@@ -36,6 +36,7 @@ class Home extends BaseController
 
 	public function index()
 	{
+		
 		$page = 1;
 		if (!empty($_GET['page'])) {
 			$page = $_GET['page'];
