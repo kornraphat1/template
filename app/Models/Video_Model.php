@@ -84,17 +84,7 @@ class Video_Model extends Model
         $query = $this->db->query($sql, [$branch_id]);
         return $query->getResultArray();
     }
-    public function get_caterow($cate_id) // เรียก Category ตาม Branch 
-    {
-        $sql = "SELECT
-                    *
-                FROM
-                    $this->table_category
-                WHERE
-                `$this->table_category`.category_id = ?";
-        $query = $this->db->query($sql, [$cate_id]);
-        return $query->getRowArray();
-    }
+  
     public function get_list_video($branchid, $keyword = "", $page = 1)
     {
         $sql_where = " ";

@@ -86,6 +86,7 @@ CRITICAL - 2021-02-02 01:44:41 --> Undefined variable: path_imgads
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-02 03:46:24 --> Unknown database 'new_variety2'
 #0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
 #1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
@@ -99,10 +100,36 @@ CRITICAL - 2021-02-02 03:46:24 --> Unknown database 'new_variety2'
 CRITICAL - 2021-02-02 03:50:34 --> Undefined property: App\Controllers\Home::$seo
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(384): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 384, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+=======
+CRITICAL - 2021-02-02 02:49:53 --> Constant FCPATH already defined
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'Constant FCPATH...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\template\index.php(12): define('FCPATH', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\app\Views\movie\MV-1\body.php(226): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-1/body...', Array, true)
+#5 C:\xampp\htdocs\template\app\Controllers\Home.php(90): view('movie/MV-1/body...', Array)
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-02-02 06:16:20 --> Undefined index: cate_req
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(95): calltemplate('MV-1', 'list', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('6', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-02 06:17:35 --> Undefined property: App\Controllers\Home::$base_backurl
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 111, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('6', '%E0%B8%AB%E0%B8...')
+>>>>>>> d6c68570509687929365b8a0cb03811024eb3b0d
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-02 03:53:38 --> Undefined index: image
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-1\header-video.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 40, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -176,10 +203,16 @@ CRITICAL - 2021-02-02 05:26:08 --> Undefined index: image
 CRITICAL - 2021-02-02 05:29:56 --> Undefined index: movie_pivture
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(385): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 385, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+=======
+CRITICAL - 2021-02-02 06:18:20 --> Undefined property: App\Controllers\Home::$base_backurl
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 111, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('6', '%E0%B8%AB%E0%B8...')
+>>>>>>> d6c68570509687929365b8a0cb03811024eb3b0d
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-02 05:30:03 --> Undefined index: image
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-1\header-video.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 40, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -303,10 +336,16 @@ CRITICAL - 2021-02-02 05:41:25 --> Undefined index: setting_title
 CRITICAL - 2021-02-02 05:42:09 --> Undefined variable: title_name
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(383): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 383, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+=======
+CRITICAL - 2021-02-02 06:18:28 --> Undefined property: App\Controllers\Home::$base_backurl
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 111, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('6', '%E0%B8%AB%E0%B8...')
+>>>>>>> d6c68570509687929365b8a0cb03811024eb3b0d
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-02 05:51:03 --> Undefined variable: title_name
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(383): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 383, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
@@ -524,6 +563,13 @@ CRITICAL - 2021-02-02 06:11:21 --> Invalid file: {0}
 #1 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('player', Array, true)
 #2 C:\xampp\htdocs\template\app\Controllers\Home.php(457): view('player', Array)
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('1', 'movie_thmain')
+=======
+CRITICAL - 2021-02-02 06:18:56 --> Invalid file: templates/header.php
+#0 C:\xampp\htdocs\template\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/heade...')
+#1 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(114): view('templates/heade...', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('6', '%E0%B8%AB%E0%B8...')
+>>>>>>> d6c68570509687929365b8a0cb03811024eb3b0d
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
