@@ -350,18 +350,15 @@ class Home extends BaseController
 		//add view
 		// $this->VideoModel->movie_view($series_id);
 	}
-	public function video($id, $typeplay)
+
+
+
+	public function video($id)
 	{
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$keyword_string = "";
-		$video_data = $this->VideoModel->get_id_video($id);
+	
 		$setting = $this->VideoModel->get_setting($this->branch);
-		$setting['image'] = $video_data['movie_picture'];
-		$seo = $this->VideoModel->get_seo($this->branch);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		$video_data = $this->VideoModel->get_id_video($id);
+		
 		if (!empty($seo)) {
 			if (!empty($seo['seo_title'])) {
 				$title = $seo['seo_title'];
@@ -369,8 +366,7 @@ class Home extends BaseController
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
 					"{movie_title} - {title_web}",
-					$name_videos . " - " . $title_name,
-					$title
+					$name_videos . " - " . $title_name,$title
 				);
 				$setting['setting_title'] = $title_web;
 			}
@@ -381,6 +377,24 @@ class Home extends BaseController
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string,
+			'id' => $id,
+			'seo' => $this->seo,
+			'ads' => $this->ads
+		];
+
+		calltemplate('MV-1', 'video', $parameter);
+
+
+	
+	
+
+
+		
+
+
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -389,7 +403,6 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' => $this->path_ads,
 			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string,
 			'index' => ""
 		];
 		echo view('templates/header-video.php', $header_data);
@@ -419,7 +432,6 @@ class Home extends BaseController
 			'feildplay' => $feildplay,
 			'ads' => $path_imgads,
 			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string
 		];
 		echo view('templates/video.php', $body_data);
 		echo view('templates/footer.php');
