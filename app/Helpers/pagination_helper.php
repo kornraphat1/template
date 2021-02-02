@@ -1,29 +1,7 @@
 <?php
 use App\Models\Video_Model;
 
-function calltemplate($template,$page,$parameter = []){
-    $VideoModel = new Video_Model();
-    switch ($template) {
-        case 'movie1':
-            switch ($page) {
-                case 'index':
-                    $list = [
-                        'setting'=>$VideoModel->get_setting('1')
-                    ];
-                    break;
-                default:
-                    # code...
-                    break;
-            }
-            break;
-        default:
-            $list = [];
-            break;
-    }
 
-
-    return $list;
-}
 
     function get_pagination($sql,$page,$perpage,$total){
 

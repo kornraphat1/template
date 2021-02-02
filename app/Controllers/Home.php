@@ -7,16 +7,16 @@ use App\Models\Video_Model;
 class Home extends BaseController
 {
 	public $document_root = '';
-	protected $base_backurl;
+	protected $backURL;
 	public $path_setting = "";
 	public $path_ads = "";
 	public $img_backurl = "img_movies/";
-	public $branch_id = 1;
-	public $backURL = "https://backend.donengded.com/public/";
+	public $branch_id = '';
+
 	public function __construct()
 	{
 		$config = new \Config\App();
-		// $this->base_backurl = $config->backURL;
+		$this->backURL = $config->backURL;
 		$this->validation =  \Config\Services::validation();
 		$this->session = \Config\Services::session();
 		$this->VideoModel = new Video_Model();
@@ -26,20 +26,45 @@ class Home extends BaseController
 		// Directory
 		$this->path_ads = $this->backURL . 'banners/';
 		$this->path_setting = $this->backURL . 'setting/';
-		
-		helper(['url', 'pagination']);
+		$this->keyword_string = "";
+		//query
+		$this->setting = $this->VideoModel->get_setting($this->branch);
+		$this->ads = $this->VideoModel->get_path_imgads($this->branch);
+
+		helper(['url', 'pagination', 'template']);
 	}
 
 	public function index()
 	{
-		$catereq = [6, 7, 28];
 		$page = 1;
 		if (!empty($_GET['page'])) {
 			$page = $_GET['page'];
 		}
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		$catereq = [6, 7, 28];
+		$parameter = [
+			'branch' => $this->branch_id,
+			'branch' => $this->branch_id,
+			'branch' => $this->branch_id,
+
+
+
+		];
+		calltemplate('MV-1', 'index', $parameter);
+		echo '<pre>', print_r($this->setting, true), '</pre>';
+		die;
+
+		
+	
 		$keyword_string = "";
+		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
+		$list_movie_recommend = $this->VideoModel->get_movie_new_recommend($this->branch, '', $page);
+		$category_id = $this->VideoModel->get_category($this->branch);
+		$listyear = $this->VideoModel->get_listyear($this->branch);
+		foreach ($catereq as $val) {
+			$video_interest[] = $this->VideoModel->get_list_video_bycate($this->branch, $val);
+		}
+		
+		
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -51,15 +76,6 @@ class Home extends BaseController
 			'keyword_string' => $keyword_string
 		];
 
-		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
-		$ads = $this->VideoModel->get_path_imgads($this->branch);
-		$list_movie_recommend = $this->VideoModel->get_movie_new_recommend($this->branch, '', $page);
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-
-		foreach ($catereq as $val) {
-			$video_interest[] = $this->VideoModel->get_list_video_bycate($this->branch, $val);
-		}
 		$data = [
 			'category_id' => $category_id,
 			'list_video' => $list_video['list'],
@@ -79,42 +95,7 @@ class Home extends BaseController
 		echo view('templates/footer.php');
 	}
 	//--------------------------------------------------------------------
-	public function zoom()
-	{
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$keyword_string = "";
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listzoom = $this->VideoModel->get_list_video_zoom($this->branch, $page);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$path_livesteram = $this->VideoModel->get_path_livesteram();
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
-		$header_data = [
-			'document_root' => $this->document_root,
-			'branch' => $this->branch,
-			'setting' => $setting,
-			'backURL' => $this->backURL,
-			'path_setting' => $this->path_setting,
-			'path_ads' => $this->path_ads,
-			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string
-		];
-		echo view('templates/header', $header_data);
-		$data = [
-			'movie' => $listzoom,
-			'category_id' => $category_id,
-			'listyear' => $listyear,
-			'base_backurl' => $this->base_backurl,
-			'img_backurl' => $this->img_backurl
-		];
-		echo view('templates/zoom', $data);
-		echo view('templates/footer');
-	}
+
 	public function video_bycate($id, $name)
 	{
 
@@ -166,6 +147,8 @@ class Home extends BaseController
 		echo view('templates/search', $list_data_video);
 		echo view('templates/footer');
 	}
+
+
 	public function video_byyear($id)
 	{
 		$page = 1;
@@ -474,7 +457,7 @@ class Home extends BaseController
 		echo view('player', $data);
 	}
 
-	
+
 	public function video_search($keyword_string)
 	{
 		$page = 1;
