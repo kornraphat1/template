@@ -3,32 +3,12 @@
         <h1 class="title-web"><span class="text-silver-linear">ดูหนังออนไลน์</span> <span class="text-gold-linear"> donengded</span></h1>
         <h2 class="title-description">หนังใหม่ ดูหนังออนไลน์ ครบทุกเรื่องทุกรสที่ donengded</h2>
     </div>
-    <div class="content-left">
-        <div class="sidebar">
-            <div class="sidebar-header" style="width: 100%;">
-                <p style="font-size: 18px; text-align: center;">
-                    ปีที่ฉาย
-                </p>
-            </div>
-            <ul>
-                <?php
 
 
-                foreach ($listyear as $val) {
-                    if ($val['movie_year'] > '1988') {
-                ?>
-                        <div class="col-xs-6">
-                            <li class="cat-item">
-                                <a href="<?php echo base_url('/year/' . $val['movie_year']); ?>" alt="<?php echo $val['movie_year']; ?>" title="<?php echo $val['movie_year']; ?>"><?php echo $val['movie_year']; ?></a>
-                            </li>
-                        </div>
-                <?php
-                    }
-                }
-                ?>
-            </ul>
-        </div>
-    </div>
+    <?php include('left.php') ?>
+
+
+
     <div class="content-main">
         <div class="box">
             <div class="box-header">
@@ -223,26 +203,13 @@
             ?>
         </div>
     </div>
-    <div class="content-right">
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <p style="font-size: 18px; text-align: center;">
-                    หมวดหมู่
-                </p>
-            </div>
-            <ul>
-                <?php foreach ($category_id as $value) { ?>
-                    <li class="cat-item cat-left">
-                        <h3 class="cate-name">
-                            <a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ', '-', $value['category_name']))); ?>" title=<?php echo $value['category_name']; ?> alt="<?php echo $value['category_name']; ?>">
-                                <?php echo $value['category_name']; ?>
-                            </a>
-                        </h3>
-                    </li>
-                <?php } ?>
-            </ul>
-        </div>
-    </div>
+
+
+
+    <?php include('right.php') ?>
+
+
+
     <div class="clearfix"></div>
 </div>
 
@@ -254,7 +221,7 @@
             </a>
         </center>
         <p class="content-footer"><strong><a href="">donengded</a></strong> <strong><a href="">ดูหนัง</a></strong> ดูหนังซีรี่ส์ฟรี โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS <strong><a href="">ดูหนังออนไลน์</a></strong>
-            <?php foreach ($category_id as $value) {
+            <?php foreach ($category_list as $value) {
                 echo $value['category_name'] . " ";
             } ?> และยังมี ให้รับชมอีกมากมาย <br>สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมงที่ <strong><a href="">donengded.com</a></strong></p>
     </div>

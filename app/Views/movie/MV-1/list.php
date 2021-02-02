@@ -6,39 +6,7 @@
         <h2>เลือกดูหนังตามปีที่ฉาย</h2>
     </div>
 
-    <div class="content-left">
-
-        <div class="sidebar">
-
-            <div class="sidebar-header">
-
-                <p style="font-size: 18px; text-align: center;">
-
-                    ปีที่ฉาย
-
-                </p>
-
-            </div>
-
-            <ul>
-                <?php
-                foreach ($listyear as $val) {
-                    if ($val['movie_year'] > '1988') {
-                ?>
-                        <div class="col-xs-6">
-                            <li class="cat-item">
-                                <a href="<?php echo base_url('/year/' . $val['movie_year']); ?>"><?php echo $val['movie_year']; ?></a>
-                            </li>
-                        </div>
-
-                <?php
-                    }
-                }
-                ?>
-            </ul>
-
-        </div>
-    </div>
+    <?php include('left.php') ?>
 
     <div class="content-main">
 
@@ -52,9 +20,9 @@
             </div>
 
 
-            <?php if (!empty($paginate['list'])) { ?>
+            <?php if (!empty($list_video['list'])) { ?>
 
-                <?php foreach ($paginate['list'] as $value) {
+                <?php foreach ($list_video['list'] as $value) {
                     $id = $value['movie_id'];
 
                     $s_replace = [
@@ -139,10 +107,10 @@
 
         <!-- Pagination -->
         <?php
-     
-       
-        if ($paginate['total_page'] != '1') {
-            if (!empty($paginate['list'])) {
+
+
+        if ($list_video['total_page'] != '1') {
+            if (!empty($list_video['list'])) {
         ?>
                 <div class="box">
 
@@ -154,7 +122,7 @@
 
                                 <div class="pagination2">
 
-                                    <?= pagination($paginate['page'], $paginate['total_page']); ?>
+                                    <?= pagination($list_video['page'], $list_video['total_page']); ?>
 
                                 </div>
 
@@ -179,106 +147,44 @@
 
 
 
+    <?php include('right.php') ?>
 
 
-
-
-    <div class="content-right">
-
-        <div class="sidebar">
-
-            <div class="sidebar-header">
-
-                <p style="font-size: 18px; text-align: center;">
-
-                    หมวดหมู่
-
-                </p>
-
-            </div>
-
-            <ul>
-                <?php foreach ($category_id as $value) { ?>
-                    <li class="cat-item cat-left">
-                        <h3 class="cate-name">
-                            <a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ', '-', $value['category_name']))); ?>" title=<?= $value['category_name'] ?>>
-                                <?= $value['category_name'] ?>
-                            </a>
-                        </h3>
-                    </li>
-                <?php } ?>
-            </ul>
-
-        </div>
-
-
-    </div>
 
     <div class="clearfix"></div>
 
     <!-- ADS ล่าง -->
-
+    <!-- ADS2 -->
     <div id="ads_fox_bottom">
-
         <div id="ads_fix_footer">
 
-            <div style="text-align:center;">
-
-                <div id="fix_footer">
-
-                    <?php foreach ($path_imgads as $value) {
-
-                        if (empty($value['ads_position'] == "4")) {
-                        } else { ?>
+            <?php
+            if (!empty($ads['pos4'])) {
+                foreach ($ads['pos4'] as $val) {
+                    if (substr($val['ads_picture'], 0, 4) == 'http') {
+                        $ads_picture = $val['ads_picture'];
+                    } else {
+                        $ads_picture = $path_ads . $val['ads_picture'];
+                    }
+            ?>
+                    <div style="text-align:center;">
+                        <div id="fix_footer">
 
                             <!-- ปุ่ม close ADS ล่าง -->
-
                             <a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
 
-                    <?php }
-                    } ?>
-
-                </div>
-
-            </div>
-
-            <?php
-
-            foreach ($path_imgads as $value) {
-
-                if ($value['ads_position'] == "4") {
-
-            ?>
-
-                    <div style="clear:both;"></div>
-
-                    <div id="fix_footer2" style="width:100%; display:block;  overflow:hidden; line-height:0px;">
-
-                        <div style="display:inline-block; width:100%; text-align:center;">
-
-                            <div class="textwidget custom-html-widget">
-
-                                <center><a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?= $value['ads_url'] ?>" target="_blank" rel="noopener"><img alt="<?= $value['ads_name'] ?>" title="<?= $value['ads_name'] ?>" src="<?php echo  $path_ads . $value['ads_picture']; ?>" width="70%"></a></center>
-
-                            </div>
-
                         </div>
-
                     </div>
 
-                    <div style="clear:both;"></div>
-
+                    <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                    </a>
             <?php
-
                 }
             }
-
             ?>
-
-
-
         </div>
-
     </div>
+    <!-- ADS2 -->
 
     <!-- ADS ล่าง -->
