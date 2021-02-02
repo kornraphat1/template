@@ -8,14 +8,15 @@ function calltemplate($template,$view,$parameter = []){
             switch ($view) {
                 case 'index':
                     $list = [
-                        'setting'=>$VideoModel->get_setting($parameter['branch'])
+                        'setting'=>$VideoModel->get_setting($parameter['branch']),
+                        'list_video'=>$VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page'])
                     ];
                     break;
 
                     case 'video':
                         $list = [
                             'setting'=>$VideoModel->get_setting($parameter['branch'])
-                            
+
                         ];
                         break;
 

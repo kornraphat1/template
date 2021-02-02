@@ -11,7 +11,7 @@ class Home extends BaseController
 	public $path_setting = "";
 	public $path_ads = "";
 	public $img_backurl = "img_movies/";
-	public $branch_id = '';
+	public $branch = '';
 
 	public function __construct()
 	{
@@ -41,16 +41,18 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 		$catereq = [6, 7, 28];
+
+
 		$parameter = [
-			'branch' => $this->branch_id,
-			'branch' => $this->branch_id,
-			'branch' => $this->branch_id,
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $this->keyword_string,
 
 
 
 		];
-		calltemplate('MV-1', 'index', $parameter);
-		echo '<pre>', print_r($this->setting, true), '</pre>';
+		$a=calltemplate('MV-1', 'index', $parameter);
+		echo '<pre>', print_r($a, true), '</pre>';
 		die;
 
 		
@@ -108,7 +110,7 @@ class Home extends BaseController
 		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$keyword_string = "";
-		$list_video = $this->VideoModel->get_id_video_bycategory($id, $this->branch_id, $page);
+		$list_video = $this->VideoModel->get_id_video_bycategory($id, $this->branch, $page);
 		// echo "<pre>";
 		// print_r($list_video['list']);die;
 		$header_data = [
@@ -175,7 +177,7 @@ class Home extends BaseController
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$cateRow = ['category_name' => $id];
 		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$list_video = $this->VideoModel->get_id_video_byyear($id, $this->branch_id, $page);
+		$list_video = $this->VideoModel->get_id_video_byyear($id, $this->branch, $page);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$body_data = [
 			'paginate' => $list_video,
@@ -482,7 +484,7 @@ class Home extends BaseController
 		echo view('templates/header', $header_data);
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch_id, $page);
+		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch, $page);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
 		$body_data = [
 			'paginate' => $list_video,
