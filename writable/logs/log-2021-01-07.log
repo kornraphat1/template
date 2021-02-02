@@ -1,0 +1,49 @@
+CRITICAL - 2021-01-07 02:36:56 --> Undefined variable: listFunction
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Home.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 02:37:59 --> Using $this when not in object context
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Home.php(41): getmovieeee()
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 02:38:18 --> Using $this when not in object context
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Home.php(41): getmovieeee()
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 23:45:37 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Clips_Home.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 390, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Clips_Home->video('1073742558', '%E0%B9%80%E0%B8...')
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clips_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 23:45:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Clips_Home.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 390, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Clips_Home->video('1073742558', '%E0%B9%80%E0%B8...')
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clips_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 23:46:54 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Clips_Home.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 390, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Clips_Home->video('1073742558', '%E0%B9%80%E0%B8...')
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clips_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-07 23:48:00 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Clips_Home.php(390): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 390, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Clips_Home->video('1073742558', '%E0%B9%80%E0%B8...')
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Clips_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

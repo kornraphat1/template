@@ -1,0 +1,20 @@
+CRITICAL - 2021-01-08 03:02:55 --> Undefined index: movie_type
+#0 C:\xampp\htdocs\donungded.com\app\Views\anime\body.php(159): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 159, Array)
+#1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('anime/body.php', Array, true)
+#3 C:\xampp\htdocs\donungded.com\app\Controllers\An_Home.php(80): view('anime/body.php', Array)
+#4 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\An_Home->index()
+#5 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\An_Home))
+#6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-08 03:03:48 --> Undefined index: movie_type
+#0 C:\xampp\htdocs\donungded.com\app\Views\anime\body.php(159): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 159, Array)
+#1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('anime/body.php', Array, true)
+#3 C:\xampp\htdocs\donungded.com\app\Controllers\An_Home.php(80): view('anime/body.php', Array)
+#4 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\An_Home->index()
+#5 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\An_Home))
+#6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

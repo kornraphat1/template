@@ -1,0 +1,24 @@
+CRITICAL - 2021-01-03 23:41:25 --> Undefined variable: urlvideo
+#0 C:\xampp\htdocs\donungded.com\app\Views\AV\body.php(211): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 211, Array)
+#1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/body.php', Array, true)
+#3 C:\xampp\htdocs\donungded.com\app\Controllers\Av_Home.php(76): view('AV/body.php', Array)
+#4 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Av_Home->index()
+#5 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Av_Home))
+#6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-01-03 23:52:05 --> Undefined property: App\Controllers\Av_Home::$AvModel
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Av_Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Av_Home->index()
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Av_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-03 23:52:20 --> Undefined property: App\Controllers\Av_Home::$AvModel
+#0 C:\xampp\htdocs\donungded.com\app\Controllers\Av_Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(910): App\Controllers\Av_Home->index()
+#2 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Av_Home))
+#3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

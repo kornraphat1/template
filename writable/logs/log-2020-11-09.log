@@ -1,0 +1,387 @@
+CRITICAL - 2020-11-09 00:00:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''7,8,6'' at line 5
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(436): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-09 00:09:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE  mo_moviecate.category_id = 6 
+                    Limit 2' at line 25
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:11:17 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:11:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:12:01 --> Unknown column 'mo.category_id' in 'on clause'
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:12:25 --> Unknown column 'mo_category.movie_id' in 'on clause'
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:12:39 --> Unknown column 'mo_category.movie_id' in 'on clause'
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:13:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:13:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:13:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:13:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:13:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                        mo_movie
+                   
+                ...' at line 19
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(481): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:19:01 --> Unknown column 'mo_category.category_id' in 'field list'
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(482): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(442): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:20:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                mo_moviecate
+
+                LEFT JOIN (
+          ...' at line 3
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(482): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(443): App\Models\Video_Model->get_video_interest_movie('6')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:24:24 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(450): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 450, Array)
+#1 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-11-09 00:25:42 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(450): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 450, Array)
+#1 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-11-09 00:26:25 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(451): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 451, Array)
+#1 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-11-09 00:27:42 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(451): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 451, Array)
+#1 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(55): App\Models\Video_Model->get_video_interest(1)
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-11-09 00:35:53 --> Undefined variable: video_interest
+#0 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 65, Array)
+#1 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-11-09 00:39:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(445): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(59): App\Models\Video_Model->get_video_interest(1, 7)
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-09 00:39:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(445): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(59): App\Models\Video_Model->get_video_interest(1, 7)
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-09 00:41:16 --> explode() expects parameter 2 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'explode() expec...', 'C:\\xampp\\htdocs...', 237, Array)
+#1 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(237): explode('|', Array)
+#2 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#4 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-11-09 00:41:26 --> Undefined variable: movie
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(239): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 239, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:44:42 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(246): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:46:01 --> Undefined offset: 0
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(246): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:52:14 --> Undefined variable: score
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(268): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 268, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:52:41 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 314, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:54:07 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(450): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 450, Array)
+#1 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(59): App\Models\Video_Model->get_video_interest(1, 7)
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-11-09 00:54:36 --> Undefined index: category_id
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(231): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 231, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:55:13 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\body2.php(315): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 315, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/body2...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(85): view('templates/body2...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-09 00:58:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM
+                mo_moviecate
+
+                LEFT JOIN (
+          ...' at line 9
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(495): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(450): App\Models\Video_Model->get_video_interest_movie('7')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(59): App\Models\Video_Model->get_video_interest(1, 7)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 00:59:02 --> Unknown column 'mo_movie.movie_thname' in 'field list'
+#0 C:\xampp\htdocs\gumovie\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\gumovie\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(495): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...')
+#4 C:\xampp\htdocs\gumovie\app\Models\Video_Model.php(450): App\Models\Video_Model->get_video_interest_movie('7')
+#5 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(59): App\Models\Video_Model->get_video_interest(1, 7)
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-11-09 01:48:45 --> Too few arguments to function App\Controllers\Home::video_bycate(), 1 passed in C:\xampp\htdocs\gumovie\system\CodeIgniter.php on line 910 and exactly 2 expected
+#0 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('')
+#1 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-11-09 01:49:01 --> Undefined variable: keyword_string
+#0 C:\xampp\htdocs\gumovie\app\Views\templates\header.php(213): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 213, Array)
+#1 C:\xampp\htdocs\gumovie\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gumovie\system\Common.php(1071): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#3 C:\xampp\htdocs\gumovie\app\Controllers\Home.php(112): view('templates/heade...', Array)
+#4 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(910): App\Controllers\Home->video_list('')
+#5 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\gumovie\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gumovie\public\index.php(89): CodeIgniter\CodeIgniter->run()
+#8 {main}
