@@ -27,6 +27,22 @@ class Video_Model extends Model
         $db = \Config\Database::connect();
         $this->path_filelogo = "logo";
     }
+
+    public function get_ads($branch_id)
+    {
+        $ads = [];
+        $sql = "SELECT ads_position FROM  `$this->ads` WHERE branch_id = '$branch_id' group by ads_position";
+        $query = $this->db->query($sql);
+        $ads_position = $query->getResultArray();
+        foreach ($ads_position as $val) {
+            $ads_position = $val['ads_position'];
+
+            $sql = "SELECT * FROM  `$this->ads` WHERE branch_id = '$branch_id' AND ads_position =  '$ads_position' ";
+            $query = $this->db->query($sql);
+            $ads['pos' . $ads_position] = $query->getResultArray();
+        }
+        return $ads;
+    }
     function get_adsvideolist($backurl,$branch)
     {
         $sql = "SELECT 

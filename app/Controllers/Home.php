@@ -29,7 +29,7 @@ class Home extends BaseController
 		$this->keyword_string = "";
 		//query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
-		$this->ads = $this->VideoModel->get_path_imgads($this->branch);
+		$this->ads = $this->VideoModel->get_ads($this->branch);
 
 		helper(['url', 'pagination', 'template']);
 	}
@@ -40,61 +40,54 @@ class Home extends BaseController
 		if (!empty($_GET['page'])) {
 			$page = $_GET['page'];
 		}
-		$catereq = [6, 7, 28];
+		$cate_req = [6, 7, 28];
 
 
 		$parameter = [
 			'branch' => $this->branch,
 			'page' => $page,
 			'keyword_string' => $this->keyword_string,
-
+			'cate_req' => $cate_req,
 
 
 		];
-		$a=calltemplate('MV-1', 'index', $parameter);
-		echo '<pre>', print_r($a, true), '</pre>';
-		die;
+		$data_query = calltemplate('MV-1', 'index', $parameter);
+		// echo '<pre>', print_r($data_query, true), '</pre>';
+		// die;
 
-		
-	
+
+
 		$keyword_string = "";
-		$list_video = $this->VideoModel->get_list_video($this->branch, '', $page);
+	
 		$list_movie_recommend = $this->VideoModel->get_movie_new_recommend($this->branch, '', $page);
+
 		$category_id = $this->VideoModel->get_category($this->branch);
 		$listyear = $this->VideoModel->get_listyear($this->branch);
-		foreach ($catereq as $val) {
-			$video_interest[] = $this->VideoModel->get_list_video_bycate($this->branch, $val);
-		}
 		
-		
+
+
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
-			'setting' => $setting,
+			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
-			'path_ads' => $this->path_ads,
-			'path_imgads' => $path_imgads,
+			'ads'  => $this->ads,			
 			'keyword_string' => $keyword_string
 		];
 
 		$data = [
 			'category_id' => $category_id,
-			'list_video' => $list_video['list'],
-			'base_backurl' => $this->base_backurl,
-			'img_backurl' => $this->img_backurl,
+			'list_video' => $data_query['list_video'],
 			'cateRow' => array('category_name' => 'รายการหนัง'),
-			'paginate' => $list_video,
-			'ads'  => $ads,
-			'new_movie_recom' => $list_movie_recommend['list'],
 			'listyear' => $listyear,
-			'video_interest' => $video_interest
+			'video_cate' => $data_query['video_cate']
 		];
 		// echo '<pre>'.print_r($video_interest ,true).'</pre>';die;
 
-		echo view('templates/header.php', $header_data);
-		echo view('templates/body.php', $data);
-		echo view('templates/footer.php');
+		echo view('movie/MV-1/header.php', $header_data);
+		echo view('movie/MV-1/body.php', $data);
+		echo view('movie/MV-1/footer.php');
 	}
 	//--------------------------------------------------------------------
 
