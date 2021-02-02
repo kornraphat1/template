@@ -380,7 +380,8 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
 			'id' => $id,
-			'seo' => $this->seo
+			'seo' => $this->seo,
+			'ads' => $this->ads
 		];
 
 		calltemplate('MV-1', 'video', $parameter);
@@ -390,7 +391,7 @@ class Home extends BaseController
 	
 
 
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
+		
 
 
 		$header_data = [
