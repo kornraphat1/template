@@ -193,8 +193,7 @@
                                 <a target="_blank" href="<?php echo $setting['setting_fb']; ?>"><img id="icon-facebook" style="width: 6%;" src="<?= $document_root ?>/assets/images/social-icon/facebook.png" title="ติดต่อทางเฟซบุ้ค" alt="ติดต่อทางเฟซบุ้ค"></a>
                             <?php
                             }
-                            if (!empty($setting['setting_line'])) 
-                            {
+                            if (!empty($setting['setting_line'])) {
                             ?>
                                 <a target="_blank" href="<?php echo $setting['setting_line']; ?>"><img id="icon-line" style="width: 6%; border-radius:5px" src="<?= $document_root ?>/assets/images/social-icon/line.png" title="ติดต่อทางไลน์" alt="ติดต่อทางไลน์"></a>
                             <?php
@@ -221,7 +220,7 @@
                         หนังการ์ตูน
                     </a>
                 </li>
-               
+
                 <li class="cat-item">
                     <a href="<?php echo base_url('/category/7/หนังฝรั่ง'); ?>" alt="หนังฝรั่ง" title="Inter Movie" style="font-size: 19px">
                         หนังฝรั่ง
@@ -247,7 +246,7 @@
                         Clips 18+
                     </a>
                 </li>
-               
+
                 <!-- <li class="nav-main-item  menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-28">
                     <a class="nav-main-link request" style="font-size: 19px">ขอหนัง</a>
                 </li> -->
@@ -264,49 +263,61 @@
         <div class="notice" style="z-index:2147483647;display: flex">
             <div style="width: 15%">
                 <?php
-                if (!empty($path_imgads)) {
-                    foreach ($path_imgads as $value) {
-                        if ($value['ads_position'] == "2") {
-                ?>
-                            <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank">
-                                <img alt="<?php echo $value['ads_url'] ?>" title="<?php echo $value['ads_url'] ?>" src="<?php echo $path_ads . $value['ads_picture'] ?>" style="width: 100%" class="hoverimg">
-                            </a>
-                <?php
+                if (!empty($ads['pos2'])) {
+                    foreach ($ads['pos2'] as $val) {
+
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                } else {
                 }
                 ?>
             </div>
             <div style="width: 70%">
                 <?php
-                if (!empty($path_imgads)) {
-                    foreach ($path_imgads as $value) {
-                        if ($value['ads_position'] == "1") {
-                ?>
-                            <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank">
-                                <img alt="<?php echo $value['ads_url'] ?>" title="<?php echo $value['ads_url'] ?>" src="<?php echo $path_ads . $value['ads_picture'] ?>" style="width: 100%;padding-bottom: 5px;" class="hoverimg">
-                            </a>
-                <?php
+                if (!empty($ads['pos1'])) {
+                    foreach ($ads['pos1'] as $val) {
+
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                } else {
                 }
                 ?>
             </div>
             <div style="width: 15%">
                 <?php
-                if (!empty($path_imgads)) {
-                    foreach ($path_imgads as $value) {
-                        if ($value['ads_position'] == "3") {
-                ?>
-                            <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank">
-                                <img alt="<?php echo $value['ads_url'] ?>" title="<?php echo $value['ads_url'] ?>" src="<?php echo $path_ads . $value['ads_picture'] ?>" style="width: 100%" class="hoverimg">
-                            </a>
-                <?php
+                if (!empty($ads['pos3'])) {
+                    foreach ($ads['pos3'] as $val) {
+
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                } else {
                 }
                 ?>
             </div>
