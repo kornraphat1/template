@@ -16,12 +16,8 @@ function calltemplate($template, $view, $parameter = [])
 
 
                     $list = [
-
                         'list_video' => $paginate,
                         'video_cate' => $video_cate,
-
-
-
                     ];
                     break;
 
@@ -30,11 +26,10 @@ function calltemplate($template, $view, $parameter = [])
                         $list = [
                             'video_data'=> $VideoModel->get_id_video($parameter['id']),
                             'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
-                            'setting'=>$VideoModel->get_setting($parameter['branch']),
-                            'seo' => $VideoModel->get_seo($parameter['branch'])
+                            'seo' => $VideoModel->get_seo($parameter['branch']),
                         ];
-                        echo "<pre>";
-                        print_r($list);die;
+                        
+                       
                         break;
 
                 default:

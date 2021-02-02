@@ -26,8 +26,9 @@ class App extends BaseConfig
 	*/
 
 	public $baseURL = 'http://192.168.10.45:8991/';
-	public $docURL = 'http://192.168.10.45:8991/public/';
+	public $docURL = 'http://192.168.10.45:8991/public/movie/MV-1/';
 	public $backURL = "https://backend.donengded.com/public/";
+
 
 	/*
 	|--------------------------------------------------------------------------
