@@ -265,6 +265,8 @@ class Home extends BaseController
 		echo view('movie/MV-1/series.php', $body_data);
 		echo view('movie/MV-1/footer.php');
 	}
+	//--------------------------------------------------------------------
+
 	public function video_series($series_id, $title, $index, $ep_name)
 	{
 		$page = 1;
@@ -345,6 +347,7 @@ class Home extends BaseController
 		// $this->VideoModel->movie_view($series_id);
 	}
 
+	//--------------------------------------------------------------------
 
 
 	public function video($id)
@@ -428,6 +431,7 @@ class Home extends BaseController
 		//add view
 		// $this->VideoModel->movie_view($id);
 	}
+	//--------------------------------------------------------------------
 
 
 	public function player($id, $filed = "", $index = "")
@@ -455,6 +459,7 @@ class Home extends BaseController
 		echo view('movie/player/player', $data);
 	}
 
+	//--------------------------------------------------------------------
 
 	
 	// แจ้งหนังเสีย
@@ -468,6 +473,8 @@ class Home extends BaseController
 			echo "Error";
 		}
 	}
+	//--------------------------------------------------------------------
+
 	// ขอหนัง
 	public function save_request($branch, $movie)
 	{
@@ -479,11 +486,13 @@ class Home extends BaseController
 			echo "Error";
 		}
 	}
+	//--------------------------------------------------------------------
 
 	public function countView($id)
 	{
 		$this->VideoModel->countView($id);
 	}
+	//--------------------------------------------------------------------
 
 	public function DateThai($strDate)
 	{
@@ -497,4 +506,6 @@ class Home extends BaseController
 		$strMonthThai = $strMonthCut[$strMonth];
 		return "$strDay $strMonthThai $strYear, $strHour:$strMinute";
 	}
+	//--------------------------------------------------------------------
+
 }
