@@ -23,32 +23,52 @@ function calltemplate($template, $view, $parameter = [])
 
                     ];
                     break;
-                    case 'list':
-                
-                        $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'],$parameter['branch'], $parameter['page'],);
-                        $category_list = $VideoModel->get_category($parameter['branch']);
-                        $listyear = $VideoModel->get_listyear($parameter['branch']);
-                        $list = [
-    
-                            'list_video' => $list_video,
-                            
-                            'category_list' => $category_list,
-                            'listyear' => $listyear,
-    
-                        ];     
-                        break;
-    
+                case 'list':
+
+                    $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page'],);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list = [
+
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+
+                    ];
+                    break;
+
                 case 'video':
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
                         'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
-                        'setting' => $VideoModel->get_setting($parameter['branch']),
-                        'seo' => $VideoModel->get_seo($parameter['branch'])
+                        'seo' => $VideoModel->get_seo($parameter['branch']),
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
                     ];
-                    echo "<pre>";
-                    print_r($list);
-                    die;
+
+                    break;
+
+                case 'series':
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $series = $VideoModel->get_ep_series($parameter['id']);
+
+                   
+                    $list = [
+                        'video_data' => $VideoModel->get_id_video($parameter['id']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
+                        'seo' => $VideoModel->get_seo($parameter['branch']),
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                        'series' => $series,
+                        
+                    ];
+
+                   
+                 
                     break;
 
                 default:
