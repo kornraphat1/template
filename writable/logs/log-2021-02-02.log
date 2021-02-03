@@ -574,3 +574,14 @@ CRITICAL - 2021-02-02 06:18:56 --> Invalid file: templates/header.php
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2021-02-02 06:36:34 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-1\right.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-1\video.php(394): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-1/vide...', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(403): view('movie/MV-1/vide...', Array)
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

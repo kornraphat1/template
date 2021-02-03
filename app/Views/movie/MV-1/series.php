@@ -4,29 +4,9 @@
 		<h2>เลือกหนังที่จะดูได้ตามหมวดหมู่หรือเลือกดูหนังออนไลน์ที่อัพใหม่ได้ที่หน้าแรก</h2>
 		<h2>เลือกดูหนังตามปีที่ฉาย</h2>
 	</div>
-	<div class="content-left">
-		<div class="sidebar">
-			<div class="sidebar-header">
-				<p style="font-size: 18px; text-align: center;">
-					ปีที่ฉาย
-				</p>
-			</div>
-			<ul>
-				<?php 
-				foreach ($listyear as $val) {
-					if ($val['movie_year'] > '1988') { ?>
-						<div class="col-xs-6">
-							<li class="cat-item">
-								<a href="<?php echo base_url('/year/' . $val['movie_year']); ?>"><?php echo $val['movie_year']; ?></a>
-							</li>
-						</div>
-				<?php 
-					}
-				} 
-				?>
-			</ul>
-		</div>
-	</div>
+<?php include('left.php'); ?>
+
+
 	<div class="content-main">
 		<div class="box">
 			<div class="box-header">
@@ -323,24 +303,5 @@
 			color: white;
 		}
 	</style>
-	<div class="content-right">
-		<div class="sidebar">
-			<div class="sidebar-header">
-				<p style="font-size: 18px; text-align: center;">
-					หมวดหมู่
-				</p>
-			</div>
-			<ul>
-				<?php foreach ($category_id as $value) { ?>
-					<li class="cat-item cat-left">
-						<h3 class="cate-name">
-							<a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ','-',$value['category_name']))); ?>" title=<?= $value['category_name'] ?>>
-								<?= $value['category_name'] ?> 
-							</a>
-						</h3>
-					</li>
-				<?php } ?>
-			</ul>
-		</div>
-	</div>
+	<?php include('right.php'); ?>
 	<div class="clearfix"></div>
