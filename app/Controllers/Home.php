@@ -115,6 +115,7 @@ class Home extends BaseController
 		echo view('movie/MV-1/list', $data);
 		echo view('movie/MV-1/footer');
 	}
+	//--------------------------------------------------------------------
 
 
 	public function video_byyear($year)
@@ -128,11 +129,9 @@ class Home extends BaseController
 			'page' => $page,
 			'keyword_string' => $this->keyword_string,
 			'year' => $year,
-			// 'cate_id' => '',
-
 		];
 		$data_query = calltemplate('MV-1', 'video_byyear', $parameter);
-	$title = $year;
+		$title = $year;
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -146,7 +145,6 @@ class Home extends BaseController
 		$body_data = [
 			'category_list' => $data_query['category_list'],
 			'listyear' => $data_query['listyear'],
-			'title' => $title,
 			'list_video' => $data_query['list_video'],
 			'title' => $title,
 		];
@@ -154,18 +152,45 @@ class Home extends BaseController
 		echo view('movie/MV-1/list', $body_data);
 		echo view('movie/MV-1/footer');
 	}
-	public function DateThai($strDate)
+	//--------------------------------------------------------------------
+
+	public function video_search($keyword_string)
 	{
-		$strYear = date("Y", strtotime($strDate)) + 543;
-		$strMonth = date("n", strtotime($strDate));
-		$strDay = date("j", strtotime($strDate));
-		$strHour = date("H", strtotime($strDate));
-		$strMinute = date("i", strtotime($strDate));
-		$strSeconds = date("s", strtotime($strDate));
-		$strMonthCut = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
-		$strMonthThai = $strMonthCut[$strMonth];
-		return "$strDay $strMonthThai $strYear, $strHour:$strMinute";
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+
+
+		$keyword_string = urldecode($keyword_string);
+		$title = $keyword_string;
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $keyword_string,
+		];
+		$data_query = calltemplate('MV-1', 'video_search', $parameter);
+		$header_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'setting' => $this->setting,
+			'path_setting' => $this->path_setting,
+			'ads' => $this->ads,
+			'keyword_string' => $keyword_string
+		];
+		$body_data = [
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'list_video' => $data_query['list_video'],
+			'title' => $title,
+		];
+		echo view('movie/MV-1/header', $header_data);
+		echo view('movie/MV-1/list', $body_data);
+		echo view('movie/MV-1/footer');
 	}
+	//--------------------------------------------------------------------
+
 	public function series($id, $title)
 	{
 		$page = 1;
@@ -431,42 +456,7 @@ class Home extends BaseController
 	}
 
 
-	public function video_search($keyword_string)
-	{
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$keyword_string = urldecode($keyword_string);
-		$title = $keyword_string;
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$setting['setting_description'] = str_replace("{date}", $this->DateThai(gmdate('Y-m-d H:i:s')), $setting['setting_description']);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		$header_data = [
-			'document_root' => $this->document_root,
-			'branch' => $this->branch,
-			'setting' => $setting,
-			'backURL' => $this->backURL,
-			'path_setting' => $this->path_setting,
-			'path_ads' => $this->path_ads,
-			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string
-		];
-		echo view('movie/MV-1/header', $header_data);
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$list_video = $this->VideoModel->get_list_video_search($keyword_string, $this->branch, $page);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		$body_data = [
-			'paginate' => $list_video,
-			'img_backurl' => $this->img_backurl,
-			'category_id' => $category_id,
-			'listyear' => $listyear,
-			'title' => $title
-		];
-		echo view('movie/MV-1/list', $body_data);
-		echo view('movie/MV-1/footer');
-	}
+	
 	// แจ้งหนังเสีย
 	public function save_report($branch, $id, $reason, $name)
 	{
@@ -492,7 +482,19 @@ class Home extends BaseController
 
 	public function countView($id)
 	{
-
 		$this->VideoModel->countView($id);
+	}
+
+	public function DateThai($strDate)
+	{
+		$strYear = date("Y", strtotime($strDate)) + 543;
+		$strMonth = date("n", strtotime($strDate));
+		$strDay = date("j", strtotime($strDate));
+		$strHour = date("H", strtotime($strDate));
+		$strMinute = date("i", strtotime($strDate));
+		$strSeconds = date("s", strtotime($strDate));
+		$strMonthCut = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
+		$strMonthThai = $strMonthCut[$strMonth];
+		return "$strDay $strMonthThai $strYear, $strHour:$strMinute";
 	}
 }
