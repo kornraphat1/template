@@ -190,28 +190,11 @@ class Home extends BaseController
 		echo view('movie/MV-1/footer');
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	//--------------------------------------------------------------------
 
 	public function series($id, $title)
 	{
-	$video_data = $this->VideoModel->get_id_video($id);	
+
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
@@ -222,14 +205,13 @@ class Home extends BaseController
 
 		// echo "<pre>";
 		// print_r($data_query['series']);die;
-		
+
 		$setting = $this->setting;
 		$setting['image'] = $data_query['series']['movie_picture'];
-		$seo = $this->VideoModel->get_seo($this->branch);
 		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		if (!empty($seo)) {
-			if (!empty($seo['seo_title'])) {
-				$title = $seo['seo_title'];
+		if (!empty($data_query['seo'])) {
+			if (!empty($data_query['seo']['seo_title'])) {
+				$title = $data_query['seo']['seo_title'];
 				$name_videos = $data_query['series']['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
@@ -240,8 +222,8 @@ class Home extends BaseController
 				$setting['setting_title'] = $title_web;
 			}
 
-			if (!empty($seo['seo_description'])) {
-				$description = $seo['seo_description'];
+			if (!empty($data_query['seo']['seo_description'])) {
+				$description = $data_query['seo']['seo_description'];
 				$description_movie = $data_query['series']['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
@@ -252,61 +234,60 @@ class Home extends BaseController
 			'setting' => $setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
-			'path_ads' => $this->path_ads,
-			'path_imgads' => $path_imgads,
 			'keyword_string' => $this->keyword_string,
-			'category_list' => $data_query['category_list']
+			'ads' => $this->ads,
+
 		];
-		echo view('movie/MV-1/header-video.php', $header_data);
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
-		if (!empty($video_data['movie_thmain'])) {
+
+		if (!empty($data_query['video_data']['movie_thmain'])) {
 			$feildplay = 'movie_thmain';
-		} else if (!empty($video_data['movie_thsub1'])) {
+		} else if (!empty($data_query['video_data']['movie_thsub1'])) {
 			$feildplay = 'movie_thsub1';
-		} else if (!empty($video_data['movie_thsub2'])) {
+		} else if (!empty($data_query['video_data']['movie_thsub2'])) {
 			$feildplay = 'movie_thsub2';
-		} else if (!empty($video_data['movie_enmain'])) {
+		} else if (!empty($data_query['video_data']['movie_enmain'])) {
 			$feildplay = 'movie_enmain';
-		} else if (!empty($video_data['movie_ensub1'])) {
+		} else if (!empty($data_query['video_data']['movie_ensub1'])) {
 			$feildplay = 'movie_ensub1';
-		} else if (!empty($video_data['movie_ensub2'])) {
+		} else if (!empty($data_query['video_data']['movie_ensub2'])) {
 			$feildplay = 'movie_ensub2';
 		} else {
 			$feildplay = '';
 		}
 		$body_data = [
-			'category_id' => $category_id,
-			'listyear' => $listyear,
-			'vdorandom' => $vdorandom,
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'vdorandom' => $data_query['vdorandom'],
 			'video_data' => $data_query['series'],
 			'feildplay' => $feildplay,
-			'ads' => $path_imgads,
-			'path_imgads' => $path_imgads,
 			'keyword_string' => $this->keyword_string
 		];
-
+		echo view('movie/MV-1/header-video.php', $header_data);
 		echo view('movie/MV-1/series.php', $body_data);
 		echo view('movie/MV-1/footer.php');
 	}
+
+	//--------------------------------------------------------------------
+
 	public function video_series($id, $title, $index, $ep_name)
 	{
-	
 		$page = 1;
 		if (!empty($_GET['page'])) {
 			$page = $_GET['page'];
 		}
-		$keyword_string = "";
-		$series = $this->VideoModel->get_ep_series($id);
-		$setting = $this->VideoModel->get_setting($this->branch);
-		$setting['image'] = $series['movie_picture'];
-		$seo = $this->VideoModel->get_seo($this->branch);
-		$path_imgads = $this->VideoModel->get_path_imgads($this->branch);
-		if (!empty($seo)) {
-			if (!empty($seo['seo_title'])) {
-				$title = $seo['seo_title'];
-				$name_videos = $series['movie_thname'];
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string,
+			'id' => $id,
+
+		];
+		$data_query = calltemplate('MV-1', 'video_series', $parameter);
+		$setting = $this->setting;
+		$setting['image'] = $data_query['video_data']['movie_picture'];
+		if (!empty($data_query['seo'])) {
+			if (!empty($data_query['seo']['seo_title'])) {
+				$title = $data_query['seo']['seo_title'];
+				$name_videos = $data_query['video_data']['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
 					"{movie_title} - {title_web}",
@@ -315,43 +296,22 @@ class Home extends BaseController
 				);
 				$setting['setting_title'] = $title_web;
 			}
-
-			if (!empty($seo['seo_description'])) {
-				$description = $seo['seo_description'];
-				$description_movie = $series['movie_des'];
+			if (!empty($data_query['seo']['seo_description'])) {
+				$description = $data_query['seo']['seo_description'];
+				$description_movie = $data_query['video_data']['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
-		// echo '<pre>'.print_r($series ,true).'</pre>';die;
-
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
 			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
-			'path_ads' => $this->path_ads,
-			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string
-			
+			'ads' => $this->ads,
+			'keyword_string' => $this->keyword_string
 		];
-		echo view('movie/MV-1/header.php', $header_data);
-
-		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
 		$feildplay = "";
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-
-
-
-		$parameter = [
-			'branch' => $this->branch,
-			'keyword_string' => $this->keyword_string,
-			'id' => $id,
-			
-		];
-		
-		$data_query = calltemplate('MV-1', 'video', $parameter);
 		if (!empty($data_query['video_data']['movie_thmain'])) {
 			$feildplay = 'movie_thmain';
 		} else if (!empty($data_query['video_data']['movie_thsub1'])) {
@@ -369,21 +329,16 @@ class Home extends BaseController
 		}
 		$body_data = [
 			'index' => $index,
-			'category_id' => $category_id,
-			'listyear' => $listyear,
-			'vdorandom' => $vdorandom,
-			'video_data' => $series,
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'vdorandom' => $data_query['video_random'],
+			'video_data' => $data_query['video_data'],
 			'feildplay' => $feildplay,
-			'ads' => $path_imgads,
-			'path_imgads' => $path_imgads,
-			'keyword_string' => $keyword_string,
-			'category_list' => $data_query['category_list']
+			
 		];
-
+		echo view('movie/MV-1/header.php', $header_data);
 		echo view('movie/MV-1/video.php', $body_data);
 		echo view('movie/MV-1/footer.php');
-		//add view
-		// $this->VideoModel->movie_view($series_id);
 	}
 
 	//--------------------------------------------------------------------
@@ -391,8 +346,8 @@ class Home extends BaseController
 
 	public function video($id)
 	{
-	
-		$video_data = $this->VideoModel->get_id_video($id);	
+
+		$video_data = $this->VideoModel->get_id_video($id);
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
@@ -468,15 +423,7 @@ class Home extends BaseController
 
 	public function player($id, $filed = "", $index = "")
 	{
-		$parameter = [
-			'branch' => $this->branch,
-			'keyword_string' => $this->keyword_string,
-			'id' => $id,
-		];
-		$data_query = calltemplate('MV-1', 'video', $parameter);
-		echo "<pre>";
-		print_r($data_query['series']);die;
-		
+
 		if ($filed == "") {
 			$filed = 'movie_thmain';
 		}
@@ -502,7 +449,7 @@ class Home extends BaseController
 
 	//--------------------------------------------------------------------
 
-	
+
 	// แจ้งหนังเสีย
 	public function save_report($branch, $id, $reason, $name)
 	{
