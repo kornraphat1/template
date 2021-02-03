@@ -23,21 +23,26 @@ function calltemplate($template, $view, $parameter = [])
 
                     ];
                     break;
-                    case 'list':
-                
-                        $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'],$parameter['branch'], $parameter['page'],);
-                        $category_list = $VideoModel->get_category($parameter['branch']);
-                        $listyear = $VideoModel->get_listyear($parameter['branch']);
-                        $list = [
-    
-                            'list_video' => $list_video,
-                            
-                            'category_list' => $category_list,
-                            'listyear' => $listyear,
-    
-                        ];     
-                        break;
-    
+                case 'video_bycate':
+                    $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                    ];
+                    break;
+                case 'video_byyear':
+                    $list_video = $VideoModel->get_id_video_byyear($parameter['year'], $parameter['branch'], $parameter['page']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                    ];
+                    break;
                 case 'video':
 
                     $list = [
