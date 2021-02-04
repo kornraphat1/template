@@ -1,0 +1,14 @@
+CRITICAL - 2021-02-04 00:14:07 --> Undefined index: category_id
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(415): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 415, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('79', 'Sherlock-Gnomes')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 00:14:21 --> Undefined index: vdorandom
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(417): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 417, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('79', 'Sherlock-Gnomes')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

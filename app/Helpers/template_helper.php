@@ -96,12 +96,12 @@ function calltemplate($template, $view, $parameter = [])
                         $category_list = $VideoModel->get_category($parameter['branch']);
                         $video_data = $VideoModel->get_ep_series($parameter['id']);
                         $seo = $VideoModel->get_seo($parameter['branch']);
-                        $vdorandom = $VideoModel->get_id_video_random($parameter['branch']);
+                        $video_random = $VideoModel->get_id_video_random($parameter['branch']);
 
                         $list = [
 
                             'video_data' => $video_data,
-                            'video_random' => $vdorandom,
+                            'video_random' => $video_random,
                             'seo' => $seo,
                             'category_list' => $category_list,
                             'listyear' => $listyear,

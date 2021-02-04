@@ -59,6 +59,7 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string
 
@@ -138,6 +139,7 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string
 		];
@@ -176,6 +178,7 @@ class Home extends BaseController
 			'backURL' => $this->backURL,
 			'setting' => $this->setting,
 			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $keyword_string
 		];
@@ -235,6 +238,7 @@ class Home extends BaseController
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'keyword_string' => $this->keyword_string,
+			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
 
 		];
@@ -308,6 +312,7 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string
 		];
@@ -334,7 +339,7 @@ class Home extends BaseController
 			'vdorandom' => $data_query['video_random'],
 			'video_data' => $data_query['video_data'],
 			'feildplay' => $feildplay,
-			
+
 		];
 		echo view('movie/MV-1/header.php', $header_data);
 		echo view('movie/MV-1/video.php', $body_data);
@@ -347,7 +352,7 @@ class Home extends BaseController
 	public function video($id)
 	{
 
-		$video_data = $this->VideoModel->get_id_video($id);
+		;
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
@@ -355,6 +360,7 @@ class Home extends BaseController
 		];
 
 		$data_query = calltemplate('MV-1', 'video', $parameter);
+
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
@@ -381,38 +387,36 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
 			'index' => "",
 			'keyword_string' => $this->keyword_string,
-			'category_list' => $data_query['category_list']
+			
 		];
 
-		echo view('movie/MV-1/header.php', $header_data);
-
 		$feildplay = "";
-		$category_id = $this->VideoModel->get_category($this->branch);
-		$listyear = $this->VideoModel->get_listyear($this->branch);
-		$vdorandom = $this->VideoModel->get_id_video_random($this->branch);
-		if (!empty($video_data['movie_thmain'])) {
+
+		if (!empty($data_query['video_data']['movie_thmain'])) {
 			$feildplay = 'movie_thmain';
-		} else if (!empty($video_data['movie_thsub1'])) {
+		} else if (!empty($data_query['video_data']['movie_thsub1'])) {
 			$feildplay = 'movie_thsub1';
-		} else if (!empty($video_data['movie_thsub2'])) {
+		} else if (!empty($data_query['video_data']['movie_thsub2'])) {
 			$feildplay = 'movie_thsub2';
-		} else if (!empty($video_data['movie_enmain'])) {
+		} else if (!empty($data_query['video_data']['movie_enmain'])) {
 			$feildplay = 'movie_enmain';
-		} else if (!empty($video_data['movie_ensub1'])) {
+		} else if (!empty($data_query['video_data']['movie_ensub1'])) {
 			$feildplay = 'movie_ensub1';
-		} else if (!empty($video_data['movie_ensub2'])) {
+		} else if (!empty($data_query['video_data']['movie_ensub2'])) {
 			$feildplay = 'movie_ensub2';
 		}
 		$body_data = [
-			'category_id' => $category_id,
-			'listyear' => $listyear,
-			'vdorandom' => $vdorandom,
-			'video_data' => $video_data,
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'vdorandom' => $data_query['video_random'],
+			'video_data' => $data_query['video_data'],
 			'feildplay' => $feildplay
 		];
+		echo view('movie/MV-1/header.php', $header_data);
 		echo view('movie/MV-1/video.php', $body_data);
 		echo view('movie/MV-1/footer.php');
 		//add view
