@@ -13,7 +13,7 @@
 						<div class="menu-cate-menu-container">
 							<ul id="menu-cate-menu" class="menu">
 								<li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38 list-cate">
-									<?php foreach ($category_id as $value) { ?>
+									<?php foreach ($category_list as $value) { ?>
 										<h3><a class=" list-cate" title=<?= $value['category_name'] ?> alt=<?= $value['category_name'] ?> href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ', '-', trim($value['category_name'])))); ?>"> <?= $value['category_name'] ?></a></h3>
 									<?php } ?>
 								</li>
@@ -75,7 +75,7 @@
 		</div>
 		<div style="display: block; padding: 15px;" class="movie_player">
 			<!-- Movie source -->
-			<!-- <iframe src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" id="player_iframe" style="width: 100%; height: 420px; border: none;/* position: relative; z-index: 2147483647*/" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" scrolling="no" __idm_id__="993216513"></iframe> -->
+		
 			<div class="video-info">
 				<!-- 16:9 aspect ratio  -->
 				<!-- Your share button code -->
