@@ -12,7 +12,7 @@
                            <div class="menu-cate-menu-container">
                                <ul id="menu-cate-menu" class="menu">
                                    <li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-38 list-cate">
-                                       <?php foreach ($category_id as $value) { ?>
+                                       <?php foreach ($category_list as $value) { ?>
                                            <h3><a class=" list-cate" title=<?= $value['category_name'] ?> alt=<?= $value['category_name'] ?> href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ', '-', trim($value['category_name'])))); ?>"> <?= $value['category_name'] ?></a></h3>
                                        <?php } ?>
                                    </li>
@@ -31,10 +31,11 @@
                <h1>ดูหนังใหม่ หนังออนไลน์ ฟรี HD</h1>
            </div>
            <div class="grid-movie">
-               <?php  //echo "<pre>"; print_r($list_video);
+               <?php  //echo "<pre>"; print_r($list_video);die;
                 $quality = "";
                 ?>
-               <?php foreach ($list_video as $value) {
+               <?php foreach ($list_video['list'] as $value) {
+
                     $id = $value['movie_id'];
                     if (empty($value['movie_year'])) {
                         if (empty($value['movie_thname'])) {
@@ -115,7 +116,7 @@
                    <ul>
                        <div class="topbar-filter">
                            <div class="pagination2" style="text-align: center; padding-top: 4rem;">
-                               <?= pagination($paginate['page'], $paginate['total_page']); ?>
+                               <?= pagination($list_video['page'], $list_video['total_page']); ?>
                            </div>
                        </div>
                    </ul>

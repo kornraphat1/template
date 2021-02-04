@@ -45,10 +45,10 @@
     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href='<?php echo base_url("/public/assets/css/main.css?v=1010"); ?>'>
-    <link rel="stylesheet" href='<?php echo base_url("/public/assets/css/poster.css"); ?>'>
-    <link rel="stylesheet" href='<?php echo base_url("/public/assets/css/ads.css"); ?>'>
-    <link rel="stylesheet" href='<?php echo base_url("/public/assets/css/all.min.css"); ?>'>
+    <link rel="stylesheet" href="<?= $document_root ?>/assets/css/main.css?v=1010">
+    <link rel="stylesheet" href="<?= $document_root ?>/assets/css/poster.css">
+    <link rel="stylesheet" href="<?= $document_root ?>/assets/css/ads.css">
+    <link rel="stylesheet" href="<?= $document_root ?>/assets/css/all.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -384,61 +384,66 @@
 
                 <!-- Banner ซ้าย -->
                 <div class="ad_left">
-                    <?php
+                <?php
+                if (!empty($ads['pos2'])) {
+                    foreach ($ads['pos2'] as $val) {
 
-                    $i = 0;
-                    if (!empty($path_imgads)) {
-                        foreach ($path_imgads as $value) {
-                            if ($value['ads_position'] == "2") {
-                                $i++;
-                    ?>
-                                <li id="media_image-126" class="widget widget_media_image">
-                                    <a onclick="onClickAds(<?= $value['ads_id']; ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" rel="nofollow noopener noreferrer" target="_blank"><img width="798" height="110" alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" src="<?php echo $backURL . 'banners/' . $value['ads_picture']; ?>" class="image wp-image-8205  attachment-full size-full" style="max-width: 100%; height: auto;" /></a>
-                                </li>
-                    <?php
-                            }
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
-                    } else {
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                    ?>
+                }
+                ?>
                 </div>
 
                 <div class="ad_cen">
-                    <?php
-                    $i = 0;
-                    if (!empty($path_imgads)) {
-                        foreach ($path_imgads as $value) {
-                            if ($value['ads_position'] == "1") {
-                                $i++;
-                    ?>
-                                <li id="media_image-101" class="widget widget_media_image">
-                                    <a onclick="onClickAds(<?= $value['ads_id']; ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" rel="nofollow noopener noreferrer" target="_blank"><img width="798" height="110" alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" src="<?php echo $backURL . 'banners/' . $value['ads_picture']; ?>" class="image wp-image-8205  attachment-full size-full" style="max-width: 100%; height: auto;" /></a>
-                                </li>
-                    <?php
-                            }
+                <?php
+                if (!empty($ads['pos1'])) {
+                    foreach ($ads['pos1'] as $val) {
+
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
-                    } else {
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                    ?>
+                }
+                ?>
                 </div>
                 <!-- Banner ขวา -->
                 <div class="ad_right">
-                    <?php
-                    $i = 0;
-                    if (!empty($path_imgads)) {
-                        foreach ($path_imgads as $value) {
-                            if ($value['ads_position'] == "3") {
-                                $i++;
-                    ?>
-                                <li id="media_image-126" class="widget widget_media_image">
-                                    <a onclick="onClickAds(<?= $value['ads_id']; ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" rel="nofollow noopener noreferrer" target="_blank"><img width="798" height="110" alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" src="<?php echo $backURL . 'banners/' . $value['ads_picture']; ?>" class="image wp-image-8205  attachment-full size-full" style="max-width: 100%; height: auto;" /></a>
-                                </li>
-                    <?php
-                            }
+                <?php
+                if (!empty($ads['pos3'])) {
+                    foreach ($ads['pos3'] as $val) {
+
+
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
-                    } else {
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
                     }
-                    ?>
+                }
+                ?>
                 </div>
             </div>
 

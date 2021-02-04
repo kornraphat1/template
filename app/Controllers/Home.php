@@ -70,7 +70,7 @@ class Home extends BaseController
 			'list_video' => $data_query['list_video'],
 			'video_cate' => $data_query['video_cate']
 		];
-		// echo '<pre>'.print_r($video_interest ,true).'</pre>';die;
+		// echo '<pre>'.print_r($data ,true).'</pre>';die;
 
 		echo view('movie/'.$this->template.'/header.php', $header_data);
 		echo view('movie/'.$this->template.'/body.php', $data);
