@@ -1,20 +1,32 @@
-<div class="content-right">
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <p style="font-size: 18px; text-align: center;">
-                    หมวดหมู่
-                </p>
-            </div>
-            <ul>
-                <?php foreach ($category_list as $value) { ?>
-                    <li class="cat-item cat-left">
-                        <h3 class="cate-name">
-                            <a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode(str_replace(' ', '-', $value['category_name']))); ?>" title=<?php echo $value['category_name']; ?> alt="<?php echo $value['category_name']; ?>">
-                                <?php echo $value['category_name']; ?>
-                            </a>
-                        </h3>
-                    </li>
-                <?php } ?>
-            </ul>
+<!-- ช่องหลักขวา -->
+<div class="sec_main-right">
+    <style>
+        .content-left .sidebar ul li {
+            width: 50%;
+        }
+    </style>
+    <div class="type">
+        <div class="h3-text text-cat" style="background-color: crimson; padding-bottom: 1px; ">
+            <h3>ประเภทหนัง
+            </h3>
         </div>
+        <li id="wp_categories_widget-4" class="widget widget_wp_categories_widget">
+            <ul>
+                <div class="col-xs-12" style="width: 105%;">
+                    <li class="cat-item cat-item-35">
+                        <?php foreach ($listyear as $val) {
+                            if ($val['movie_year'] > '1988') {
+                        ?>
+                                <h3> <a class="list-cate-year " href="<?php echo base_url('/year/' . $val['movie_year']); ?>" alt="<?php echo $val['movie_year']; ?>" title=" <?php echo $val['movie_year']; ?>"><?php echo $val['movie_year']; ?></a> </h3>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </li>
+                </div>
+            </ul>
+        </li>
     </div>
+    <div class="ad_right1">
+    </div>
+</div> <!-- จบช่องหลักขวา -->
