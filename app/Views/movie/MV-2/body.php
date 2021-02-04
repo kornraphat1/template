@@ -44,7 +44,7 @@
                     if ($value['movie_type'] == 'se') {
                         $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
                     } else {
-                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/movie/' . $id . '/' . $url_name)));
+                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
                     }
                 ?>
                    <div class="movie_box">

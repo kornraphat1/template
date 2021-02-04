@@ -32,6 +32,9 @@ CRITICAL - 2021-02-04 00:45:00 --> Unknown database 'new_variety2'
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-04 02:50:10 --> Undefined index: category_list
+=======
 CRITICAL - 2021-02-04 02:39:21 --> Unknown database 'variety_nungkai_2'
 #0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
 #1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
@@ -59,19 +62,28 @@ CRITICAL - 2021-02-04 02:41:24 --> Switch statements may only contain one defaul
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
 CRITICAL - 2021-02-04 02:42:48 --> Undefined index: category_list
+>>>>>>> a63ea93bbb19748d7e7d17807c2248087cbea089
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 68, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-04 02:50:18 --> Undefined index: category_list
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(411): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 411, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+=======
 CRITICAL - 2021-02-04 02:45:01 --> Undefined index: category_list
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 68, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> a63ea93bbb19748d7e7d17807c2248087cbea089
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
+=======
 CRITICAL - 2021-02-04 02:45:29 --> Undefined variable: category_id
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-2\body.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 15, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -122,6 +134,7 @@ CRITICAL - 2021-02-04 02:48:12 --> Undefined variable: path_imgads
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-04 03:03:10 --> include(MV-2/left.php): failed to open stream: No such file or directory
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-2\body.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(MV-2/le...', 'C:\\xampp\\htdocs...', 4, Array)
 #1 C:\xampp\htdocs\template\app\Views\movie\MV-2\body.php(4): include()
@@ -152,12 +165,168 @@ CRITICAL - 2021-02-04 03:12:53 --> Invalid file: movie/MV-2/list.php
 #6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
 CRITICAL - 2021-02-04 03:31:16 --> Undefined variable: title_web
+=======
+>>>>>>> a63ea93bbb19748d7e7d17807c2248087cbea089
+CRITICAL - 2021-02-04 03:00:30 --> Unknown database 'new_variety2'
+#0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(217): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(31): App\Models\Video_Model->get_setting(1)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-04 03:00:44 --> Undefined variable: category_id
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-2\video.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-2/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(418): view('movie/MV-2/vide...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', 'deadpool')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-04 03:04:07 --> unlink(C:\xampp\htdocs\template\writable\debugbar/debugbar_1612352085.json): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp...', 'C:\\xampp\\htdocs...', 106, Array)
+#1 C:\xampp\htdocs\template\system\Debug\Toolbar\Collectors\History.php(106): unlink('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Debug\Toolbar.php(481): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles(1612429447, 20)
+#3 C:\xampp\htdocs\template\system\Debug\Toolbar.php(454): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#4 C:\xampp\htdocs\template\app\Config\Events.php(87): CodeIgniter\Debug\Toolbar->respond()
+#5 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#6 C:\xampp\htdocs\template\system\Events\Events.php(188): call_user_func(Object(Closure))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(287): CodeIgniter\Events\Events::trigger('pre_system')
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-04 03:11:54 --> Undefined variable: title_web
+>>>>>>> 0ad63328d3c760453641f5338b830b4086a61fab
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-2\header-video.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-2/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(269): view('movie/MV-2/head...', Array)
+<<<<<<< HEAD
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9893', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+=======
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9272', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-04 03:12:00 --> Undefined variable: title_web
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-2\header-video.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-2/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(269): view('movie/MV-2/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9272', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-04 03:12:30 --> Undefined variable: category_id
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-2\series.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 15, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-2/seri...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(270): view('movie/MV-2/seri...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9272', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+>>>>>>> 0ad63328d3c760453641f5338b830b4086a61fab
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+<<<<<<< HEAD
+=======
+CRITICAL - 2021-02-04 03:14:23 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:17:50 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:20:13 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:24:53 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:26:24 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:27:58 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(437): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 437, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:28:44 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:29:31 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:29:49 --> Undefined index: ep4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', 'ep4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:29:57 --> Undefined index: ep4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', 'ep4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:29:58 --> Undefined offset: 4
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9272', '4')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-04 03:30:31 --> Undefined offset: 5
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9566', '5')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+>>>>>>> 0ad63328d3c760453641f5338b830b4086a61fab
+CRITICAL - 2021-02-04 03:33:37 --> Unknown database 'variety_nungkai_2'
+#0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(217): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(31): App\Models\Video_Model->get_setting(1)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}

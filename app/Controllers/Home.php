@@ -266,7 +266,7 @@ class Home extends BaseController
 			'feildplay' => $feildplay,
 			'keyword_string' => $this->keyword_string
 		];
-		echo view('movie/'.$this->template.'/header-video.php', $header_data);
+		echo view('movie/'.$this->template.'/header.php', $header_data);
 		echo view('movie/'.$this->template.'/series.php', $body_data);
 		echo view('movie/'.$this->template.'/footer.php');
 	}
@@ -350,7 +350,7 @@ class Home extends BaseController
 
 
 	public function video($id)
-	{;
+	{
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
@@ -425,15 +425,16 @@ class Home extends BaseController
 
 	public function player($id, $filed = "", $index = "")
 	{
-
+		$video_data = $this->VideoModel->get_ep_series($id);
+		//echo "<pre>";print_r($video_data);die;
 		if ($filed == "") {
 			$filed = 'movie_thmain';
 		}
 		if ($index != "") {
-			$video_data = $this->VideoModel->get_ep_series($id);
+			
 			$urlplay = $video_data['ep_thmai'][$index];
 		} else {
-			$video_data = $this->VideoModel->get_id_video($id);
+			
 			$urlplay = $video_data[$filed];
 		}
 		$adsvideo_data = $this->VideoModel->get_adsvideolist($this->backURL, $this->branch);
