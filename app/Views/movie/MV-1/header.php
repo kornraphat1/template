@@ -37,6 +37,7 @@
     <meta property="og:title" content="<?php echo $setting['setting_title']; ?>" />
     <meta property="og:description" content="<?php echo  $setting['setting_description']; ?>" />
     <meta property="og:image" content="<?php echo $path_setting . $logos; ?>" />
+    
     <link rel="icon" type="image/png" href='<?php echo $path_setting . $setting['setting_icon']; ?>' />
     <style>
         .movie-imdb b {

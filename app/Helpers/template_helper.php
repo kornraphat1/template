@@ -250,15 +250,12 @@ function calltemplate($template, $view, $parameter = [])
         case 'MV-3':
             switch ($view) {
                 case 'index':
-                    foreach ($parameter['cate_req'] as $val) {
-                        $video_cate[] = $VideoModel->get_list_video_bycate($parameter['branch'], $val);
-                    }
+
                     $paginate = $VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
                     $list = [
                         'list_video' => $paginate,
-                        'video_cate' => $video_cate,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
 
