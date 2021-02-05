@@ -55,7 +55,7 @@ class Home extends BaseController
 		// die;
 
 		
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -99,7 +99,7 @@ class Home extends BaseController
 		];
 		$data_query = calltemplate($this->template, 'video_bycate', $parameter);
 
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] = $this->path_setting.$this->setting['setting_logo'];
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -139,7 +139,7 @@ class Home extends BaseController
 		];
 		$data_query = calltemplate($this->template, 'video_byyear', $parameter);
 		
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
 
 		$title = 'หนังปี : ' . $year;
 		$header_data = [
@@ -179,7 +179,7 @@ class Home extends BaseController
 		];
 		$data_query = calltemplate($this->template, 'newmovie', $parameter);
 		
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
 
 		$title = 'หนังใหม่';
 		$header_data = [
@@ -212,7 +212,7 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
 
 
 		$keyword_string = urldecode($keyword_string);
@@ -254,7 +254,7 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 
-		$this->setting['image'] =$this->path_setting.$this->setting['logo'];
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
 
 		$title = 'ซีรีย์';
 		$parameter = [
@@ -303,7 +303,7 @@ class Home extends BaseController
 
 		$setting = $this->setting;
 		$setting['image'] = $data_query['series']['movie_picture'];
-		$this->setting['image'] = ($data_query['video_data']['list']['movie_picture']);
+	
 
 	
 		if (!empty($data_query['seo'])) {
@@ -355,7 +355,7 @@ class Home extends BaseController
 		$body_data = [
 			'category_list' => $data_query['category_list'],
 			'listyear' => $data_query['listyear'],
-			'vdorandom' => $data_query['vdorandom'],
+			'vdorandom' => $data_query['video_random'],
 			'video_data' => $data_query['series'],
 			'feildplay' => $feildplay,
 			'keyword_string' => $this->keyword_string
@@ -380,10 +380,11 @@ class Home extends BaseController
 
 		];
 		$data_query = calltemplate($this->template, 'video_series', $parameter);
-		$this->setting['image'] = ($data_query['video_data']['list']['movie_picture']);
+	
 
 		$setting = $this->setting;
 		$setting['image'] = $data_query['video_data']['movie_picture'];
+		
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
@@ -405,7 +406,7 @@ class Home extends BaseController
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
-			'setting' => $this->setting,
+			'setting' => $setting,
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
@@ -454,7 +455,10 @@ class Home extends BaseController
 		];
 
 		$data_query = calltemplate($this->template, 'video', $parameter);
-		$this->setting['image'] = ($data_query['video_data']['list']['movie_picture']);
+		$setting = $this->setting;
+		$setting['image'] = $data_query['video_data']['movie_picture'];
+	
+
 		
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
@@ -479,7 +483,7 @@ class Home extends BaseController
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
-			'setting' => $this->setting,
+			'setting' => $setting,
 
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,

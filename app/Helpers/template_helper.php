@@ -197,11 +197,9 @@ function calltemplate($template, $view, $parameter = [])
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
                         'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
-                        'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
                         'series' => $series,
-                        'vdorandom' => $vdorandom,
                         'seo' => $seo,
                     ];
 
