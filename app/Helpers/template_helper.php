@@ -151,7 +151,26 @@ function calltemplate($template, $view, $parameter = [])
                         'listyear' => $listyear,
                     ];
                     break;
-
+                case 'newmovie':
+                    $list_video = $VideoModel->get_video_newmovie( $parameter['branch'], $parameter['page']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                    ];
+                    break;
+                    case 'list_series':
+                        $list_video = $VideoModel->get_list_series( $parameter['branch'], $parameter['page']);
+                        $category_list = $VideoModel->get_category($parameter['branch']);
+                        $listyear = $VideoModel->get_listyear($parameter['branch']);
+                        $list = [
+                            'list_video' => $list_video,
+                            'category_list' => $category_list,
+                            'listyear' => $listyear,
+                        ];
+                        break;
                 case 'video_search':
                     $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
 

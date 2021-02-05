@@ -7,7 +7,7 @@
     </style>
     <div class="type">
         <div class="h3-text text-cat" style="background-color: crimson; padding-bottom: 1px; ">
-            <h3>ประเภทหนัง
+            <h3>ปีที่ฉาย
             </h3>
         </div>
         <li id="wp_categories_widget-4" class="widget widget_wp_categories_widget">
