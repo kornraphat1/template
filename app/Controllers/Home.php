@@ -247,6 +247,48 @@ class Home extends BaseController
 	//--------------------------------------------------------------------
 
 
+	public function video_topimdb()
+	{
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+
+		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+
+
+	
+		$title = 'TOP-IMDB';
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $this->keyword_string,
+		];
+		$data_query = calltemplate($this->template, 'list_topimdb', $parameter);
+		$header_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'setting' => $this->setting,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+			'keyword_string' => $this->keyword_string
+		];
+		$body_data = [
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'list_video' => $data_query['list_video'],
+			'title' => $title,
+		];
+		echo view('movie/' . $this->template . '/header', $header_data);
+		echo view('movie/' . $this->template . '/list', $body_data);
+		echo view('movie/' . $this->template . '/footer');
+	}
+
+	//--------------------------------------------------------------------
+
+
 	public function list_series()
 	{
 		$page = 1;
@@ -580,6 +622,25 @@ class Home extends BaseController
 		}
 	}
 	//--------------------------------------------------------------------
+
+// ติดต่อโฆษณา
+	public function contact_ads()
+	{
+
+		$ads_con_name = $_POST['namesurname'];
+		$ads_con_email = $_POST['email'];
+		$ads_con_line = $_POST['lineid'];
+		$ads_con_tel = $_POST['phone'];
+
+		// print_r($_POST);
+		// die;
+
+
+		$this->VideoModel->contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
+	}
+	
+	//--------------------------------------------------------------------
+
 
 	public function countView($id)
 	{

@@ -264,10 +264,10 @@
                     <div class="tab-content">
                         <div class="form-group"> </div>
                         <div id="menu1" class="tab-pane fade in active">
-                            <form class="form-horizontal" action="<?php echo base_url('/contactdata/'); ?>" method="post" onsubmit="return checkcontact()">
+                            <form class="form-horizontal" action="<?php echo base_url('/contact_ads/'); ?>" method="post" onsubmit="return checkcontact()">
                                 <div class="form-group"> </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="email">ชื่อ สกุล *:</label>
+                                    <label class="control-label col-sm-3" for="namesurname">ชื่อ สกุล *:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="namesurname" placeholder="Enter name" required autocomplete="off" pattern="([^,<>;]+)" name="namesurname">
                                         <div class="invalid-feedback">
@@ -285,16 +285,16 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="email">Line ID *:</label>
+                                    <label class="control-label col-sm-3" for="lineid">Line ID *:</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="lindid" placeholder="Enter Line ID" required name="lineid" required autocomplete="off" pattern="([^,<>;]+)">
+                                        <input type="text" class="form-control" id="lineid" placeholder="Enter Line ID" required name="lineid" required autocomplete="off" pattern="([^,<>;]+)">
                                         <div class="invalid-feedback">
                                             กรุณากรอก Line ID และ ห้ามใช้ เครื่องหมาย <> , ;
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="email">เบอร์โทรศัพท์ *:</label>
+                                    <label class="control-label col-sm-3" for="phone">เบอร์โทรศัพท์ *:</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="phone" placeholder="Enter Yourphone" required name="phone" required autocomplete="off" pattern="([,<>';]+)|(^0([8|9|6])([0-9]{8}$))">
                                         <div class="invalid-feedback">

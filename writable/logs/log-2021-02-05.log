@@ -77,3 +77,48 @@ CRITICAL - 2021-02-05 02:50:10 --> Undefined index: logo
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2021-02-05 03:12:31 --> Too few arguments to function App\Controllers\Home::video_topimdb(), 0 passed in C:\xampp\htdocs\template\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_topimdb()
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-02-05 03:12:40 --> Undefined variable: keyword_string
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(260): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 260, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_topimdb()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-05 03:39:13 --> Undefined index: ads_con_name
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 630, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact_ads()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-05 03:42:33 --> Undefined index: lindid
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(632): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 632, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact_ads()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-05 03:43:36 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\template\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(639): CodeIgniter\Model->__call('contact_ads', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact_ads()
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-05 03:44:45 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\template\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(639): CodeIgniter\Model->__call('contact_ads', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact_ads()
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
