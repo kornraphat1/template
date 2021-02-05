@@ -449,7 +449,6 @@ class Home extends BaseController
 		];
 		echo view('movie/player/player', $data);
 	}
-
 	//--------------------------------------------------------------------
 
 
