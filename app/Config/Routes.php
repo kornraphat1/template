@@ -88,12 +88,18 @@ $routes->get('/year/(:num)', 'Home::video_byyear/$1');
 $routes->get('/newmovie', 'Home::newmovie');
 // search
 $routes->get('/search/(:any)', 'Home::video_search/$1');
-
+// topimdb
+$routes->get('/list_top_imdb', 'Home::video_topimdb');
 //แจ้งหนังเสีย
 $routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)', 'Home::save_report/$1/$2/$3/$4');
 
 //ขอหนัง 
 $routes->get('/saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$2');
+
+//ติดต่อโฆษณา 
+$routes->post('/contact_ads', 'Home::contact_ads');
+
+
 $routes->get('countview/(:num)', 'Home::countView/$1');
 
 

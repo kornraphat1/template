@@ -36,7 +36,7 @@
                         $urlvideo = urldecode(base_url('/series/' . $id . '/' . $url_name));
                     } else {
                         $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $moviename)))))));
-                        $urlvideo = urldecode(base_url('/movie/' . $id . '/' . $url_name));
+                        $urlvideo = urldecode(base_url('/video/' . $id . '/' . $url_name));
                     }
                 ?>
                    <div class="movie_box">
