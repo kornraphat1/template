@@ -71,6 +71,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/page/home', 'Home::index');
 $routes->get('/zoom', 'Home::zoom');
+$routes->get('/category_series', 'Home::list_series');
+
 $routes->get('/series/(:num)/(:segment)', 'Home::series/$1/$2');
 $routes->get('/video/(:num)/(:any)', 'Home::video/$1/$2');
 $routes->get('/series/(:num)/(:segment)/(:num)/(:segment)', 'Home::video_series/$1/$2/$3/$4');
@@ -82,7 +84,8 @@ $routes->get('/category/(:num)/(:any)', 'Home::video_bycate/$1/$2');
 
 // year แบ่งตาม ปี เมื่อกดเลือก  ปี
 $routes->get('/year/(:num)', 'Home::video_byyear/$1');
-
+// หนังใหม่ 
+$routes->get('/newmovie', 'Home::newmovie');
 // search
 $routes->get('/search/(:any)', 'Home::video_search/$1');
 

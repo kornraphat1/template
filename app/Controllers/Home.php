@@ -132,7 +132,7 @@ class Home extends BaseController
 			'year' => $year,
 		];
 		$data_query = calltemplate($this->template, 'video_byyear', $parameter);
-		$title = $year;
+		$title = 'หนังปี : '.$year;
 		$header_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -149,6 +149,43 @@ class Home extends BaseController
 			'listyear' => $data_query['listyear'],
 			'list_video' => $data_query['list_video'],
 			'title' => $title,
+		];
+		echo view('movie/'.$this->template.'/header', $header_data);
+		echo view('movie/'.$this->template.'/list', $body_data);
+		echo view('movie/'.$this->template.'/footer');
+	}
+	//--------------------------------------------------------------------
+
+	public function newmovie()
+	{
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $this->keyword_string,
+			
+		];
+		$data_query = calltemplate($this->template, 'newmovie', $parameter);
+		$title = 'หนังใหม่';
+		$header_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'setting' => $this->setting,
+			'backURL' => $this->backURL,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+			'keyword_string' => $this->keyword_string
+		];
+
+		$body_data = [
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'list_video' => $data_query['list_video'],
+			'title' => 'หนังปี : '.$title,
 		];
 		echo view('movie/'.$this->template.'/header', $header_data);
 		echo view('movie/'.$this->template.'/list', $body_data);
@@ -194,6 +231,47 @@ class Home extends BaseController
 	}
 
 	//--------------------------------------------------------------------
+
+
+	public function list_series()
+	{
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+
+
+		
+		$title = 'ซีรีย์';
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+		];
+		$data_query = calltemplate($this->template, 'list_series', $parameter);
+		$header_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'setting' => $this->setting,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+		];
+		$body_data = [
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'list_video' => $data_query['list_video'],
+			'title' => $title,
+		];
+		echo view('movie/'.$this->template.'/header', $header_data);
+		echo view('movie/'.$this->template.'/list', $body_data);
+		echo view('movie/'.$this->template.'/footer');
+	}
+
+	//--------------------------------------------------------------------
+
+
+
 
 	public function series($id, $title)
 	{

@@ -4,20 +4,18 @@
        <?php include('left.php') ?>
        <!-- จบเมนูหลักซ้าย -->
 
-
        <div class="sec_main-cen">
            <div class="h2-text" style="background-color: crimson;">
-               <h1>ดูหนังใหม่ หนังออนไลน์ ฟรี HD</h1>
+               <h1><?= str_replace('-', ' ', $title) ?></h1>
            </div>
            <div class="grid-movie">
-               <?php  //echo "<pre>"; print_r($list_video);die;
+               <?php  //echo "<pre>"; print_r($list_video);
                 $quality = "";
                 ?>
                <?php foreach ($list_video['list'] as $value) {
-
                     $id = $value['movie_id'];
                     if (empty($value['movie_year'])) {
-                        if (empty($value['movie_thname'])) {
+                        if (empty( $value['movie_thname'])) {
                             $moviename =   $value['movie_enname'];
                         } else if (empty($value['movie_enname'])) {
                             $moviename =   $value['movie_thname'];
@@ -25,7 +23,7 @@
                             $moviename =   $value['movie_thname'] .  $value['movie_enname'];
                         }
                     } else {
-                        if (empty($value['movie_thname'])) {
+                        if (empty( $value['movie_thname'])) {
                             $moviename =   $value['movie_enname'] . ' ( ' . $value['movie_year'] . ' ) ';
                         } else if (empty($value['movie_enname'])) {
                             $moviename =   $value['movie_thname'] . ' ( ' . $value['movie_year'] . ' ) ';
@@ -33,18 +31,12 @@
                             $moviename =   $value['movie_thname'] . ' ( ' . $value['movie_year'] . ' ) ' . $value['movie_enname'];
                         }
                     }
-                    $s_replace = [
-                        ")", "(", " ", '%'
-                    ];
-                    $e_replace = [
-                        "", "", "-", '%25'
-                    ];
-                    $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $moviename)));
-
                     if ($value['movie_type'] == 'se') {
-                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
+                        $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $moviename)))))));
+                        $urlvideo = urldecode(base_url('/series/' . $id . '/' . $url_name));
                     } else {
-                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
+                        $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $moviename)))))));
+                        $urlvideo = urldecode(base_url('/movie/' . $id . '/' . $url_name));
                     }
                 ?>
                    <div class="movie_box">
@@ -94,7 +86,7 @@
                <div class="navigation">
                    <ul>
                        <div class="topbar-filter">
-                           <div class="pagination2" style="text-align: center; padding-top: 4rem;">
+                           <div class="pagination2" style="text-align: center;padding-top: 4rem;">
                                <?= pagination($list_video['page'], $list_video['total_page']); ?>
                            </div>
                        </div>
@@ -103,9 +95,10 @@
            </div>
            <!-- /Pagination -->
        </div>
-
+       <!-- ช่องหลักขวา -->
        <?php include('right.php') ?>
-       
+
+       </div> <!-- จบช่องหลักขวา -->
    </section>
    <!-- จบส่วนหลัก -->
    </main>

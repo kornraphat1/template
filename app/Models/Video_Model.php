@@ -43,7 +43,7 @@ class Video_Model extends Model
         }
         return $ads;
     }
-    function get_adsvideolist($backurl,$branch)
+    function get_adsvideolist($backurl, $branch)
     {
         $sql = "SELECT 
 					$this->table_vdoads.adsvideo_id,
@@ -84,7 +84,7 @@ class Video_Model extends Model
         $query = $this->db->query($sql, [$branch_id]);
         return $query->getResultArray();
     }
-  
+
     public function get_list_video($branchid, $keyword = "", $page = 1)
     {
         $sql_where = " ";
@@ -107,6 +107,28 @@ class Video_Model extends Model
         // return $query->getResultArray();
         return get_pagination($sql, $page, $perpage, $total);
     }
+
+    public function get_list_series($branchid, $page = 1)
+    {
+       
+        $sql = "SELECT
+                    *
+                FROM
+                    $this->table_movie
+                WHERE
+                    `$this->table_movie`.branch_id = '$branchid'
+                    AND `$this->table_movie`.movie_type IN ('se') 
+                    AND $this->table_movie.movie_active = '1' " .
+        
+            "ORDER BY `$this->table_movie`.movie_year DESC , `$this->table_movie`.movie_id DESC";
+        $query = $this->db->query($sql);
+        $total = count($query->getResultArray());
+        $perpage = 24;
+        // return $query->getResultArray();
+        return get_pagination($sql, $page, $perpage, $total);
+    }
+
+
     public function get_movie_new_recommend($branchid, $keyword = "", $page = 1)
     {
         $sql_where = " ";
@@ -161,7 +183,7 @@ class Video_Model extends Model
                     `$this->table_movie`
                 WHERE
                 `$this->table_movie`.movie_id =" . $id;
-                
+
         $query = $this->db->query($sql);
         $data = $query->getResultArray();
         if (!empty($data[0]['movie_thmain'])) {
@@ -271,7 +293,7 @@ class Video_Model extends Model
         $query = $this->db->query($sql);
         return $query->getResultArray();
     }
-    
+
     public function get_id_video_bycategory($id, $branch_id, $page = 1, $keyword = "")
     {
         $sql_where = " ";
@@ -291,6 +313,8 @@ class Video_Model extends Model
         $perpage = 28;
         return get_pagination($sql, $page, $perpage, $total);
     }
+
+
     public function get_id_video_byyear($id, $branch_id, $page = 1, $keyword = "")
     {
         $sql_where = " ";
@@ -308,6 +332,26 @@ class Video_Model extends Model
         $perpage = 28;
         return get_pagination($sql, $page, $perpage, $total);
     }
+
+
+
+    public function get_video_newmovie($branch_id, $page = 1)
+    {
+        $yearnow = date('Y');
+        $yearold  = (date('Y') - 1);
+        $sql = "SELECT
+                    *
+                FROM
+                   mo_movie
+                WHERE movie_year in ($yearold,$yearnow) AND branch_id = '$branch_id' 
+                ORDER BY `$this->table_movie`.movie_year DESC";
+        $query = $this->db->query($sql);
+        $total = count($query->getResultArray());
+        $perpage = 28;
+        return get_pagination($sql, $page, $perpage, $total);
+    }
+
+
     public function get_id_video_random($branch_id)
     {
         $sql = "SELECT
@@ -321,7 +365,7 @@ class Video_Model extends Model
         return $query->getResultArray();
     }
     //แจ้งหนังเสีย
-    public function save_reports($branch, $id, $reason,$name)
+    public function save_reports($branch, $id, $reason, $name)
     {
         $bd =  $this->db->table($this->report_movie);
         $this->db->transBegin();
@@ -558,5 +602,4 @@ class Video_Model extends Model
 
         return $movie_view_add;
     }
-
 }
