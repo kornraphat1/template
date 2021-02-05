@@ -31,11 +31,24 @@
     }
     $logos = $setting['setting_logo'];
     ?>
+    <!-- TAG og facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?php echo base_url(); ?>" />
     <meta property="og:title" content="<?php echo $setting['setting_title']; ?>" />
     <meta property="og:description" content="<?php echo  $setting['setting_description']; ?>" />
-    <meta property="og:image" content="<?php echo $backURL . "setting/" . $logos; ?>" />
+    <meta property="og:image" content="<?php echo $setting['image']; ?>" />
+   
+
+     <!-- TAG og twitter -->
+     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<?php echo $setting['setting_title']; ?>" />
+    <meta name="twitter:description" content="<?php echo $setting['setting_description']; ?>" />
+    <meta name="twitter:image" content="<<?php echo $setting['image']; ?>" />
+    <meta name="twitter:site" content="@ondemandacademy" />
+    <meta name="geo.region" content="TH" />
+    <meta name="geo.position" content="14.897192;100.83273" />
+    <meta name="ICBM" content="14.897192, 100.83273" />
+
     <?php
     if (
         ("https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']) != ('https://' . $_SERVER['HTTP_HOST'] . '/')
