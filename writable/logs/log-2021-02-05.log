@@ -1,0 +1,28 @@
+CRITICAL - 2021-02-05 00:35:59 --> Undefined index: year
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 155, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(170): calltemplate('MV-2', 'newmovie', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-05 01:10:27 --> Too few arguments to function App\Controllers\Home::list_series(), 0 passed in C:\xampp\htdocs\template\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->list_series()
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-02-05 01:10:59 --> Undefined variable: keyword_string
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(249): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->list_series()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-02-05 01:11:21 --> Undefined variable: keyword_string
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(249): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->list_series()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
