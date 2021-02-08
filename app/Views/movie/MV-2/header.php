@@ -37,10 +37,10 @@
     <meta property="og:title" content="<?php echo $setting['setting_title']; ?>" />
     <meta property="og:description" content="<?php echo  $setting['setting_description']; ?>" />
     <meta property="og:image" content="<?php echo $setting['image']; ?>" />
-   
 
-     <!-- TAG og twitter -->
-     <meta name="twitter:card" content="summary" />
+
+    <!-- TAG og twitter -->
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="<?php echo $setting['setting_title']; ?>" />
     <meta name="twitter:description" content="<?php echo $setting['setting_description']; ?>" />
     <meta name="twitter:image" content="<<?php echo $setting['image']; ?>" />
@@ -64,7 +64,7 @@
     <link rel="stylesheet" href="<?= $document_root ?>/assets/css/ads.css">
     <link rel="stylesheet" href="<?= $document_root ?>/assets/css/all.min.css">
     <!-- <link rel="stylesheet" href="<?= $document_root ?>/assets/css/paginate.css"> -->
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -266,7 +266,7 @@
                     <div class="tab-content">
                         <div class="form-group"> </div>
                         <div id="menu1" class="tab-pane fade in active">
-                            <form class="form-horizontal" action="<?php echo base_url('/contact_ads/'); ?>" method="post" onsubmit="return checkcontact()">
+                            <form class="form-horizontal" onsubmit="return contact_ads()">
                                 <div class="form-group"> </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="namesurname">ชื่อ สกุล *:</label>
@@ -313,8 +313,8 @@
                             </form>
                         </div>
                         <div id="menu2" class="tab-pane fade">
-                            <form class="form-horizontal" method="post" onsubmit="return checkcontact_2()" action="<?php echo base_url('/contact/'); ?>">
-                                <textarea name="contact" id="contact" placeholder="พิมพ์ชื่อหนังที่ต้องการขอ..."></textarea>
+                            <form class="form-horizontal" onsubmit="return request_m()" >
+                                <textarea name="request" id="request" placeholder="พิมพ์ชื่อหนังที่ต้องการขอ..."></textarea>
                                 <div class="form-group"> </div>
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-default">ส่ง</button>
@@ -399,66 +399,66 @@
 
                 <!-- Banner ซ้าย -->
                 <div class="ad_left">
-                <?php
-                if (!empty($ads['pos2'])) {
-                    foreach ($ads['pos2'] as $val) {
+                    <?php
+                    if (!empty($ads['pos2'])) {
+                        foreach ($ads['pos2'] as $val) {
 
 
-                        if (substr($val['ads_picture'], 0, 4) == 'http') {
-                            $ads_picture = $val['ads_picture'];
-                        } else {
-                            $ads_picture = $path_ads . $val['ads_picture'];
+                            if (substr($val['ads_picture'], 0, 4) == 'http') {
+                                $ads_picture = $val['ads_picture'];
+                            } else {
+                                $ads_picture = $path_ads . $val['ads_picture'];
+                            }
+                    ?>
+                            <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                                <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            </a>
+                    <?php
                         }
-                ?>
-                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                        </a>
-                <?php
                     }
-                }
-                ?>
+                    ?>
                 </div>
 
                 <div class="ad_cen">
-                <?php
-                if (!empty($ads['pos1'])) {
-                    foreach ($ads['pos1'] as $val) {
+                    <?php
+                    if (!empty($ads['pos1'])) {
+                        foreach ($ads['pos1'] as $val) {
 
 
-                        if (substr($val['ads_picture'], 0, 4) == 'http') {
-                            $ads_picture = $val['ads_picture'];
-                        } else {
-                            $ads_picture = $path_ads . $val['ads_picture'];
+                            if (substr($val['ads_picture'], 0, 4) == 'http') {
+                                $ads_picture = $val['ads_picture'];
+                            } else {
+                                $ads_picture = $path_ads . $val['ads_picture'];
+                            }
+                    ?>
+                            <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                                <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            </a>
+                    <?php
                         }
-                ?>
-                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                        </a>
-                <?php
                     }
-                }
-                ?>
+                    ?>
                 </div>
                 <!-- Banner ขวา -->
                 <div class="ad_right">
-                <?php
-                if (!empty($ads['pos3'])) {
-                    foreach ($ads['pos3'] as $val) {
+                    <?php
+                    if (!empty($ads['pos3'])) {
+                        foreach ($ads['pos3'] as $val) {
 
 
-                        if (substr($val['ads_picture'], 0, 4) == 'http') {
-                            $ads_picture = $val['ads_picture'];
-                        } else {
-                            $ads_picture = $path_ads . $val['ads_picture'];
+                            if (substr($val['ads_picture'], 0, 4) == 'http') {
+                                $ads_picture = $val['ads_picture'];
+                            } else {
+                                $ads_picture = $path_ads . $val['ads_picture'];
+                            }
+                    ?>
+                            <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                                <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            </a>
+                    <?php
                         }
-                ?>
-                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                        </a>
-                <?php
                     }
-                }
-                ?>
+                    ?>
                 </div>
             </div>
 
@@ -485,4 +485,6 @@
                     });
 
                 });
+
+               
             </script>

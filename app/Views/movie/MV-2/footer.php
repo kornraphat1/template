@@ -244,12 +244,11 @@
 </html>
 
 <script>
-	function goReport(id, branch) {
-		//alert("sdsds");
+	function goReport(id, branch, name, ep) {
 		var request = prompt('แจ้งหนังเสืย');
 		if (request != null) {
 			jQuery.ajax({
-				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request,
+				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name +"/" + ep,
 				type: 'GET',
 				crossDomain: true,
 				cache: false,
@@ -262,6 +261,74 @@
 
 		} else {}
 	};
+
+	function contact_ads() {
+
+		if (!jQuery("#namesurname").val() && !jQuery('#email').val() && !jQuery('#lindid').val() && !jQuery('#phone').val()) {
+			return false;
+		} else {
+
+			var url = "<?php echo base_url('/contact_ads/'); ?>"
+
+			var namesurname = jQuery("#namesurname").val();
+			var email = jQuery('#email').val();
+			var lineid = jQuery('#lineid').val();
+			var phone = jQuery('#phone').val();
+
+			jQuery.ajax({
+				url: url,
+				method: "POST",
+				async: false,
+				data: {
+					namesurname: namesurname,
+					email: email,
+					lineid: lineid,
+					phone: phone,
+
+				},
+				success: function(result) {
+					alert('ส่งข้อมูลสำเร็จ Admin จะติดต่อกลับภายหลัง')
+					window.location.href = "<?php echo base_url(); ?>"
+					return false
+				}
+
+			});
+			return false
+		}
+
+	}
+
+
+
+
+	function request_m() {
+
+		if (!jQuery("#request").val()) {
+			return false;
+		} else {
+
+
+			var request = jQuery("#request").val();
+			var branch = <?= $branch ?>;
+			jQuery.ajax({
+				url: "/saverequest/branch/" + branch + "/movie/" + request,
+				type: 'GET',
+				async: false,
+				success: function(data) {
+					console.log(data);
+					alert('f')
+					return false
+					if (data == "OK") {
+						alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
+						window.location.href = "<?php echo base_url(); ?>";
+					}
+				}
+			});
+			return false
+		}
+
+	}
+
 
 	function request_movie(branch) {
 		console.log(branch);
@@ -290,17 +357,7 @@
 		}
 	});
 
-	function checkcontact() {
-		if (!jQuery("#namesurname").val() && !jQuery('#email').val() && !jQuery('#lindid').val() && !jQuery('#phone').val()) {
-			return false;
-		}
-	}
 
-	function checkcontact_2() {
-		if (!jQuery("#contact").val()) {
-			return false;
-		}
-	}
 
 	function onClickAds(adsid, branch) {
 		var backurl = '<?= $backURL ?>';

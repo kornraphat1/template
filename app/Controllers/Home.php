@@ -467,6 +467,7 @@ class Home extends BaseController
 			'listyear' => $data_query['listyear'],
 			'vdorandom' => $data_query['video_random'],
 			'video_data' => $data_query['video_data'],
+			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
 
 		];
@@ -516,7 +517,6 @@ class Home extends BaseController
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
 			'setting' => $setting,
-
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
@@ -588,10 +588,11 @@ class Home extends BaseController
 
 
 	// แจ้งหนังเสีย
-	public function save_report($branch, $id, $reason, $name)
+	public function save_report($branch, $id, $reason, $name, $ep)
 	{
+		
 		$reason = urldecode($reason);
-		$result = $this->VideoModel->save_reports($branch, $id, $reason, urldecode($name));
+		$result = $this->VideoModel->save_reports($branch, $id, $reason, urldecode($name), $ep);
 		if ($result == true && is_bool($result)) {
 			echo "OK";
 		} else {

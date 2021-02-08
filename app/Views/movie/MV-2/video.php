@@ -20,7 +20,8 @@
 			<?php if (!empty($video_data['movie_des'])) { ?>
 				<div class="blog5">
 					<p style="color:#fff;border-style: solid;padding: 17px;border-radius: 15px;background: #3c3c3c;">
-						<strong></strong> <?php echo "เรื่องย่อ : " . $video_data['movie_des']; ?> </p>
+						<strong></strong> <?php echo "เรื่องย่อ : " . $video_data['movie_des']; ?>
+					</p>
 				</div>
 			<?php } else {
 			} ?>
@@ -38,7 +39,8 @@
 		<div class="info-movie">
 			<div class="img-movie">
 				<div class="thumb-img">
-					<img width="203" height="300" src="<?php echo $video_data['movie_picture']; ?>" class="attachment-medium size-medium wp-post-image" alt="" sizes="(max-width: 203px) 100vw, 203px" /> </div>
+					<img width="203" height="300" src="<?php echo $video_data['movie_picture']; ?>" class="attachment-medium size-medium wp-post-image" alt="" sizes="(max-width: 203px) 100vw, 203px" />
+				</div>
 				<div class="box-triler">
 					<?php
 					$yb = explode('?v=', $video_data['movie_preview']);
@@ -48,12 +50,13 @@
 						$url = "https://www.youtube.com/embed/" . $yb[0];
 					}
 					?>
-					<iframe width="560" height="315" src="<?php echo $url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+					<iframe width="560" height="315" src="<?php echo $url; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 		<div style="display: block; padding: 15px;" class="movie_player">
 			<!-- Movie source -->
-		
+
 			<div class="video-info">
 				<!-- 16:9 aspect ratio  -->
 				<!-- Your share button code -->
@@ -153,8 +156,18 @@
 				border-radius: 5px;
 			}
 		</style>
+		<?php
+		if (!empty($ep_name)) {
+			$ep_name = $ep_name;
+		} else {
+			$ep_name = '-';
+		}
+
+		?>
 		<div class="row" style="float: right;">
-			<button class="pull-right btn report-movie" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')">
+
+
+			<button class="pull-right btn report-movie" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>','<?= $video_data['movie_thname'] ?>','<?= $ep_name ?>')">
 				<span class="text-white">แจ้งหนังเสีย</span>
 			</button>
 		</div>
@@ -213,7 +226,7 @@
 						</div>
 					</div> -->
 	</div>
-		<?php include('right.php') ?>
+	<?php include('right.php') ?>
 
 	<!-- จบส่วนหลัก -->
 	</main>
