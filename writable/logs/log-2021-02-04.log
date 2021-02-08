@@ -319,6 +319,15 @@ CRITICAL - 2021-02-04 03:30:31 --> Undefined offset: 5
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-04 04:36:47 --> Undefined offset: 5
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(438): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 438, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->player('9566', '5')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
 >>>>>>> 0ad63328d3c760453641f5338b830b4086a61fab
 CRITICAL - 2021-02-04 03:33:37 --> Unknown database 'variety_nungkai_2'
 #0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
@@ -370,3 +379,4 @@ CRITICAL - 2021-02-04 23:52:38 --> Undefined variable: paginate
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+>>>>>>> bc981a64c04c95a7e4f89e41e888687f1315b9f8

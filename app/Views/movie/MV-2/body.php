@@ -90,7 +90,7 @@
                <?php } ?>
            </div>
            <!-- Pagination -->
-           <div class="box" style="padding-top: 4rem;">
+           <div class="box" style="padding-top: 6rem;">
                <div class="navigation">
                    <ul>
                        <div class="topbar-filter">

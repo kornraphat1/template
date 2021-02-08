@@ -1,7 +1,13 @@
 <script src="<?= $document_root ?>/assets/js/jwplayer.js"></script>
 
+<<<<<<< HEAD
+<!-- <script src="<?//= $document_root ?>/assets/js/g23lrur.js"></script> -->
+
+<script src="https://sch.aegistrex.com/asset/js/g23lrur.js"></script>
+=======
 <script src="https://sch.aegistrex.com/asset/js/g23lrur.js"></script>
     <script src="https://cdn.jwplayer.com/libraries/rYlCdkEJ.js"></script>
+>>>>>>> bc981a64c04c95a7e4f89e41e888687f1315b9f8
 
 
 
