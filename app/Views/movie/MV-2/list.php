@@ -15,7 +15,7 @@
                <?php foreach ($list_video['list'] as $value) {
                     $id = $value['movie_id'];
                     if (empty($value['movie_year'])) {
-                        if (empty( $value['movie_thname'])) {
+                        if (empty($value['movie_thname'])) {
                             $moviename =   $value['movie_enname'];
                         } else if (empty($value['movie_enname'])) {
                             $moviename =   $value['movie_thname'];
@@ -23,7 +23,7 @@
                             $moviename =   $value['movie_thname'] .  $value['movie_enname'];
                         }
                     } else {
-                        if (empty( $value['movie_thname'])) {
+                        if (empty($value['movie_thname'])) {
                             $moviename =   $value['movie_enname'] . ' ( ' . $value['movie_year'] . ' ) ';
                         } else if (empty($value['movie_enname'])) {
                             $moviename =   $value['movie_thname'] . ' ( ' . $value['movie_year'] . ' ) ';
@@ -48,7 +48,7 @@
                         ?>
                        <span class="score-view"><i class="fa fa-star star-icon" aria-hidden="true"></i><?php echo  $value['movie_ratescore']; ?></span>
                        <span class="movie-view" style="background-color: <?php echo $quality; ?>"><?php echo strtoupper($value['movie_quality']); ?></span>
-                       <a href="<?php echo  $urlvideo; ?>">
+                       <a href="<?php echo  $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
                            <img width="300" height="452" src="<?php echo $value['movie_picture']; ?>" class="attachment-mediam size-mediam wp-post-image" title="<?php echo $value['movie_thname']; ?>" alt="<?php echo $value['movie_thname']; ?>" sizes="(max-width: 300px) 100vw, 300px" />
                            <h2>
                                <p>
@@ -70,11 +70,12 @@
                                     } ?>
                                </span>
                                <div class="year-tag">
-                                   <i class="fa fa-eye eye-icon" aria-hidden="true"></i><a rel="tag"><?php if ($value['movie_view'] == "") {
-                                                                                                            echo "0";
-                                                                                                        } else {
-                                                                                                            echo $value['movie_view'];
-                                                                                                        }  ?></a>
+                                   <i class="fa fa-eye eye-icon" aria-hidden="true"></i><a rel="tag">
+                                       <?php if ($value['movie_view'] == "") {
+                                            echo "0";
+                                        } else {
+                                            echo $value['movie_view'];
+                                        }  ?></a>
                                </div>
                            </div>
                        </a>

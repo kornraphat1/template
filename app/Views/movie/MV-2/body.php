@@ -56,7 +56,7 @@
                         ?>
                        <span class="score-view"><i class="fa fa-star star-icon" aria-hidden="true"></i><?php echo  $value['movie_ratescore']; ?></span>
                        <span class="movie-view" style="background-color: <?php echo $quality; ?>"><?php echo strtoupper($value['movie_quality']); ?></span>
-                       <a href="<?php echo  $urlvideo; ?>">
+                       <a href="<?php echo  $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
                            <img width="300" height="452" src="<?php echo $value['movie_picture']; ?>" class="attachment-mediam size-mediam wp-post-image" title="<?php echo $value['movie_thname']; ?>" alt="<?php echo $value['movie_thname']; ?>" sizes="(max-width: 300px) 100vw, 300px" />
                            <h2>
                                <p>
@@ -105,7 +105,7 @@
        </div>
 
        <?php include('right.php') ?>
-       
+
    </section>
    <!-- จบส่วนหลัก -->
    </main>

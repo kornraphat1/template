@@ -248,7 +248,7 @@
 		var request = prompt('แจ้งหนังเสืย');
 		if (request != null) {
 			jQuery.ajax({
-				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name +"/" + ep,
+				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
 				type: 'GET',
 				crossDomain: true,
 				cache: false,
@@ -351,13 +351,24 @@
 	jQuery("#formsearch").submit(function(event) {
 		// alert("Esad");
 		if (jQuery("#search").val()) {
-			var url = "<?= base_url('/search') ?>" + '/' + jQuery("#search").val();
+			var url = +'/' + jQuery("#search").val();
 			window.location.href = url;
 			event.preventDefault();
 		}
 	});
 
+	function count_view(id) {
 
+		var url = "<?= base_url('/countview') ?>/" + id
+	
+		jQuery.ajax({
+			url: url,
+			async: true,
+			success: function(response) {
+				console.log(url); // server response
+			}
+		});
+	}
 
 	function onClickAds(adsid, branch) {
 		var backurl = '<?= $backURL ?>';

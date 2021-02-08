@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-2';
+		$this->template = 'MV-3';
 
 		helper(['url', 'pagination', 'template']);
 	}
@@ -61,6 +61,7 @@ class Home extends BaseController
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
+			'category_list' =>	$data['category_list'],
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string
 		];
