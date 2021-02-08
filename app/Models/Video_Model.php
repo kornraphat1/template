@@ -236,10 +236,6 @@ class Video_Model extends Model
                     `$this->table_movie`
                 WHERE
                 `$this->table_movie`.movie_id =" . $id;
-<<<<<<< HEAD
-  
-=======
->>>>>>> b225d6bfa2fdda07528be2b7534d62f478597155
         $query = $this->db->query($sql);
         $data = $query->getResultArray();
         if (!empty($data[0]['movie_thmain'])) {
