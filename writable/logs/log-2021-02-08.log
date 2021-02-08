@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2021-02-08 01:13:30 --> syntax error, unexpected '<<' (T_SL), expecting ']'
 #0 C:\xampp\htdocs\template\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
 #1 C:\xampp\htdocs\template\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Database')
@@ -40,6 +41,9 @@ CRITICAL - 2021-02-08 01:15:10 --> Undefined index: cate_req
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
 CRITICAL - 2021-02-08 01:15:13 --> Undefined index: cate_req
+=======
+CRITICAL - 2021-02-08 00:40:22 --> Undefined index: cate_req
+>>>>>>> 55e33c6aca7092f2ea04250acc80532ca93d70e4
 #0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 123, Array)
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-2', 'index', Array)
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
@@ -47,19 +51,43 @@ CRITICAL - 2021-02-08 01:15:13 --> Undefined index: cate_req
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-08 01:15:13 --> Undefined index: cate_req
 #0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 123, Array)
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-2', 'index', Array)
+=======
+CRITICAL - 2021-02-08 00:44:23 --> Undefined index: cate_req
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-1', 'index', Array)
+>>>>>>> 55e33c6aca7092f2ea04250acc80532ca93d70e4
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-02-08 01:15:13 --> Undefined index: cate_req
 #0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 123, Array)
+=======
+CRITICAL - 2021-02-08 00:45:17 --> Undefined variable: video_cate
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 133, Array)
+>>>>>>> 55e33c6aca7092f2ea04250acc80532ca93d70e4
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-2', 'index', Array)
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
+=======
+CRITICAL - 2021-02-08 00:49:52 --> syntax error, unexpected '<<' (T_SL)
+#0 C:\xampp\htdocs\template\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\template\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Vide...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Vide...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(22): spl_autoload_call('App\\Models\\Vide...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+>>>>>>> 55e33c6aca7092f2ea04250acc80532ca93d70e4

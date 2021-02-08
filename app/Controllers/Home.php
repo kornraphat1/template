@@ -583,6 +583,7 @@ class Home extends BaseController
 		];
 		echo view('movie/player/player', $data);
 	}
+
 	//--------------------------------------------------------------------
 
 
@@ -625,7 +626,8 @@ class Home extends BaseController
 		// die;
 
 
-		$this->VideoModel->contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
+		$this->VideoModel->save_contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
+		
 	}
 	
 	//--------------------------------------------------------------------
