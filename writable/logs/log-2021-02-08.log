@@ -1,0 +1,24 @@
+CRITICAL - 2021-02-08 00:40:22 --> Undefined index: cate_req
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 123, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-2', 'index', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-08 00:44:23 --> Undefined index: cate_req
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-1', 'index', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-02-08 00:45:17 --> Undefined variable: video_cate
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 133, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-2', 'index', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

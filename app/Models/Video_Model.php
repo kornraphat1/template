@@ -581,6 +581,7 @@ class Video_Model extends Model
     //ติดต่อโฆษณา 
     public function save_contact_ads($namesurname, $email, $lineid, $phone, $branch_id)
     {
+
         $bd =  $this->db->table($this->mo_adscontact);
         $this->db->transBegin();
         $data =  [

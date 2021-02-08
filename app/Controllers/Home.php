@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-3';
+		$this->template = 'MV-2';
 
 		helper(['url', 'pagination', 'template']);
 	}
@@ -626,7 +626,8 @@ class Home extends BaseController
 		// die;
 
 
-		$this->VideoModel->contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
+		$this->VideoModel->save_contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
+		
 	}
 	
 	//--------------------------------------------------------------------
