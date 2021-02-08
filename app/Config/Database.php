@@ -34,11 +34,7 @@ class Database extends \CodeIgniter\Database\Config
 		'hostname' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-<<<<<<< HEAD
-		'database' => 'main_variety',
-=======
 		'database' => 'aegistrex',
->>>>>>> b225d6bfa2fdda07528be2b7534d62f478597155
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
