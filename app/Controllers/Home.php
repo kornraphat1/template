@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-2';
+		$this->template = 'MV-4';
 
 		helper(['url', 'pagination', 'template']);
 	}
@@ -51,6 +51,7 @@ class Home extends BaseController
 		];
 
 		$data = calltemplate($this->template, 'index', $parameter);
+	
 
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 

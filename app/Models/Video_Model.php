@@ -670,7 +670,50 @@ class Video_Model extends Model
 
     //-------------------------------------------------------------------------------------------------
 
-    
+
+    // LOOP Category หน้าบ้าน
+    public function category_list()
+    {
+        $sql = "SELECT
+                mo_category.category_id,
+                mo_category.category_name,
+                mo_category.category_status,
+                mo_category.category_seq,
+                mo_category.branch_id
+            FROM
+                mo_category
+            WHERE mo_category.branch_id = '1'
+            AND mo_category.category_id != '1'
+            AND mo_category.category_id != '11'
+            AND mo_category.category_id != '3'
+            AND mo_category.category_id != '28'
+            
+            ORDER BY mo_category.category_seq ASC";
+
+            //echo $sql;die;
+        $query = $this->db->query($sql);
+        return $query->getResultArray();
+    }
+
+    //-------------------------------------------------------------------------------------------------
+    public function cate_movie($cat_id, $branch_id)
+    {
+        $sql = "SELECT
+                    `$this->table_movie`.*
+                FROM
+                    `$this->mo_moviecate`
+                INNER JOIN `$this->table_movie` ON `$this->table_movie`.movie_id =   `$this->mo_moviecate`.movie_id
+                WHERE
+                    `$this->table_movie`.branch_id = '$branch_id'
+                    AND `$this->table_movie`.movie_active = '1'
+                    AND `$this->mo_moviecate`.category_id = '$cat_id'
+                ORDER BY  `$this->table_movie`.movie_year DESC, `$this->table_movie`.movie_create DESC limit 5";
+
+        $query = $this->db->query($sql);
+        return $query->getResultArray();
+        
+    }
+//-------------------------------------------------------------------------------------------------
     public function get_list_video_zoom($branchid, $page)
     {
         $sql = "SELECT 
