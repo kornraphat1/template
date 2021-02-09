@@ -170,28 +170,23 @@
     <script src="<?= $document_root ?>/assets/js/5Npl_DkivWTNCRdzYR204bTSOlo.js"></script>
 
     <script>
-      function goReport(id, branch,name) {
+    function goReport(id, branch, name, ep) {
+		var request = prompt('แจ้งหนังเสืย');
+		if (request != null) {
+			jQuery.ajax({
+				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+				type: 'GET',
+				crossDomain: true,
+				cache: false,
+				success: function(data) {
+					console.log(request);
+					alert('เราจะดำเนินการให้เร็วที่สุด');
+				}
 
-            do {
-                var request = prompt('แจ้งหนังเสีย');
-            }
-            while(request.length < 1);
+			});
 
-            if (request != null && request != '') {
-                jQuery.ajax({
-
-                    url: "<?php echo base_url()?>/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name,
-                    type: 'GET',
-                    crossDomain: true,
-                    cache: false,
-                    success: function(data) {
-                        console.log(request);
-                    }
-
-                });
-                alert('เราจะดำเนินการให้เร็วที่สุด');
-            } 
-        };
+		} else {}
+	};;
 
 
 

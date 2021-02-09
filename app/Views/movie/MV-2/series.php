@@ -128,7 +128,7 @@
 			}
 		</style>
 		<div class="row" style="float: right;">
-			<button class="pull-right btn report-movie" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')">
+			<button class="pull-right btn report-movie" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>','<?= $video_data['movie_thname'] ?>','all')">
 				<span class="text-white">แจ้งหนังเสีย</span>
 			</button>
 		</div>

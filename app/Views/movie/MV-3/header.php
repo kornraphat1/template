@@ -829,11 +829,12 @@
          <div class="col-md-12 row header-top">
             <div class="col-lg-3 col-md-6 col-sm-5 col-xs-8">
                <?php 
-                  if (empty($setting['setting_logo'])) {
+               // echo '<pre>',print_r($setting,true),'</pre>';die;
+                  if (!empty($setting['setting_logo'])) {
                      if (substr($setting['setting_logo'], 0, 4) == 'http') {
                         $logo = $setting['setting_logo']; 
                      } else {
-                        $logo = $path_logo . $setting['setting_logo'];
+                        $logo = $path_setting . $setting['setting_logo'];
                      
                      }
                   }
@@ -869,7 +870,7 @@
                   <?php
                   for ($x = 0; $x <= 2; $x++) { ?>
                      <li class="dropdown mega-dropdown">
-                        <a href="<?php echo base_url('/categoty/' . $category_id[$x]['category_id'] . '/' . urlencode($category_id[$x]['category_name'])); ?>" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $category_id[$x]['category_name']; ?> <span class="pull-right"></span></a>
+                        <a href="<?php echo base_url('/categoty/' . $category_list[$x]['category_id'] . '/' . urlencode($category_list[$x]['category_name'])); ?>" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $category_list[$x]['category_name']; ?> <span class="pull-right"></span></a>
                      </li>
                   <?php
                   }
@@ -880,7 +881,7 @@
                   <li class="dropdown mega-dropdown">
                      <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ประเภทหนัง <span class="fa fa-chevron-down pull-right"></span></a>
                      <ul class="dropdown-menu">
-                        <?php foreach ($category_id as $key => $value) { ?>
+                        <?php foreach ($category_list as $key => $value) { ?>
                            <li><a href="<?php echo base_url('/categoty/' . $value['category_id'] . '/' . urlencode($value['category_name'])); ?>"><?php echo $value['category_name']; ?></a></li>
                         <?php } ?>
                      </ul>

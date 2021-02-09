@@ -18,7 +18,7 @@
                         } else {
                         ?>
                            <a href="<?= base_url(); ?>" class="banner-l ">
-                              <img class="img-responsive logo" src='<?= $path_logo . $setting['setting_logo'] ?>' alt="#">
+                              <img class="img-responsive logo" src='<?= $path_setting . $setting['setting_logo'] ?>' alt="#">
                            </a>
                      <?php
                         }

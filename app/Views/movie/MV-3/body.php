@@ -13,7 +13,8 @@
                <div class="col-md-12 col-sm-12">
                   <div class="row auto-clear">
                      <?php 
-                        foreach($list_video as $value){
+                    
+                        foreach($list_video['list'] as $value){
 
                            $id = $value['movie_id'];
                            $s_replace = [")", "(", " ", '%'];
@@ -69,7 +70,7 @@
                   <?php } ?>
                   </div>
                   <div class="row pagi text-center">
-                        <?= pagination($paginate['page'], $paginate['total_page']); ?>
+                        <?= pagination($list_video['page'], $list_video['total_page']); ?>
                   </div>
                </div>
 

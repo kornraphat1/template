@@ -498,7 +498,7 @@ class Video_Model extends Model
 
     
     //แจ้งหนังเสีย
-    public function save_reports($branch, $id, $reason, $name)
+    public function save_reports($branch, $id, $reason, $name, $ep)
     {
         $bd =  $this->db->table($this->report_movie);
         $this->db->transBegin();
@@ -507,7 +507,7 @@ class Video_Model extends Model
             'branch_id' => $branch,
             'moviereport_status' => 1,
             'movie_name' => $name,
-            'ep_name' => '-',
+            'ep_name' => $ep,
             'reason' => $reason
         ];
         try {

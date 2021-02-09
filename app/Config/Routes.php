@@ -91,7 +91,7 @@ $routes->get('/search/(:any)', 'Home::video_search/$1');
 // topimdb
 $routes->get('/list_top_imdb', 'Home::video_topimdb');
 //แจ้งหนังเสีย
-$routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)', 'Home::save_report/$1/$2/$3/$4');
+$routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)/(:segment)', 'Home::save_report/$1/$2/$3/$4/$5');
 
 //ขอหนัง 
 $routes->get('/saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$2');
