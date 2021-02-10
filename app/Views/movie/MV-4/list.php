@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="hero-ct">
-                    <h1> <?=$catename?> </h1>
+                    <h1> <?=$title?> </h1>
                     <!-- <ul class="breadcumb">
                         <li class="active"><a href="#">Home</a></li>
                         <li> <span class="ion-ios-arrow-right"></span> movie listing</li>
@@ -151,13 +151,13 @@
             <div class="col-md-8 col-xs-12 manga-item-list">
 
                 <div class="title-hd">
-                    <!-- <h2><?=$catename?></h2> -->
+                    
                 </div>
 
                 <div class="flex-wrap-movielist">
                     <?php 
                     if(!empty($list_video)){
-                        foreach ($list_video as $value) {
+                        foreach ($list_video['list'] as $value) {
 
                             $id = $value['movie_id'];
                             $s_replace = [
@@ -243,7 +243,7 @@
                             <div class="topbar-filter">
 
                                 <div class="pagination2">
-                                    <?= pagination($paginate['page'], $paginate['total_page']); ?>
+                                    <?= pagination($list_video['page'], $list_video['total_page']); ?>
                                 </div>
 
                             </div>

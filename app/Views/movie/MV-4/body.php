@@ -264,9 +264,11 @@
 
                 ?>
 
-                <?php foreach ($category_list_interest as $key => $values) { ?>
+                <?php foreach ($category_list_interest as $key => $values) {
+                    $i++
+                ?>
 
-                    <?php $i++ ?>
+
 
                     <div class="title-hd col-lg-12" style="padding-top:20px">
                         <?php
@@ -279,35 +281,13 @@
 
                     <div class="flex-wrap-movielist">
 
+
                         <?php
 
-
                         $quality = "";
-                        foreach ($values['movie'] as $key =>  $val) {
-                            $name = divineMovieName($val['movie_thname'], $val['movie_year']);
-                            $values['movie'][$key]['movie_thname'] = $name['thaiName'];
-                            $values['movie'][$key]['movie_enname'] = $name['engName'];
-                        }
-                        ?>
-                        <?php foreach ($values['movie'] as $value) {
+                        foreach ($values['movie'] as $value) {
                             $id = $value['movie_id'];
-                            if (empty($value['movie_year'])) {
-                                if (empty($value['movie_thname'])) {
-                                    $moviename =   $value['movie_enname'];
-                                } else if (empty($value['movie_enname'])) {
-                                    $moviename =   $value['movie_thname'];
-                                } else {
-                                    $moviename =   $value['movie_thname'] .  $value['movie_enname'];
-                                }
-                            } else {
-                                if (empty($value['movie_thname'])) {
-                                    $moviename =   $value['movie_enname'] . ' (' . $value['movie_year'] . ') ';
-                                } else if (empty($value['movie_enname'])) {
-                                    $moviename =   $value['movie_thname'] . ' (' . $value['movie_year'] . ') ';
-                                } else {
-                                    $moviename =   $value['movie_thname'] . ' (' . $value['movie_year'] . ') ' . $value['movie_enname'];
-                                }
-                            }
+
                             $s_replace = [
                                 ")", "(", " ", '%'
                             ];
@@ -315,10 +295,10 @@
                                 "", "", "-", '%25'
                             ];
                             if ($value['movie_type'] == 'se') {
-                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $moviename)))))));
+                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
                                 $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
                             } else {
-                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $moviename)))))));
+                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
                                 $urlvideo = str_replace('%', '%25', urldecode(base_url('/movie/' . $id . '/' . $url_name)));
                             }
                         ?>
@@ -338,20 +318,20 @@
                                     ?>
 
                                         <a href="<?php echo $urlvideo; ?>">
-                                            <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>"">
-                                            </a>
+                                            <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                        </a>
 
-                                        <?php
+                                    <?php
                                     }
-                                        ?>
+                                    ?>
 
 
 
-                                    </div>
+                                </div>
 
-                                    <div class=" hvr-inner">
+                                <div class=" hvr-inner">
 
-                                            <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                    <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                                 </div>
 
@@ -359,24 +339,29 @@
 
                                     <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_thname']; ?></a></h2>
 
-                                    <p class="rate"><i class="ion-android-star"></i><span><?php echo $score; ?></span> &nbsp; <span style="float: right;"><i class="fa fa-eye" aria-hidden="true"></i> <?php if (empty($value['movie_view'])) {
-                                                                                                                                                                                                            echo "0";
-                                                                                                                                                                                                        } else {
-                                                                                                                                                                                                            echo $value['movie_view'];
-                                                                                                                                                                                                        } ?></span> </p>
+                                    <p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span> &nbsp; <span style="float: right;">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <?php if (empty($value['movie_view'])) {
+                                                echo "0";
+                                            } else {
+                                                echo $value['movie_view'];
+                                            } ?></span> </p>
 
                                 </div>
-
                             </div>
-
-                    <?php
+                        <?php
 
                         }
-                    }
-
-                    ?>
+                        ?>
 
                     </div>
+                <?php
+                }
+
+                ?>
+
+
+
 
 
 

@@ -33,7 +33,7 @@ class Home extends BaseController
 		$this->ads = $this->VideoModel->get_ads($this->branch);
 		$this->template = 'MV-4';
 
-		helper(['url', 'pagination', 'template']);
+		helper(['url', 'pagination', 'template', 'moviename']);
 	}
 
 	public function index()
@@ -51,8 +51,9 @@ class Home extends BaseController
 		];
 
 		$data = calltemplate($this->template, 'index', $parameter);
-	
 
+		
+		
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$header_data = [
@@ -91,7 +92,7 @@ class Home extends BaseController
 		];
 		$data_query = calltemplate($this->template, 'video_bycate', $parameter);
 
-		$this->setting['image'] = $this->path_setting.$this->setting['setting_logo'];
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -102,11 +103,11 @@ class Home extends BaseController
 			'path_ads' => $this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string,
+			'category_list' => $data_query['category_list'],
 
 		];
 		$data = [
 			'list_video' => $data_query['list_video'],
-			'category_list' => $data_query['category_list'],
 			'listyear' => $data_query['listyear'],
 			'title' => $title,
 		];
@@ -130,8 +131,8 @@ class Home extends BaseController
 			'year' => $year,
 		];
 		$data_query = calltemplate($this->template, 'video_byyear', $parameter);
-		
-		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$title = 'หนังปี : ' . $year;
 		$header_data = [
@@ -170,8 +171,8 @@ class Home extends BaseController
 
 		];
 		$data_query = calltemplate($this->template, 'newmovie', $parameter);
-		
-		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$title = 'หนังใหม่';
 		$header_data = [
@@ -204,7 +205,7 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 
-		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 
 		$keyword_string = urldecode($keyword_string);
@@ -246,10 +247,10 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 
-		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 
-	
+
 		$title = 'TOP-IMDB';
 		$parameter = [
 			'branch' => $this->branch,
@@ -288,7 +289,7 @@ class Home extends BaseController
 			$page = $_GET['page'];
 		}
 
-		$this->setting['image'] =$this->path_setting.$this->setting['setting_logo'];
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$title = 'ซีรีย์';
 		$parameter = [
@@ -337,9 +338,9 @@ class Home extends BaseController
 
 		$setting = $this->setting;
 		$setting['image'] = $data_query['series']['movie_picture'];
-	
 
-	
+
+
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
@@ -414,11 +415,11 @@ class Home extends BaseController
 
 		];
 		$data_query = calltemplate($this->template, 'video_series', $parameter);
-	
+
 
 		$setting = $this->setting;
 		$setting['image'] = $data_query['video_data']['movie_picture'];
-		
+
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
@@ -492,9 +493,9 @@ class Home extends BaseController
 		$data_query = calltemplate($this->template, 'video', $parameter);
 		$setting = $this->setting;
 		$setting['image'] = $data_query['video_data']['movie_picture'];
-	
 
-		
+
+
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
@@ -592,7 +593,7 @@ class Home extends BaseController
 	// แจ้งหนังเสีย
 	public function save_report($branch, $id, $reason, $name, $ep)
 	{
-		
+
 		$reason = urldecode($reason);
 		$result = $this->VideoModel->save_reports($branch, $id, $reason, urldecode($name), $ep);
 		if ($result == true && is_bool($result)) {
@@ -616,7 +617,7 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
-// ติดต่อโฆษณา
+	// ติดต่อโฆษณา
 	public function contact_ads()
 	{
 
@@ -629,10 +630,9 @@ class Home extends BaseController
 		// die;
 
 
-		$this->VideoModel->save_contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel,$this->branch);
-		
+		$this->VideoModel->save_contact_ads($ads_con_name, $ads_con_email, $ads_con_line, $ads_con_tel, $this->branch);
 	}
-	
+
 	//--------------------------------------------------------------------
 
 
@@ -654,6 +654,9 @@ class Home extends BaseController
 		$strMonthThai = $strMonthCut[$strMonth];
 		return "$strDay $strMonthThai $strYear, $strHour:$strMinute";
 	}
+	//--------------------------------------------------------------------
+
+	
 	//--------------------------------------------------------------------
 
 }

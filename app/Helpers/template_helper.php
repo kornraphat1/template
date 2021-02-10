@@ -369,7 +369,12 @@ function calltemplate($template, $view, $parameter = [])
             case 'MV-4':
                 switch ($view) {
                     case 'index':
-                     
+                        $cate_req = [6, 7, 28];
+                        foreach ($cate_req as $val) {
+                            $video_cate[] = $VideoModel->get_list_video_bycate($parameter['branch'], $val);
+                        }
+
+
                         $paginate = $VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
                         $category_list = $VideoModel->get_category($parameter['branch']);
                         $listyear = $VideoModel->get_listyear($parameter['branch']);
@@ -391,11 +396,15 @@ function calltemplate($template, $view, $parameter = [])
                             'category_list_interest' => $category_list_interest
                            
                         ];
+                        // echo '<pre>',print_r($category_list,true),'</pre>';die;
                         break;
                     case 'video_bycate':
                         $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
+
+                       
                         $category_list = $VideoModel->get_category($parameter['branch']);
                         $listyear = $VideoModel->get_listyear($parameter['branch']);
+                        
                         $list = [
                             'list_video' => $list_video,
                             'category_list' => $category_list,
