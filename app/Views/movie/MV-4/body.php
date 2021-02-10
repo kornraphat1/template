@@ -18,9 +18,9 @@
                     $id = $value['movie_id'];
 
                     if ($value['movie_type'] == 'mo') {
-                        $urlvideo = base_url('/video/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_thname'])));
+                        $urlvideo = base_url('/video/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
                     } else if ($value['movie_type'] == 'se') {
-                        $urlvideo = base_url('/series/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_thname'])));
+                        $urlvideo = base_url('/series/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
                     }
 
                 ?>
@@ -35,7 +35,7 @@
                             ?>
 
                                 <a href="<?php echo $urlvideo; ?>">
-                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                 </a>
 
                             <?php
@@ -43,7 +43,7 @@
                             ?>
 
                                 <a href="<?php echo $urlvideo; ?>">
-                                    <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                    <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                 </a>
 
                             <?php
@@ -69,7 +69,7 @@
                             </div>
 
                             <h2><a href="#">
-                                    <?php echo $value['movie_thname']; ?>
+                                    <?php echo $value['movie_name']; ?>
                                 </a></h2>
 
                             <p><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span></p>
@@ -160,7 +160,7 @@
                             "", "", "-", '%25'
                         ];
 
-                        $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_thname'])));
+                        $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
                         if ($value['movie_type'] == 'se') {
 
                             $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
@@ -180,7 +180,7 @@
                                 if (substr($value['movie_picture'], 0, 4) == 'http') {
                                 ?>
 
-                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 
 
                                 <?php
@@ -188,7 +188,7 @@
                                 ?>
 
                                     <a href="<?php echo $urlvideo; ?>">
-                                        <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                        <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
                                 <?php
@@ -207,7 +207,7 @@
 
                             <div class="mv-item-infor">
 
-                                <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_thname'] ?></a></h2>
+                                <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_name'] ?></a></h2>
 
                                 <p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span> <span style="float: right;"><i class="fa fa-eye" aria-hidden="true"></i> <?php if (empty($value['movie_view'])) {
                                                                                                                                                                                                                     echo "0";
@@ -310,7 +310,7 @@
                                     if (substr($value['movie_picture'], 0, 4) == 'http') {
                                     ?>
 
-                                        <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                        <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 
 
                                     <?php
@@ -318,7 +318,7 @@
                                     ?>
 
                                         <a href="<?php echo $urlvideo; ?>">
-                                            <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                            <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                         </a>
 
                                     <?php
@@ -337,7 +337,7 @@
 
                                 <div class="mv-item-infor">
 
-                                    <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_thname']; ?></a></h2>
+                                    <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_name']; ?></a></h2>
 
                                     <p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span> &nbsp; <span style="float: right;">
                                             <i class="fa fa-eye" aria-hidden="true"></i>

@@ -333,9 +333,9 @@
 
 					$id = $value['movie_id'];
 					if($value['movie_type']=='mo'){
-						$urlvideo = base_url('/video/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_thname'])));
+						$urlvideo = base_url('/video/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_name'])));
 					}else if($value['movie_type']=='se'){
-						$urlvideo = base_url('/series/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_thname'])));
+						$urlvideo = base_url('/series/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_name'])));
 					}
 
 				?>
@@ -344,7 +344,7 @@
 
 						<div class="mv-img-style-resize">
 
-							<img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+							<img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 
 						</div>
 
@@ -360,7 +360,7 @@
 
 							<h2>
 								<a href="<?php echo $urlvideo; ?>">
-									<?php echo $value['movie_thname'] ?>
+									<?php echo $value['movie_name'] ?>
 								</a>
 							</h2>
 

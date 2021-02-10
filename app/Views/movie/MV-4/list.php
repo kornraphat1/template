@@ -167,7 +167,7 @@
                                 "", "", "-", '%25'
                             ];
         
-                            $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_thname'])));
+                            $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
                             if ($value['movie_type'] == 'se') {
         
                                 $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
@@ -186,7 +186,7 @@
                                 if (substr($value['movie_picture'], 0, 4) == 'http') {
                                 ?>
 
-                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                    <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 
 
                                 <?php
@@ -194,7 +194,7 @@
                                 ?>
 
                                     <a href="<?php echo $urlvideo; ?>">
-                                        <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+                                        <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
                                 <?php
@@ -214,7 +214,7 @@
 
                                 <h2>
                                     <a href="<?php echo $urlvideo; ?>">
-                                        <?php echo $value['movie_thname']?>
+                                        <?php echo $value['movie_name']?>
                                     </a>
                                 </h2>
 
