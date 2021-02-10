@@ -16,30 +16,14 @@
                <?php foreach ($list_video['list'] as $value) {
 
                     $id = $value['movie_id'];
-                    if (empty($value['movie_year'])) {
-                        if (empty($value['movie_thname'])) {
-                            $moviename =   $value['movie_enname'];
-                        } else if (empty($value['movie_enname'])) {
-                            $moviename =   $value['movie_thname'];
-                        } else {
-                            $moviename =   $value['movie_thname'] .  $value['movie_enname'];
-                        }
-                    } else {
-                        if (empty($value['movie_thname'])) {
-                            $moviename =   $value['movie_enname'] . ' ( ' . $value['movie_year'] . ' ) ';
-                        } else if (empty($value['movie_enname'])) {
-                            $moviename =   $value['movie_thname'] . ' ( ' . $value['movie_year'] . ' ) ';
-                        } else {
-                            $moviename =   $value['movie_thname'] . ' ( ' . $value['movie_year'] . ' ) ' . $value['movie_enname'];
-                        }
-                    }
+                    
                     $s_replace = [
                         ")", "(", " ", '%'
                     ];
                     $e_replace = [
                         "", "", "-", '%25'
                     ];
-                    $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $moviename)));
+                    $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
 
                     if ($value['movie_type'] == 'se') {
                         $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
@@ -57,10 +41,10 @@
                        <span class="score-view"><i class="fa fa-star star-icon" aria-hidden="true"></i><?php echo  $value['movie_ratescore']; ?></span>
                        <span class="movie-view" style="background-color: <?php echo $quality; ?>"><?php echo strtoupper($value['movie_quality']); ?></span>
                        <a href="<?php echo  $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
-                           <img width="300" height="452" src="<?php echo $value['movie_picture']; ?>" class="attachment-mediam size-mediam wp-post-image" title="<?php echo $value['movie_thname']; ?>" alt="<?php echo $value['movie_thname']; ?>" sizes="(max-width: 300px) 100vw, 300px" />
+                           <img width="300" height="452" src="<?php echo $value['movie_picture']; ?>" class="attachment-mediam size-mediam wp-post-image" title="<?php echo $value['movie_name']; ?>" alt="<?php echo $value['movie_name']; ?>" sizes="(max-width: 300px) 100vw, 300px" />
                            <h2>
                                <p>
-                                   <?php echo $moviename; ?>
+                                   <?php echo $value['movie_name']; ?>
                                </p>
                            </h2>
                            <div class="figure-box">
