@@ -71,84 +71,10 @@
 
         <div class="row ipad-width">
 
-            <div class="col-md-4 ">
+            
+        <?php include('left.php'); ?>
 
-                <div class="sidebar hidden-xs hidden-sm">
-
-                    <div class="celebrities">
-
-                        <!-- <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">หมวดหมู่</a> -->
-
-                        <ul class="dropdown-menu">
-
-                            <li class="fa-chevron"><a onclick="goView2('29')">Action</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('30')">Adventure</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('31')">Comedy</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('32')">Drama</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('33')">Fantasy</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('34')">Martial Arts</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('35')">Shounen</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('36')">Supernatural</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('37')">Manhua</a></li>
-
-                            <li class="fa-chevron"><a onclick="goView2('38')">Horror</a></li>
-
-                        </ul>
-
-                        <h4 class="sb-title">หมวดหมู่</h4>
-
-                        <?php foreach ($category_list as $value) { ?>
-
-                            <div class="celeb-item">
-
-                                <div class="celeb-author">
-
-                                    <h3><a href="<?php echo base_url('/category/' . $value['category_id'] . "/" . urlencode(str_replace(' ','-',$value['category_name']))); ?>" title=<?= $value['category_name'] ?>><?= $value['category_name'] ?></a></h3>
-
-                                </div>
-
-                            </div>
-
-                        <?php } ?>
-
-                    </div>
-
-                </div>
-
-                <?php 
-
-                if (!empty($path_imgads)) {
-                    foreach ($path_imgads as $value) {
-                        if ($value['ads_position'] == "2") {
-
-                ?>
-
-                            <div class="col-sm-6 col-xs-6 col-md-12 col-lg-12">
-                                <asidenone>
-                                    <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'];?>" target="_blank">
-                                        <img src="<?php echo $pathads . $value['ads_picture']; ?>" style="width: 100%;margin-top: 20px;border-left-width: 10px;margin-left: 15px;" class="hoverimg">
-                                    </a>
-                                </asidenone>
-                            </div>
-
-                <?php
-                        }
-                    }
-                }
-
-                ?>
-
-            </div>
-
-            <div class="col-md-8 col-xs-12 manga-item-list">
+            <div class="col-md-9 col-xs-12 manga-item-list">
 
                 <div class="title-hd">
                     

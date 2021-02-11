@@ -1042,7 +1042,7 @@
                         </div>
 
                     </div>
-                    <a href="<?php echo base_url(); ?>"><img class="logo" src="<?php echo $path_setting . $setting['setting_logo']; ?>" alt="<?php echo $setting['setting_title']; ?>" width="200" ></a>
+                    <a href="<?php echo base_url(); ?>"><img class="logo" src="<?php echo $path_setting . $setting['setting_logo']; ?>" alt="<?php echo $setting['setting_title']; ?>" ></a>
 
                 </div>
 

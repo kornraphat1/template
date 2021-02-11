@@ -138,7 +138,7 @@
 
             <?php include('left.php'); ?>
 
-            <div class="col-md-8 col-xs-12 manga-item-list">
+            <div class="col-md-9 col-xs-12 manga-item-list">
 
                 <div class="title-hd">
 

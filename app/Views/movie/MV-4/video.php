@@ -106,25 +106,18 @@
 			<div class="movie-img">
 				<div class="crop-video">
 
-				<?php
-                            if (substr($video_data['movie_picture'], 0, 4) == 'http') {
-                            ?>
+					<?php
+					if (substr($video_data['movie_picture'], 0, 4) == 'http') {
 
-                                <a href="<?php echo $urlvideo; ?>">
-                                    <img src="<?php echo $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
-                                </a>
-
-                            <?php
-                            } else {
-                            ?>
-
-                                <a href="<?php echo $urlvideo; ?>">
-                                    <img src="<?php echo $backURL. $img_backurl . $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
-                                </a>
-
-                            <?php
-                            }
-                            ?>
+					?>
+						<img src="<?php echo $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
+					<?php
+					} else {
+					?>
+						<img src="<?php echo $backURL . $img_backurl . $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
+					<?php
+					}
+					?>
 
 
 
@@ -160,7 +153,7 @@
 			?>
 						<div class="col-sm-6 col-md-12 col-xs-12 col-lg-12">
 							<asidenone>
-								<a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'];?>" target="_blank">
+								<a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank">
 									<img src="<?php echo $backURL . "banners/" . $value['ads_picture']; ?>" style="width: 100%;margin-top: 20px;border-left-width: 10px;margin-left: 0px;" class="hoverimg">
 								</a>
 							</asidenone>
@@ -184,74 +177,74 @@
 
 			<br>
 			<?php
-							if ($video_data['movie_type'] == 'se') {
+			if ($video_data['movie_type'] == 'se') {
 			?>
-								<div class="movie-series-content ">
-									<div class="row">
-										<div class="col-md-12">
-											<?php
-												$url_name =  str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
+				<div class="movie-series-content ">
+					<div class="row">
+						<div class="col-md-12">
+							<?php
+							$url_name =  str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
 
-											if ($index > 0) {
-												$key = $index - 1;
-												$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-												$disabled = '';
-											} else {
-												$key = $index;
-												$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-												$disabled = 'disabled';
-											}
+							if ($index > 0) {
+								$key = $index - 1;
+								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+								$disabled = '';
+							} else {
+								$key = $index;
+								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+								$disabled = 'disabled';
+							}
 
-											?>
+							?>
 
-											<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
-
-
-											<select onchange="click_ep(this)">
-
-												<?php
-
-												foreach ($video_data['name_ep'] as $key => $value) {
-
-													$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
-
-													$select = "";
-													if ($value == $video_data['name_ep'][$index]) {
-
-														$select = 'selected';
-													}
-
-													// $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
-
-												?>
-
-													<option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
-												<?php } ?>
-											</select>
-
-											<?php
-											if (isset($video_data['name_ep'][$index+1])) {
-												$key = $index + 1;
-												$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-												$disabled = '';
-											} else {
-												$key = $index;
-												$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-												$disabled = 'disabled';
-											}
-
-											?>
-
-											<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; "<?= $disabled ?> >ตอนถัดไป</button></a>
+							<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
 
 
-										</div>
-									</div>
-								</div>
+							<select onchange="click_ep(this)">
+
+								<?php
+
+								foreach ($video_data['name_ep'] as $key => $value) {
+
+									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
+
+									$select = "";
+									if ($value == $video_data['name_ep'][$index]) {
+
+										$select = 'selected';
+									}
+
+									// $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
+
+								?>
+
+									<option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
+								<?php } ?>
+							</select>
 
 							<?php
+							if (isset($video_data['name_ep'][$index + 1])) {
+								$key = $index + 1;
+								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+								$disabled = '';
+							} else {
+								$key = $index;
+								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+								$disabled = 'disabled';
 							}
-?>
+
+							?>
+
+							<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
+
+
+						</div>
+					</div>
+				</div>
+
+			<?php
+			}
+			?>
 			<div class="movie-single-ct main-content" style="display:flex;width:100%;margin-bottom: 20px;"><br>
 
 				<!-- ปุ่มแชร์เฟสบุ้ค -->
@@ -268,12 +261,12 @@
 						</a>
 					</div>
 
-				<!-- ปุ่มแชร์ไลน์ -->
-				<div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="<?= base_url(uri_string()) ?>" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
+					<!-- ปุ่มแชร์ไลน์ -->
+					<div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="<?= base_url(uri_string()) ?>" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
 
-				<button class="pull-right btn redbtn" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')" style="margin-left: auto;">
-					<font color="white">แจ้งหนังเสีย</font>
-				</button>
+					<button class="pull-right btn redbtn" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')" style="margin-left: auto;">
+						<font color="white">แจ้งหนังเสีย</font>
+					</button>
 
 			</div>
 
@@ -329,13 +322,13 @@
 
 			<div class="flex-wrap-movielist">
 
-				<?php foreach ($random_movie as $value) {
+				<?php foreach ($vdorandom as $value) {
 
 					$id = $value['movie_id'];
-					if($value['movie_type']=='mo'){
-						$urlvideo = base_url('/video/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_name'])));
-					}else if($value['movie_type']=='se'){
-						$urlvideo = base_url('/series/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_name'])));
+					if ($value['movie_type'] == 'mo') {
+						$urlvideo = base_url('/video/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
+					} else if ($value['movie_type'] == 'se') {
+						$urlvideo = base_url('/series/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
 					}
 
 				?>
@@ -366,16 +359,16 @@
 
 							<p class="rate">
 								<i class="ion-android-star"></i>
-								<span><?php echo $value['movie_ratescore']; ?></span>&nbsp; 
+								<span><?php echo $value['movie_ratescore']; ?></span>&nbsp;
 								<span style="float: right;"><i class="fa fa-eye" aria-hidden="true"></i>
-									<?php 
-										if (empty($value['movie_view'])) {
-											echo "0";
-										} else {
-											echo $value['movie_view'];
-										} 
+									<?php
+									if (empty($value['movie_view'])) {
+										echo "0";
+									} else {
+										echo $value['movie_view'];
+									}
 									?>
-								</span> 
+								</span>
 							</p>
 						</div>
 					</div>
@@ -426,20 +419,18 @@
 	<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript">
+		$(document).ready(function() {
+			var url = "<?php echo base_url(); ?>" + "/movie_view_add/movie_id/" + <?php echo $video_data['movie_id']; ?> + "/branch/" + "<?php echo $video_data['branch_id']; ?>";
+			jQuery.ajax({
+				url: url,
+				async: true,
+				success: function(response) {
+					console.log(url); // server response
+				}
 
-		$( document ).ready(function() {
-				var url = "<?php echo base_url(); ?>" +"/movie_view_add/movie_id/" + <?php echo $video_data['movie_id'];?> + "/branch/" + "<?php echo $video_data['branch_id'];?>";
-				jQuery.ajax({
-	            url: url,
-	            async: true,
-	            success: function(response) {
-	           	console.log(url); // server response
-	            }
+			});
 
-	        });
-	    
-	});
-
+		});
 	</script>
 
 </div>

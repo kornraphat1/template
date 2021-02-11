@@ -13,17 +13,18 @@ div.mv-img-resize {
   text-align: center;
 }
 div.mv-img-style-resize img {
-  width: auto !important;
-  height: 261px;
+  width: max-content;
+  height: 260px;
   margin-bottom: 0px !important;
   border: solid 3px #4a0505f2;
 }
 div.mv-img-style-resize {
-  width: 160px;
+  width: auto;
   height: 261px;
   overflow: hidden;
   text-align: center;
   margin-bottom: 20px;
+  padding: 0px 10px;
 }
 div.top-search div,
 div.top-search-mobile div {

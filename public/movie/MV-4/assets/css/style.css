@@ -1497,6 +1497,10 @@ input[type="search"] {
 .form-group {
   margin-bottom: 15px;
 }
+
+.logo {
+ max-width: 150px;
+}
 .radio,
 .checkbox {
   position: relative;
@@ -4462,9 +4466,9 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: inherit;
-  width: 170px;
+  width: 200px;
   position: relative;
-  /* margin-right: 15px; */
+  margin-right: 15px;
 }
 .movie-item-style-1 img {
   margin-right: 0;
@@ -5199,6 +5203,8 @@ ul {
   color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 35px;
   margin-bottom: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid #405266;

@@ -373,7 +373,9 @@ class Video_Model extends Model
                     `$this->table_movie`.branch_id = '$branch_id'
                 ORDER BY RAND()  limit 4";
         $query = $this->db->query($sql);
-        return $query->getResultArray();
+        $data= $query->getResultArray();
+        $data = divineMovieName($data);
+        return $data;
     }
 
 
@@ -596,7 +598,7 @@ class Video_Model extends Model
                     `$this->table_movie`.branch_id = '$branch_id'
                     AND `$this->table_movie`.movie_active = '1'
                     AND `$this->mo_moviecate`.category_id = '$cat_id'
-                ORDER BY  `$this->table_movie`.movie_year DESC, `$this->table_movie`.movie_create DESC limit 6";
+                ORDER BY  `$this->table_movie`.movie_year DESC, `$this->table_movie`.movie_create DESC limit 5";
 
         $query = $this->db->query($sql);
         $data = $query->getResultArray();
