@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 00:43:10 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(553): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9936', 'The-Trial-of-th...')
+=======
 CRITICAL - 2021-02-10 00:37:14 --> Undefined variable: data
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(663): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 663, Array)
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(55): App\Controllers\Home->name_movie(Array)
@@ -60,10 +68,17 @@ CRITICAL - 2021-02-10 02:25:00 --> Undefined variable: moviename
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/body...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(73): view('movie/MV-4/body...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 00:56:09 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(667): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 667, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(14): App\Models\Video_Model->get_list_video_bycate(1, 6)
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-1', 'index', Array)
+=======
 CRITICAL - 2021-02-10 02:25:56 --> Undefined index: movie_name
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\body.php(300): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 300, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -78,11 +93,19 @@ CRITICAL - 2021-02-10 02:29:15 --> Undefined index: list
 #0 C:\xampp\htdocs\template\app\Models\Video_Model.php(601): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 601, Array)
 #1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(382): App\Models\Video_Model->cate_movie('6', 1)
 #2 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-4', 'index', Array)
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:07:32 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(667): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 667, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(14): App\Models\Video_Model->get_list_video_bycate(1, 6)
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-1', 'index', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+=======
 CRITICAL - 2021-02-10 02:30:27 --> Undefined variable: score
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\body.php(341): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 341, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -140,20 +163,59 @@ CRITICAL - 2021-02-10 02:47:35 --> Undefined offset: 0
 #1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(432): App\Models\Video_Model->get_ep_series('19489')
 #2 C:\xampp\htdocs\template\app\Controllers\Home.php(334): calltemplate('MV-4', 'series', Array)
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('19489', 'The-King:-Etern...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:17:20 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(553): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 02:55:59 --> Undefined index: movie
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\body.php(288): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 288, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/body...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(73): view('movie/MV-4/body...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:20:21 --> Unknown database 'aegistrex'
+#0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(322): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(32): App\Models\Video_Model->get_setting(1)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-10 01:20:32 --> No database selected
+#0 C:\xampp\htdocs\template\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT * FROM `...')
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\xampp\htdocs\template\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Models\Video_Model.php(322): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(32): App\Models\Video_Model->get_setting(1)
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-02-10 01:22:10 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(553): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 03:37:39 --> Undefined variable: category_list
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -170,50 +232,95 @@ CRITICAL - 2021-02-10 03:38:38 --> Undefined variable: category_list
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(114): view('movie/MV-4/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('65', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:22:54 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(553): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 03:56:06 --> Undefined variable: catename
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\list.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 6, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-4/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('65', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:25:03 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(556): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 03:58:55 --> Undefined variable: catename
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\list.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 6, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-4/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('65', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:25:13 --> Undefined variable: urlvideo
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\video.php(113): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 113, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(557): view('movie/MV-4/vide...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 03:59:39 --> Undefined variable: catename
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\list.php(6): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 6, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-4/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('65', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:28:30 --> Undefined variable: random_movie
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\video.php(332): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 332, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(557): view('movie/MV-4/vide...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9876', 'Alive-2020-%E0%...')
+=======
 CRITICAL - 2021-02-10 03:59:59 --> Undefined variable: catename
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\list.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 154, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-4/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('65', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:37:03 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(113): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('76', '%E0%B8%A5%E0%B8...')
+=======
 CRITICAL - 2021-02-10 04:00:22 --> Undefined index: movie_id
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\list.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 162, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -250,30 +357,93 @@ CRITICAL - 2021-02-10 04:05:35 --> Undefined variable: paginate
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-4/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('43', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:43:37 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(113): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+=======
 CRITICAL - 2021-02-10 04:17:25 --> Undefined variable: category_list
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(554): view('movie/MV-4/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('1', '%E0%B9%80%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:57:52 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(234): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('The King')
+=======
 CRITICAL - 2021-02-10 04:17:30 --> Undefined variable: category_list
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(554): view('movie/MV-4/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('112', '%E0%B9%81%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-02-10 01:58:10 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(246): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 246, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(431): App\Models\Video_Model->get_ep_series('19489')
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(333): calltemplate('MV-4', 'series', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('19489', 'The-King:-Etern...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 02:33:10 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(431): App\Models\Video_Model->get_ep_series('19489')
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(333): calltemplate('MV-4', 'series', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('19489', 'The-King:-Etern...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 02:33:26 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(431): App\Models\Video_Model->get_ep_series('19489')
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(333): calltemplate('MV-4', 'series', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('19489', 'The-King:-Etern...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 02:41:50 --> Undefined offset: 0
+#0 C:\xampp\htdocs\template\app\Models\Video_Model.php(248): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 248, Array)
+#1 C:\xampp\htdocs\template\app\Helpers\template_helper.php(431): App\Models\Video_Model->get_ep_series('19489')
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(333): calltemplate('MV-4', 'series', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('19489', 'The-King:-Etern...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-02-10 02:51:14 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-4/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(397): view('movie/MV-4/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9661', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+=======
 CRITICAL - 2021-02-10 08:42:12 --> Undefined variable: category_list
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-4\header.php(1074): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1074, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -330,6 +500,7 @@ CRITICAL - 2021-02-10 09:06:00 --> Undefined variable: cateRow
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/list', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(115): view('movie/MV-3/list', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+>>>>>>> 656b2a230762e5ab138a6d382d48c3fb0ba49b19
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()

@@ -1071,6 +1071,7 @@
                         <li class="first">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">หมวดหมู่</a>
                             <ul class="dropdown-menu">
+                            
                                 <?php foreach($category_list as $value){ ?>
                                 <li class="fa-chevron"><a onclick="goView2('<?php echo $value['category_id'];?>','<?php echo $value['category_name'];?>')"> <?php echo $value['category_name']; ?></a></li>
                                 <?php } ?>

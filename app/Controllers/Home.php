@@ -433,7 +433,6 @@ class Home extends BaseController
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
-
 		$feildplay = "";
 		if (!empty($data_query['video_data']['movie_thmain'])) {
 			$feildplay = 'movie_thmain';
@@ -460,10 +459,6 @@ class Home extends BaseController
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string,
 			'index' => $index,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'vdorandom' => $data_query['video_random'],
-			'video_data' => $data_query['video_data'],
 			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
 		];
@@ -509,6 +504,8 @@ class Home extends BaseController
 				$this->setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
+	 	$category_list = $data_query['category_list'];
+		// echo "<pre>";print_r($data_query['category_list']);die;
 
 		$feildplay = "";
 

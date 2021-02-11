@@ -458,7 +458,7 @@ function calltemplate($template, $view, $parameter = [])
                     case 'video':
                         $listyear = $VideoModel->get_listyear($parameter['branch']);
                         $category_list = $VideoModel->get_category($parameter['branch']);
-    
+                        
                         $list = [
                             'video_data' => $VideoModel->get_id_video($parameter['id']),
                             'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
