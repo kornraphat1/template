@@ -297,9 +297,9 @@
 			<h3 class="box-header">เรื่องอื่นๆ</h3>
 			<?php foreach ($vdorandom as  $value) {
 				$id = $value['movie_id'];
-				$title_encode = urlencode(str_replace(' ', '-', $value['movie_thname']));
+				$title_encode = urlencode(str_replace(' ', '-', $value['movie_name']));
 
-				$url_name = urldecode(str_replace([" ", "'"], ["-", ""], $value['movie_thname']));
+				$url_name = urldecode(str_replace([" ", "'"], ["-", ""], $value['movie_name']));
 
 
 
@@ -315,7 +315,7 @@
 						<div class="movie-title">
 							<h2>
 								<a href='<?php echo $urlvideo; ?>' onclick="countView('<?= $value['movie_id'] ?>')">
-									<span class="movie-title-color"><?php echo $value['movie_thname']; ?></span>
+									<span class="movie-title-color"><?php echo $value['movie_name']; ?></span>
 								</a>
 							</h2>
 						</div>
@@ -345,7 +345,7 @@
 						<div class="movie-corner movie-HD" style=" background-color: <?php echo $display; ?>;"><?php echo strtoupper($value['movie_quality']); ?></div>
 						<div class="movie-image">
 							<a href='<?php echo $urlvideo; ?>' onclick="countView('<?= $value['movie_id'] ?>')">
-								<img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_thname']; ?>" title="<?php echo $value['movie_thname']; ?>">
+								<img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 							</a>
 						</div>
 					</div>
