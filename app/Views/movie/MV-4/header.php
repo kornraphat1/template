@@ -25,12 +25,12 @@
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet"/>
     <!-- CSS files -->
-    <!-- <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/custom.css?v=5"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/custom.css?v=5"; ?>' />
     <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css?v=8"; ?>' />
     <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/plugins.css?v=2"; ?>' />
     <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/animate.css?v=1"; ?>' />
     <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/size.css?v=3"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-awesome.min.css?v=1"; ?>'> -->
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-awesome.min.css?v=1"; ?>'>
 
     <!-- TAG og facebook -->
     <meta property="og:url" content="<?php echo base_url(uri_string()); ?>" />
@@ -1071,6 +1071,7 @@
                         <li class="first">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">หมวดหมู่</a>
                             <ul class="dropdown-menu">
+                            
                                 <?php foreach($category_list as $value){ ?>
                                 <li class="fa-chevron"><a onclick="goView2('<?php echo $value['category_id'];?>','<?php echo $value['category_name'];?>')"> <?php echo $value['category_name']; ?></a></li>
                                 <?php } ?>

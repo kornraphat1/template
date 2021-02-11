@@ -319,7 +319,7 @@
 
 			<div class="flex-wrap-movielist">
 
-				<?php foreach ($random_movie as $value) {
+				<?php foreach ($vdorandom as $value) {
 
 					$id = $value['movie_id'];
 					if($value['movie_type']=='mo'){

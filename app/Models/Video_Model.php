@@ -93,6 +93,7 @@ class Video_Model extends Model
             WHERE
             `$this->table_category`.branch_id = ? AND $this->table_movie.movie_active = '1'
             GROUP BY $this->table_category.category_id";
+       
         $query = $this->db->query($sql, [$branch_id]);
         return $query->getResultArray();
     }
@@ -236,8 +237,10 @@ class Video_Model extends Model
                     `$this->table_movie`
                 WHERE
                 `$this->table_movie`.movie_id =" . $id;
+       
         $query = $this->db->query($sql);
         $data = $query->getResultArray();
+        
         if (!empty($data[0]['movie_thmain'])) {
             $data[0]['ep_thmai'] = $this->normalizeSeriestoArray($data[0]['movie_thmain']);
             $data[0]['name_ep'] = $this->getListNameSeries($data[0]['movie_thmain'])[0];
@@ -247,7 +250,6 @@ class Video_Model extends Model
         }
         return $data[0];
     }
-    
 
     //-------------------------------------------------------------------------------------------------
 
@@ -660,7 +662,8 @@ class Video_Model extends Model
                     AND `$this->table_movie`.movie_active = '1'
                     AND   `$this->table_movie`.branch_id = '$branchid'
                 ORDER BY `$this->table_movie`.movie_year DESC, `$this->table_movie`.movie_create DESC , `$this->table_movie`.movie_view DESC limit 8 ";
-        $query = $this->db->query($sql);
+      
+       $query = $this->db->query($sql);
         $data['list'] = $query->getResultArray();
         $data['category_name'] = $data['list'][0]['category_name'];
         $data['category_id'] = $data['list'][0]['category_id'];

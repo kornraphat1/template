@@ -110,7 +110,7 @@
                             if (substr($video_data['movie_picture'], 0, 4) == 'http') {
                             ?>
 
-                                <a href="<?php echo $urlvideo; ?>">
+                                <a>
                                     <img src="<?php echo $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
                                 </a>
 
@@ -118,7 +118,7 @@
                             } else {
                             ?>
 
-                                <a href="<?php echo $urlvideo; ?>">
+                                <a>
                                     <img src="<?php echo $backURL. $img_backurl . $video_data['movie_picture']; ?>" alt="<?php echo $video_data['movie_thname']; ?>" title="<?php echo $video_data['movie_thname']; ?>">
                                 </a>
 
@@ -329,7 +329,7 @@
 
 			<div class="flex-wrap-movielist">
 
-				<?php foreach ($random_movie as $value) {
+				<?php foreach ($vdorandom as $value) {
 
 					$id = $value['movie_id'];
 					if($value['movie_type']=='mo'){
