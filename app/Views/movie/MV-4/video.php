@@ -102,7 +102,7 @@
 
 
 
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+		<div class="col-md-3 col-sm-12">
 			<div class="movie-img">
 				<div class="crop-video">
 
@@ -169,10 +169,13 @@
 
 		</div>
 
-		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+		<div class="col-md-9 col-sm-12">
 
 			<iframe class="if-size" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0"></iframe>
-			<p><strong style="color: red;"><?php echo $video_data['movie_thname']; ?></strong> <?php echo $video_data['movie_des']; ?></p>
+		
+		</div>
+		<div class="col-md-12 col-sm-12">
+		<p><strong style="color: red;"><?php echo $video_data['movie_thname']; ?></strong> <?php echo $video_data['movie_des']; ?></p>
 			<h1 class="name-movie bd-hd"> <?php echo $video_data['movie_thname']; ?></h1>
 
 			<br>
@@ -302,15 +305,9 @@
 
 		</div>
 
+		
 
-
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-
-
-
-		</div>
-
-		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="position: relative; min-height: 1px;padding-left: 0px;padding-right: 0px;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position: relative; min-height: 1px;padding-left: 0px;padding-right: 0px;">
 
 			<div class="title-hd" style="padding-top:20px">
 

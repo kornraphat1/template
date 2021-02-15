@@ -13,7 +13,7 @@ div.mv-img-resize {
   text-align: center;
 }
 div.mv-img-style-resize img {
-  width: max-content;
+  width: max-content !important;
   height: 260px;
   margin-bottom: 0px !important;
   border: solid 3px #4a0505f2;
