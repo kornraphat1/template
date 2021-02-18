@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-4';
+		$this->template = 'MV-5';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -55,6 +55,8 @@ class Home extends BaseController
 
 
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
+		
+		
 
 		$view_data = [
 			'document_root' => $this->document_root,
@@ -108,6 +110,7 @@ class Home extends BaseController
 			'listyear' => $data_query['listyear'],
 			'title' => $title,
 		];
+		
 		$data = [];
 		echo view('movie/' . $this->template . '/header', $view_data);
 		echo view('movie/' . $this->template . '/list', $data);
@@ -461,6 +464,10 @@ class Home extends BaseController
 			'index' => $index,
 			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
+			'category_list' => $data_query['category_list'],
+			'listyear' => $data_query['listyear'],
+			'vdorandom' => $data_query['video_random'],
+			'video_data' => $data_query['video_data'],
 		];
 		
 		echo view('movie/' . $this->template . '/header.php', $view_data);

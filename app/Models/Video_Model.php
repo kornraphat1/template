@@ -364,7 +364,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_random($branch_id)
+    public function get_id_video_random($branch_id,$limit)
     {
         $sql = "SELECT
                     *
@@ -372,7 +372,7 @@ class Video_Model extends Model
                     `$this->table_movie`
                 WHERE
                     `$this->table_movie`.branch_id = '$branch_id'
-                ORDER BY RAND()  limit 4";
+                ORDER BY RAND()  limit $limit";
         $query = $this->db->query($sql);
         $data= $query->getResultArray();
         $data = divineMovieName($data);

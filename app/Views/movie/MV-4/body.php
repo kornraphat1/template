@@ -13,7 +13,8 @@
             <div class="slick-multiItemSlider">
                 <?php //echo "<pre>";print_r($movie_recomend);die; 
                 ?>
-                <?php foreach ($movie_recomend['list'] as $value) {
+                <?php 
+                foreach ($movie_recomend['list'] as $value) {
 
                     $id = $value['movie_id'];
 
@@ -34,7 +35,7 @@
                             if (substr($value['movie_picture'], 0, 4) == 'http') {
                             ?>
 
-                                <a href="<?php echo $urlvideo; ?>">
+                                <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
                                     <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                 </a>
 
@@ -56,7 +57,7 @@
 
                         <div class="hvr-inner">
 
-                            <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                            <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                         </div>
 
@@ -187,7 +188,7 @@
                                 } else {
                                 ?>
 
-                                    <a href="<?php echo $urlvideo; ?>">
+                                    <a href="<?php echo $urlvideo; ?>"onclick=" return count_view(<?= $id ?>) ">
                                         <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
@@ -201,7 +202,7 @@
 
                             <div class="hvr-inner">
 
-                                <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                <a href="<?php echo $urlvideo; ?>"onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                             </div>
 
@@ -264,7 +265,9 @@
 
                 ?>
 
-                <?php foreach ($category_list_interest as $key => $values) {
+                <?php 
+                
+                foreach ($category_list_interest as $key => $values) {
                     $i++
                 ?>
 
@@ -299,7 +302,7 @@
                                 $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
                             } else {
                                 $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
-                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/movie/' . $id . '/' . $url_name)));
+                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
                             }
                         ?>
                             <div class="movie-item-style-2 movie-item-style-1">
@@ -317,7 +320,7 @@
                                     } else {
                                     ?>
 
-                                        <a href="<?php echo $urlvideo; ?>">
+                                        <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
                                             <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                         </a>
 
@@ -331,13 +334,13 @@
 
                                 <div class=" hvr-inner">
 
-                                    <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                    <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                                 </div>
 
                                 <div class="mv-item-infor">
 
-                                    <h2><a href="<?php echo $urlvideo; ?>"><?php echo $value['movie_name']; ?></a></h2>
+                                    <h2><a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) "><?php echo $value['movie_name']; ?></a></h2>
 
                                     <p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span> &nbsp; <span style="float: right;">
                                             <i class="fa fa-eye" aria-hidden="true"></i>

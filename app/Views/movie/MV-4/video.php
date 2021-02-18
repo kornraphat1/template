@@ -172,73 +172,71 @@
 		<div class="col-md-9 col-sm-12">
 
 			<iframe class="if-size" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0"></iframe>
-		
-		</div>
-		<div class="col-md-12 col-sm-12">
-		<p><strong style="color: red;"><?php echo $video_data['movie_thname']; ?></strong> <?php echo $video_data['movie_des']; ?></p>
-			<h1 class="name-movie bd-hd"> <?php echo $video_data['movie_thname']; ?></h1>
-
-			<br>
 			<?php
 			if ($video_data['movie_type'] == 'se') {
 			?>
 				<div class="movie-series-content ">
 					<div class="row">
 						<div class="col-md-12">
-							<?php
-							$url_name =  str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
-
-							if ($index > 0) {
-								$key = $index - 1;
-								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-								$disabled = '';
-							} else {
-								$key = $index;
-								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-								$disabled = 'disabled';
-							}
-
-							?>
-
-							<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
-
-
-							<select onchange="click_ep(this)">
-
+							<div class="col-md-2">
 								<?php
+								$url_name =  str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
 
-								foreach ($video_data['name_ep'] as $key => $value) {
-
-									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
-
-									$select = "";
-									if ($value == $video_data['name_ep'][$index]) {
-
-										$select = 'selected';
-									}
-
-									// $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
+								if ($index > 0) {
+									$key = $index - 1;
+									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+									$disabled = '';
+								} else {
+									$key = $index;
+									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+									$disabled = 'disabled';
+								}
 
 								?>
 
-									<option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
-								<?php } ?>
-							</select>
+								<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
+							</div>
+							<div class="col-md-8">
 
-							<?php
-							if (isset($video_data['name_ep'][$index + 1])) {
-								$key = $index + 1;
-								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-								$disabled = '';
-							} else {
-								$key = $index;
-								$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-								$disabled = 'disabled';
-							}
+								<select onchange="click_ep(this)">
 
-							?>
+									<?php
 
-							<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
+									foreach ($video_data['name_ep'] as $key => $value) {
+
+										$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
+
+										$select = "";
+										if ($value == $video_data['name_ep'][$index]) {
+
+											$select = 'selected';
+										}
+
+										// $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
+
+									?>
+
+										<option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
+									<?php } ?>
+								</select>
+							</div>
+							<div class="col-md-2">
+
+								<?php
+								if (isset($video_data['name_ep'][$index + 1])) {
+									$key = $index + 1;
+									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+									$disabled = '';
+								} else {
+									$key = $index;
+									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+									$disabled = 'disabled';
+								}
+
+								?>
+
+								<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
+							</div>
 
 
 						</div>
@@ -248,6 +246,13 @@
 			<?php
 			}
 			?>
+		</div>
+		<div class="col-md-12 col-sm-12">
+			<p><strong style="color: red;"><?php echo $video_data['movie_thname']; ?></strong> <?php echo $video_data['movie_des']; ?></p>
+			<h1 class="name-movie bd-hd"> <?php echo $video_data['movie_thname']; ?></h1>
+
+			<br>
+		
 			<div class="movie-single-ct main-content" style="display:flex;width:100%;margin-bottom: 20px;"><br>
 
 				<!-- ปุ่มแชร์เฟสบุ้ค -->
@@ -266,8 +271,15 @@
 
 					<!-- ปุ่มแชร์ไลน์ -->
 					<div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="<?= base_url(uri_string()) ?>" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
+					<?php
+					if (!empty($ep_name)) {
+						$ep_name = $ep_name;
+					} else {
+						$ep_name = '-';
+					}
 
-					<button class="pull-right btn redbtn" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')" style="margin-left: auto;">
+					?>
+					<button class="pull-right btn redbtn" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>','<?= $video_data['movie_thname'] ?>','<?= $ep_name ?>')" style="margin-left: auto;">
 						<font color="white">แจ้งหนังเสีย</font>
 					</button>
 
@@ -305,7 +317,7 @@
 
 		</div>
 
-		
+
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="position: relative; min-height: 1px;padding-left: 0px;padding-right: 0px;">
 
