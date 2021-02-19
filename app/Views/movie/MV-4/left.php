@@ -1,61 +1,61 @@
-<div class="col-md-4 ">
+<div class="col-md-3 ">
 
-                <div class="sidebar hidden-xs hidden-sm">
+    <div class="sidebar hidden-xs hidden-sm">
 
-                    <div class="celebrities">
-                        <h4 class="sb-title">หมวดหมู่</h4>
-                        
-                        <?php foreach ($category_list as $value) { ?>
+        <div class="celebrities">
+            <h4 class="sb-title">หมวดหมู่</h4>
 
-                            <div class="celeb-item">
+            <?php foreach ($category_list as $value) { ?>
 
-                                <div class="celeb-author">
+                <div class="celeb-item">
 
-                                    <h3><a href="<?php echo base_url('/category/' . $value['category_id'] . "/" . urlencode($value['category_name'])); ?>" title=<?= $value['category_name'] ?>><?= $value['category_name'] ?></a></h3>
+                    <div class="celeb-author">
 
-                                </div>
-
-                            </div>
-
-                        <?php } ?>
+                        <h3><a href="<?php echo base_url('/category/' . $value['category_id'] . "/" . urlencode($value['category_name'])); ?>" title=<?= $value['category_name'] ?>><?= $value['category_name'] ?></a></h3>
 
                     </div>
 
                 </div>
 
-                <?php 
+            <?php } ?>
 
-                if (!empty($path_imgads)) {
+        </div>
+
+    </div>
+
+    <?php
+
+    if (!empty($path_imgads)) {
 
 
-                    foreach ($path_imgads as $value) {
+        foreach ($path_imgads as $value) {
 
 
 
-                        if ($value['ads_position'] == "2") {
+            if ($value['ads_position'] == "2") {
 
-                ?>
+    ?>
 
-                            <div class="col-sm-6 col-xs-6 col-md-12 col-lg-12">
+                <div class="col-sm-6 col-xs-6 col-md-12 col-lg-12">
 
-                                <asidenone>
+                    <asidenone>
 
-                                    <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank">
+                        <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank">
 
-                                        <img src="<?php echo $pathads . $value['ads_picture']; ?>" alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" style="width: 100%;margin-top: 20px;border-left-width: 10px;margin-left: 15px;" class="hoverimg">
+                            <img src="<?php echo $pathads . $value['ads_picture']; ?>" alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" style="width: 100%;margin-top: 20px;border-left-width: 10px;margin-left: 15px;" class="hoverimg">
 
-                                    </a>
+                        </a>
 
-                                </asidenone>
+                    </asidenone>
 
-                            </div>
+                </div>
 
-                <?php
+    <?php
 
-                        }
-                    }
-                }
+            }
+        }
+    }
 
-                ?>
+    ?>
 
-            </div>
+</div>

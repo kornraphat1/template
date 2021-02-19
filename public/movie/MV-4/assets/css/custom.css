@@ -6,27 +6,31 @@ div.mv-img-resize img {
   width: auto !important;
   height: 420px;
 }
+
 div.mv-img-resize {
   width: 274px;
   height: 420px;
   overflow: hidden;
   text-align: center;
 }
+
 div.mv-img-style-resize img {
-  width: auto !important;
-  height: 261px;
+  width: max-content !important;
+  height: 260px;
   margin-bottom: 0px !important;
   border: solid 3px #4a0505f2;
 }
+
 div.mv-img-style-resize {
-  width: 160px;
+  width: auto;
   height: 261px;
   overflow: hidden;
   text-align: center;
   margin-bottom: 20px;
+  padding: 0px 10px;
 }
-div.top-search div,
-div.top-search-mobile div {
+
+div.top-search div, div.top-search-mobile div {
   width: 200px;
   height: 46px;
   font-size: 16px;
@@ -36,18 +40,14 @@ div.top-search-mobile div {
   padding: 10px 10px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  background: #d40909; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #33001b,
-    #d40909
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #33001b,
-    #d40909
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #d40909;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient( to top, #33001b, #d40909);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient( to top, #33001b, #d40909);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -60,9 +60,11 @@ div.top-search-mobile div {
   z-index: 2;
   cursor: pointer;
 }
+
 .clear-fix {
   clear: both;
 }
+
 .search-item {
   padding-top: 200px;
   position: relative;
@@ -73,21 +75,26 @@ div.top-search-mobile div {
   align-items: center;
   justify-content: center;
 }
+
 .title-in {
   text-align: left;
 }
+
 .video-stlye {
   margin-bottom: 20px;
 }
+
 iframe {
   width: 100%;
   margin-bottom: 20px !important;
 }
+
 .movie-block {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 }
+
 .nextbtn {
   font-family: "Mitr", sans-serif;
   font-size: 14px;
@@ -104,6 +111,7 @@ iframe {
   -moz-border-bottom-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
+
 .prevbtn {
   font-family: "Mitr", sans-serif;
   font-size: 14px;
@@ -120,33 +128,41 @@ iframe {
   -moz-border-bottom-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+
 .mv-item-infor-style {
   width: 100%;
   margin-top: 20px;
 }
+
 .series-list {
   text-align: center;
 }
-.series-list a{
+
+.series-list a {
   color: #ffffff;
 }
+
 .movie-series-content {
   display: grid;
   padding: 10px;
 }
+
 .movie-series-content select {
-  font-family: "Mitr", sans-serif;;
+  font-family: "Mitr", sans-serif;
+  ;
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 7px 9px;
   border-radius: 5px;
   border: 3px solid #737373;
   background: #e0e0e0;
   text-align: center;
 }
+
 .movie-series-content button {
-  font-family: "Mitr", sans-serif;;
-  width: 20%;
+  font-family: "Mitr", sans-serif;
+  ;
+  width: 100%;
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;
@@ -161,9 +177,11 @@ iframe {
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
 }
+
 .movie-series-content button:hover {
   background-color: #777777;
 }
+
 .movie_player {
   margin-bottom: 2rem;
 }
@@ -171,32 +189,37 @@ iframe {
 #content .content-web {
   padding: 20px 20px;
 }
+
 #content h1.title-web {
   font-size: 36px;
   text-align: center;
 }
+
 #content h1.title-web span.text-gold-linear {
-  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgb(255, 231, 193) 0%, rgb(243, 228, 203) 26%, rgba(226,186,120,1) 35%, rgb(245, 224, 190) 45%, rgb(216, 188, 142) 61%, rgba(213,173,109,1) 100%);
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgb(255, 231, 193) 0%, rgb(243, 228, 203) 26%, rgba(226, 186, 120, 1) 35%, rgb(245, 224, 190) 45%, rgb(216, 188, 142) 61%, rgba(213, 173, 109, 1) 100%);
   background: -o-linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 #content h1.title-web span.text-silver-linear {
   background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(250, 249, 249) 26%, rgb(235, 235, 235) 35%, rgb(219, 219, 219) 45%, rgb(155, 155, 155) 61%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 100%);
   background: -o-linear-gradient(transparent, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 #content h2.title-description {
   text-align: center;
   color: #8c8c8c;
-
 }
+
 #content a img.logo-footer {
   margin: auto;
   margin-bottom: 20px;
   text-align: center;
 }
+
 #content p.content-footer {
   color: #ffffff;
   max-width: 70%;
@@ -205,8 +228,7 @@ iframe {
   text-align: center;
 }
 
-@media (min-width: 1281px) {
-}
+@media (min-width: 1281px) {}
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .slider {
@@ -218,11 +240,9 @@ iframe {
   .slider {
     padding-top: 27% !important;
   }
-
   header .top-search {
     display: none !important;
   }
-
   .mb-search {
     display: flex;
     position: absolute;
@@ -232,7 +252,6 @@ iframe {
     width: 100%;
     margin-top: 13%;
   }
-
   .top-search-mobile {
     padding-top: 8%;
     display: -webkit-flex !important;
@@ -245,11 +264,9 @@ iframe {
     -moz-border-radius: 10px;
     border-radius: 10px;
   }
-
   div.top-search-mobile div {
     width: 40% !important;
   }
-
   .movie-item-style-1:hover .hvr-inner {
     margin-left: 40%;
   }
@@ -323,5 +340,402 @@ iframe {
   }
   .slider .slick-multiItemSlider .slick-dots {
     text-align: center !important;
+  }
+}
+
+/* จอไอโฟน 5 / se */
+
+@media only screen and (max-width: 320px) {
+  .movie-item-style-1 .hvr-inner {
+    margin-left: 47px;
+  }
+  .flex-wrap-movielist {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 5rem;
+  }
+  .pagination {
+    flex-wrap: wrap;
+  }
+  .if-size {
+    width: 100%;
+    height: 35%;
+  }
+  .bd-hd {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 100%;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .icon-fb {
+    width: 18%;
+  }
+  .icon-line {
+    width: 18%;
+  }
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 55%;
+    min-height: 1px;
+  }
+  div.top-search div, div.top-search-mobile div {
+    width: 100px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    padding: 10px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: #d40909;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #33001b, #d40909);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #33001b, #d40909);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .padding-top-search {
+    padding-top: 20px;
+  }
+}
+
+/* จอ Mobile เล็กกว่า Iphone 678 plus*/
+
+@media only screen and (min-width: 360px) and (max-device-width: 413px) {
+  .movie-item-style-1 .hvr-inner {
+    margin-left: 47px;
+  }
+  .flex-wrap-movielist {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .if-size {
+    width: 100%;
+    height: 35%;
+  }
+  .bd-hd {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 100%;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .icon-fb {
+    width: 18%;
+  }
+  .icon-line {
+    width: 18%;
+  }
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 55%;
+    min-height: 1px;
+  }
+  div.top-search div, div.top-search-mobile div {
+    width: 100px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    padding: 10px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: #d40909;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #33001b, #d40909);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #33001b, #d40909);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .padding-top-search {
+    padding-top: 20px;
+  }
+}
+
+/* จอไอโฟน 678 plus */
+
+@media only screen and (min-width: 414px) and (max-device-width: 767px) {
+  .movie-item-style-1 .hvr-inner {
+    margin-left: 47px;
+  }
+  .flex-wrap-movielist {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 0rem;
+  }
+  .manga-item-list {
+    padding: 20px !important;
+  }
+  .if-size {
+    width: 100%;
+    height: 35%;
+  }
+  .bd-hd {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 100%;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .icon-fb {
+    width: 18%;
+  }
+  .icon-line {
+    width: 18%;
+  }
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 55%;
+    min-height: 1px;
+  }
+  div.top-search div, div.top-search-mobile div {
+    width: 100px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    padding: 10px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: #d40909;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #33001b, #d40909);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #33001b, #d40909);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
+
+/* จอ Ipad */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+  .if-size {
+    width: 100%;
+    height: 35%;
+  }
+  .bd-hd {
+    font-size: 31px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .padding-top {
+    padding-top: 47%;
+  }
+  .search_width {
+    width: 60%;
+  }
+  .icon-fb {
+    width: 12%;
+  }
+  .icon-line {
+    width: 12%;
+  }
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 36%;
+    min-height: 1px;
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1199px) and (-webkit-min-device-pixel-ratio: 1) {
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 36%;
+    min-height: 1px;
+  }
+  .if-size {
+    width: 100%;
+    height: 26%;
+  }
+  .bd-hd {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 180px;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .padding-top {
+    padding-top: 47%;
+  }
+  .search_width {
+    width: 83%;
+  }
+  .icon-fb {
+    width: 3rem;
+  }
+  .icon-line {
+    width: 3rem;
+  }
+}
+
+/* จอ Laptop pmint*/
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .if-size {
+    width: 100%;
+    height: 68%;
+  }
+  .bd-hd {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 12%;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .padding-top {
+    padding-top: 47%;
+  }
+  .search_width {
+    width: 83%;
+  }
+  .icon-fb {
+    width: 70%;
+  }
+  .icon-line {
+    width: 70%;
+  }
+  .padding-top-search {
+    padding-top: 20px;
+  }
+}
+
+/* จอใหญ่สุด */
+
+@media screen and (min-device-width: 1601px) {
+  .if-size {
+    width: 100%;
+    height: 46%;
+  }
+  .bd-hd {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  .padding-top {
+    padding-top: 47%;
+  }
+  #ads_fox_bottom {
+    bottom: 0px;
+    display: block;
+    min-height: 40px;
+    position: fixed;
+    text-align: center;
+    z-index: 50000;
+    width: 100%;
+  }
+  #ads_fix_footer {
+    width: 100%;
+  }
+  .search_width {
+    width: 83%;
+  }
+  .icon-fb {
+    width: 70%;
+  }
+  .icon-line {
+    width: 70%;
+  }
+  .padding-top-search {
+    padding-top: 0px;
   }
 }
