@@ -62,12 +62,12 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $vdorandom = $VideoModel->get_id_video_random($parameter['branch']);
+                    $vdorandom = $VideoModel->get_id_video_random($parameter['branch'],4);
 
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
-                        'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'],4),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
@@ -84,7 +84,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
-                        'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'],4),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
@@ -97,7 +97,7 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $video_data = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch']);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'],4);
 
                     $list = [
 
@@ -204,12 +204,12 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $vdorandom = $VideoModel->get_id_video_random($parameter['branch']);
+                    $vdorandom = $VideoModel->get_id_video_random($parameter['branch'],4);
 
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
-                        'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'],4),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
                         'series' => $series,
@@ -224,7 +224,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
-                        'video_random' => $VideoModel->get_id_video_random($parameter['branch']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'],4),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
@@ -237,7 +237,7 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $video_data = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch']);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'],4);
 
                     $list = [
 
@@ -490,14 +490,11 @@ function calltemplate($template, $view, $parameter = [])
                         case 'index':
                             $cate_req = [6, 7, 28];
                             foreach ($cate_req as $val) {
-                                $video_cate[] = $VideoModel->get_list_video_bycate($parameter['branch'], $val);
+                                $video_cate[] = $VideoModel->get_id_video_bycategory($val,$parameter['branch'] , $parameter['page']);
                             }
-    
-    
-                            $paginate = $VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
+                            $list_video = $VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
                             $category_list = $VideoModel->get_category($parameter['branch']);
                             $listyear = $VideoModel->get_listyear($parameter['branch']);
-                            
                             $movie_recomend = $VideoModel->get_movie_new_recommend($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
                            
                             $category_list_interest = $VideoModel->category_list();
@@ -508,9 +505,10 @@ function calltemplate($template, $view, $parameter = [])
                             }
                           
                             $list = [
-                                'list_video' => $paginate,
+                                'list_video' => $list_video,
                                 'category_list' => $category_list,
                                 'listyear' => $listyear,
+                                'video_cate' => $video_cate,
                                 'movie_recomend' => $movie_recomend,
                                 'category_list_interest' => $category_list_interest
                                
@@ -519,8 +517,6 @@ function calltemplate($template, $view, $parameter = [])
                             break;
                         case 'video_bycate':
                             $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
-    
-                           
                             $category_list = $VideoModel->get_category($parameter['branch']);
                             $listyear = $VideoModel->get_listyear($parameter['branch']);
                             
@@ -530,16 +526,7 @@ function calltemplate($template, $view, $parameter = [])
                                 'listyear' => $listyear,
                             ];
                             break;
-                        case 'video_byyear':
-                            $list_video = $VideoModel->get_id_video_byyear($parameter['year'], $parameter['branch'], $parameter['page']);
-                            $category_list = $VideoModel->get_category($parameter['branch']);
-                            $listyear = $VideoModel->get_listyear($parameter['branch']);
-                            $list = [
-                                'list_video' => $list_video,
-                                'category_list' => $category_list,
-                                'listyear' => $listyear,
-                            ];
-                            break;
+              
         
                         case 'video_search':
                             $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
