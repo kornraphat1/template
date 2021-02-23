@@ -1,50 +1,26 @@
-<style>
-	.btn-twitter {
-		position: relative;
-		height: 20px;
-		box-sizing: border-box;
-		padding: 1px 8px 1px 6px;
-		background-color: #1b95e0;
-		color: #fff;
-		border-radius: 3px;
-		font-weight: 500;
-		cursor: pointer;
-	}
-
-	.btn-twitter i {
-		position: relative;
-		top: 2px;
-		display: inline-block;
-		width: 14px;
-		height: 14px;
-		background: transparent 0 0 no-repeat;
-		background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);
-	}
-</style>
-
 <body class="body">
 	<section class="section section--details section--bg" data-bg="img/section/section.jpg">
 		<div class="container">
 			<div class="row">
 
-				<div class="col-lg-12 col-lg-6">
+				<div class="col-lg-12">
 					<div class=" card--details">
 						<div class="row">
 							<div class="col-lg-3 col-md-12">
 								<div class="card__cover">
 									<img src="<?php echo $video_data['movie_picture']; ?>" alt="">
-									<span class="card__rate card__rate--green">8.4</span>
+									<span class="card__rate card__rate--green"><?php echo $video_data['movie_ratescore']; ?></span>
 								</div>
 								<!-- ADS2 -->
 								<div class="ads">
 									<?php foreach ($ads as $value) {
 										if ($value['ads_position'] == "3") {
 									?>
-									<div class="slide-ads2">
-											<img src='<?php echo  $backURL . "ads/" . $value['ads_picture']; ?>' style="padding-top: 10px;" alt="">
-								</div>
-								
-								<?php } else {
+											<div class="slide-ads2">
+												<img src='<?php echo  $backURL . "ads/" . $value['ads_picture']; ?>' style="padding-top: 10px;" alt="">
+											</div>
+
+									<?php } else {
 										}
 									} ?>
 								</div>
@@ -53,36 +29,157 @@
 							</div>
 							<!-- player -->
 
-							<div class="col-lg-8 col-md-12">
+							<div class="col-lg-9 col-md-12">
 								<iframe class="if-size" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0"> </iframe>
-								<h1 class="section__title bd-hd"><?php echo $video_data['movie_thname']; ?></h1>
-								<div class="movie-single-ct main-content"><br>
-									<a class="redbtn-alert" style=" float: right;">แจ้งหนังเสีย</a>
-									<div class="row" style="display: inline-flex;">
-										<div id="fb-root"></div>
-										<div class="fb-share-button" data-href="https://www.your-domain.com/your-page.html" data-layout="button_count"></div>
 
-										<div class="line-it-button" data-lang="en" data-type="share-a" data-ver="3" data-url="https://media.line.me/en/how_to_install" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
+								<?php
+								if ($video_data['movie_type'] == 'se') {
+								?>
+									<div class="movie-series-content ">
+										<div class="row">
+											<div class="col-md-12">
+												<?php
+												$url_name =   str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
 
-										<a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
-											<div class="btn-twitter" data-scribe="component:button" style="width: 65px;">
-												<a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
-													<span style="padding: 0px 0px 0px;" class="label" id="l">
-														<font color="white" style="font-size: 11px;">Tweet</font>
-													</span>
-												</a>
+												if ($index > 0) {
+													$key = $index - 1;
+													$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+													$disabled = '';
+												} else {
+													$key = $index;
+													$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+													$disabled = 'disabled';
+												}
+
+												?>
+
+												<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button <?= $disabled ?> style=" float: left;">ตอนก่อนหน้า</button></a>
+
+
+												<select onchange="click_ep(this)">
+
+													<?php
+
+													foreach ($video_data['name_ep'] as $key => $value) {
+
+														$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
+
+														$select = "";
+														if ($value == $video_data['name_ep'][$index]) {
+
+															$select = 'selected';
+														}
+
+														// $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
+
+													?>
+
+														<option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
+													<?php } ?>
+												</select>
+
+												<?php
+												if (isset($video_data['name_ep'][$index + 1])) {
+
+													$key = $index + 1;
+													$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+													$disabled = '';
+												} else {
+													$key = $index;
+													$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
+													$disabled = 'disabled';
+												}
+
+												?>
+
+												<a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"><button style=" float: right; " <?= $disabled ?>>ตอนถัดไป</button></a>
+
+
 											</div>
+										</div>
+									</div>
 
-									</div><br><br>
-									<div class="fb-comments col-xs-12 d-none d-sm-block" style="text-align: center;" data-href="<?= base_url(uri_string()) ?>" data-numposts="5" data-width=""></div>
+								<?php
+								}
+								?>
+							</div>
+							<div class="col-lg-12 col-md-12">
+
+								<h1 class="section__title bd-hd"><?php echo $video_data['movie_thname']; ?></h1>
+								<div class="movie-description">
+									<p>
+										<?php if (empty($video_data['movie_des'])) {
+											echo "-";
+										} else {
+											echo $video_data['movie_des'];
+										} ?>
+									</p>
+								</div>
+
+								<div class="movie-single-ct main-content"><br>
+
+
+									<div class="movie-single-ct main-content">
+										<div class="row">
+											<div class="col-md-12">
+												<a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=<?= urlencode(base_url(uri_string())) ?>&display=popup&ref=plugin&src=share_button" target="_blank"><i class="fa fa-facebook-f"></i></a>
+
+												<a href="https://social-plugins.line.me/lineit/share?url=<?= urlencode(base_url(uri_string())) ?>" target="_blank">
+													<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="line" class="svg-inline--fa fa-line fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+														<path fill="currentColor" d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"></path>
+													</svg>
+												</a>
+
+												<a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=<?= $video_data['movie_thname'] ?>" class="btn-b" id="b"><i class="fa fa-twitter"></i></a>
+												<?php
+												if (!empty($ep_name)) {
+													$ep_name = $ep_name;
+												} else {
+													$ep_name = '-';
+												}
+
+												?>
+												<a onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>','<?= $video_data['movie_thname'] ?>','<?= $ep_name ?>')" class="redbtn-alert" style=" float: right;">แจ้งหนังเสีย</a>
+
+											</div>
+										</div>
+									</div>
+
+									<div id="movie-comment">
+
+										<div class="fb-comments" data-href="<?= base_url(uri_string()) ?>" data-colorscheme="light" data-width="1200" data-numposts="5" style="text-align: center;background: aliceblue"></div>
+
+										<div id="fb-root"></div>
+
+										<script>
+											(function(d, s, id) {
+
+												var js, fjs = d.getElementsByTagName(s)[0];
+
+												if (d.getElementById(id)) return;
+
+												js = d.createElement(s);
+
+												js.id = id;
+
+												js.src =
+
+													'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.2&appId=254458338652270&autoLogAppEvents=1';
+
+												fjs.parentNode.insertBefore(js, fjs);
+
+											}(document, 'script', 'facebook-jssdk'));
+										</script>
+
+									</div>
 
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 
