@@ -468,9 +468,7 @@
          width: 37px;
          padding: -2px;
       }
-   </style>
 
-   <style type="text/css">
       @font-face {
          font-family: myFirstFont;
          src: url('<?php echo base_url("/assets/font/Prompt-Bold.ttf") ?>');
