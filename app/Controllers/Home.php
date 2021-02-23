@@ -52,12 +52,7 @@ class Home extends BaseController
 
 		$data = calltemplate($this->template, 'index', $parameter);
 
-
-
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-
-
-
 		$view_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -107,13 +102,11 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'category_list' => $data_query['category_list'],
 			'list_video' => $data_query['list_video'],
-			'listyear' => $data_query['listyear'],
 			'title' => $title,
 		];
-
-		$data = [];
+		
 		echo view('movie/' . $this->template . '/header', $view_data);
-		echo view('movie/' . $this->template . '/list', $data);
+		echo view('movie/' . $this->template . '/list', $data_query);
 		echo view('movie/' . $this->template . '/footer');
 	}
 	//--------------------------------------------------------------------
