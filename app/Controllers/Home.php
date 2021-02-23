@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-5';
+		$this->template = 'MV-3';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -52,11 +52,8 @@ class Home extends BaseController
 
 		$data = calltemplate($this->template, 'index', $parameter);
 
-
-
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-		
-		
+	
 
 		$view_data = [
 			'document_root' => $this->document_root,
@@ -69,6 +66,8 @@ class Home extends BaseController
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
 		];
+
+		// echo "<pre>";print_r($this->ads);die;
 
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
@@ -107,13 +106,11 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'category_list' => $data_query['category_list'],
 			'list_video' => $data_query['list_video'],
-			'listyear' => $data_query['listyear'],
 			'title' => $title,
 		];
 		
-		$data = [];
 		echo view('movie/' . $this->template . '/header', $view_data);
-		echo view('movie/' . $this->template . '/list', $data);
+		echo view('movie/' . $this->template . '/list', $data_query);
 		echo view('movie/' . $this->template . '/footer');
 	}
 	//--------------------------------------------------------------------

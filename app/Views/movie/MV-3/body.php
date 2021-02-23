@@ -19,7 +19,7 @@
                            $id = $value['movie_id'];
                            $s_replace = [")", "(", " ", '%'];
                            $e_replace = [ "", "", "-", '%25'];
-                           $url_name = urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_thname'])));
+                           $url_name = urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
                            
                            if($value['movie_type']=="se"){
                               $urlvideo = urldecode(base_url('series/'.$id.'/'.$url_name));
@@ -54,13 +54,8 @@
                                  </div> 
                               </a>
                                        
-                              <?php 
-                                 if (strlen($value['movie_thname']) > 40){
-                                 $value['movie_thname'] = iconv_substr($value['movie_thname'], 0, 40, "UTF-8") . '...';
-                                 }
-                              ?>
                               <h2 class="titla_name" style="height: 53px;">
-                                 <a class="title" style="word-wrap: break-word;" href="<?= $urlvideo ?>"><?php echo $value['movie_thname'];?></a>
+                                 <a class="title" style="word-wrap: break-word;" href="<?= $urlvideo ?>"><?php echo $value['movie_name'];?></a>
                               </h2>
                            
                            </div>
@@ -111,15 +106,19 @@
       <div id="ads_fix_footer">
       <div style="text-align:center;">
          <div id="fix_footer">
-            <?php foreach($ads as $value){ if(empty($value['ads_position']=="2")){
-             } else {?>
+            <?php 
+            foreach($ads['pos2'] as $value){ 
+               if(!empty($value['ads_position']=="2")){
+            ?>
                <a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
-            <?php } 
-         }?>
+            <?php 
+               }
+            } 
+            ?>
          </div>
       </div>
      <?php
-            foreach ($ads as $value){
+            foreach ($ads['pos2'] as $value){
                if($value['ads_position']=="2"){ 
          ?>
             <div style="clear:both;"></div> 
