@@ -25,11 +25,7 @@
                     ];
                     $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
 
-                    if ($value['movie_type'] == 'se') {
-                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
-                    } else {
-                        $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
-                    }
+                   
                 ?>
                    <div class="movie_box">
                        <?php if ($value['movie_quality'] = "hd") {
@@ -40,7 +36,7 @@
                         ?>
                        <span class="score-view"><i class="fa fa-star star-icon" aria-hidden="true"></i><?php echo  $value['movie_ratescore']; ?></span>
                        <span class="movie-view" style="background-color: <?php echo $quality; ?>"><?php echo strtoupper($value['movie_quality']); ?></span>
-                       <a href="<?php echo  $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
+                       <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
                            <img width="300" height="452" src="<?php echo $value['movie_picture']; ?>" class="attachment-mediam size-mediam wp-post-image" title="<?php echo $value['movie_name']; ?>" alt="<?php echo $value['movie_name']; ?>" sizes="(max-width: 300px) 100vw, 300px" />
                            <h2>
                                <p>

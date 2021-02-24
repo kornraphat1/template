@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+CRITICAL - 2021-02-23 08:48:03 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-1\body.php(156): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 156, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-1/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(75): view('movie/MV-1/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-23 08:49:36 --> Undefined index: movie_id
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-1\body.php(183): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 183, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-1/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(75): view('movie/MV-1/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+=======
 CRITICAL - 2021-02-23 01:20:03 --> Unknown database 'new_variety2'
 #0 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
 #1 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
@@ -187,6 +208,17 @@ CRITICAL - 2021-02-23 04:03:07 --> Undefined variable: datethai
 #5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+>>>>>>> 028c72fcc9180fbb8e5da0652c0f18cb5a15e1bc
+#8 {main}
+CRITICAL - 2021-02-23 22:46:44 --> Unknown database 'aegistrex'
+#0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(723): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(32): App\Models\Video_Model->get_setting(1)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
 CRITICAL - 2021-02-23 23:24:53 --> Undefined variable: datethai
 #0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 16, Array)
