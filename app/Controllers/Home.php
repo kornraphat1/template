@@ -542,7 +542,6 @@ class Home extends BaseController
 
 		];
 
-
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/video.php');
 		echo view('movie/' . $this->template . '/footer.php');

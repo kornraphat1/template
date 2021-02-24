@@ -1,26 +1,4 @@
-<!-- มาร์กอัป JSON-LD ที่สร้างขึ้นโดยโปรแกรมช่วยมาร์กอัปข้อมูลที่มีโครงสร้างของ Google -->
-<script type="application/ld+json">
-   {
 
-      "@context": "http://schema.org",
-      "@type": "Movie",
-      "name": "รายการหนัง",
-      "image": "<?php echo $video_data['movie_picture']; ?>",
-      "url": "<?= "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>",
-      "aggregateRating": {
-         "@type": "AggregateRating",
-         "ratingValue": "<?php echo $video_data['movie_ratescore']; ?>",
-         "bestRating": "9.8",
-         "worstRating": "0",
-         "ratingCount": "4892",
-         "dateCreated": "<?= $datethai ?>",
-         "director": {
-            "@type": "Person",
-            "name": "Unknow"
-         }
-      }
-   }
-</script>
 <style type="text/css">
    .video-embed-box {
       margin-left: 0px !important;
@@ -34,251 +12,6 @@
       height: 55vw;
       max-height: 400px;
       box-sizing: border-box;
-   }
-
-   @font-face {
-      font-family: myFirstFont;
-      src: url('<?php echo base_url("/assets/font/Prompt-Bold.ttf") ?>');
-   }
-
-   div,
-   h2,
-   h3 {
-      font-family: myFirstFont !important;
-   }
-
-   h3,
-   .h3 {
-      font-size: 16px;
-   }
-
-   .bor {
-      border: 7px solid #ccc !important;
-   }
-
-   #ads_fix_footer {
-      width: 100%;
-      margin: auto;
-   }
-
-   #ads_fox_bottom {
-      bottom: 0px;
-      display: block;
-      min-height: 40px;
-      position: fixed;
-      text-align: center;
-      z-index: 50000;
-      width: 100%;
-   }
-
-   .col-ms-12 {
-      padding-right: 17px;
-   }
-
-
-   /* จอใหญ่สุด */
-   @media (min-width: 1281px) {
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 32%;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: 37px;
-         margin-top: -15px;
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 450px;
-         cursor: pointer;
-      }
-
-      #single-video-wrapper {
-         margin-left: 58px;
-      }
-
-      .col-ms-4 {
-         padding-right: 17px;
-
-      }
-   }
-
-   @media (min-width: 1025px) and (max-width: 1280px) {
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 728px;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: 60px;
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 450px;
-         cursor: pointer;
-      }
-
-      .col-ms-4 {
-         padding-right: 17px;
-      }
-   }
-
-   @media (min-width: 768px) and (max-width: 1024px) {
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 728px;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: -25px;
-         margin-top: -9px;
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 75%;
-         cursor: pointer;
-      }
-
-      #single-video {
-         margin-right: 30px;
-         margin-left: 30px;
-         padding-left: 0px;
-      }
-
-      .col-ms-4 {
-         padding-right: 17px;
-      }
-
-   }
-
-   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 100%;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: auto;
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 75%;
-         cursor: pointer;
-      }
-
-      #single-video {
-         margin-right: 30px;
-         margin-left: 30px;
-         padding-left: 0px;
-      }
-
-
-   }
-
-   @media (min-width: 481px) and (max-width: 767px) {
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 100%;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: 30px;
-         margin-top: -40px;
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 75%;
-         cursor: pointer;
-      }
-   }
-
-   @media (min-width: 320px) and (max-width: 480px) {
-
-      h2 {
-         font-size: 14px !important;
-      }
-
-      #fix_footer2 img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 100%;
-         height: auto;
-      }
-
-      #fix_footer img {
-         background-repeat: no-repeat;
-         background-size: contain;
-         width: 50px;
-         height: 13px;
-         margin-left: 7px;
-         margin-top: -8px
-      }
-
-      #fix_footer {
-         width: 26px;
-         height: 0px;
-         display: -webkit-inline-box;
-         margin: 0px 0px 0px 75%;
-         cursor: pointer;
-      }
-
-      #single-video {
-         margin-right: 30px;
-         margin-left: 30px;
-         padding-left: 0px;
-      }
-
-
    }
 
    .btn-twitter {
@@ -304,13 +37,6 @@
    }
 </style>
 
-<?php
-//  echo "<pre>";
-//  print_r($video_data);die;
-// print_r($feildplay);die;
-// echo "<pre>";
-//  print_r($path_livesteram);
-?>
 <div id="single-video-wrapper" class="col-xs-12 col-lg-8 col-md-12 standard-bg">
    <div class="row">
       <!-- Triler Movies -->
@@ -342,8 +68,6 @@
             <div class="post post-medium">
                <div class="thumbr">
                   <a class="post-thumb" href="https://www.youtube.com/watch?v=Ikkfwnq4Uss" data-lity>
-
-
                   </a>
                </div>
                <div class="infor">
@@ -354,10 +78,7 @@
       <!--/ Triler Movies -->
       <!-- VIDEO SINGLE POST -->
       <div class="col-xs-12">
-         <!-- <a href="http://themeforest.net/user/orcasthemes/portfolio?ref=orcasthemes" class="banner-md">
-                  <img src= '<?php echo base_url("/assets/img/banners/banner-xl.jpg") ?>'  class="img-responsive" alt="Buy Now Muvee Reviews Bootstrap HTML5 Template" title="Buy Now Muvee Reviews Bootstrap HTML5 Template">
-               </a> -->
-         <!-- POST L size -->
+
          <article class="post-video">
             <!-- VIDEO INFO -->
             <div class="video-info">
@@ -374,12 +95,9 @@
                   </div>
                </div>
                <!-- Your share button code -->
-
+               
                <!-- ********************* SOURCS MOVIES  ****************************  -->
                <div class="embed-responsive embed-responsive-16by9 video-embed-box" style="min-height: 150px;margin-bottom: 10px;">
-                  <!-- <iframe src="https://freeball95.com/E/M07814.mp4" width="500px" class="embed-responsive-item"></iframe> -->
-                  <?php //echo base_url();die;
-                  ?>
                   <iframe src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay . '/' . $index)  ?>" scrolling="no" frameborder="0" style="width:100%; height:100%; z-index:500;" allowfullscreen="yes"></iframe>
                </div>
                <?php
@@ -420,8 +138,6 @@
                                     $select = 'selected';
                                  }
 
-                                 // $href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname 
-
                               ?>
 
                                  <option value="<?php echo $url_name . '/' . $key . '/' . $url_epname ?>" <?= $select; ?>><?php echo $video_data['movie_thname'] . ' - ' . $value ?> </option>
@@ -461,12 +177,11 @@
                   </div>
 
                   <div class="col-ms-4">
-                     <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
-                        <div class="btn-twitter navbar-right" data-scribe="component:button" style="width: 65px;">
-                           <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
-                              <span style="padding: 0px 0px 0px;" class="label" id="l">ทวีต</span>
-                           </a>
-                        </div>
+                     <div class="btn-twitter navbar-right" data-scribe="component:button" style="width: 65px;">
+                        <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
+                           <span style="padding: 0px 0px 0px;" class="label" id="l">ทวีต</span>
+                        </a>
+                     </div>
                   </div>
 
                   <div class="col-ms-4">
@@ -480,32 +195,36 @@
          <br>
          <div class="col-lg-12 col-md-6 col-xs-12">
             <?php
-            // echo "<pre>";
-            // print_r($video_data);
-            if (!empty($video_data['movie_thmain']) && empty($video_data['movie_thsub1']) && empty($video_data['movie_thsub2'])) {
+               $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+
+               if (
+                     !empty($video_data['movie_thmain']) 
+                     && empty($video_data['movie_thsub1']) 
+                     && empty($video_data['movie_thsub2'])
+                  ) {
             ?>
-               <a href="<?php echo base_url('/page/video/id/' . $video_data['movie_id'] . '/main') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์หลัก 1</font>
                </a>
             <?php
             } else if (!empty($video_data['movie_thmain']) && !empty($video_data['movie_thsub1']) && empty($video_data['movie_thsub2'])) {
             ?>
-               <a href="<?php echo base_url('/page/video/id/' . $video_data['movie_id'] . '/main') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์หลัก 1</font>
                </a>
-               <a href="<?php echo base_url('/page/video/id/' . $video_data['movie_id'] . '/sub1') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์สำรอง 1</font>
                </a>
             <?php
             } else if (!empty($video_data['movie_thmain']) && !empty($video_data['movie_thsub1']) && !empty($video_data['movie_thsub2'])) {
             ?>
-               <a href="<?php echo base_url('/page/video/id' . $video_data['movie_id'] . '/main') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์หลัก 1</font>
                </a>
-               <a href="<?php echo base_url('/page/video/id' . $video_data['movie_id'] . '/sub1') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์สำรอง 1</font>
                </a>
-               <a href="<?php echo base_url('/page/video/id' . $video_data['movie_id'] . '/sub2') ?>" class="col-lg-3 btn btn-danger">
+               <a href="<?php echo base_url('video/' . $video_data['movie_id'] . '/'. $url_name) ?>" class="col-lg-3 btn btn-danger">
                   <font color="white">ลิงค์สำรอง 2</font>
                </a>
             <?php
@@ -522,45 +241,13 @@
 </div>
 
 </div>
-<!-- AD 2 -->
-<div id="ads_fox_bottom">
-   <div id="ads_fix_footer">
-      <div style="text-align:center;">
-         <div id="fix_footer">
-            <a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
-         </div>
-      </div>
-      <?php
-      // echo "<pre>";
-      // print_r($path_imgads);die;
-      //print_r($backURL);die;
-      foreach ($ads as $value) {
-         if ($value['ads_position'] == "2") {
-      ?>
-            <div style="clear:both;"></div>
-            <div id="fix_footer2" style="width:100%; display:block; float:left; margin:-7px 0 0 0; overflow:hidden; line-height:0px;">
-               <div style="display:inline-block; width:100%; text-align:center;">
-                  <div class="textwidget custom-html-widget">
-                     <center><a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank" rel="noopener"><img alt="<?php echo $value['ads_name']; ?>" title="<?php echo $value['ads_name']; ?>" src="<?php echo $backURL . "ads/" . $value['ads_picture']; ?>"></a></center>
-                  </div>
-               </div>
-            </div>
-            <div style="clear:both;"></div>
-      <?php
-         }
-      }
-      ?>
-   </div>
-</div>
-<!-- AD 2 -->
+
 <script type="text/javascript">
    function hide() {
       document.getElementById("ads_fox_bottom").remove();
    }
 
    function goReport(id, branch) {
-      //console.log(id,branch);
-
       $.ajax({
          url: "/savereport/branch/" + branch + "/id/" + id,
          type: 'GET',
@@ -590,11 +277,6 @@
 
    function click_ep(selectObject) {
       var value = selectObject.value;
-
-      // alert(value)
-
-
-
       window.location.href = "<?= base_url() ?>/series/<?= $video_data['movie_id'] ?>/" + value;
 
    }
