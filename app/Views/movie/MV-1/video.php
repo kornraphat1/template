@@ -301,20 +301,13 @@
 
 				$url_name = urldecode(str_replace([" ", "'"], ["-", ""], $value['movie_name']));
 
-
-
-				if ($value['movie_type'] == 'mo') {
-					$urlvideo = base_url('/video/' . $id . '/' . $url_name);
-				} else if ($value['movie_type'] == 'se') {
-					$urlvideo = base_url('/series/' . $id . '/' . $url_name);
-				}
 			?>
 
 				<div class="movie">
 					<div class="movie-box">
 						<div class="movie-title">
 							<h2>
-								<a href='<?php echo $urlvideo; ?>' onclick="countView('<?= $value['movie_id'] ?>')">
+								<a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
 									<span class="movie-title-color"><?php echo $value['movie_name']; ?></span>
 								</a>
 							</h2>
@@ -344,7 +337,7 @@
 						?>
 						<div class="movie-corner movie-HD" style=" background-color: <?php echo $display; ?>;"><?php echo strtoupper($value['movie_quality']); ?></div>
 						<div class="movie-image">
-							<a href='<?php echo $urlvideo; ?>' onclick="countView('<?= $value['movie_id'] ?>')">
+							<a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
 								<img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
 							</a>
 						</div>

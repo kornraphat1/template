@@ -3,36 +3,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/bootstrap-reboot.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/bootstrap-grid.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/owl.carousel.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/jquery.mCustomScrollbar.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/nouislider.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/ionicons.min.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/plyr.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/photoswipe.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/default-skin.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/main.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/css_size.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-manual.css";?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css";?>'>
-
+	<link rel="stylesheet" href="<?php echo $document_root . "/assets/css/font-awesome.min.css?v=1"; ?>">
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/bootstrap-grid.min.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/owl.carousel.min.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/jquery.mCustomScrollbar.min.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/nouislider.min.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/ionicons.min.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/plyr.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/photoswipe.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/default-skin.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/main.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/css_size.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-manual.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/navigation.css"; ?>'>
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href='<?php echo $document_root . "/assetsicon/favicon-32x32.png"; ?>' sizes="32x32" >
+	<link rel="icon" type="image/png" href='<?php echo $document_root . "/assetsicon/favicon-32x32.png"; ?>' sizes="32x32">
 	<link rel="apple-touch-icon" href='<?php echo $document_root . "/assets/icon/favicon-32x32.png"; ?>'>
 	<link rel="apple-touch-icon" sizes="72x72" href='<?php echo $document_root . "/assets/apple-touch-icon-72x72.png"; ?>'>
 	<link rel="apple-touch-icon" sizes="114x114" href='<?php echo $document_root . "/assets/apple-touch-icon-114x114.png"; ?>'>
-	<link rel="apple-touch-icon" sizes="144x144" href='<?php echo $document_root . "/assets/icon/apsple-touch-icon-144x144.png";?>'>
+	<link rel="apple-touch-icon" sizes="144x144" href='<?php echo $document_root . "/assets/icon/apsple-touch-icon-144x144.png"; ?>'>
 
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>ดูหนัง 4</title>
+	<title><?php echo $setting['setting_title']; ?></title>
 </head>
 
 <!-- BEGIN | Header -->
@@ -41,26 +42,26 @@
 		background-color: #020d18;
 		padding: 0px 0;
 	}
-	.row {
-	    display: -ms-flexbox;
-	    display: flex;
-	    -ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	    margin-right: -7px;
-	    margin-left: -7px;
-	}
 
+	.row {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin-right: -7px;
+		margin-left: -7px;
+	}
 </style>
 
 <body class="body">
-<header class="header">
+	<header class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="header__content">
 						<!-- header logo -->
-						<a href="/page/home" class="header__logo">
-						<img class="logo" src='<?php echo $document_root . "assets/img/logo/Donung8K Logo_6.png"; ?>' alt="" width="250" ></a>
+						<a href="<?php echo base_url(); ?>" class="header__logo">
+							<img class="logo" src='<?php echo $document_root . "assets/img/logo/Donung8K Logo_6.png"; ?>' alt="" width="250"></a>
 						</a>
 						<!-- end header logo -->
 
@@ -68,7 +69,7 @@
 						<ul class="header__nav">
 							<!-- dropdown -->
 							<li class="header__nav-item">
-								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หน้าหลัก</a>
+								<a class="dropdown-toggle header__nav-link" href="<?php echo base_url(); ?>">หน้าหลัก</a>
 							</li>
 							<!-- end dropdown -->
 
@@ -77,30 +78,33 @@
 								<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">หมวดหมู่หนัง</a>
 
 								<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-									<li><a href="catalog.html">หนังใหม่ HD</a></li>
-									<li><a href="details.html">หนัง Action</a></li>
-									<li><a href="details.html">หนังโรแมนติก</a></li>
-									<li><a href="details.html">หนัง Action</a></li>
-									<li><a href="details.html">หนัง Action</a></li>
+									<?php foreach ($category_list as $value) { ?>
+										<li class="fa-chevron">
+											<a onclick="goView2('<?php echo $value['category_id']; ?>','<?php echo $value['category_name']; ?>')"> <?php echo $value['category_name']; ?></a>
+										</li>
+									<?php } ?>
 								</ul>
 							</li>
 							<!-- end dropdown -->
 
 							<li class="header__nav-item">
-								<a href="pricing.html" class="header__nav-link">หนังตลก</a>
+								<a href="<?php echo base_url('/category/6/หนังไทย'); ?>" title="หนังไทย" class="header__nav-link">หนังไทย</a>
 							</li>
 
 							<li class="header__nav-item">
-								<a href="faq.html" class="header__nav-link">ซีรีย์</a>
+								<a href="<?php echo base_url('/category/7/หนังฝรั่ง'); ?>" title="หนังฝรั่ง" class="header__nav-link">หนังฝรั่ง</a>
+							</li>
+							<li class="header__nav-item">
+								<a href="#" onclick="request_movie('<?= $branch ?>')"  title="ขอหนัง/ติดต่อ" class="header__nav-link">ขอหนัง</a>
 							</li>
 						</ul>
 						<!-- end header nav -->
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<form action="#" class="header__search">
-								<input class="header__search-input" type="text" placeholder="ค้นหา">
-								<button class="header__search-button" type="button">
+							<form action="#" class="header__search"id="formsearch">
+								<input class="header__search-input" type="text" placeholder="ค้นหา" id="search">
+								<button class="header__search-button" type="button" onclick="goSearch()">
 									<i class="icon ion-ios-search"></i>
 								</button>
 								<button class="header__search-close" type="button">
@@ -146,7 +150,7 @@
 
 	<div class="container">
 		<div class="row">
-			
+
 			<div class="col-lg-12 col-md-12 col-xs-12 ads-head">
 				<?php
 				$style = "width: 100%;padding-top: 100px;";
@@ -166,16 +170,9 @@
 						}
 					}
 				} else {
-
 				}
 				?>
 			</div>
 		</div>
 	</div>
-<!-- home -->
-
-
-
-
-
-		
+	<!-- home -->

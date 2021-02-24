@@ -170,23 +170,23 @@
     <script src="<?= $document_root ?>/assets/js/5Npl_DkivWTNCRdzYR204bTSOlo.js"></script>
 
     <script>
-    function goReport(id, branch, name, ep) {
-		var request = prompt('แจ้งหนังเสืย');
-		if (request != null) {
-			jQuery.ajax({
-				url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
-				type: 'GET',
-				crossDomain: true,
-				cache: false,
-				success: function(data) {
-					console.log(request);
-					alert('เราจะดำเนินการให้เร็วที่สุด');
-				}
+        function goReport(id, branch, name, ep) {
+            var request = prompt('แจ้งหนังเสืย');
+            if (request != null) {
+                jQuery.ajax({
+                    url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+                    type: 'GET',
+                    crossDomain: true,
+                    cache: false,
+                    success: function(data) {
+                        console.log(request);
+                        alert('เราจะดำเนินการให้เร็วที่สุด');
+                    }
 
-			});
+                });
 
-		} else {}
-	};;
+            } else {}
+        };
 
 
 
@@ -253,17 +253,38 @@
 
                 event.preventDefault();
 
-            }else{
+            } else {
                 var url = "<?= base_url() ?>";
-               
-               window.location.href = url;
-               event.preventDefault();
+
+                window.location.href = url;
+                event.preventDefault();
 
             }
 
         });
 
-        function countView(id) {
+        function goView(id, name, type) {
+
+            count_view(id);
+            var url = '';
+
+            if (type == 'se') {
+
+                url = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name);
+
+            } else {
+
+                url = "<?= base_url() ?>/video/" + id + '/' + decodeURI(name);
+
+            }
+
+            window.open(url, '_parent');
+
+
+
+        }
+
+        function count_view(id) {
 
             var base_url = '<?= base_url() ?>';
             var url = base_url + "/countview/" + id;

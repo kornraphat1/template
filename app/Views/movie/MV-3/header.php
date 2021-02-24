@@ -370,7 +370,7 @@
 
       @font-face {
          font-family: myFirstFont;
-         src: url('<?php echo base_url("/assets/font/Prompt-Bold.ttf") ?>');
+         src: url('<?php echo $document_root."/assets/font/Prompt-Bold.ttf"?>');
       }
 
       div,
@@ -468,9 +468,7 @@
          width: 37px;
          padding: -2px;
       }
-   </style>
 
-   <style type="text/css">
       @font-face {
          font-family: myFirstFont;
          src: url('<?php echo base_url("/assets/font/Prompt-Bold.ttf") ?>');
@@ -870,7 +868,7 @@
                   <?php
                   for ($x = 0; $x <= 2; $x++) { ?>
                      <li class="dropdown mega-dropdown">
-                        <a href="<?php echo base_url('/categoty/' . $category_list[$x]['category_id'] . '/' . urlencode($category_list[$x]['category_name'])); ?>" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $category_list[$x]['category_name']; ?> <span class="pull-right"></span></a>
+                        <a href="<?php echo base_url('/category/' . $category_list[$x]['category_id'] . '/' . urlencode($category_list[$x]['category_name'])); ?>" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $category_list[$x]['category_name']; ?> <span class="pull-right"></span></a>
                      </li>
                   <?php
                   }
@@ -882,7 +880,7 @@
                      <a href="<?php echo base_url() ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ประเภทหนัง <span class="fa fa-chevron-down pull-right"></span></a>
                      <ul class="dropdown-menu">
                         <?php foreach ($category_list as $key => $value) { ?>
-                           <li><a href="<?php echo base_url('/categoty/' . $value['category_id'] . '/' . urlencode($value['category_name'])); ?>"><?php echo $value['category_name']; ?></a></li>
+                           <li><a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode($value['category_name'])); ?>"><?php echo $value['category_name']; ?></a></li>
                         <?php } ?>
                      </ul>
                   </li>
@@ -918,8 +916,8 @@
             
                $style = "width: 100%;";
                $i = 0;
-               if (!empty($ads)) {
-                  foreach ($ads as $value) {
+               if (!empty($ads['pos1'])) {
+                  foreach ($ads['pos1'] as $value) {
                      if ($value['ads_position'] == "1") {
                         if ($i != 0) {
                            $style = "width: 100%; margin-top: 20px;";
@@ -965,3 +963,5 @@
 
    }
 </script>
+
+<?php include('slide.php') ?>

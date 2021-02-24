@@ -357,10 +357,31 @@
 		}
 	});
 
+	function goView(id, name, type) {
+
+		count_view(id);
+		var url = '';
+
+		if (type == 'se') {
+
+			url = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name);
+
+		} else {
+
+			url = "<?= base_url() ?>/video/" + id + '/' + decodeURI(name);
+
+		}
+
+		window.open(url, '_parent');
+
+
+
+	}
+
 	function count_view(id) {
 
 		var url = "<?= base_url('/countview') ?>/" + id
-	
+
 		jQuery.ajax({
 			url: url,
 			async: true,
