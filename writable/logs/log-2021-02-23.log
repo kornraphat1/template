@@ -210,3 +210,13 @@ CRITICAL - 2021-02-23 04:03:07 --> Undefined variable: datethai
 #7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
 >>>>>>> 028c72fcc9180fbb8e5da0652c0f18cb5a15e1bc
 #8 {main}
+CRITICAL - 2021-02-23 22:46:44 --> Unknown database 'aegistrex'
+#0 C:\xampp\htdocs\template\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\template\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(723): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(32): App\Models\Video_Model->get_setting(1)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
