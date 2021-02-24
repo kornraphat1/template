@@ -538,6 +538,8 @@ class Video_Model extends Model
     //หนังที่น่สนใจ 2 
     public function get_list_video_bycate($branchid, $catereq)
     {
+
+        $data['total'] = $this->count_get_list_video_bycate($catereq);
         $sql = "SELECT
                     *
                 FROM
@@ -813,6 +815,26 @@ class Video_Model extends Model
 
     //-------------------------------------------------------------------------------------------------
 
+
+    public function count_get_list_video_bycate($catereq)
+    {
+      
+
+        $sql = "SELECT
+                     count(category_id) as num
+                FROM
+                $this->mo_moviecate       
+                WHERE
+                `$this->mo_moviecate`.category_id = $catereq ";
+
+        $query = $this->db->query($sql);
+        $data =  $query->getRowArray();
+
+        // print_r($data);die;
+        return $data['num'];
+    }
+
+    //-------------------------------------------------------------------------------------------------
 
 
 }

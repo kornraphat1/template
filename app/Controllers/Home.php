@@ -31,7 +31,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-5';
+		$this->template = 'MV-6';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -50,14 +50,14 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string
 		];
 
-		$data = calltemplate($this->template, 'index', $parameter);
+		$data_query = calltemplate($this->template, 'index', $parameter);
 
-
+		//echo "<pre>";print_r($data);die;
 
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 		
-		
-
+		//print_r($data['chk_act']);die;
+	
 		$view_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -65,11 +65,19 @@ class Home extends BaseController
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
-			'category_list' =>	$data['category_list'],
+			'category_list' =>	$data_query['category_list'],
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
+			'chk_act' => $data_query['chk_act'],
+			'video_cate' => $data_query['video_cate'],
+			
 		];
 
+		$data = [
+			'top_imdb' => $data_query['top_imdb'],
+			'list_video' => $data_query['list_video'],
+			'url_loadmore' => base_url('moviedata')
+		];
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/body.php', $data);
@@ -654,7 +662,20 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
+	public function moviedata()
+	{
+		$list = $this->VideoModel->get_list_video($this->branch, '', $_GET['page']);
 
+		$header_data = [
+			'document_root' => $this->document_root,
+			'path_thumbnail' => $this->path_thumbnail,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+
+		echo view('moviedata.php', $header_data);
+	}
 	//--------------------------------------------------------------------
 
 }
