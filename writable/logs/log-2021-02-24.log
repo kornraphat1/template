@@ -1,0 +1,87 @@
+CRITICAL - 2021-02-24 00:04:05 --> Undefined index: ads_position
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(509): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 509, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(547): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 00:13:10 --> Undefined index: ads_position
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(506): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 506, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(547): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 00:18:20 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(445): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 445, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(547): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 00:19:59 --> Undefined variable: key
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(445): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 445, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(547): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 00:20:45 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(445): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 445, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(547): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 01:24:37 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(445): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 445, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(546): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 01:25:18 --> Undefined index: ads_position
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-3\video.php(501): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 501, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-3/vide...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(546): view('movie/MV-3/vide...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->video('198', '%E0%B8%A2%E0%B8...')
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 01:27:54 --> Undefined variable: totalTime
+#0 C:\xampp\htdocs\templates\system\Debug\Toolbar\Views\toolbar.tpl.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\templates\system\Debug\Toolbar.php(496): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Debug\Toolbar.php(454): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\xampp\htdocs\templates\app\Config\Events.php(87): CodeIgniter\Debug\Toolbar->respond()
+#4 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\xampp\htdocs\templates\system\Events\Events.php(188): call_user_func(Object(Closure))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(287): CodeIgniter\Events\Events::trigger('pre_system')
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-02-24 02:20:38 --> Undefined offset: 2
+#0 C:\xampp\htdocs\templates\app\Controllers\Home.php(566): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 566, Array)
+#1 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->player('415', '2')
+#2 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

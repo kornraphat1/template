@@ -964,4 +964,4 @@
    }
 </script>
 
-<?php include('slide.php') ?>
+<?php include('side.php') ?>
