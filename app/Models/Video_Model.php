@@ -8,6 +8,7 @@ use CodeIgniter\Model;
 class Video_Model extends Model
 {
     protected $table_movie = 'mo_movie';
+    protected $table_slide = 'mo_slide';
     protected $table_category = 'mo_category';
     protected $mo_moviecate = 'mo_moviecate';
     protected $table_vdoads = 'mo_adsvideo';
@@ -837,6 +838,41 @@ class Video_Model extends Model
     }
 
     //-------------------------------------------------------------------------------------------------
+    public function get_list_popular($branch_id)
+    {
+        $sql = "SELECT
+                    $this->table_movie.*,
+                    $this->table_slide.slide_img
+                FROM
+                $this->table_movie
+                INNER JOIN $this->table_slide ON $this->table_slide.movie_id = $this->table_movie.movie_id 
+                WHERE
+                    `$this->table_movie`.branch_id = '$branch_id'
+                    AND `$this->table_movie`.movie_active = '1' 
+                ORDER BY `$this->table_slide`.slide_id ASC";
 
+    
+        $query = $this->db->query($sql);
+        $result = $query->getResultArray();
+
+        if (!empty($result)) {
+            foreach ($result as $key => $val) {
+
+                $id = $val['movie_id'];
+                $sqlcate = "SELECT
+                        *
+                    FROM
+                        `$this->table_category`
+                    INNER JOIN `$this->mo_moviecate` ON `$this->mo_moviecate`.category_id = `$this->table_category`.category_id
+                    WHERE
+                    `$this->mo_moviecate`.movie_id = '$id'";
+
+                $querycate = $this->db->query($sqlcate);
+                $result[$key]['cate_data'] = $querycate->getResultArray();
+            }
+        }
+
+        return $result;
+    }
 
 }

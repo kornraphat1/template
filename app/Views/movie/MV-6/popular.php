@@ -11,7 +11,8 @@
         <ul class="list-popular">
 
         <?php 
-          foreach($list as $val){ 
+        //echo "<pre>"; print_r($list_video);die;
+          foreach($list_video as $val){ 
             
             $url_name = urldecode(str_replace([" ","'"],["-",""], $val['movie_thname']));
         ?>

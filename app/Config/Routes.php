@@ -102,9 +102,11 @@ $routes->post('/contact_ads', 'Home::contact_ads');
 
 $routes->get('countview/(:num)', 'Home::countView/$1');
 
+// Popular dunung4u
+$routes->get('popular', 'Home::popular');
 
-
-
+// category dunung4u
+$routes->get('category', 'Home::categorylist');
 
 //--------------------------------------AV -----------------------------------------------//
 $routes->get('/av', 'Av_Home::index');

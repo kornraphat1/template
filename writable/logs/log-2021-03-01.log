@@ -1,0 +1,174 @@
+CRITICAL - 2021-03-01 00:30:08 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\template\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(699): CodeIgniter\Model->__call('get_list_popula...', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-01 00:47:20 --> Undefined property: App\Controllers\Home::$path_thumbnail
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(711): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 711, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 00:50:42 --> Undefined property: App\Controllers\Home::$path_slide
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(712): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 712, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 00:50:59 --> Undefined variable: list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 00:53:20 --> Undefined index: movie_thname
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 00:53:55 --> syntax error, unexpected 'print_r' (T_STRING), expecting ';' or ','
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:54:56 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 00:55:41 --> Undefined index: slide_img
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:05:56 --> Undefined variable: setting
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(697): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 697, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 01:06:47 --> Undefined index: slide_img
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:15:43 --> Undefined index: slide_img
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:16:20 --> Undefined index: cate_id
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(646): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 646, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(695): calltemplate('MV-6', 'popular', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 01:21:38 --> Too few arguments to function App\Controllers\Home::popular(), 0 passed in C:\xampp\htdocs\template\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-01 01:23:03 --> Too few arguments to function App\Controllers\Home::popular(), 0 passed in C:\xampp\htdocs\template\system\CodeIgniter.php on line 910 and exactly 1 expected
+#0 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-03-01 01:23:14 --> Undefined variable: cate_id
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(693): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 693, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 01:23:16 --> Undefined variable: cate_id
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(693): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 693, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 01:23:22 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\template\system\Model.php(1648): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(844): CodeIgniter\Model->__get('table_slide')
+#3 C:\xampp\htdocs\template\app\Helpers\template_helper.php(651): App\Models\Video_Model->get_list_popular(1)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(695): calltemplate('MV-6', 'popular', Array)
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-01 01:28:59 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\template\system\Model.php(1648): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\template\app\Models\Video_Model.php(844): CodeIgniter\Model->__get('table_slide')
+#3 C:\xampp\htdocs\template\app\Helpers\template_helper.php(649): App\Models\Video_Model->get_list_popular(1)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(695): calltemplate('MV-6', 'popular', Array)
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-01 01:30:46 --> Undefined index: list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 15, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:33:20 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
