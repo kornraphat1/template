@@ -28,11 +28,11 @@ class Home extends BaseController
 		$this->path_setting = $this->backURL . 'setting/';
 		$this->keyword_string = "";
 		$this->path_slide = $this->backURL . 'img_slide/';
-
+		$this->path_bg_cate = base_url() . '/public/bg_cate/';
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-7';
+		$this->template = 'MV-6';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -52,14 +52,7 @@ class Home extends BaseController
 		];
 
 		$data_query = calltemplate($this->template, 'index', $parameter);
-		// echo '<pre>', print_r($data_query, true), '</pre>';
-		// die;
-
-
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-
-		//print_r($data['chk_act']);die;
-
 		$view_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -69,9 +62,10 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-
-
+			'chk_act' => $data_query['chk_act'],
+			'video_cate' => $data_query['video_cate']
 		];
+
 		$view_data = array_merge($view_data, $data_query);
 
 
@@ -662,30 +656,110 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
-
-	public function moviedata_search()
+	//Popular dunung4u
+	public function popular() //ต้นแบบ หน้า cate / search
 	{
-		$list = $this->VideoModel->get_list_video($this->branch, $_GET['keyword'], $_GET['page']);
+		$ads = $this->VideoModel->get_ads($this->branch);
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
 
-		$header_data = [
-			'document_root' => $this->document_root,
-			'path_thumbnail' => $this->path_thumbnail,
-			'list' => $list,
-
-		];
-		echo view('moviedata.php', $header_data);
-	}
-
-	public function moviedata_category()
-	{
-		$list = $this->VideoModel->get_id_video_bycategory($this->branch, $_GET['keyword'], $_GET['page']);
-
-		$header_data = [
-			'document_root' => $this->document_root,
-			'path_thumbnail' => $this->path_thumbnail,
-			'list' => $list,
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $this->keyword_string
 		];
 
-		echo view('moviedata.php', $header_data);
+		$data_query = calltemplate($this->template, 'popular', $parameter);
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
+
+
+		$this->setting = $this->VideoModel->get_setting($this->branch);
+		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
+
+		
+
+		$chk_act = [
+			'home' => '',
+			'poppular' => 'active',
+			'newmovie' => '',
+			'topimdb' => '',
+			'category' => '',
+			'contract' => ''
+		];
+
+		$view_data = [
+			'document_root' => $this->document_root,
+			'path_setting' => $this->path_setting,
+			'setting' => $this->setting,
+			'chk_act' => $chk_act,
+		
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'path_slide' => $this->path_slide
+		];
+		$view_data = array_merge($view_data, $data_query);
+		echo view('movie/' . $this->template . '/header.php', $view_data);
+		echo view('movie/' . $this->template . '/popular.php');
+		echo view('movie/' . $this->template . '/footer.php');
 	}
+
+	//--------------------------------------------------------------------
+
+	//Popular dunung4u
+	public function categorylist() //ต้นแบบ หน้า cate / search
+	{
+		$ads = $this->VideoModel->get_ads($this->branch);
+		$page = 1;
+		if (!empty($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+
+		$parameter = [
+			'branch' => $this->branch,
+			'page' => $page,
+			'keyword_string' => $this->keyword_string
+		];
+
+		$data_query = calltemplate($this->template, 'category', $parameter);
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
+
+
+		$this->setting = $this->VideoModel->get_setting($this->branch);
+		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
+
+		
+
+		$chk_act = [
+			'home' => '',
+			'poppular' => 'active',
+			'newmovie' => '',
+			'topimdb' => '',
+			'category' => '',
+			'contract' => ''
+		];
+
+		$view_data = [
+			'document_root' => $this->document_root,
+			'path_setting' => $this->path_setting,
+			'setting' => $this->setting,
+			'chk_act' => $chk_act,
+		
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'path_slide' => $this->path_slide,
+			'path_bg_cate' => $this->path_bg_cate
+		];
+		$view_data = array_merge($view_data, $data_query);
+		echo view('movie/' . $this->template . '/header.php', $view_data);
+		echo view('movie/' . $this->template . '/category.php');
+		echo view('movie/' . $this->template . '/footer.php');
+	}
+
+	//--------------------------------------------------------------------
 }

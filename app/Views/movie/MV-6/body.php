@@ -523,36 +523,6 @@ foreach ($video_cate as $val_cate) {
 
     <?php } ?>
 
-
-
-
-
-
   };
-  $(document).ready(function() {
-    ""
-    var track_click = 2; //track user click on "load more" button, righ now it is 0 click
-    var total_pages = '<?= $list_video['total_page'] ?>';
-    if (track_click >= total_pages) {
-      $("#movie-loadmore").hide(0);
-    }
-    $("#movie-loadmore").click(function(e) { //user clicks on button
-      if (track_click <= total_pages) //user click number is still less than total pages
-      {
-        //post page number and load returned data into result element
-        $.get('<?php echo $url_loadmore ?>', {
-          'page': track_click
-        }, function(data) {
-          console.log(data);
-          $("#list-movie").append(data); //append data received from server
-          track_click++; //user click increment on load button
-        }).fail(function(xhr, ajaxOptions, thrownError) { //any errors?
-          alert(thrownError); //alert with HTTP error
-        });
-      }
-      if (track_click >= total_pages) {
-        $("#movie-loadmore").hide(0);
-      }
-    });
-  });
+
 </script>
