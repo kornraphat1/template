@@ -4277,4 +4277,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 .movie-comment{
   text-align: center;
+}.banners{
+  margin-top: 80px;
 }

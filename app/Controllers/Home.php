@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-6';
+		$this->template = 'MV-7';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -52,7 +52,14 @@ class Home extends BaseController
 		];
 
 		$data_query = calltemplate($this->template, 'index', $parameter);
+		// echo '<pre>', print_r($data_query, true), '</pre>';
+		// die;
+
+
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
+
+		//print_r($data['chk_act']);die;
+
 		$view_data = [
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
@@ -60,21 +67,16 @@ class Home extends BaseController
 			'backURL' => $this->backURL,
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
-			'category_list' =>	$data_query['category_list'],
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-			'chk_act' => $data_query['chk_act'],
-			'video_cate' => $data_query['video_cate']
-		];
 
-		$data = [
-			'top_imdb' => $data_query['top_imdb'],
-			'list_video' => $data_query['list_video'],
-			'url_loadmore' => base_url('moviedata')
+
 		];
+		$view_data = array_merge($view_data, $data_query);
+
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
-		echo view('movie/' . $this->template . '/body.php', $data);
+		echo view('movie/' . $this->template . '/body.php');
 		echo view('movie/' . $this->template . '/footer.php');
 	}
 	//--------------------------------------------------------------------
@@ -107,13 +109,14 @@ class Home extends BaseController
 			'path_ads' => $this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string,
-			'category_list' => $data_query['category_list'],
-			'list_video' => $data_query['list_video'],
+			
 			'title' => $title,
 		];
-		
+		$view_data = array_merge($view_data, $data_query);
+
+
 		echo view('movie/' . $this->template . '/header', $view_data);
-		echo view('movie/' . $this->template . '/list', $data_query);
+		echo view('movie/' . $this->template . '/list');
 		echo view('movie/' . $this->template . '/footer');
 	}
 	//--------------------------------------------------------------------
@@ -144,13 +147,12 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'list_video' => $data_query['list_video'],
+			
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
 
+		$view_data = array_merge($view_data, $data_query);
 
 		echo view('movie/' . $this->template . '/header', $view_data);
 		echo view('movie/' . $this->template . '/list');
@@ -181,12 +183,11 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'list_video' => $data_query['list_video'],
+		
 			'title' => 'หนังปี : ' . $title,
 			'keyword_string' => $this->keyword_string
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 
 		echo view('movie/' . $this->template . '/header', $view_data);
@@ -221,12 +222,12 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'list_video' => $data_query['list_video'],
+		
 			'title' => $title,
+
 			'keyword_string' => $keyword_string
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 		echo view('movie/' . $this->template . '/header', $view_data);
 		echo view('movie/' . $this->template . '/list');
@@ -262,12 +263,11 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'list_video' => $data_query['list_video'],
+			
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 		echo view('movie/' . $this->template . '/header', $view_data);
 		echo view('movie/' . $this->template . '/list');
@@ -300,11 +300,11 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'list_video' => $data_query['list_video'],
+		
 			'title' => $title,
 		];
+		$view_data = array_merge($view_data, $data_query);
+
 
 		echo view('movie/' . $this->template . '/header', $view_data);
 		echo view('movie/' . $this->template . '/list');
@@ -381,15 +381,13 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'vdorandom' => $data_query['video_random'],
-			'video_data' => $data_query['series'],
+		
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
 
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
@@ -463,11 +461,9 @@ class Home extends BaseController
 			'index' => $index,
 			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'vdorandom' => $data_query['video_random'],
-			'video_data' => $data_query['video_data'],
+			
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/video.php');
@@ -539,13 +535,11 @@ class Home extends BaseController
 			'ads' => $this->ads,
 			'index' => "",
 			'keyword_string' => $this->keyword_string,
-			'category_list' => $data_query['category_list'],
-			'listyear' => $data_query['listyear'],
-			'vdorandom' => $data_query['video_random'],
-			'video_data' => $data_query['video_data'],
+			
 			'feildplay' => $feildplay,
-			'chk_act' => $data_query['chk_act']
+		
 		];
+		$view_data = array_merge($view_data, $data_query);
 
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/video.php');
@@ -668,57 +662,30 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
-	//Popular dunung4u
-	public function popular() //ต้นแบบ หน้า cate / search
+
+	public function moviedata_search()
 	{
-		$ads = $this->VideoModel->get_ads($this->branch);
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
+		$list = $this->VideoModel->get_list_video($this->branch, $_GET['keyword'], $_GET['page']);
 
-		$parameter = [
-			'branch' => $this->branch,
-			'page' => $page,
-			'keyword_string' => $this->keyword_string
-		];
-
-		$data_query = calltemplate($this->template, 'popular', $parameter);
-		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-
-
-		$this->setting = $this->VideoModel->get_setting($this->branch);
-		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
-
-		
-
-		$chk_act = [
-			'home' => '',
-			'poppular' => 'active',
-			'newmovie' => '',
-			'topimdb' => '',
-			'category' => '',
-			'contract' => ''
-		];
-
-		$view_data = [
+		$header_data = [
 			'document_root' => $this->document_root,
-			'path_setting' => $this->path_setting,
-			'setting' => $this->setting,
-			'chk_act' => $chk_act,
-			'category_list' => $data_query['category_list'],
-			'list_video' => $data_query['list_video'],
-			'ads' => $ads,
-			'path_ads' => $this->path_ads,
-			'branch' => $this->branch,
-			'backURL' => $this->backURL,
-			'path_slide' => $this->path_slide
-		];
+			'path_thumbnail' => $this->path_thumbnail,
+			'list' => $list,
 
-		echo view('movie/' . $this->template . '/header.php', $view_data);
-		echo view('movie/' . $this->template . '/popular.php', $view_data);
-		echo view('movie/' . $this->template . '/footer.php');
+		];
+		echo view('moviedata.php', $header_data);
 	}
 
-	//--------------------------------------------------------------------
+	public function moviedata_category()
+	{
+		$list = $this->VideoModel->get_id_video_bycategory($this->branch, $_GET['keyword'], $_GET['page']);
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'path_thumbnail' => $this->path_thumbnail,
+			'list' => $list,
+		];
+
+		echo view('moviedata.php', $header_data);
+	}
 }

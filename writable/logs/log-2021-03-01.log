@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 00:30:08 --> You must set the database table to be used with your query.
 #0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
 #1 C:\xampp\htdocs\template\system\Model.php(1700): CodeIgniter\Model->builder()
@@ -27,48 +28,147 @@ CRITICAL - 2021-03-01 00:50:59 --> Undefined variable: list
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:03:56 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(239): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('o')
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 00:53:20 --> Undefined index: movie_thname
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:25:03 --> Undefined variable: val
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\header.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 172, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(121): view('movie/MV-5/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 00:53:55 --> syntax error, unexpected 'print_r' (T_STRING), expecting ';' or ','
 #0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:41:51 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', 'img', 'home', 'home__bg.jpg')
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2021-03-01 00:49:30 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:50:31 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:51:36 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:52:18 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 00:54:56 --> Undefined index: movie_name
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:52:21 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:52:23 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:52:27 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/foot...', Array, true)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(123): view('movie/MV-5/foot...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('7', '%E0%B8%AB%E0%B8...')
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 00:52:45 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 00:55:41 --> Undefined index: slide_img
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(723): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:52:55 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 01:05:56 --> Undefined variable: setting
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(697): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 697, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
@@ -82,20 +182,38 @@ CRITICAL - 2021-03-01 01:06:47 --> Undefined index: slide_img
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:58:15 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 01:15:43 --> Undefined index: slide_img
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\popular.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('2', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:59:47 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 01:16:20 --> Undefined index: cate_id
 #0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(646): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 646, Array)
 #1 C:\xampp\htdocs\template\app\Controllers\Home.php(695): calltemplate('MV-6', 'popular', Array)
@@ -119,17 +237,59 @@ CRITICAL - 2021-03-01 01:23:03 --> Too few arguments to function App\Controllers
 CRITICAL - 2021-03-01 01:23:14 --> Undefined variable: cate_id
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(693): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 693, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 00:59:58 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:00:46 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:01:00 --> Undefined variable: movie_recomend
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-5/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:29:40 --> Undefined index: category_list
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 01:23:16 --> Undefined variable: cate_id
 #0 C:\xampp\htdocs\template\app\Controllers\Home.php(693): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 693, Array)
 #1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 01:30:51 --> Undefined index: category_list
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-01 01:23:22 --> You must set the database table to be used with your query.
 #0 C:\xampp\htdocs\template\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
 #1 C:\xampp\htdocs\template\system\Model.php(1648): CodeIgniter\Model->builder()
@@ -168,6 +328,108 @@ CRITICAL - 2021-03-01 01:33:20 --> Undefined index: movie_name
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/popu...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(728): view('movie/MV-6/popu...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-01 01:32:33 --> Undefined index: setting_img
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-7/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:32:54 --> Undefined index: setting_img
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 17, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(83): view('movie/MV-7/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:34:01 --> Invalid file: {0}
+#0 C:\xampp\htdocs\template\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('movie/MV-7/body...')
+#1 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/body...', Array, true)
+#2 C:\xampp\htdocs\template\app\Controllers\Home.php(84): view('movie/MV-7/body...', Array)
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-01 01:34:35 --> Undefined variable: list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-7\body.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/body...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(84): view('movie/MV-7/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:35:29 --> Undefined variable: list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-7\body.php(135): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 135, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('25', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(84): view('movie/MV-7/body...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 01:57:34 --> Undefined variable: url_loadmore
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\body.php(543): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 543, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('8', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(76): view('movie/MV-6/body...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 02:08:03 --> syntax error, unexpected 'break' (T_BREAK)
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(36): helper(Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(882): App\Controllers\Home->__construct()
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(393): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-01 02:10:07 --> Undefined variable: url_loadmore
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\body.php(543): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 543, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('8', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(78): view('movie/MV-6/body...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 02:11:42 --> Undefined variable: list
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(938): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 938, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(53): calltemplate('MV-6', 'index', Array)
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-01 02:13:40 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(116): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_bycate('28', 'Netflix%20Movie')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-01 02:22:37 --> Undefined variable: url_loadmore
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-7\body.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 146, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('25', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(78): view('movie/MV-7/body...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+>>>>>>> c973cb4237402b9c063dbbc682a55eebbc12fe1e
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()

@@ -1,81 +1,3 @@
-<style type="text/css">
-   @font-face {
-      font-family: myFirstFont;
-      src: url('<?php echo base_url("/assets/font/Prompt-Bold.ttf") ?>');
-   }
-
-   ul.sidebar-links li a {
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 500;
-      text-transform: uppercase;
-      transition: all 0.1s linear 0s;
-      letter-spacing: -0.4px;
-      font-family: myFirstFont;
-   }
-
-   @media (min-width: 1200px) {
-      .col-lg-2 {
-         width: 18.666667%;
-      }
-   }
-
-   aside {
-      border: 4px solid var(--primary-color);
-      padding: 24px;
-      border-radius: 10px;
-      margin: 0px;
-      transition: all 0.1s linear 0s;
-
-   }
-
-   asidenone {
-      border: 4px solid var(--primary-color);
-      padding: 24px;
-      border-radius: 10px;
-      margin: 0px;
-      margin-left: -38px;
-      transition: all 0.1s linear 0s;
-      border-style: none;
-   }
-
-   @media (max-width: 767px) {
-      .show-xs {
-         display: show;
-      }
-   }
-
-   @media (min-width: 1024px) and (max-width: 1279px) {
-      .show-md {
-         border-radius: 4px;
-         padding: 5px;
-         width: 50%;
-         display: table-cell;
-      }
-   }
-
-
-
-   @media (min-width: 1200px) and (max-width: 1279px) {
-      .show-md {
-         border-radius: 4px;
-         padding: 5px;
-         width: 100%;
-         display: table-cell;
-      }
-   }
-
-   @media (min-width: 768px) and (max-width: 1024px) {
-      .show-md {
-         border-radius: 4px;
-         padding: 5px;
-         width: 50%;
-         display: table-cell;
-      }
-
-   }
-</style>
 
 <div class="container">
    <!-- SIDEBAR -->
@@ -84,7 +6,7 @@
          <article>
             <h2 class="icon">หมวดหมู่หนัง</h2>
 
-            <ul class="sidebar-links">
+            <ul id="sidemenu" class="sidebar-links">
                <?php
                foreach ($category_list as $value) { ?>
 
