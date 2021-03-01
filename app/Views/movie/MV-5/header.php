@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html lang="th" prefix="og: https://ogp.me/ns#">
 
 <head>
 	<meta charset="utf-8">
@@ -95,14 +93,14 @@
 								<a href="<?php echo base_url('/category/7/หนังฝรั่ง'); ?>" title="หนังฝรั่ง" class="header__nav-link">หนังฝรั่ง</a>
 							</li>
 							<li class="header__nav-item">
-								<a href="#" onclick="request_movie('<?= $branch ?>')"  title="ขอหนัง/ติดต่อ" class="header__nav-link">ขอหนัง</a>
+								<a href="#" onclick="request_movie('<?= $branch ?>')" title="ขอหนัง/ติดต่อ" class="header__nav-link">ขอหนัง</a>
 							</li>
 						</ul>
 						<!-- end header nav -->
 
 						<!-- header auth -->
 						<div class="header__auth">
-							<form action="#" class="header__search"id="formsearch">
+							<form action="#" class="header__search" id="formsearch">
 								<input class="header__search-input" type="text" placeholder="ค้นหา" id="search">
 								<button class="header__search-button" type="button" onclick="goSearch()">
 									<i class="icon ion-ios-search"></i>
@@ -151,27 +149,26 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-lg-12 col-md-12 col-xs-12 ads-head">
+			<div style="width: 70%"class="banners">
 				<?php
-				$style = "width: 100%;padding-top: 100px;";
-				$i = 0;
-				if (!empty($ads)) {
-					foreach ($ads as $value) {
-						if ($value['ads_position'] == "1") {
-							if ($i != 0) {
-								$style = "width: 100%; margin-top: 5px;";
-							}
-							$i++;
-				?>
-							<a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank">
-								<img src="<?php echo $backURL . 'ads/' . $value['ads_picture'] ?>" style="<?= $style ?>" class="hoverimg">
-							</a>
-				<?php
+				if (!empty($ads['pos1'])) {
+					foreach ($ads['pos1'] as $val) {
+
+
+						if (substr($val['ads_picture'], 0, 4) == 'http') {
+							$ads_picture = $val['ads_picture'];
+						} else {
+							$ads_picture = $path_ads . $val['ads_picture'];
 						}
+				?>
+						<a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+							<img  src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+						</a>
+				<?php
 					}
-				} else {
 				}
 				?>
+				 <!-- <img  src="https://backend.see4k.com/public/banners/1609065427_0c1402b719309c36e7a8.gif"> -->
 			</div>
 		</div>
 	</div>

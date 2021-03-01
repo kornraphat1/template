@@ -28,17 +28,18 @@
 	<div id="ads_fix_footer">
 		<div style="text-align:center;">
 			<div id="fix_footer">
-				<?php foreach ($ads as $value) {
-					if (empty($value['ads_position'] == "2")) {
-					} else { ?>
+				<?php
+				 if (!empty($ads['pos2'])) {
+                    foreach ($ads['pos2'] as $val) {
+				?>
 						<a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
-				<?php }
-				} ?>
+				<?php	}} else {  }
+				?>
 			</div>
 		</div>
 		<?php
-		foreach ($ads as $value) {
-			if ($value['ads_position'] == "2") {
+		if (!empty($ads['pos2'])) {
+			foreach ($ads['pos2'] as $val) {
 		?>
 				<div style="clear:both;"></div>
 				<div id="fix_footer2" style="width:100%; display:block; float:left; margin:-7px 0 0 0; overflow:hidden; line-height:0px;">

@@ -13,16 +13,20 @@
 								</div>
 								<!-- ADS2 -->
 								<div class="ads">
-									<?php foreach ($ads as $value) {
-										if ($value['ads_position'] == "3") {
+									<?php
+									if (!empty($ads['pos3'])) {
+										foreach ($ads['pos3'] as $val) {
 									?>
 											<div class="slide-ads2">
 												<img src='<?php echo  $backURL . "ads/" . $value['ads_picture']; ?>' style="padding-top: 10px;" alt="">
 											</div>
 
-									<?php } else {
+									<?php
 										}
-									} ?>
+									} else {
+									}
+
+									?>
 								</div>
 
 								<!-- /ADS2 -->

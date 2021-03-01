@@ -47,7 +47,7 @@
 									$view = $value['movie_view'];
 								}
 								?>
-								?>
+								
 
 								<div class="col-6 col-sm-4 col-md-4 col-xl-2">
 									<div class="card">
