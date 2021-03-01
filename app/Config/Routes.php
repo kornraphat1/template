@@ -104,6 +104,9 @@ $routes->get('countview/(:num)', 'Home::countView/$1');
 
 // Popular dunung4u
 $routes->get('popular', 'Home::popular');
+$routes->get('/moviedata', 'Home::moviedata');
+$routes->get('/moviedata_search', 'Home::moviedata_search');
+$routes->get('/moviedata_category', 'Home::moviedata_category');
 
 // category dunung4u
 $routes->get('category', 'Home::categorylist');
