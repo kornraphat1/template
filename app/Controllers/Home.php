@@ -555,7 +555,6 @@ class Home extends BaseController
 			'chk_act' => $data_query['chk_act']
 		];
 
-
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/video.php');
 		echo view('movie/' . $this->template . '/footer.php');

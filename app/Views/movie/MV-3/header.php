@@ -908,9 +908,7 @@
 
          <div id="con-ads" class="container ads-head">
 
-            <?php
-
-            ?>
+        
             <div class="col-xs-12 ads-head">
                <?php
             
@@ -964,4 +962,4 @@
    }
 </script>
 
-<?php include('slide.php') ?>
+<?php include('side.php') ?>
