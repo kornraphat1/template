@@ -89,7 +89,14 @@
                      <h1 style="word-wrap: break-word;"> <?= $video_data['movie_thname'] ?> </h1>
                   </div><br>
                   <div class="col-lg-3">
-                     <button class="pull-right btn btn-warning" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>')">
+                     <?php
+                        if (!empty($ep_name)) {
+                           $ep_name = $ep_name;
+                        } else {
+                           $ep_name = '-';
+                        }
+                     ?>
+                     <button class="pull-right btn btn-warning" onclick="goReport('<?= $video_data['movie_id'] ?>','<?= $video_data['branch_id'] ?>','<?= $video_data['movie_thname'] ?>','<?= $ep_name ?>')">
                         <font color="black">แจ้งหนังเสีย</font>
                      </button>
                   </div>
@@ -171,22 +178,16 @@
                ?>
 
                <ul class="social row">
-                  <div class="col-ms-4" style="padding-right: 2px;">
-                     <div class="fb-share-button" data-href="<?= base_url(uri_string()) ?>" data-layout="button">
-                     </div>
-                  </div>
+                  
+                  <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=<?= urlencode(base_url(uri_string())) ?>&display=popup&ref=plugin&src=share_button" target="_blank"><i class="fa fa-facebook-f"></i></a>
 
-                  <div class="col-ms-4">
-                     <div class="btn-twitter navbar-right" data-scribe="component:button" style="width: 65px;">
-                        <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=ดูหนัง หนัง ดูหนังออนไลน์ หนังใหม่ ดูหนังฟรี 2020" class="btn-b" id="b"><i></i>
-                           <span style="padding: 0px 0px 0px;" class="label" id="l">ทวีต</span>
-                        </a>
-                     </div>
-                  </div>
+                  <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=<?= $video_data['movie_thname'] ?>" class="btn-b" id="b"><i class="fa fa-twitter"></i></a>
 
-                  <div class="col-ms-4">
-                     <div class="line-it-button" data-lang="th" data-type="share-a" data-ver="3" data-url="<?= base_url(uri_string()) ?>" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
-                  </div>
+                  <a href="https://social-plugins.line.me/lineit/share?url=<?= urlencode(base_url(uri_string())) ?>" target="_blank">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="line" class="svg-inline--fa fa-line fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M272.1 204.2v71.1c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.1 0-2.1-.6-2.6-1.3l-32.6-44v42.2c0 1.8-1.4 3.2-3.2 3.2h-11.4c-1.8 0-3.2-1.4-3.2-3.2v-71.1c0-1.8 1.4-3.2 3.2-3.2H219c1 0 2.1.5 2.6 1.4l32.6 44v-42.2c0-1.8 1.4-3.2 3.2-3.2h11.4c1.8-.1 3.3 1.4 3.3 3.1zm-82-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 1.8 1.4 3.2 3.2 3.2h11.4c1.8 0 3.2-1.4 3.2-3.2v-71.1c0-1.7-1.4-3.2-3.2-3.2zm-27.5 59.6h-31.1v-56.4c0-1.8-1.4-3.2-3.2-3.2h-11.4c-1.8 0-3.2 1.4-3.2 3.2v71.1c0 .9.3 1.6.9 2.2.6.5 1.3.9 2.2.9h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.7-1.4-3.2-3.1-3.2zM332.1 201h-45.7c-1.7 0-3.2 1.4-3.2 3.2v71.1c0 1.7 1.4 3.2 3.2 3.2h45.7c1.8 0 3.2-1.4 3.2-3.2v-11.4c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2V234c0-1.8-1.4-3.2-3.2-3.2H301v-12h31.1c1.8 0 3.2-1.4 3.2-3.2v-11.4c-.1-1.7-1.5-3.2-3.2-3.2zM448 113.7V399c-.1 44.8-36.8 81.1-81.7 81H81c-44.8-.1-81.1-36.9-81-81.7V113c.1-44.8 36.9-81.1 81.7-81H367c44.8.1 81.1 36.8 81 81.7zm-61.6 122.6c0-73-73.2-132.4-163.1-132.4-89.9 0-163.1 59.4-163.1 132.4 0 65.4 58 120.2 136.4 130.6 19.1 4.1 16.9 11.1 12.6 36.8-.7 4.1-3.3 16.1 14.1 8.8 17.4-7.3 93.9-55.3 128.2-94.7 23.6-26 34.9-52.3 34.9-81.5z"></path>
+                     </svg>
+                  </a>
                </ul>
                <!-- ********************* SOURCS MOVIES  ****************************  -->
             </div>
@@ -247,18 +248,22 @@
       document.getElementById("ads_fox_bottom").remove();
    }
 
-   function goReport(id, branch) {
-      $.ajax({
-         url: "/savereport/branch/" + branch + "/id/" + id,
-         type: 'GET',
-         async: false,
-         success: function(data) {
-            if (data = "OK") {
-               alert("แจ้งหนังเสียเรียบร้อย");
+   function goReport(id, branch, name, ep) {
+      var request = prompt('แจ้งหนังเสืย');
+      if (request != null) {
+         jQuery.ajax({
+            url: "<?=base_url()?>/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+            type: 'GET',
+            crossDomain: true,
+            cache: false,
+            success: function(data) {
+               console.log(request);
+               alert('เราจะดำเนินการให้เร็วที่สุด');
             }
-         }
-      });
 
+         });
+
+      }
    }
 
    function onClickAds(adsid, branch) {
