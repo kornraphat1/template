@@ -649,17 +649,21 @@ class Home extends BaseController
 
 	public function moviedata()
 	{
+
 		$list = $this->VideoModel->get_list_video($this->branch, '', $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			'path_thumbnail' => $this->path_thumbnail,
+			// 'path_thumbnail' => $this->path_thumbnail,
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
+// echo '<pre>',print_r( $header_data,true),'</pre>';die;
+		
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+		
 
-		echo view('moviedata.php', $header_data);
 	}
 	//--------------------------------------------------------------------
 

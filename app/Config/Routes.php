@@ -102,6 +102,9 @@ $routes->post('/contact_ads', 'Home::contact_ads');
 
 $routes->get('countview/(:num)', 'Home::countView/$1');
 
+$routes->get('/moviedata', 'Home::moviedata');
+$routes->get('/moviedata_search', 'Home::moviedata_search');
+$routes->get('/moviedata_category', 'Home::moviedata_category');
 
 
 

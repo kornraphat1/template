@@ -146,7 +146,7 @@
           $.get('<?php echo $url_loadmore ?>', {
             'page': track_click
           }, function(data) {
-            alert (total_pages)
+            // alert (total_pages)
             $("#list-movie").append(data); //append data received from server
 
             track_click++; //user click increment on load button
