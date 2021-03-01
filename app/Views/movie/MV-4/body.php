@@ -95,8 +95,8 @@
         <div class="col-sm-12 dark-bg">
 
             <?php
-            if (!empty($ads['pos2'])) {
-                foreach ($ads['pos2'] as $val) {
+            if (!empty($ads['pos1'])) {
+                foreach ($ads['pos1'] as $val) {
 
 
                     if (substr($val['ads_picture'], 0, 4) == 'http') {

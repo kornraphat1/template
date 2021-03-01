@@ -4,28 +4,44 @@
            <div style="text-align:center;">
               <div id="fix_footer">
                  <?php
+
                   if (!empty($ads['pos2'])) {
-                     foreach ($ads['pos2'] as $val) {
 
-
-                        if (substr($val['ads_picture'], 0, 4) == 'http') {
-                           $ads_picture = $val['ads_picture'];
-                        } else {
-                           $ads_picture = $path_ads . $val['ads_picture'];
-                        }
                   ?>
-                       <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                          <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                       </a>
+                    <a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
                  <?php
-                     }
+
                   }
                   ?>
-
               </div>
            </div>
+           <?php
+
+
+            if (!empty($ads['pos2'])) {
+               foreach ($ads['pos2'] as $val) {
+            ?>
+                 <div style="clear:both;"></div>
+                 <div id="fix_footer2" style="width:100%; display:block; float:left; margin:-7px 0 0 0; overflow:hidden; line-height:0px;">
+                    <div style="display:inline-block; width:100%; text-align:center;">
+                       <div class="textwidget custom-html-widget">
+                          <center>
+                             <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank" rel="noopener">
+                                <img alt="<?= $value['ads_name'] ?>" title="<?= $value['ads_name'] ?>" src="<?php echo  $backURL . "ads/" . $value['ads_picture']; ?>">
+                             </a>
+                          </center>
+                       </div>
+                    </div>
+                 </div>
+                 <div style="clear:both;"></div>
+           <?php
+               }
+            }
+            ?>
+          
         </div>
-        <!-- ADS2 -->
+     </div>
+     <!-- ADS2 -->
      </div>
      <!-- FOOTER -->
      <div id="footer" class="container-fluid" style="padding-top: 0px;padding-bottom: 0px;">
