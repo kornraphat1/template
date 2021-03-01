@@ -13,7 +13,7 @@
             <div class="slick-multiItemSlider">
                 <?php //echo "<pre>";print_r($movie_recomend);die; 
                 ?>
-                <?php 
+                <?php
                 foreach ($movie_recomend['list'] as $value) {
 
                     $id = $value['movie_id'];
@@ -95,37 +95,23 @@
         <div class="col-sm-12 dark-bg">
 
             <?php
+            if (!empty($ads['pos2'])) {
+                foreach ($ads['pos2'] as $val) {
 
-            $style = "width: 100%;";
-            $i = 0;
 
-            if (!empty($ads)) {
-
-                foreach ($ads as $value) {
-
-                    if ($value['ads_position'] == "1") {
-
-                        if ($i <= 0) {
-                            $style = "width: 100%;padding-bottom: 10px;";
-                        }
-
-                        $i++;
-
-            ?>
-
-                        <a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank">
-                            <img alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" src="<?php echo $pathads . $value['ads_picture']; ?>" style="<?= $style ?>" class="hoverimg">
-                        </a>
-
-            <?php
-
+                    if (substr($val['ads_picture'], 0, 4) == 'http') {
+                        $ads_picture = $val['ads_picture'];
+                    } else {
+                        $ads_picture = $path_ads . $val['ads_picture'];
                     }
-                }
-            } else {
-            }
-
             ?>
-
+                    <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                    </a>
+            <?php
+                }
+            }
+            ?>
         </div>
 
     </div>
@@ -188,7 +174,7 @@
                                 } else {
                                 ?>
 
-                                    <a href="<?php echo $urlvideo; ?>"onclick=" return count_view(<?= $id ?>) ">
+                                    <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
                                         <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
@@ -202,7 +188,7 @@
 
                             <div class="hvr-inner">
 
-                                <a href="<?php echo $urlvideo; ?>"onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                             </div>
 
@@ -265,8 +251,8 @@
 
                 ?>
 
-                <?php 
-                
+                <?php
+
                 foreach ($category_list_interest as $key => $values) {
                     $i++
                 ?>
