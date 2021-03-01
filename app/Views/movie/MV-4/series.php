@@ -64,34 +64,24 @@
 
 		<!-- ADS TOP -->
 		<div class="dark-bg" style="padding-top: 8rem;">
-			<?php
-			$style = "width: 100%;";
-			$i = 0;
-			if (!empty($path_imgads)) {
+		<?php
+                if (!empty($ads['pos1'])) {
+                    foreach ($ads['pos1'] as $val) {
 
-				foreach ($path_imgads as $value) {
 
-					if ($value['ads_position'] == "1") {
-
-						if ($i != 0) {
-							$style = "width: 100%; padding-bottom: 28px;";
-						}
-						$i++;
-			?>
-						<a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'] ?>" target="_blank">
-
-							<img alt="<?php echo $value['ads_url'] ?>" title="<?php echo $value['ads_url'] ?>" src="<?php echo $backURL . 'banners/' . $value['ads_picture'] ?>" style="<?= $style ?>" class="hoverimg">
-
-						</a>
-
-			<?php
-
-					}
-				}
-			} else {
-			}
-
-			?>
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
+                        }
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                        </a>
+                <?php
+                    }
+                }
+                ?>
 
 		</div>
 		<!-- /ADS TOP -->
@@ -149,24 +139,23 @@
 				</div>
 			</div>
 			<?php
-			if (!empty($path_imgads)) {
-				foreach ($path_imgads as $value) {
-					if ($value['ads_position'] == "2") {
-			?>
-						<div class="col-sm-6 col-md-12 col-xs-12 col-lg-12">
-							<asidenone>
-								<a onclick="onClickAds(<?= $value['ads_id'] ?>, <?= $branch ?>)" href="<?php echo $value['ads_url'];?>" target="_blank">
-									<img src="<?php echo $backURL . "banners/" . $value['ads_picture']; ?>" style="width: 100%;margin-top: 20px;border-left-width: 10px;margin-left: 0px;" class="hoverimg">
-								</a>
-							</asidenone>
-						</div>
-			<?php
+			if (!empty($ads['pos2'])) {
+				foreach ($ads['pos2'] as $val) {
+
+
+					if (substr($val['ads_picture'], 0, 4) == 'http') {
+						$ads_picture = $val['ads_picture'];
+					} else {
+						$ads_picture = $path_ads . $val['ads_picture'];
 					}
+			?>
+					<a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+						<img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+					</a>
+			<?php
 				}
 			}
-
 			?>
-
 
 
 		</div>
@@ -178,52 +167,52 @@
 				<div class="movie-rate">
 					<div class="rate">
 						<i class="ion-android-star"></i>
-						<p><span><?=$video_data['movie_ratescore'];?></span> /10<br>
-							<span class="rv"><?=$video_data['movie_view'];?> Views</span>
+						<p><span><?= $video_data['movie_ratescore']; ?></span> /10<br>
+							<span class="rv"><?= $video_data['movie_view']; ?> Views</span>
 						</p>
 					</div>
 					<div class="rate-star">
 						<p>Rate : </p>
-						<?php 
-							if(empty($video_data['movie_ratescore'])||$video_data['movie_ratescore']==0){
-								$loopnull = 10;
-								$loopscore = 0;
-							}else{
-								$ratescore = explode('.',$video_data['movie_ratescore']);
-								$loopscore = $ratescore[0];
-								$loopnull = 10 - $loopscore;
-								if(!empty($ratescore[1])){
-									$loopnull--;
-								}
+						<?php
+						if (empty($video_data['movie_ratescore']) || $video_data['movie_ratescore'] == 0) {
+							$loopnull = 10;
+							$loopscore = 0;
+						} else {
+							$ratescore = explode('.', $video_data['movie_ratescore']);
+							$loopscore = $ratescore[0];
+							$loopnull = 10 - $loopscore;
+							if (!empty($ratescore[1])) {
+								$loopnull--;
 							}
+						}
 
-							for ($i=1; $i <=$loopscore ; $i++) { 
-								echo '<i class="ion-ios-star"></i>';
-							}
+						for ($i = 1; $i <= $loopscore; $i++) {
+							echo '<i class="ion-ios-star"></i>';
+						}
 
-							if(!empty($ratescore[1])){
-								echo '<i class="ion-ios-star-half"></i>';
-							}
+						if (!empty($ratescore[1])) {
+							echo '<i class="ion-ios-star-half"></i>';
+						}
 
-							for ($i=1; $i <=$loopnull ; $i++) { 
-								echo '<i class="ion-ios-star-outline"></i>';
-							}
+						for ($i = 1; $i <= $loopnull; $i++) {
+							echo '<i class="ion-ios-star-outline"></i>';
+						}
 
 						?>
-						
+
 					</div>
 				</div>
 			</div>
 
 
 			<?php
-				foreach ($video_data['name_ep'] as $key => $value) {
-					$url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
-					$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
+			foreach ($video_data['name_ep'] as $key => $value) {
+				$url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+				$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
 			?>
 				<p class="series-list"><a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"> <?php echo $video_data['movie_thname'] . ' - ' . $value ?> </a></p>
-			<?php 
-				} 
+			<?php
+			}
 			?>
 
 			<div class="movie-single-ct main-content"><br>
@@ -322,10 +311,10 @@
 				<?php foreach ($vdorandom as $value) {
 
 					$id = $value['movie_id'];
-					if($value['movie_type']=='mo'){
-						$urlvideo = base_url('/video/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_thname'])));
-					}else if($value['movie_type']=='se'){
-						$urlvideo = base_url('/series/' . $id . '/'. urlencode(str_replace(' ','-',$value['movie_thname'])));
+					if ($value['movie_type'] == 'mo') {
+						$urlvideo = base_url('/video/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_thname'])));
+					} else if ($value['movie_type'] == 'se') {
+						$urlvideo = base_url('/series/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_thname'])));
 					}
 
 				?>
@@ -352,13 +341,13 @@
 								<a href="<?php echo $urlvideo; ?>">
 									<?php echo $value['movie_thname'] ?>
 								</a>
-							</h2>
+								</h2>
 
-							<p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span>&nbsp; <span style="float: right;"><i class="fa fa-eye" aria-hidden="true"></i> <?php if (empty($value['movie_view'])) {
-																																																						echo "0";
-																																																					} else {
-																																																						echo $value['movie_view'];
-																																																					} ?></span> </p>
+								<p class="rate"><i class="ion-android-star"></i><span><?php echo $value['movie_ratescore']; ?></span>&nbsp; <span style="float: right;"><i class="fa fa-eye" aria-hidden="true"></i> <?php if (empty($value['movie_view'])) {
+																																																							echo "0";
+																																																						} else {
+																																																							echo $value['movie_view'];
+																																																						} ?></span> </p>
 
 
 
@@ -422,20 +411,18 @@
 	<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript">
+		$(document).ready(function() {
+			var url = "<?php echo base_url(); ?>" + "/movie_view_add/movie_id/" + <?php echo $video_data['movie_id']; ?> + "/branch/" + "<?php echo $video_data['branch_id']; ?>";
+			jQuery.ajax({
+				url: url,
+				async: true,
+				success: function(response) {
+					console.log(url); // server response
+				}
 
-		$( document ).ready(function() {
-				var url = "<?php echo base_url(); ?>" +"/movie_view_add/movie_id/" + <?php echo $video_data['movie_id'];?> + "/branch/" + "<?php echo $video_data['branch_id'];?>";
-				jQuery.ajax({
-	            url: url,
-	            async: true,
-	            success: function(response) {
-	           	console.log(url); // server response
-	            }
+			});
 
-	        });
-	    
-	});
-
+		});
 	</script>
 
 </div>

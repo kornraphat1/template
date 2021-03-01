@@ -21,44 +21,23 @@
         <div class="col-sm-12 dark-bg">
 
             <?php
+                if (!empty($ads['pos1'])) {
+                    foreach ($ads['pos1'] as $val) {
 
-            $style = "width: 100%;";
 
-            $i = 0;
-
-            if (!empty($path_imgads)) {
-
-                foreach ($path_imgads as $value) {
-
-                    if ($value['ads_position'] == "1") {
-
-                        if ($i != 0) {
-
-                            $style = "width: 100%;";
-
+                        if (substr($val['ads_picture'], 0, 4) == 'http') {
+                            $ads_picture = $val['ads_picture'];
+                        } else {
+                            $ads_picture = $path_ads . $val['ads_picture'];
                         }
-
-                        $i++;
-
-            ?>
-
-                        <a onclick="onClickAds(<?= $value['ads_id']?>, <?= $branch ?>)" href="<?php echo $value['ads_url']; ?>" target="_blank">
-
-                            <img alt="<?php echo $value['ads_url']; ?>" title="<?php echo $value['ads_url']; ?>" src="<?php echo $pathads . $value['ads_picture']; ?>" style="<?= $style ?>" class="hoverimg">
-
+                ?>
+                        <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $val['branch_id'] ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                            <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
                         </a>
-
-            <?php
-
+                <?php
                     }
-
                 }
-
-            } else {
-
-            }
-
-            ?>
+                ?>
 
         </div>
 
