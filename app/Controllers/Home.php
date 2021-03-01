@@ -551,8 +551,8 @@ class Home extends BaseController
 			'listyear' => $data_query['listyear'],
 			'vdorandom' => $data_query['video_random'],
 			'video_data' => $data_query['video_data'],
-			'feildplay' => $feildplay
-
+			'feildplay' => $feildplay,
+			'chk_act' => $data_query['chk_act']
 		];
 
 

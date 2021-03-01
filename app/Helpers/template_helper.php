@@ -614,7 +614,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $category_list_interest = $VideoModel->category_list();
                     $top_imdb = $VideoModel->get_list_topimdb($parameter['branch'], $parameter['page']);
-                    
+                   // echo "<pre>";print_r($top_imdb);die;
                     foreach ($category_list_interest as $key => $val) {
                         $cat_id = $val['category_id'];
                         $cate_movie = $VideoModel->cate_movie($cat_id, $parameter['branch']);
@@ -701,13 +701,22 @@ function calltemplate($template, $view, $parameter = [])
                 case 'video':
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
                     $category_list = $VideoModel->get_category($parameter['branch']);
-
+                    $chk_act = [
+                        'home' => 'active',
+                        'topimdb' => '',
+                        'newmovie' => '',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
                         'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 5),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
+                        'chk_act' => $chk_act,
                     ];
 
                     break;

@@ -51,13 +51,14 @@
               $view = $val['movie_view'];
             }
 
-
-            $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_thname']));
+            //echo "<pre>";print_r($val);die;
+            $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
+           
           ?>
             <div class="swiper-slide">
               <div class="movie-box">
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                  <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                  <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                 </a>
                 <span class="movie-score"><?= $val['movie_ratescore'] ?><i class="fas fa-star"></i></span>
                 <span class="movie-view"><?= $view ?> <i class="fas fa-eye"></i></span>
@@ -68,7 +69,7 @@
               </div>
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                 </h2>
               </div>
             </div>
@@ -182,13 +183,13 @@
               $view = $val['movie_view'];
             }
 
-            $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_thname']));
+            $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
           ?>
             <div class="swiper-slide">
               <div class="movie-box">
 
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                  <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                  <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                 </a>
                 <span class="movie-score"><?= $val['movie_ratescore'] ?><i class="fas fa-star"></i></span>
                 <span class="movie-view"><?= $view ?> <i class="fas fa-eye"></i></span>
@@ -199,7 +200,7 @@
               </div>
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                 </h2>
               </div>
             </div>
@@ -269,13 +270,13 @@ foreach ($video_cate as $val_cate) {
                   $view = $val['movie_view'];
                 }
 
-                $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_thname']));
+                $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
 
             ?>
                 <div class="swiper-slide">
                   <div class="movie-box">
-                    <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                      <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                    <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                      <img src="<?= $val['movie_picture'] ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                     </a>
                     <span class="movie-score"><?= $val['movie_ratescore'] ?><i class="fas fa-star"></i></span>
                     <span class="movie-view"><?= $view ?> <i class="fas fa-eye"></i></span>
@@ -286,7 +287,7 @@ foreach ($video_cate as $val_cate) {
                   </div>
                   <div class="title-in">
                     <h2>
-                      <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                      <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" aalt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                     </h2>
                   </div>
                 </div>
