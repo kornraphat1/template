@@ -216,9 +216,9 @@
           </div>
         </div>
       </section>
-      <iframe id="player" class="player" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $index) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
+      <iframe id="player" class="player" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>"scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
 
-
+     
 
       <!-- สำหรับ series -->
 
@@ -341,11 +341,8 @@
       </div>
 
       <ul id="list-movie" class="list-movie">
-
-        <?php foreach ($vdorandom as $val) { ?>
-
+        <?php foreach ($video_random as $val) { ?>
           <li>
-
             <div class="movie-box">
               <?php if (substr($val['movie_picture'], 0, 4) == 'http') {
                 $movie_picture = $val['movie_picture'];
@@ -386,7 +383,6 @@
             </div>
             <?php
             if (strlen($val['movie_thname']) > 40) {
-              //= substr($value['movie_thname'], 0, 40) . '...';
               $val['movie_thname'] = iconv_substr($val['movie_thname'], 0, 40, "UTF-8") . '...';
             }
             ?>

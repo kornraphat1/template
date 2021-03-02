@@ -34,7 +34,7 @@ class Database extends \CodeIgniter\Database\Config
 		'hostname' => '13.212.162.210',
 		'username' => 'variety',
 		'password' => 'vfe6FkBZFC3bqYlV',
-		'database' => 'variety',
+		'database' => 'variety_test',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,

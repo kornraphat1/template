@@ -692,6 +692,51 @@ function calltemplate($template, $view, $parameter = [])
                         'chk_act' => $chk_act,
                     ];
                     break;
+                case 'contract':
+                    $chk_act = [
+                        'home' => '',
+                        'topimdb' => '',
+                        'newmovie' => '',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list_video = $VideoModel->get_list_popular($parameter['branch']);
+
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                    ];
+                    break;
+
+
+                case 'newmovie':
+                    $chk_act = [
+                        'home' => '',
+                        'topimdb' => '',
+                        'newmovie' => 'active',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list_video = $VideoModel->get_list_video($parameter['branch']);
+
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                        'url_loadmore' => base_url('moviedata'),
+                    ];
+                    break;
 
 
                 case 'video_bycate':
@@ -703,6 +748,7 @@ function calltemplate($template, $view, $parameter = [])
                         'list_video' => $list_video,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
+                        'url_loadmore' => base_url('moviedata'),
                     ];
                     break;
 
@@ -788,6 +834,7 @@ function calltemplate($template, $view, $parameter = [])
                         'seo' => $seo,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
+                       
                     ];
 
                     break;
@@ -820,8 +867,6 @@ function calltemplate($template, $view, $parameter = [])
                     ];
                     $list = [
                         'list_video' => $paginate,
-
-
                         'chk_act' => $chk_act,
                         'url_loadmore' => base_url('moviedata'),
 
