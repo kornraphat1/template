@@ -270,6 +270,7 @@ class Video_Model extends Model
             $data[0]['ep_thmai'] = $this->normalizeSeriestoArray($data[0]['movie_series']);
             $data[0]['name_ep'] = $this->getListNameSeries($data[0]['movie_series'])[0];
         }
+        $data = divineMovieName($data);
         return $data[0];
     }
 
@@ -291,12 +292,9 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_bycategory($id, $branch_id, $page = 1, $keyword = "")
+    public function get_id_video_bycategory($id, $branch_id, $page = 1)
     {
-        $sql_where = " ";
-        if ($keyword != "") {
-            $sql_where = " AND `$this->table_movie`.movie_thname LIKE '%$keyword%' ";
-        }
+    
         $sql = "SELECT
                     *,mo_category.category_name
                 FROM
@@ -434,7 +432,7 @@ class Video_Model extends Model
         // echo $sql;die;
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 28;
+        $perpage = 24;
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 

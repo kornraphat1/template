@@ -28,11 +28,11 @@
                   $movie_picture = $path_thumbnail . $val['movie_picture'];
                 }
 
-                $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
+                $url_name = urlencode(str_replace(' ', '-', $val['movie_name']));
                 ?>
 
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>' , '<?=$val['movie_type']?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>' , '<?=$val['movie_type']?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                 </a>
                 <div class="movie-overlay"></div>
                 <?php
@@ -76,7 +76,7 @@
               </div>
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" tabindex="-1" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                 </h2>
                 
                 <?php

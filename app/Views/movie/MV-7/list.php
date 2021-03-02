@@ -4,25 +4,16 @@
   <div class="container">
     <div id="movie-list" class="row">
       <div class="movie-title-list">
-        <?php
-          if (!empty($cate_name)) {
-        
-            $title = $cate_name ;
-
-          } else if (!empty($keyword)) {
-        
-            $title = 'คุณกำลังค้นหา : '. $keyword;
       
-          }
-        ?>
         <h1><?= $title ?></h1>
       </div>
 
-      <?php if (!empty($list['list'])) { ?>
+      <?php if (!empty($list_video['list'])) { ?>
       <ul id="list-movie" class="list-movie">
 
         <?PHP
-          foreach ($list['list'] as $val) {
+        
+          foreach ($list_video['list'] as $val) {
 
         ?>
             <li>
@@ -34,11 +25,11 @@
                   $movie_picture = $path_thumbnail . $val['movie_picture'];
                 }
 
-                $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
+                $url_name = urlencode(str_replace(' ', '-', $val['movie_name']));
                 ?>
 
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                 </a>
                 <div class="movie-overlay"></div>
                 <?php
@@ -82,7 +73,7 @@
               </div>
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" tabindex="-1" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                 </h2>
                 
                 <?php
@@ -111,7 +102,7 @@
       <?php } ?>
 
       <?php
-        if ( !empty($list['list']) ) {
+        if ( !empty($list_video['list']) ) {
       ?>
         <button id="movie-loadmore">NEXT</button>
       <?php
@@ -149,15 +140,13 @@
 
 <script>
   $(document).ready(function() {
-    var track_click = 1; //track user click on "load more" button, righ now it is 0 click
-    var total_pages = '<?= $list['total_page'] ?>';
+    var track_click = 2; //track user click on "load more" button, righ now it is 0 click
+    var total_pages = '<?= $list_video['total_page'] ?>';
     var keyword = "<?= $keyword ?>";
 
     if( track_click >= total_pages ){
       $("#movie-loadmore").hide(0);
     }
-
-    track_click = 2;
 
     $("#movie-loadmore").click(function(e) { //user clicks on button
 

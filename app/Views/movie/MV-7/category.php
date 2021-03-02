@@ -4,7 +4,7 @@
       <div class="row">
         <ul class="movie-category">
           <?php 
-            foreach($list_category as $val ){ 
+            foreach($category_list as $val ){ 
               $catename = str_replace(' ','-',$val['category_name']);
           ?>
             <li><a href="<?php echo base_url().'/category/'.$val['category_id'].'/'.$catename ?>"><?=$val['category_name']?></a></li>

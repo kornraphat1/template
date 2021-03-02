@@ -27,19 +27,19 @@
 <section id="movie-video" class="text-center">
   <div class="container">
     <div class="row">
-      <?php if (substr($videodata['movie_picture'], 0, 4) == 'http') {
-        $movie_picture = $videodata['movie_picture'];
+      <?php if (substr($video_data['movie_picture'], 0, 4) == 'http') {
+        $movie_picture = $video_data['movie_picture'];
       } else {
-        $movie_picture = $path_thumbnail . $videodata['movie_picture'];
+        $movie_picture = $path_thumbnail . $video_data['movie_picture'];
       }
-      $url_name = urlencode(str_replace(' ', '-', $videodata['movie_thname']))
+      $url_name = urlencode(str_replace(' ', '-', $video_data['movie_name']))
 
       ?>
       <div id="movie-player">
         <div class="movie-header">
           <div class="movie-trailer">
           <?php
-            $yb = explode('?v=', $videodata['movie_preview']);
+            $yb = explode('?v=', $video_data['movie_preview']);
             if (count($yb) > 1) {
               $urlyb = "https://www.youtube.com/embed/" . $yb[1];
             } else {
@@ -50,30 +50,31 @@
             <iframe src="<?=$urlyb?>" frameborder="0" allowfullscreen=""></iframe>
           </div>
           <div class="movie-thumbnail">
-            <img src="<?php echo $videodata['movie_picture']; ?>" alt="<?= $videodata['movie_thname'] ?>" title="<?= $videodata['movie_thname'] ?>">
+            <img src="<?php echo $video_data['movie_picture']; ?>" alt="<?= $video_data['movie_name'] ?>" title="<?= $video_data['movie_name'] ?>">
           </div>
         </div>
-        <iframe id="player" class="player" src="<?= base_url('player/' . $videodata['movie_id'] . '/' . $index) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
+        <iframe id="player" class="player" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
             
         <!-- สำหรับ series -->
-        <?php if($videodata['movie_type']=='se'){ ?>
+        <?php if($video_data['movie_type']=='se'){ ?>
         <div class="movie-episode">
           <div id="NextEP" class="swiper-container">
             <div class="swiper-wrapper">
 
               <?php 
-                foreach ($videodata['epdata'] as $key => $val) { 
+                foreach ($video_data['name_ep'] as $key => $val) { 
+                  // echo '<pre>',print_r($key,true),'</pre>';die;
                   $active = '';
                   if($index==$key){
                     $active = 'active';
                   }
-                  $url_nameep = urlencode(str_replace(' ', '-', $videodata['name_ep'][$key]));
+                  $url_nameep = urlencode(str_replace(' ', '-', $video_data['name_ep'][$key]));
 
               ?>
                 <div class="swiper-slide">
-                  <a onclick="goEP('<?=$videodata['movie_id']?>','<?=$url_name?>','<?= trim($key) ?>','<?= $url_nameep ?>')" tabindex="-1">
+                  <a onclick="goEP('<?=$video_data['movie_id']?>','<?=$url_name?>','<?= trim($key) ?>','<?= $url_nameep ?>')" tabindex="-1">
                     <img src="<?= $movie_picture ?>">
-                    <span class="<?=$active?>"><?= $videodata['name_ep'][$key] ?></span>
+                    <span class="<?=$active?>"><?= $video_data['name_ep'][$key] ?></span>
                   </a>
                 </div>
               <?php } ?>
@@ -93,21 +94,21 @@
 
       <div id="movie-detail">
         <div class="movie-card-detail">
-          <h1 class="movie-title"><?= $videodata['movie_thname'] ?> </h1>
+          <h1 class="movie-title"><?= $video_data['movie_name'] ?> </h1>
           <div class="movie-description">
             <p>
-              เรื่องย่อ: <?php if(empty($videodata['movie_des'])){ echo "-"; }else{ echo $videodata['movie_des']; } ?>
+              เรื่องย่อ: <?php if(empty($video_data['movie_des'])){ echo "-"; }else{ echo $video_data['movie_des']; } ?>
             </p>
           </div>
           <div class="movie-box">
            
             <div class="movie-score">
             <?php
-              if( !empty($videodata['movie_ratescore']) && $videodata['movie_ratescore'] != 0 ){
-                if( strpos($videodata['movie_ratescore'],'.') ){
-                  $score = substr($videodata['movie_ratescore'],0,3);
+              if( !empty($video_data['movie_ratescore']) && $video_data['movie_ratescore'] != 0 ){
+                if( strpos($video_data['movie_ratescore'],'.') ){
+                  $score = substr($video_data['movie_ratescore'],0,3);
                 }else{
-                  $score = substr($videodata['movie_ratescore'],0);
+                  $score = substr($video_data['movie_ratescore'],0);
                 }
             ?>
               <i class="fas fa-star"></i> <?= $score ?>
@@ -131,11 +132,11 @@
             </div>
           </div>
 
-          <?php if( !empty($videodata['cate_data'] ) ){ ?>
+          <?php if( !empty($video_data['cate_data'] ) ){ ?>
           <div class="movie-category">
             Category:
             <?php 
-              foreach ($videodata['cate_data'] as $val) { 
+              foreach ($video_data['cate_data'] as $val) { 
                 $catename = str_replace(' ','-',$val['category_name']);
             ?>
               <a href="<?php echo base_url().'/category/'.$val['category_id'].'/'.$catename ?>" target="_blank">
@@ -184,7 +185,7 @@
         <h1>คุณอาจจะสนใจ</h1>
       </div>
       <ul id="list-movie" class="list-movie">
-      <?php foreach($videinterest as $interest){ ?>
+      <?php foreach($video_random as $interest){ ?>
         <li>
           <div class="movie-box">
 
@@ -194,11 +195,11 @@
               $movie_picture = $path_thumbnail . $interest['movie_picture'];
             }
 
-            $url_name = urlencode(str_replace(' ', '-', $interest['movie_thname']));
+            $url_name = urlencode(str_replace(' ', '-', $interest['movie_name']));
             ?>
 
-            <a onclick="goView('<?= $interest['movie_id'] ?>', '<?=$url_name?>')" alt="<?= $interest['movie_thname'] ?>" title="<?= $interest['movie_thname'] ?>">
-              <img src="<?= $movie_picture ?>" alt="<?= $interest['movie_thname'] ?>" title="<?= $interest['movie_thname'] ?>">
+            <a onclick="goView('<?= $interest['movie_id'] ?>', '<?=$url_name?>')" alt="<?= $interest['movie_name'] ?>" title="<?= $interest['movie_name'] ?>">
+              <img src="<?= $movie_picture ?>" alt="<?= $interest['movie_name'] ?>" title="<?= $interest['movie_name'] ?>">
             </a>
             <div class="movie-overlay"></div>
             <?php
@@ -242,7 +243,7 @@
           </div>
           <div class="title-in">
             <h2>
-              <a onclick="goView('<?= $interest['movie_id'] ?>', '<?=$url_name?>')" tabindex="-1" alt="<?= $interest['movie_thname'] ?>" title="<?= $interest['movie_thname'] ?>"><?= $interest['movie_thname'] ?></a>
+              <a onclick="goView('<?= $interest['movie_id'] ?>', '<?=$url_name?>')" tabindex="-1" alt="<?= $interest['movie_name'] ?>" title="<?= $interest['movie_name'] ?>"><?= $interest['movie_name'] ?></a>
             </h2>
             
             <?php
@@ -315,11 +316,11 @@
   };
 
   function get_Report() {
-    var movie_id = '<?= $videodata['movie_id'] ?>';
-    var movie_name = '<?= $videodata['movie_thname'] ?>';
+    var movie_id = '<?= $video_data['movie_id'] ?>';
+    var movie_name = '<?= $video_data['movie_name'] ?>';
     var movie_ep_name = '';
-    <?php if($videodata['movie_type']=='se'){ ?>
-      movie_ep_name = '<?= $videodata['name_ep'][$index] ?>';
+    <?php if($video_data['movie_type']=='se'){ ?>
+      movie_ep_name = '<?= $video_data['name_ep'][$index] ?>';
     <?php } ?>
 
     $.ajax({
