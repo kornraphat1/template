@@ -840,10 +840,10 @@ function calltemplate($template, $view, $parameter = [])
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
-                  
+
 
                     $list = [
-                        
+
                         'category_list' => $category_list,
                         'listyear' => $listyear,
                     ];
@@ -873,14 +873,14 @@ function calltemplate($template, $view, $parameter = [])
                         'url_loadmore' => base_url('moviedata_category'),
 
                     ];
-                    
+
                     break;
 
 
-                
+
 
                 case 'video_search':
-    $chk_act = [
+                    $chk_act = [
                         'home' => 'active',
                         'topimdb' => '',
                         'newmovie' => '',
@@ -890,18 +890,17 @@ function calltemplate($template, $view, $parameter = [])
                         'contract' => ''
                     ];
 
-                    
-                    $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
 
+                    $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
                     $list = [
                         'list_video' => $list_video,
                         'category_list' => $category_list,
-                        'listyear' => $listyear, 
+                        'listyear' => $listyear,
                         'chk_act' => $chk_act,
                         'keyword' => $parameter['keyword_string'],
-                        'url_loadmore' => base_url('moviedata_category'),
+                        'url_loadmore' => base_url('moviedata_search'),
                     ];
                     break;
 
