@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-3';
+		$this->template = 'MV-7';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -324,14 +324,14 @@ class Home extends BaseController
 		// print_r($data_query['series']);die;
 
 		$setting = $this->setting;
-		$setting['image'] = $data_query['series']['movie_picture'];
+		$setting['image'] = $data_query['video_data']['movie_picture'];
 
 
 
 		if (!empty($data_query['seo'])) {
 			if (!empty($data_query['seo']['seo_title'])) {
 				$title = $data_query['seo']['seo_title'];
-				$name_videos = $data_query['series']['movie_thname'];
+				$name_videos = $data_query['video_data']['movie_thname'];
 				$title_name = $setting['setting_title'];
 				$title_web = str_replace(
 					"{movie_title} - {title_web}",
@@ -343,7 +343,7 @@ class Home extends BaseController
 
 			if (!empty($data_query['seo']['seo_description'])) {
 				$description = $data_query['seo']['seo_description'];
-				$description_movie = $data_query['series']['movie_des'];
+				$description_movie = $data_query['video_data']['movie_des'];
 				$setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
@@ -682,11 +682,11 @@ class Home extends BaseController
 	public function moviedata_search()
 	{
 	
-		$list = $this->VideoModel->get_list_video_search($_GET['keyword_string'],$this->branch,  $_GET['page']);
+		$list = $this->VideoModel->get_list_video_search($this->keyword_string,$this->branch,  $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			// 'path_thumbnail' => $this->path_thumbnail,
+			
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,

@@ -893,11 +893,11 @@ function calltemplate($template, $view, $parameter = [])
 
                     $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
                     $category_list = $VideoModel->get_category($parameter['branch']);
-                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                   
                     $list = [
                         'list_video' => $list_video,
                         'category_list' => $category_list,
-                        'listyear' => $listyear,
+                        
                         'chk_act' => $chk_act,
                         'keyword' => $parameter['keyword_string'],
                         'url_loadmore' => base_url('moviedata_search'),
@@ -905,28 +905,34 @@ function calltemplate($template, $view, $parameter = [])
                     break;
 
                 case 'series':
-                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $chk_act = [
+                        'home' => 'active',
+                        'topimdb' => '',
+                        'newmovie' => '',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 3);
-
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
+// echo '<pre>',print_r($series,true),'</pre>';die;
 
                     $list = [
-                        'video_data' => $VideoModel->get_id_video($parameter['id']),
-
-                        'seo' => $VideoModel->get_seo($parameter['branch']),
+                        
                         'category_list' => $category_list,
-                        'listyear' => $listyear,
-                        'series' => $series,
+                        'video_data' => $series,
                         'video_random' => $video_random,
                         'seo' => $seo,
+                        'chk_act' => $chk_act,
+
                     ];
 
                     break;
 
                 case 'video':
-                    $listyear = $VideoModel->get_listyear($parameter['branch']);
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $chk_act = [
                         'home' => 'active',
@@ -942,26 +948,35 @@ function calltemplate($template, $view, $parameter = [])
                         'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 5),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
-                        'listyear' => $listyear,
                         'chk_act' => $chk_act,
                     ];
 
                     break;
 
                 case 'video_series':
-                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $chk_act = [
+                        'home' => 'active',
+                        'topimdb' => '',
+                        'newmovie' => '',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
+
                     $category_list = $VideoModel->get_category($parameter['branch']);
-                    $video_data = $VideoModel->get_ep_series($parameter['id']);
+                    $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
                     $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
 
                     $list = [
 
-                        'video_data' => $video_data,
+                        'video_data' => $series,
                         'video_random' => $video_random,
                         'seo' => $seo,
                         'category_list' => $category_list,
-                        'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                        
                     ];
 
                     break;
