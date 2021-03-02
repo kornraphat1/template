@@ -24,11 +24,25 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
+	
+//โต้
 
-	public $baseURL = 'http://192.168.10.45:8991/';
-	public $docURL = 'http://192.168.10.45:8991/public/movie/MV-6/';
+	// public $baseURL = 'http://192.168.10.45:8991/';
+	// public $docURL = 'http://192.168.10.45:8991/public/movie/MV-6/';
+	// public $backURL = "https://backend.donengded.com/public/";
+
+
+//กร 
+
+	public $baseURL = 'http://localhost:9220/';
+	public $docURL = 'http://localhost:9220/public/movie/MV-7/';
 	public $backURL = "https://backend.donengded.com/public/";
 
+//พี่มิ้น
+
+// public $baseURL = 'http://192.168.10.45:8991/';
+// 	public $docURL = 'http://192.168.10.45:8991/public/movie/MV-6/';
+// 	public $backURL = "https://backend.donengded.com/public/";
 
 	/*
 	|--------------------------------------------------------------------------

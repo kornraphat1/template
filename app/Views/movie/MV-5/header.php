@@ -31,6 +31,31 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
+
+	 <!--Google Font-->
+	 <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet"/>
+    <!-- CSS files -->
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/custom.css?v=5"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css?v=8"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/plugins.css?v=2"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/animate.css?v=1"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/size.css?v=3"; ?>' />
+    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-awesome.min.css?v=1"; ?>'>
+
+    <!-- TAG og facebook -->
+    <meta property="og:url" content="<?php echo base_url(uri_string()); ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php echo  $setting['setting_title']; ?>" />
+    <meta property="og:description" content="<?php echo  $setting['setting_description']; ?>" />
+    <meta property="og:image" content="<?php echo $path_setting . $setting['setting_logo']; ?>" />
+
+    <!-- TAG og Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<?php echo  $setting['setting_title']; ?>" />
+    <meta name="twitter:description" content="<?php echo  $setting['setting_description']; ?>" />
+    <meta name="twitter:image" content="<?php echo $path_setting . $setting['setting_logo']; ?>" />
+    <meta name="twitter:site" content="@ondemandacademy" />
+
 	<title><?php echo $setting['setting_title']; ?></title>
 </head>
 

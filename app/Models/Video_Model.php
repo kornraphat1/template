@@ -291,12 +291,9 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_bycategory($id, $branch_id, $page = 1, $keyword = "")
+    public function get_id_video_bycategory($id, $branch_id, $page = 1)
     {
-        $sql_where = " ";
-        if ($keyword != "") {
-            $sql_where = " AND `$this->table_movie`.movie_thname LIKE '%$keyword%' ";
-        }
+    
         $sql = "SELECT
                     *,mo_category.category_name
                 FROM

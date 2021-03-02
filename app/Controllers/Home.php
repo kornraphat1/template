@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-6';
+		$this->template = 'MV-7';
 
 		helper(['url', 'pagination', 'template', 'moviename']);
 	}
@@ -62,8 +62,7 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-			'chk_act' => $data_query['chk_act'],
-			'video_cate' => $data_query['video_cate']
+		
 		];
 
 		$view_data = array_merge($view_data, $data_query);
@@ -660,7 +659,47 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
-	//Popular dunung4u
+	public function moviedata_category()
+	{
+
+		$list = $this->VideoModel->get_id_video_bycategory($_GET['keyword'],$this->branch,  $_GET['page']);
+
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			// 'path_thumbnail' => $this->path_thumbnail,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+// echo '<pre>',print_r( $_GET['keyword'],true),'</pre>';die;
+		
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+		
+
+	}//--------------------------------------------------------------------
+
+	public function moviedata_search()
+	{
+	
+		$list = $this->VideoModel->get_list_video_search($_GET['keyword_string'],$this->branch,  $_GET['page']);
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			// 'path_thumbnail' => $this->path_thumbnail,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+// echo '<pre>',print_r( $header_data,true),'</pre>';die;
+		
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+		
+
+	}
+	//--------------------------------------------------------------------
+
+	//Popular dunung4u - mv7
 	public function popular() //ต้นแบบ หน้า cate / search
 	{
 		$ads = $this->VideoModel->get_ads($this->branch);
@@ -713,7 +752,7 @@ class Home extends BaseController
 
 	//--------------------------------------------------------------------
 
-	//Popular dunung4u
+	//Popular dunung4u - mv7
 	public function categorylist() //ต้นแบบ หน้า cate / search
 	{
 		$ads = $this->VideoModel->get_ads($this->branch);
