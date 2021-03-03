@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-7';
+		$this->template = 'MV-6';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -208,6 +208,7 @@ class Home extends BaseController
 
 
 		$keyword_string = urldecode($keyword_string);
+		
 		$title = $keyword_string;
 		$parameter = [
 			'branch' => $this->branch,
@@ -223,7 +224,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+			'keyword' => $this->keyword_string,
 			'title' => $title,
 
 			'keyword_string' => $keyword_string
@@ -676,26 +677,21 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-// echo '<pre>',print_r( $_GET['keyword'],true),'</pre>';die;
-		
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 		
-
 	}//--------------------------------------------------------------------
 
 	public function moviedata_search()
 	{
 	
-		$list = $this->VideoModel->get_list_video_search($this->keyword_string,$this->branch,  $_GET['page']);
+		$list = $this->VideoModel->get_list_video_search($this->keyword_string, $this->branch,  $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-// echo '<pre>',print_r( $header_data,true),'</pre>';die;
 		
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 		

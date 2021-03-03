@@ -748,7 +748,8 @@ function calltemplate($template, $view, $parameter = [])
                         'list_video' => $list_video,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
-                        'url_loadmore' => base_url('moviedata'),
+                        'keyword' => $parameter['cate_id'],
+                        'url_loadmore' => base_url('moviedata_category'),
                     ];
                     break;
 
@@ -769,10 +770,21 @@ function calltemplate($template, $view, $parameter = [])
 
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $chk_act = [
+                        'home' => '',
+                        'topimdb' => '',
+                        'newmovie' => 'active',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
                     $list = [
                         'list_video' => $list_video,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                        'url_loadmore' => base_url('moviedata_search'),
                     ];
                     break;
 
@@ -781,16 +793,24 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 3);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
 
-
+                    $chk_act = [
+                        'home' => 'active',
+                        'topimdb' => '',
+                        'newmovie' => '',
+                        'netflix' => '',
+                        'category' => '',
+                        'poppular' => '',
+                        'contract' => ''
+                    ];
                     $list = [
-                        'video_data' => $VideoModel->get_id_video($parameter['id']),
-
+                    
+                        'chk_act' => $chk_act,
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
-                        'series' => $series,
+                        'video_data' => $series,
                         'video_random' => $video_random,
                         'seo' => $seo,
                     ];
@@ -817,7 +837,6 @@ function calltemplate($template, $view, $parameter = [])
                         'listyear' => $listyear,
                         'chk_act' => $chk_act,
                     ];
-
                     break;
 
                 case 'video_series':

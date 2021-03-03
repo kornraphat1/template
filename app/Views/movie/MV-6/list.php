@@ -49,13 +49,13 @@
                 } else {
                   $movie_picture = $path_thumbnail . $val['movie_picture'];
                 }
-                
-            $url_name = urldecode(str_replace([" ","'"],["-",""], $val['movie_thname']));
+
+                $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
                 ?>
 
-                
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                  <img src="<?= $movie_picture ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
                 </a>
 
 
@@ -90,16 +90,16 @@
               </div>
 
               <?php
-              if (strlen($val['movie_thname']) > 40) {
-                //= substr($value['movie_thname'], 0, 40) . '...';
-                $val['movie_thname'] = iconv_substr($val['movie_thname'], 0, 40, "UTF-8") . '...';
+              if (strlen($val['movie_name']) > 40) {
+                //= substr($value['movie_name'], 0, 40) . '...';
+                $val['movie_name'] = iconv_substr($val['movie_name'], 0, 40, "UTF-8") . '...';
               }
               ?>
 
 
               <div class="title-in">
                 <h2>
-                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                  <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
                 </h2>
                 <?php
                 if (!empty($val['movie_ratescore']) && $val['movie_ratescore'] != 0) {
@@ -159,14 +159,16 @@
 </section>
 <script>
   $(document).ready(function() {
-    var track_click = 1; //track user click on "load more" button, righ now it is 0 click
+    var track_click = 2; //track user click on "load more" button, righ now it is 0 click
     var total_pages = '<?= $list_video['total_page'] ?>';
-    var keyword = "<?= $keyword_string ?>";
-    if (track_click >= total_pages) {
+    var keyword = "<?= $keyword ?>";
+
+    if( track_click >= total_pages ){
       $("#movie-loadmore").hide(0);
     }
-    track_click = 2;
+
     $("#movie-loadmore").click(function(e) { //user clicks on button
+
       if (track_click <= total_pages) //user click number is still less than total pages
       {
         //post page number and load returned data into result element
@@ -174,17 +176,26 @@
           'page': track_click,
           'keyword': keyword,
         }, function(data) {
-          //  $("#anime-loadmore").show(); //bring back load more button
+
+         //  $("#anime-loadmore").show(); //bring back load more button
           $("#list-movie").append(data); //append data received from server
+
           track_click++; //user click increment on load button
+
         }).fail(function(xhr, ajaxOptions, thrownError) { //any errors?
           alert(thrownError); //alert with HTTP error
         });
+
       }
-      if (track_click >= total_pages) {
+
+      if(track_click >= total_pages){
+
         $("#movie-loadmore").hide(0);
+
       }
+
       // alert(track_click+" "+total_pages)
+
     });
   });
 </script>

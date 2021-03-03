@@ -122,9 +122,10 @@
       });
 
       function goSearch() {
-        var search = $.trim($("#movie-search").val())
-        if (search) {
-          window.location.href = "/search/" + $("#movie-search").val();
+        var search = $.trim($("#movie-search").val());
+        var res = search.replace("%", "%25");
+        if (res) {
+          window.location.href = "/search/" + res;
         } else {
           window.location.href = "<?= base_url() ?>";
         }
