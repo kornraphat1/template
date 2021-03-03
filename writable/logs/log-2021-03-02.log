@@ -86,3 +86,92 @@ CRITICAL - 2021-03-02 00:49:30 --> Undefined variable: keyword
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2021-03-02 04:25:14 --> Undefined index: setting_img
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 04:30:24 --> Undefined index: setting_img
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 04:51:55 --> Undefined index: setting_img
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 04:52:19 --> Undefined variable: contectUrl
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 120, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 22:40:11 --> Undefined variable: urlsearch
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(162): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 162, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 23:53:54 --> Invalid file: {0}
+#0 C:\xampp\htdocs\templates\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('movie/MV-8/body...')
+#1 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/body...', Array, true)
+#2 C:\xampp\htdocs\templates\app\Controllers\Home.php(72): view('movie/MV-8/body...')
+#3 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-03-02 23:54:11 --> Undefined variable: popular
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\body.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/body...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(72): view('movie/MV-8/body...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 23:56:18 --> Undefined variable: list
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\body.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 175, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('3', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/body...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-02 23:56:38 --> Undefined variable: list
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\body.php(337): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 337, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('1', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/body...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

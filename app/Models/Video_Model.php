@@ -295,7 +295,9 @@ class Video_Model extends Model
     {
     
         $sql = "SELECT
-                    *,mo_category.category_name
+                    mo_moviecate.*,
+                    mo_movie.*,
+                    mo_category.category_name
                 FROM
                     mo_moviecate
                 INNER JOIN mo_movie ON mo_moviecate.movie_id = mo_movie.movie_id 
@@ -851,6 +853,7 @@ class Video_Model extends Model
     
         $query = $this->db->query($sql);
         $result = $query->getResultArray();
+        $result = divineMovieName($result);
 
         if (!empty($result)) {
             foreach ($result as $key => $val) {

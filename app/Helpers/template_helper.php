@@ -880,7 +880,7 @@ function calltemplate($template, $view, $parameter = [])
                 
 
                 case 'video_search':
-    $chk_act = [
+                    $chk_act = [
                         'home' => 'active',
                         'topimdb' => '',
                         'newmovie' => '',
@@ -955,6 +955,169 @@ function calltemplate($template, $view, $parameter = [])
                     $video_data = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
                     $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
+
+                    $list = [
+
+                        'video_data' => $video_data,
+                        'video_random' => $video_random,
+                        'seo' => $seo,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                    ];
+
+                    break;
+
+
+                default:
+                    $list = [
+                        'error_message' => 'not found controller'
+                    ];
+                    break;
+            }
+
+            break;
+
+        case 'MV-8':
+            switch ($view) {
+                case 'index':
+
+                    $paginate = $VideoModel->get_list_video($parameter['branch'], $parameter['keyword_string'], $parameter['page']);
+                    $popular_list = $VideoModel->get_list_popular($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $list = [
+                        'list_video' => $paginate,
+                        'chk_act' => $chk_act,
+                        'popular' => $popular_list,
+                        'category_list' => $category_list,
+                        'url_loadmore' => base_url('moviedata'),
+                    ];
+
+                    break;
+
+                case 'category':
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    
+                    $list = [
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                    ];
+
+                    break;
+
+                case 'video_bycate':
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'chk_act' => $chk_act,
+                        'cate_name' => $list_video['list'][0]['category_name'],
+                        'cate_id' => $parameter['cate_id'],
+                        'keyword' => '',
+                        'url_loadmore' => base_url('moviedata_category'),
+                    ];
+                    
+                    break;
+
+                case 'video_search':
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
+
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $list = [
+                        'list_video' => $list_video,
+                        'category_list' => $category_list,
+                        'listyear' => $listyear, 
+                        'chk_act' => $chk_act,
+                        'keyword' => $parameter['keyword_string'],
+                        'url_loadmore' => base_url('moviedata_category'),
+                    ];
+                    break;
+
+                case 'series':
+
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $series = $VideoModel->get_ep_series($parameter['id']);
+                    $seo = $VideoModel->get_seo($parameter['branch']);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 3);
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $list = [
+                        'video_data' => $VideoModel->get_id_video($parameter['id']),
+                        'seo' => $VideoModel->get_seo($parameter['branch']),
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                        'series' => $series,
+                        'video_random' => $video_random,
+                        'seo' => $seo,
+                    ];
+
+                    break;
+
+                case 'video':
+
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
+
+                    $list = [
+                        'video_data' => $VideoModel->get_id_video($parameter['id']),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 5),
+                        'seo' => $VideoModel->get_seo($parameter['branch']),
+                        'category_list' => $category_list,
+                        'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                    ];
+
+                    break;
+
+                case 'video_series':
+
+                    $listyear = $VideoModel->get_listyear($parameter['branch']);
+                    $category_list = $VideoModel->get_category($parameter['branch']);
+                    $video_data = $VideoModel->get_ep_series($parameter['id']);
+                    $seo = $VideoModel->get_seo($parameter['branch']);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
+
+                    $chk_act = [
+                        'home' => 'active',
+                        'contract' => ''
+                    ];
 
                     $list = [
 

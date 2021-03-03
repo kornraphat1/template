@@ -90,6 +90,8 @@ $routes->get('/newmovie', 'Home::newmovie');
 $routes->get('/search/(:any)', 'Home::video_search/$1');
 // topimdb
 $routes->get('/list_top_imdb', 'Home::video_topimdb');
+// ขอหนัง
+$routes->post('contact', 'Home::contact');
 //แจ้งหนังเสีย
 $routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)/(:segment)', 'Home::save_report/$1/$2/$3/$4/$5');
 

@@ -40,7 +40,7 @@ class App extends BaseConfig
 
 //พี่มิ้น
 	public $baseURL = 'http://localhost:1111/';
-	public $docURL = 'http://localhost:1111//public/movie/MV-3/';
+	public $docURL = 'http://localhost:1111//public/movie/MV-8/';
 	public $backURL = "https://backend.donengded.com/public/";
 
 	/*

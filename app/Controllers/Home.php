@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-3';
+		$this->template = 'MV-8';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -62,7 +62,6 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-		
 		];
 
 		$view_data = array_merge($view_data, $data_query);
@@ -472,6 +471,80 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,
 			'id' => $id,
+		];
+
+		$data_query = calltemplate($this->template, 'video', $parameter);
+		$setting = $this->setting;
+		$setting['image'] = $data_query['video_data']['movie_picture'];
+
+
+
+		if (!empty($data_query['seo'])) {
+			if (!empty($data_query['seo']['seo_title'])) {
+				$title = $data_query['seo']['seo_title'];
+				$name_videos = $data_query['video_data']['movie_thname'];
+				$title_name = $this->setting['setting_title'];
+				$title_web = str_replace(
+					"{movie_title} - {title_web}",
+					$name_videos . " - " . $title_name,
+					$title
+				);
+				$this->setting['setting_title'] = $title_web;
+			}
+
+			if (!empty($data_query['seo']['seo_description'])) {
+				$description = $data_query['seo']['seo_description'];
+				$description_movie = $data_query['video_data']['movie_des'];
+				$this->setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
+			}
+		}
+		$category_list = $data_query['category_list'];
+		// echo "<pre>";print_r($data_query['category_list']);die;
+
+		$feildplay = "";
+
+		if (!empty($data_query['video_data']['movie_thmain'])) {
+			$feildplay = 'movie_thmain';
+		} else if (!empty($data_query['video_data']['movie_thsub1'])) {
+			$feildplay = 'movie_thsub1';
+		} else if (!empty($data_query['video_data']['movie_thsub2'])) {
+			$feildplay = 'movie_thsub2';
+		} else if (!empty($data_query['video_data']['movie_enmain'])) {
+			$feildplay = 'movie_enmain';
+		} else if (!empty($data_query['video_data']['movie_ensub1'])) {
+			$feildplay = 'movie_ensub1';
+		} else if (!empty($data_query['video_data']['movie_ensub2'])) {
+			$feildplay = 'movie_ensub2';
+		}
+
+		$view_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'setting' => $setting,
+			'backURL' => $this->backURL,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+			'index' => "",
+			'keyword_string' => $this->keyword_string,
+			
+			'feildplay' => $feildplay,
+		
+		];
+		$view_data = array_merge($view_data, $data_query);
+
+		echo view('movie/' . $this->template . '/header.php', $view_data);
+		echo view('movie/' . $this->template . '/video.php');
+		echo view('movie/' . $this->template . '/footer.php');
+		//add view
+		// $this->VideoModel->movie_view($id);
+	}
+
+	public function contact()
+	{
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string
 		];
 
 		$data_query = calltemplate($this->template, 'video', $parameter);
