@@ -93,7 +93,7 @@
             </li>
             
             <li class="nav-item <?= $chk_act['newmovie'] ?>">
-            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">หนังใหม่</a>
+            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">New movie</a>
             </li>
             <li class="nav-item <?= $chk_act['category'] ?>">
               <a class="nav-link" href="<?php echo base_url('category') ?>">CATEGORY</a>
