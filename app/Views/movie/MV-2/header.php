@@ -313,7 +313,7 @@
                             </form>
                         </div>
                         <div id="menu2" class="tab-pane fade">
-                            <form class="form-horizontal" onsubmit="return request_m()" >
+                            <form class="form-horizontal" onsubmit="return request_movie()" >
                                 <textarea name="request" id="request" placeholder="พิมพ์ชื่อหนังที่ต้องการขอ..."></textarea>
                                 <div class="form-group"> </div>
                                 <div class="modal-footer">

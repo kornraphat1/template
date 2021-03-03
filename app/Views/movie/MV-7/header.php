@@ -91,14 +91,15 @@
             <li class="nav-item <?= $chk_act['poppular'] ?>">
               <a class="nav-link" href="<?php echo base_url('popular') ?>">Popular</a>
             </li>
-            <li class="nav-item <?= $chk_act['netflix'] ?>">
-              <a class="nav-link" href="<?=base_url('/category/28/Netflix-Movie')?>">Netflix</a>
+            
+            <li class="nav-item <?= $chk_act['newmovie'] ?>">
+            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">หนังใหม่</a>
             </li>
             <li class="nav-item <?= $chk_act['category'] ?>">
               <a class="nav-link" href="<?php echo base_url('category') ?>">CATEGORY</a>
             </li>
-            <li class="nav-item <?= $chk_act['contract'] ?>">
-              <a class="nav-link" href="<?php echo base_url('contract') ?>">ติดต่อ | ขอหนัง</a>
+            <li class="nav-item <?= $chk_act['contact'] ?>">
+              <a class="nav-link" href="<?php echo base_url('contact') ?>">ติดต่อ | ขอหนัง</a>
             </li>
           </ul>
           <form id="movie-formsearch">

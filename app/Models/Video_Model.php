@@ -243,7 +243,9 @@ class Video_Model extends Model
                     `$this->table_movie`.movie_id = ? 
                     AND `$this->table_movie`.movie_active = '1'";
         $query = $this->db->query($sql, [$id]);
-        return $query->getRowArray();
+        $data = $query->getResultArray();
+        $data = divineMovieName($data);
+        return $data[0];
     }
 
 
