@@ -83,7 +83,7 @@
                 <input id="movie-search" class="movie-search ml-auto" placeholder="Search..." value="<?php echo $value ?>" autocomplete="off">
               </div>
             </form>
-            <?php if ($chk_act['category'] || $chk_act['contract'] || $chk_act['poppular']) {
+            <?php if ($chk_act['category'] || $chk_act['contact'] || $chk_act['poppular']) {
               $change = 'change';
               $style = 'style="display: block;"';
             } else {
@@ -107,7 +107,7 @@
             <ul class="movie-sup-manu">
               <li><a class=" <?= $chk_act['poppular'] ?>" href="<?= base_url() . '/popular/' ?>"> POPULAR</a></li>
               <li><a class=" <?= $chk_act['category'] ?>" href="<?= base_url() . '/category/' ?>"> Category</a></li>
-              <li><a class=" <?= $chk_act['contract'] ?>" href="<?= base_url() . '/contract/' ?>">ขอหนัง/ติดต่อ</a></li>
+              <li><a class=" <?= $chk_act['contact'] ?>" href="<?= base_url() . '/contact/' ?>">ขอหนัง/ติดต่อ</a></li>
             </ul>
           </div>
         </div>

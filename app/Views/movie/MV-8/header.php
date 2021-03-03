@@ -114,7 +114,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item <?= $chk_act['contract'] ?>">
+            <li class="nav-item <?= $chk_act['contact'] ?>">
               <a class="nav-link" href="<?php echo base_url('contact') ?>">ติดต่อ | ขอหนัง</a>
             </li>
           </ul>
