@@ -148,8 +148,6 @@
       $("#movie-loadmore").hide(0);
     }
 
-    track_click = 2;
-
     $("#movie-loadmore").click(function(e) { //user clicks on button
 
       if (track_click <= total_pages) //user click number is still less than total pages

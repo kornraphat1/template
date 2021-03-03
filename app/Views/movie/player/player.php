@@ -23,7 +23,7 @@ $movie_video = array(
 
     <body class="if-size">
     <!-- <div id="playervideo" style="display: none;">Movie Player</div> -->
-        <iframe id="playervideo" src="https://movie.aegistrex.com/api/player/<?= $url_play?>" style="width:100%;height: 120%;border: 0px; overflow: hidden;" allowfullscreen="yes"></iframe>
+        <iframe id="playervideo" src="https://movie.aegistrex.com/api/player/<?= $url_play?>" style="width:100%;height: 140%;border: 0px; overflow: hidden;" allowfullscreen="yes"></iframe>
 
         
         <?php

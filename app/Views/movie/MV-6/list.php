@@ -31,16 +31,16 @@
         <?php
         if (!empty($cate_name)) {
           $title = $cate_name;
-        } else if (!empty($keyword)) {
-          $title = 'คุณกำลังค้นหา : ' . $keyword;
+        } else if (!empty($keyword_string)) {
+          $title = 'คุณกำลังค้นหา : ' . $keyword_string;
         }
         ?>
         <h1><?= $title ?></h1>
       </div>
-      <?php if (!empty($list['list'])) { ?>
+      <?php if (!empty($list_video['list'])) { ?>
         <ul id="list-movie" class="list-movie">
           <?PHP
-          foreach ($list['list'] as $val) {
+          foreach ($list_video['list'] as $val) {
           ?>
             <li>
               <div class="movie-box">
@@ -123,7 +123,7 @@
         <h3> ไม่พบหนังที่คุณค้นหา</h3>
       <?php } ?>
       <?php
-      if (!empty($list['list'])) {
+      if (!empty($list_video['list'])) {
       ?>
         <button id="movie-loadmore">NEXT</button>
       <?php
@@ -160,8 +160,8 @@
 <script>
   $(document).ready(function() {
     var track_click = 1; //track user click on "load more" button, righ now it is 0 click
-    var total_pages = '<?= $list['total_page'] ?>';
-    var keyword = "<?= $keyword ?>";
+    var total_pages = '<?= $list_video['total_page'] ?>';
+    var keyword = "<?= $keyword_string ?>";
     if (track_click >= total_pages) {
       $("#movie-loadmore").hide(0);
     }
