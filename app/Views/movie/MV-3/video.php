@@ -114,17 +114,17 @@
                      <div class="row">
                         <div class="col-md-12">
                            <?php
-                           if ($index > 0) {
-                              $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
-                              $key = $index - 1;
-                              $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-                              $disabled = '';
-                           } else {
-                              $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
-                              $key = $index;
-                              $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
-                              $disabled = 'disabled';
-                           }
+                              if ($index > 0) {
+                                 $key = $index - 1;
+                                 $disabled = '';
+                              } else {
+                                 $key = $index;
+                                 $disabled = 'disabled';
+                              }
+
+                              $url_name =  urlname_encode($video_data['movie_thname']);
+                              $url_epname =  urlname_encode($video_data['name_ep'][$key]);
+
 
                            ?>
 

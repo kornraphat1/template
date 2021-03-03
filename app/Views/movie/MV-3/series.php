@@ -114,17 +114,14 @@
                <div class="clearfix spacer"></div>
                <div class="video-content">
                   <h2 class="title main-head-title">ตอน</h2>
-                  <?php
-                  foreach ($video_data['name_ep'] as $key => $value) {
-                    $url_name =  str_replace('%', '%25',urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
-                    $url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value)))))));
-                  ?>
-
+                     <?php
+                     foreach ($video_data['name_ep'] as $key => $value) {
+                        $url_name = urlname_encode($video_data['movie_name']);
+                     ?>
 
                      <p class="series-list"><a href="<?php echo base_url() . '/series/' . $video_data['movie_id'] . '/' . $url_name . '/' . $key . '/' . $url_epname ?>"> <?php echo $video_data['movie_thname'] . ' - ' . $value ?> </a></p>
-                  <?php } ?>
 
-
+                     <?php } ?>
                </div>
             </div>
             <div class="clearfix spacer"></div>

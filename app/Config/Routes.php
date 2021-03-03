@@ -90,6 +90,8 @@ $routes->get('/newmovie', 'Home::newmovie');
 $routes->get('/search/(:any)', 'Home::video_search/$1');
 // topimdb
 $routes->get('/list_top_imdb', 'Home::video_topimdb');
+// ขอหนัง
+$routes->post('contact', 'Home::contact');
 //แจ้งหนังเสีย
 $routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)/(:segment)', 'Home::save_report/$1/$2/$3/$4/$5');
 
@@ -107,12 +109,19 @@ $routes->get('countview/(:num)', 'Home::countView/$1');
 
 // Popular dunung4u
 $routes->get('popular', 'Home::popular');
+
 $routes->get('/moviedata', 'Home::moviedata');
 $routes->get('/moviedata_search', 'Home::moviedata_search');
 $routes->get('/moviedata_category', 'Home::moviedata_category');
 
 // category dunung4u
 $routes->get('category', 'Home::categorylist');
+
+// category dunung4u
+$routes->get('contract', 'Home::contract');
+// category dunung4u
+$routes->get('newmovie', 'Home::newmovielist');
+
 
 //--------------------------------------AV -----------------------------------------------//
 $routes->get('/av', 'Av_Home::index');

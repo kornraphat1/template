@@ -59,22 +59,16 @@
                                    // echo  $movie_pic = $base_backurl.$img_backurl.'.$value['movie_picture']');
                                       $movie_pic = $base_backurl.$img_backurl.$value['movie_picture'];
                                  }
-                                 $id = $value['movie_id'];
 
-                                 $s_replace = [")", "(", " ", '%'];
-                                 $e_replace = [ "", "", "-", '%25'];
-                                 $url_name = urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
+                                 $id = $value['movie_id'];
+                                 $url_name = urlname_encode($value['movie_name']);
       
-                                
-                                 if($value['movie_type']=="mo"){
-                                    $urlvideo = base_url('video/'.$id.'/'.$url_name);
-                                 }
-                                 else if($value['movie_type']=="se"){
+                                 if($value['movie_type']=="se"){
                                     $urlvideo = base_url('series/'.$id.'/'.$url_name);
                                  }else{
                                     $urlvideo = base_url('video/'.$id.'/'.$url_name);
                                  }
-                                 //print_r($urlvideo);
+
                               ?>  
                                     <article class="col-lg-3 col-md-3 col-sm-4">
                                        <!-- POST L size -->

@@ -12,7 +12,8 @@
 
                   <li >
                      <h3>
-                        <a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . urlencode($value['category_name'])); ?>">
+                        <?php $url_cate = urlname_encode($value['category_name']); ?>
+                        <a href="<?php echo base_url('/category/' . $value['category_id'] . '/' . $url_cate ); ?>">
                            <?php echo $value['category_name']; ?>
                         </a>
                      </h3>
