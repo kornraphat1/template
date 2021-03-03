@@ -99,6 +99,9 @@ $routes->get('/saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$
 //ติดต่อโฆษณา 
 $routes->post('/contact_ads', 'Home::contact_ads');
 
+//หน้า contract
+$routes->get('contract', 'Home::contract');
+
 
 $routes->get('countview/(:num)', 'Home::countView/$1');
 

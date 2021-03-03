@@ -91,8 +91,9 @@
             <li class="nav-item <?= $chk_act['poppular'] ?>">
               <a class="nav-link" href="<?php echo base_url('popular') ?>">Popular</a>
             </li>
-            <li class="nav-item <?= $chk_act['netflix'] ?>">
-              <a class="nav-link" href="<?=base_url('/category/28/Netflix-Movie')?>">Netflix</a>
+            
+            <li class="nav-item <?= $chk_act['newmovie'] ?>">
+            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">หนังใหม่</a>
             </li>
             <li class="nav-item <?= $chk_act['category'] ?>">
               <a class="nav-link" href="<?php echo base_url('category') ?>">CATEGORY</a>

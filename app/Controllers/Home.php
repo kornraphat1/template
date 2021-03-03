@@ -62,7 +62,7 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-		
+
 		];
 
 		$view_data = array_merge($view_data, $data_query);
@@ -102,7 +102,7 @@ class Home extends BaseController
 			'path_ads' => $this->path_ads,
 			'ads' => $this->ads,
 			'keyword_string' => $this->keyword_string,
-			
+
 			'title' => $title,
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -140,7 +140,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			
+
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
@@ -176,8 +176,8 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
-			'title' => 'หนังปี : ' . $title,
+
+			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -215,7 +215,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+
 			'title' => $title,
 
 			'keyword_string' => $keyword_string
@@ -256,7 +256,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			
+
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
@@ -293,7 +293,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+
 			'title' => $title,
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -374,7 +374,7 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
@@ -454,7 +454,7 @@ class Home extends BaseController
 			'index' => $index,
 			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
-			
+
 		];
 		$view_data = array_merge($view_data, $data_query);
 
@@ -499,8 +499,6 @@ class Home extends BaseController
 				$this->setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
-		$category_list = $data_query['category_list'];
-		// echo "<pre>";print_r($data_query['category_list']);die;
 
 		$feildplay = "";
 
@@ -528,9 +526,9 @@ class Home extends BaseController
 			'ads' => $this->ads,
 			'index' => "",
 			'keyword_string' => $this->keyword_string,
-			
+
 			'feildplay' => $feildplay,
-		
+
 		];
 		$view_data = array_merge($view_data, $data_query);
 
@@ -651,52 +649,83 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-// echo '<pre>',print_r( $header_data,true),'</pre>';die;
-		
-		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
-		
+		// echo '<pre>',print_r( $header_data,true),'</pre>';die;
 
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
 	//--------------------------------------------------------------------
 
 	public function moviedata_category()
 	{
 
-		$list = $this->VideoModel->get_id_video_bycategory($_GET['keyword'],$this->branch,  $_GET['page']);
+		$list = $this->VideoModel->get_id_video_bycategory($_GET['keyword'], $this->branch,  $_GET['page']);
 
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			// 'path_thumbnail' => $this->path_thumbnail,
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-// echo '<pre>',print_r( $_GET['keyword'],true),'</pre>';die;
-		
-		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
-		
+		// echo '<pre>',print_r( $_GET['keyword'],true),'</pre>';die;
 
-	}//--------------------------------------------------------------------
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+	} //--------------------------------------------------------------------
 
 	public function moviedata_search()
 	{
-	
-		$list = $this->VideoModel->get_list_video_search($this->keyword_string,$this->branch,  $_GET['page']);
+
+		$list = $this->VideoModel->get_list_video_search($this->keyword_string, $this->branch,  $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-// echo '<pre>',print_r( $header_data,true),'</pre>';die;
-		
-		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
-		
+		// echo '<pre>',print_r( $header_data,true),'</pre>';die;
 
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
+
+	public function moviedata_newmovie()
+	{
+
+		$list = $this->VideoModel->get_video_newmovie( $this->branch,  $_GET['page']);
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+		echo '<pre>',print_r( $header_data,true),'</pre>';die;
+
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+	}
+	//--------------------------------------------------------------------
+
+	public function contract()
+	{
+
+		$data_query = calltemplate($this->template, 'contract',);
+		$view_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'setting' => $this->setting,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+
+		];
+		$view_data = array_merge($view_data, $data_query);
+
+		echo view('movie/' . $this->template . '/header', $view_data);
+		echo view('movie/' . $this->template . '/contract');
+		echo view('movie/' . $this->template . '/footer');
+	}
+
 	//--------------------------------------------------------------------
 
 	//Popular dunung4u - mv7
@@ -721,7 +750,7 @@ class Home extends BaseController
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
 
-		
+
 
 		$chk_act = [
 			'home' => '',
@@ -737,7 +766,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
-		
+
 			'ads' => $ads,
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
@@ -774,7 +803,7 @@ class Home extends BaseController
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
 
-		
+
 
 		$chk_act = [
 			'home' => '',
@@ -790,7 +819,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
-		
+
 			'ads' => $ads,
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,

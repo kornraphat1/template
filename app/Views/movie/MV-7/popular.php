@@ -8,7 +8,7 @@
         <ul class="list-popular">
 
         <?php 
-          foreach($list as $val){ 
+          foreach($list_video as $val){ 
             $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
         ?>
           <li>
