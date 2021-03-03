@@ -101,8 +101,8 @@ $routes->get('/saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$
 //ติดต่อโฆษณา 
 $routes->post('/contact_ads', 'Home::contact_ads');
 
-//หน้า contract
-$routes->get('contract', 'Home::contract');
+//หน้า contact
+$routes->get('contact', 'Home::contact');
 
 
 $routes->get('countview/(:num)', 'Home::countView/$1');
@@ -117,8 +117,7 @@ $routes->get('/moviedata_category', 'Home::moviedata_category');
 // category dunung4u
 $routes->get('category', 'Home::categorylist');
 
-// category dunung4u
-$routes->get('contract', 'Home::contract');
+
 // category dunung4u
 $routes->get('newmovie', 'Home::newmovielist');
 

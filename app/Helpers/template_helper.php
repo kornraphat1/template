@@ -629,7 +629,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list = [
                         'list_video' => $paginate,
@@ -655,7 +655,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => '',
                         'poppular' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
@@ -678,7 +678,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => 'active',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
@@ -691,7 +691,7 @@ function calltemplate($template, $view, $parameter = [])
                         'chk_act' => $chk_act,
                     ];
                     break;
-                case 'contract':
+                case 'contact':
                     $chk_act = [
                         'home' => '',
                         'topimdb' => '',
@@ -699,7 +699,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
@@ -722,7 +722,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $listyear = $VideoModel->get_listyear($parameter['branch']);
@@ -806,7 +806,7 @@ function calltemplate($template, $view, $parameter = [])
                         'netflix' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
@@ -855,7 +855,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list = [
                         'list_video' => $paginate,
@@ -871,7 +871,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => 'active',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $list = [
@@ -887,7 +887,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list_video = $VideoModel->get_list_popular($parameter['branch']);
 
@@ -903,7 +903,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => 'active',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list_video = $VideoModel->get_video_newmovie($parameter['branch'], $parameter['page']);
                     $list = [
@@ -921,7 +921,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => 'active',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
@@ -943,7 +943,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
 
@@ -963,7 +963,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
@@ -983,7 +983,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
@@ -999,7 +999,7 @@ function calltemplate($template, $view, $parameter = [])
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
@@ -1012,13 +1012,13 @@ function calltemplate($template, $view, $parameter = [])
                     ];
 
                     break;
-                case 'contract':
+                case 'contact':
                     $chk_act = [
                         'home' => 'active',
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list = [
@@ -1047,7 +1047,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list = [
@@ -1064,7 +1064,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $category_list = $VideoModel->get_category($parameter['branch']);
@@ -1081,7 +1081,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list_video = $VideoModel->get_id_video_bycategory($parameter['cate_id'], $parameter['branch'], $parameter['page']);
@@ -1103,7 +1103,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list_video = $VideoModel->get_list_video_search($parameter['keyword_string'], $parameter['branch'], $parameter['page']);
@@ -1130,7 +1130,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list = [
@@ -1152,7 +1152,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list = [
@@ -1176,7 +1176,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $chk_act = [
                         'home' => 'active',
-                        'contract' => ''
+                        'contact' => ''
                     ];
 
                     $list = [

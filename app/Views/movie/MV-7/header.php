@@ -98,8 +98,8 @@
             <li class="nav-item <?= $chk_act['category'] ?>">
               <a class="nav-link" href="<?php echo base_url('category') ?>">CATEGORY</a>
             </li>
-            <li class="nav-item <?= $chk_act['contract'] ?>">
-              <a class="nav-link" href="<?php echo base_url('contract') ?>">ติดต่อ | ขอหนัง</a>
+            <li class="nav-item <?= $chk_act['contact'] ?>">
+              <a class="nav-link" href="<?php echo base_url('contact') ?>">ติดต่อ | ขอหนัง</a>
             </li>
           </ul>
           <form id="movie-formsearch">
