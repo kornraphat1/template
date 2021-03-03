@@ -62,7 +62,6 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
-		
 		];
 
 		$view_data = array_merge($view_data, $data_query);
@@ -95,7 +94,7 @@ class Home extends BaseController
 			'newmovie' => '',
 			'topimdb' => '',
 			'category' => '',
-			'contract' => ''
+			'contact' => ''
 		];
 		$data_query = calltemplate($this->template, 'video_bycate', $parameter);
 
@@ -148,7 +147,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			
+
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
@@ -184,8 +183,8 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
-			'title' => 'หนังปี : ' . $title,
+
+			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -226,7 +225,6 @@ class Home extends BaseController
 			'ads' => $this->ads,
 			'keyword' => $this->keyword_string,
 			'title' => $title,
-
 			'keyword_string' => $keyword_string
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -265,7 +263,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-			
+
 			'title' => $title,
 			'keyword_string' => $this->keyword_string
 		];
@@ -302,7 +300,7 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+
 			'title' => $title,
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -383,7 +381,7 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-		
+
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
@@ -463,7 +461,7 @@ class Home extends BaseController
 			'index' => $index,
 			'ep_name' => $ep_name,
 			'feildplay' => $feildplay,
-			
+
 		];
 		$view_data = array_merge($view_data, $data_query);
 
@@ -508,8 +506,6 @@ class Home extends BaseController
 				$this->setting['setting_description'] = str_replace("{movie_description}", $description_movie, $description);
 			}
 		}
-		$category_list = $data_query['category_list'];
-		// echo "<pre>";print_r($data_query['category_list']);die;
 
 		$feildplay = "";
 
@@ -548,6 +544,7 @@ class Home extends BaseController
 		//add view
 		// $this->VideoModel->movie_view($id);
 	}
+
 	//--------------------------------------------------------------------
 
 
@@ -667,23 +664,23 @@ class Home extends BaseController
 	public function moviedata_category()
 	{
 
-		$list = $this->VideoModel->get_id_video_bycategory($_GET['keyword'],$this->branch,  $_GET['page']);
+		$list = $this->VideoModel->get_id_video_bycategory($_GET['keyword'], $this->branch,  $_GET['page']);
 
 
 		$header_data = [
 			'document_root' => $this->document_root,
-			// 'path_thumbnail' => $this->path_thumbnail,
 			'list' => $list,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
+		// echo '<pre>',print_r( $_GET['keyword'],true),'</pre>';die;
+
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
-		
-	}//--------------------------------------------------------------------
+	} //--------------------------------------------------------------------
 
 	public function moviedata_search()
 	{
-	
+
 		$list = $this->VideoModel->get_list_video_search($this->keyword_string, $this->branch,  $_GET['page']);
 
 		$header_data = [
@@ -692,11 +689,52 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-		
-		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
-		
+		// echo '<pre>',print_r( $header_data,true),'</pre>';die;
 
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
+
+	public function moviedata_newmovie()
+	{
+
+		$list = $this->VideoModel->get_video_newmovie( $this->branch,  $_GET['page']);
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+		echo '<pre>',print_r( $header_data,true),'</pre>';die;
+
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+	}
+	//--------------------------------------------------------------------
+
+	public function contact()
+	{
+
+		$data_query = calltemplate($this->template, 'contact','');
+		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
+
+		$view_data = [
+			'document_root' => $this->document_root,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+			'setting' => $this->setting,
+			'path_setting' => $this->path_setting,
+			'path_ads' =>	$this->path_ads,
+			'ads' => $this->ads,
+
+		];
+
+		$view_data = array_merge($view_data, $data_query);
+
+		echo view('movie/' . $this->template . '/header', $view_data);
+		echo view('movie/' . $this->template . '/contact');
+		echo view('movie/' . $this->template . '/footer');
+	}
+
 	//--------------------------------------------------------------------
 
 	//Popular dunung4u - mv7
@@ -721,7 +759,7 @@ class Home extends BaseController
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
 
-		
+
 
 		$chk_act = [
 			'home' => '',
@@ -729,7 +767,7 @@ class Home extends BaseController
 			'newmovie' => '',
 			'topimdb' => '',
 			'category' => '',
-			'contract' => ''
+			'contact' => ''
 		];
 
 		$view_data = [
@@ -737,6 +775,9 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
+
+			'ads' => $this->ads,
+
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
@@ -774,7 +815,7 @@ class Home extends BaseController
 			'newmovie' => '',
 			'topimdb' => '',
 			'category' => '',
-			'contract' => ''
+			'contact' => ''
 		];
 
 		$view_data = [
@@ -782,6 +823,8 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
+
+			'ads' => $this->ads,
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
@@ -791,53 +834,6 @@ class Home extends BaseController
 		$view_data = array_merge($view_data, $data_query);
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/category.php');
-		echo view('movie/' . $this->template . '/footer.php');
-	}
-
-	//--------------------------------------------------------------------
-
-	// Contact dunung4u
-	public function contract() //ต้นแบบ หน้า cate / search
-	{
-		$page = 1;
-		if (!empty($_GET['page'])) {
-			$page = $_GET['page'];
-		}
-		$parameter = [
-			'branch' => $this->branch,
-			'page' => $page,
-			'keyword_string' => $this->keyword_string
-		];
-
-		$data_query = calltemplate($this->template, 'contract', $parameter);
-		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-		$this->setting = $this->VideoModel->get_setting($this->branch);
-		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
-		
-
-		$chk_act = [
-			'home' => '',
-			'poppular' => '',
-			'newmovie' => '',
-			'topimdb' => '',
-			'category' => '',
-			'contract' => 'active'
-		];
-
-		$view_data = [
-			'document_root' => $this->document_root,
-			//'path_thumbnail' => $this->path_thumbnail,
-			'path_setting' => $this->path_setting,
-			'setting' => $this->setting,
-			'chk_act' => $chk_act,
-			'path_ads' => $this->path_ads,
-			'branch' => $this->branch,
-			'backURL' => $this->backURL,
-		];
-
-		$view_data = array_merge($view_data, $data_query);
-		echo view('movie/' . $this->template . '/header.php', $view_data);
-		echo view('movie/' . $this->template . '/contract.php');
 		echo view('movie/' . $this->template . '/footer.php');
 	}
 

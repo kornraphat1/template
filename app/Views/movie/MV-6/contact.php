@@ -103,75 +103,7 @@
   </section>
 
   <script type="text/javascript">
-    $(function() {
-
-      $(".movie-formcontract").on("submit", function() {
-
-        var form = $(this)[0];
-        var request_text = $.trim($("#request_text").val());
-        var ads_con_name = $.trim($("#ads_con_name").val());
-        var ads_con_email = $.trim($("#ads_con_email").val());
-        var ads_con_line = $.trim($("#ads_con_line").val());
-        var ads_con_tel = $.trim($("#ads_con_tel").val());
-
-        if (form.checkValidity() === false) {
-
-          event.preventDefault();
-
-          event.stopPropagation();
-
-        } else if (request_text) {
-
-          $.ajax({
-            url: "<?php echo base_url().'/save_requests/'  ?>",
-            type: 'POST',
-            async: false,
-            data: {
-              request_text: request_text
-            },
-            success: function(data) {
-              alert('ดำเนินการเรียบร้อยแล้วครับ')
-              setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-            
-              return false;
-
-            }
-          });
-          return false;
-
-        } else {
-
-          $.ajax({
-            url: " <?php echo base_url() . '/con_ads/' ?>",
-            type: 'POST',
-            data: {
-              ads_con_name: ads_con_name,
-              ads_con_email: ads_con_email,
-              ads_con_line: ads_con_line,
-              ads_con_tel: ads_con_tel,
-
-            },
-            success: function(data) {
-              alert('ดำเนินการเรียบร้อยแล้วครับ')
-              setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-              return false;
-
-            }
-          });
-          return false;
-
-        }
-
-
-
-        form.classList.add('was-validated');
-
-      });
-
-    });
-
-
-
+    
     $(document).ready(function() {
 
       $("#ads_con_email_alt").hide();

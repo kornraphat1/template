@@ -301,7 +301,7 @@
 
 
 
-	function request_m() {
+	function request_movie() {
 
 		if (!jQuery("#request").val()) {
 			return false;
@@ -316,7 +316,7 @@
 				async: false,
 				success: function(data) {
 					console.log(data);
-					alert('f')
+					
 					return false
 					if (data == "OK") {
 						alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
@@ -330,24 +330,24 @@
 	}
 
 
-	function request_movie(branch) {
-		console.log(branch);
-		var movie = prompt('ของหนังกับทาง Admin');
-		console.log(movie);
-		if (movie != null) {
-			jQuery.ajax({
-				url: "/saverequest/branch/" + branch + "/movie/" + movie,
-				type: 'GET',
-				async: false,
-				success: function(data) {
-					console.log(data);
-					if (data == "OK") {
-						alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
-					}
-				}
-			});
-		}
-	}
+	// function request_movie(branch) {
+	// 	console.log(branch);
+	// 	var movie = prompt('ของหนังกับทาง Admin');
+	// 	console.log(movie);
+	// 	if (movie != null) {
+	// 		jQuery.ajax({
+	// 			url: "/saverequest/branch/" + branch + "/movie/" + movie,
+	// 			type: 'GET',
+	// 			async: false,
+	// 			success: function(data) {
+	// 				console.log(data);
+	// 				if (data == "OK") {
+	// 					alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
+	// 				}
+	// 			}
+	// 		});
+	// 	}
+	// }
 	jQuery("#formsearch").submit(function(event) {
 		// alert("Esad");
 		if (jQuery("#search").val()) {
