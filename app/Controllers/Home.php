@@ -381,7 +381,6 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
@@ -705,7 +704,7 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-		echo '<pre>',print_r( $header_data,true),'</pre>';die;
+		
 
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
@@ -713,8 +712,11 @@ class Home extends BaseController
 
 	public function contact()
 	{
-
-		$data_query = calltemplate($this->template, 'contact','');
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string
+		];
+		$data_query = calltemplate($this->template, 'contact',$parameter);
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$view_data = [
