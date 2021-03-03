@@ -784,26 +784,26 @@ class Home extends BaseController
 	}
 	//--------------------------------------------------------------------
 
-	public function contract()
-	{
+	// public function contract()
+	// {
 
-		$data_query = calltemplate($this->template, 'contract',);
-		$view_data = [
-			'document_root' => $this->document_root,
-			'branch' => $this->branch,
-			'backURL' => $this->backURL,
-			'setting' => $this->setting,
-			'path_setting' => $this->path_setting,
-			'path_ads' =>	$this->path_ads,
-			'ads' => $this->ads,
+	// 	$data_query = calltemplate($this->template, 'contract',);
+	// 	$view_data = [
+	// 		'document_root' => $this->document_root,
+	// 		'branch' => $this->branch,
+	// 		'backURL' => $this->backURL,
+	// 		'setting' => $this->setting,
+	// 		'path_setting' => $this->path_setting,
+	// 		'path_ads' =>	$this->path_ads,
+	// 		'ads' => $this->ads,
 
-		];
-		$view_data = array_merge($view_data, $data_query);
+	// 	];
+	// 	$view_data = array_merge($view_data, $data_query);
 
-		echo view('movie/' . $this->template . '/header', $view_data);
-		echo view('movie/' . $this->template . '/contract');
-		echo view('movie/' . $this->template . '/footer');
-	}
+	// 	echo view('movie/' . $this->template . '/header', $view_data);
+	// 	echo view('movie/' . $this->template . '/contract');
+	// 	echo view('movie/' . $this->template . '/footer');
+	// }
 
 	//--------------------------------------------------------------------
 
@@ -846,7 +846,8 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
 
-			'ads' => $ads,
+			'ads' => $this->ads,
+
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
@@ -893,7 +894,7 @@ class Home extends BaseController
 			'setting' => $this->setting,
 			'chk_act' => $chk_act,
 
-			'ads' => $ads,
+			'ads' => $this->ads,
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
