@@ -942,7 +942,6 @@ function calltemplate($template, $view, $parameter = [])
                     $list = [
                         'list_video' => $list_video,
                         'category_list' => $category_list,
-                        
                         'chk_act' => $chk_act,
                         'keyword' => $parameter['keyword_string'],
                         'url_loadmore' => base_url('moviedata_search'),
@@ -963,7 +962,6 @@ function calltemplate($template, $view, $parameter = [])
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
                     $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
-// echo '<pre>',print_r($series,true),'</pre>';die;
 
                     $list = [
                         
@@ -1115,6 +1113,7 @@ function calltemplate($template, $view, $parameter = [])
                         'listyear' => $listyear, 
                         'chk_act' => $chk_act,
                         'keyword' => $parameter['keyword_string'],
+                        'cate_id' => '',
                         'url_loadmore' => base_url('moviedata_category'),
                     ];
                     break;

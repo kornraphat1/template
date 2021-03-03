@@ -147,21 +147,7 @@
 
 
     <script type="text/javascript">
-      $(document).ready(function() {
-        $('#movie-formsearch').submit(function(e) {
-          goSearch();
-          return false; //<---- Add this line
-        });
-      });
-      function goSearch() {
-        var search = $.trim($("#movie-search").val())
-
-        if (search) {
-          window.location.href = "<?=base_url('search')?>/" + $("#movie-search").val();
-        } else {
-          window.location.href = "<?= base_url() ?>";
-        }
-      }
+            
       function openMenu() {
         var x = document.getElementById("movie-navbar");
         if (x.style.display === "block") {

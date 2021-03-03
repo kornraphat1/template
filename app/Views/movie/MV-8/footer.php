@@ -11,33 +11,7 @@
     </div>
   </footer>
 
-  <script>
-
-    function onClickAds(adsid, branch) {
-
-      var backurl = '<?= $backURL ?>';
-      debugger;
-      jQuery.ajax({
-          url: backurl + "ads/sid/<?= session_id() ?>/adsid/" + adsid + "/branch/" + branch,
-          async: true,
-          success: function(response) {
-              console.log(response); // server response
-          }
-      });
-
-    }
-
-    function moveCursorToEnd(el) {
-      if (typeof el.selectionStart == "number") {
-          el.selectionStart = el.selectionEnd = el.value.length;
-      } else if (typeof el.createTextRange != "undefined") {
-          el.focus();
-          var range = el.createTextRange();
-          range.collapse(false);
-          range.select();
-      }
-    }
-  </script>
+  <script src="<?= base_url('public/movie/js/defualt.js') ?>"></script>
   
   </body>
 
