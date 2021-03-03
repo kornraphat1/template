@@ -1116,6 +1116,7 @@ function calltemplate($template, $view, $parameter = [])
                         'listyear' => $listyear, 
                         'chk_act' => $chk_act,
                         'keyword' => $parameter['keyword_string'],
+                        'cate_id' => '',
                         'url_loadmore' => base_url('moviedata_category'),
                     ];
                     break;

@@ -11,31 +11,42 @@
     </div>
   </footer>
 
+  <script src="<?= base_url('public/movie/js/defualt.js') ?>"></script>
   <script>
+    $(document).ready(function() {
+      
+      var mySwiper = new Swiper('#HomeSlide', {
+        loop: true,
+        speed: 800,
+        spaceBetween: 100,
+        effect: 'fade',
 
-    function onClickAds(adsid, branch) {
+        // Slide auto play
+        autoplay: {
+          delay: 5000,
+        },
 
-      var backurl = '<?= $backURL ?>';
-      debugger;
-      jQuery.ajax({
-          url: backurl + "ads/sid/<?= session_id() ?>/adsid/" + adsid + "/branch/" + branch,
-          async: true,
-          success: function(response) {
-              console.log(response); // server response
-          }
-      });
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
 
+    });
+    
+    /* Set the width of the side navigation to 0 */
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.body.style.overflow = 'hidden'
+      document.getElementById("overlay").style.display = "block";
     }
 
-    function moveCursorToEnd(el) {
-      if (typeof el.selectionStart == "number") {
-          el.selectionStart = el.selectionEnd = el.value.length;
-      } else if (typeof el.createTextRange != "undefined") {
-          el.focus();
-          var range = el.createTextRange();
-          range.collapse(false);
-          range.select();
-      }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.body.style.overflow = 'auto'
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
   

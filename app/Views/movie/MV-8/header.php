@@ -114,7 +114,7 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item <?= $chk_act['contract'] ?>">
+            <li class="nav-item <?= $chk_act['contact'] ?>">
               <a class="nav-link" href="<?php echo base_url('contact') ?>">ติดต่อ | ขอหนัง</a>
             </li>
           </ul>
@@ -147,21 +147,7 @@
 
 
     <script type="text/javascript">
-      $(document).ready(function() {
-        $('#movie-formsearch').submit(function(e) {
-          goSearch();
-          return false; //<---- Add this line
-        });
-      });
-      function goSearch() {
-        var search = $.trim($("#movie-search").val())
-
-        if (search) {
-          window.location.href = "<?=base_url('search')?>/" + $("#movie-search").val();
-        } else {
-          window.location.href = "<?= base_url() ?>";
-        }
-      }
+            
       function openMenu() {
         var x = document.getElementById("movie-navbar");
         if (x.style.display === "block") {

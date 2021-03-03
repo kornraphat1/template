@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-7';
+		$this->template = 'MV-8';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -545,7 +545,6 @@ class Home extends BaseController
 		// $this->VideoModel->movie_view($id);
 	}
 
-
 	//--------------------------------------------------------------------
 
 
@@ -837,53 +836,6 @@ class Home extends BaseController
 		echo view('movie/' . $this->template . '/category.php');
 		echo view('movie/' . $this->template . '/footer.php');
 	}
-
-	//--------------------------------------------------------------------
-
-	// Contact dunung4u
-	// public function contact() //ต้นแบบ หน้า cate / search
-	// {
-	// 	$page = 1;
-	// 	if (!empty($_GET['page'])) {
-	// 		$page = $_GET['page'];
-	// 	}
-	// 	$parameter = [
-	// 		'branch' => $this->branch,
-	// 		'page' => $page,
-	// 		'keyword_string' => $this->keyword_string
-	// 	];
-
-	// 	$data_query = calltemplate($this->template, 'contact', $parameter);
-	// 	$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
-	// 	$this->setting = $this->VideoModel->get_setting($this->branch);
-	// 	$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
-		
-
-	// 	$chk_act = [
-	// 		'home' => '',
-	// 		'poppular' => '',
-	// 		'newmovie' => '',
-	// 		'topimdb' => '',
-	// 		'category' => '',
-	// 		'contact' => 'active'
-	// 	];
-
-	// 	$view_data = [
-	// 		'document_root' => $this->document_root,
-	// 		//'path_thumbnail' => $this->path_thumbnail,
-	// 		'path_setting' => $this->path_setting,
-	// 		'setting' => $this->setting,
-	// 		'chk_act' => $chk_act,
-	// 		'path_ads' => $this->path_ads,
-	// 		'branch' => $this->branch,
-	// 		'backURL' => $this->backURL,
-	// 	];
-
-	// 	$view_data = array_merge($view_data, $data_query);
-	// 	echo view('movie/' . $this->template . '/header.php', $view_data);
-	// 	echo view('movie/' . $this->template . '/contact.php');
-	// 	echo view('movie/' . $this->template . '/footer.php');
-	// }
 
 	//--------------------------------------------------------------------
 
