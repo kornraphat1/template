@@ -19,7 +19,7 @@
           }
         }
         ?>
-        
+
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
         $movie_picture = $path_thumbnail . $video_data['movie_picture'];
       }
 
-      $url_name = urlencode(str_replace(' ', '-', $video_data['movie_thname']))
+      $url_name = urlencode(str_replace(' ', '-', $video_data['movie_name']))
 
       ?>
 
@@ -111,187 +111,181 @@
                 ?>
 
               </div>
-         
-
-                <div class="movie-description">
-
-                  <p>
-
-                    เรื่องย่อ: <?php if (empty($video_data['movie_des'])) {
-                                  echo "-";
-                                } else {
-                                  echo $video_data['movie_des'];
-                                } ?>
-
-                  </p>
-
-                </div>
-         
-              
-                <div class="movie-social">
-
-                  <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=<?= urlencode(base_url(uri_string())) ?>&display=popup&ref=plugin&src=share_button" target="_blank">
-
-                    <i class="fab fa-facebook-square"></i>
-
-                  </a>
 
 
+              <div class="movie-description">
 
-                  <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=<?= $url_name ?>">
+                <p>
 
-                    <i class="fab fa-twitter"></i>
+                  เรื่องย่อ: <?php if (empty($video_data['movie_des'])) {
+                                echo "-";
+                              } else {
+                                echo $video_data['movie_des'];
+                              } ?>
 
-                  </a>
+                </p>
+
+              </div>
+
+
+              <div class="movie-social">
+
+                <a href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=<?= urlencode(base_url(uri_string())) ?>&display=popup&ref=plugin&src=share_button" target="_blank">
+
+                  <i class="fab fa-facebook-square"></i>
+
+                </a>
 
 
 
-                  <a href="https://social-plugins.line.me/lineit/share?url=<?= urlencode(base_url(uri_string())) ?>" target="_blank">
+                <a target="_blank" href="https://twitter.com/share?hashtags=ดูหนังออนไลน์,ดูหนังใหม่&text=<?= $url_name ?>">
 
-                    <i class="fab fa-line"></i>
+                  <i class="fab fa-twitter"></i>
 
-                  </a>
+                </a>
 
 
 
-                  <button class="movie-btn-report" onclick="get_Report()">แจ้งหนังเสีย</button>
+                <a href="https://social-plugins.line.me/lineit/share?url=<?= urlencode(base_url(uri_string())) ?>" target="_blank">
 
-            
+                  <i class="fab fa-line"></i>
+
+                </a>
+
+
+
+                <button class="movie-btn-report" onclick="get_Report()">แจ้งหนังเสีย</button>
+
+
               </div>
             </div>
             <div class="movie-box">
 
-            <?php if (!empty($video_data['cate_data'])) { ?>
+              <?php if (!empty($video_data['cate_data'])) { ?>
 
-              <div class="movie-category">
+                <div class="movie-category">
 
-                Category:
+                  Category:
 
-                <?php
+                  <?php
 
-                foreach ($video_data['cate_data'] as $val) {
+                  foreach ($video_data['cate_data'] as $val) {
 
-                  $catename = str_replace(' ', '-', $val['category_name']);
+                    $catename = str_replace(' ', '-', $val['category_name']);
 
-                ?>
+                  ?>
 
-                  <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $catename ?>" target="_blank">
+                    <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $catename ?>" target="_blank">
 
-                    <span class="cate-name"><?= $val['category_name'] ?></span>
+                      <span class="cate-name"><?= $val['category_name'] ?></span>
 
-                  </a>
+                    </a>
 
-                <?php } ?>
-
-              </div>
-
-            <?php } ?>
-          </div>
-        </div>
-      </div>
-
-      <section id="movie-banners" class="text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-lg-12 ">
-              <?php
-              if (!empty($ads['pos4'])) {
-                foreach ($ads['pos4'] as $val) {
-                  if (substr($val['ads_picture'], 0, 4) == 'http') {
-                    $ads_picture = $val['ads_picture'];
-                  } else {
-                    $ads_picture = $path_ads . $val['ads_picture'];
-                  }
-              ?>
-                  <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $branch ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-                    <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
-
-                  </a>
-              <?php
-                }
-              }
-              ?>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      <iframe id="player" class="player" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>"scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
-
-     
-
-      <!-- สำหรับ series -->
-
-      <?php if ($video_data['movie_type'] == 'se') { ?>
-
-        <div class="movie-episode">
-
-          <div id="NextEP" class="swiper-container">
-
-            <div class="swiper-wrapper">
-
-
-
-              <?php
-
-              foreach ($video_data['epdata'] as $key => $val) {
-
-                $active = '';
-
-                if ($index == $key) {
-
-                  $active = 'active';
-                }
-
-                $url_nameep = urlencode(str_replace(' ', '-', $video_data['name_ep'][$key]));
-
-
-
-              ?>
-
-                <div class="swiper-slide">
-
-                  <a onclick="goEP('<?= $video_data['movie_id'] ?>','<?= $url_name ?>','<?= trim($key) ?>','<?= $url_nameep ?>')" tabindex="-1">
-
-                    <img src="<?= $movie_picture ?>">
-
-                    <span class="<?= $active ?>"><?= $video_data['name_ep'][$key] ?></span>
-
-                  </a>
+                  <?php } ?>
 
                 </div>
 
               <?php } ?>
+            </div>
+          </div>
+        </div>
+
+        <section id="movie-banners" class="text-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg-12 ">
+                <?php
+                if (!empty($ads['pos4'])) {
+                  foreach ($ads['pos4'] as $val) {
+                    if (substr($val['ads_picture'], 0, 4) == 'http') {
+                      $ads_picture = $val['ads_picture'];
+                    } else {
+                      $ads_picture = $path_ads . $val['ads_picture'];
+                    }
+                ?>
+                    <a onclick="onClickAds(<?= $val['ads_id'] ?>, <?= $branch ?>)" href="<?= $val['ads_url'] ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+                      <img class="banners" src="<?= $ads_picture ?>" alt="<?= $val['ads_name'] ?>" title="<?= $val['ads_name'] ?>">
+
+                    </a>
+                <?php
+                  }
+                }
+                ?>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <iframe id="player" class="player" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
 
 
+
+        <!-- สำหรับ series -->
+
+        <?php if ($video_data['movie_type'] == 'se') { ?>
+
+          <div class="movie-episode">
+
+            <div id="NextEP" class="swiper-container">
+
+              <div class="swiper-wrapper">
+
+
+
+                <?php
+
+                foreach ($video_data['name_ep'] as $key => $val) {
+                 
+                  $active = '';
+                  if ($index == $key) {
+                    $active = 'active';
+                  }
+                  $url_nameep = urlencode(str_replace(' ', '-', $video_data['name_ep'][$key]));
+                ?>
+
+                  <div class="swiper-slide">
+
+                    <a onclick="goEP('<?=$video_data['movie_id']?>','<?=$url_name?>','<?= trim($key) ?>','<?= $url_nameep ?>')" tabindex="-1">
+
+                      <img src="<?= $movie_picture ?>">
+
+                      <span class="<?= $active ?>"><?= $video_data['name_ep'][$key] ?></span>
+
+                    </a>
+
+                  </div>
+
+                <?php } ?>
+
+
+
+              </div>
+
+
+
+              <!-- If we need navigation buttons -->
+
+              <div class="swiper-button-prev"></div>
+
+              <div class="swiper-button-next"></div>
+
+
+
+              <!-- Add Pagination -->
+
+              <div class="swiper-pagination"></div>
 
             </div>
 
-
-
-            <!-- If we need navigation buttons -->
-
-            <div class="swiper-button-prev"></div>
-
-            <div class="swiper-button-next"></div>
-
-
-
-            <!-- Add Pagination -->
-
-            <div class="swiper-pagination"></div>
-
           </div>
 
-        </div>
+        <?php } ?>
 
-      <?php } ?>
+      </div>
+
+
 
     </div>
-
-
-
-  </div>
 
   </div>
 
@@ -320,7 +314,7 @@
           }
         }
         ?>
-        
+
       </div>
     </div>
   </div>
@@ -349,11 +343,11 @@
               } else {
                 $movie_picture = $path_thumbnail . $val['movie_picture'];
               }
-              
-            $url_name = urldecode(str_replace([" ","'"],["-",""], $val['movie_thname']));
+
+              $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
               ?>
-              <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
-                <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+              <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
+                <img src="<?= $movie_picture ?>" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">
               </a>
               <div class="movie-overlay"></div>
               <?php
@@ -382,15 +376,15 @@
               <?php } ?>
             </div>
             <?php
-            if (strlen($val['movie_thname']) > 40) {
-              $val['movie_thname'] = iconv_substr($val['movie_thname'], 0, 40, "UTF-8") . '...';
+            if (strlen($val['movie_name']) > 40) {
+              $val['movie_name'] = iconv_substr($val['movie_name'], 0, 40, "UTF-8") . '...';
             }
             ?>
 
 
             <div class="title-in">
               <h2>
-                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                <a onclick="goView('<?= $val['movie_id'] ?>', '<?= $url_name ?>', '<?= $val['movie_type'] ?>')" tabindex="-1" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>"><?= $val['movie_name'] ?></a>
               </h2>
               <?php
               if (!empty($val['movie_ratescore']) && $val['movie_ratescore'] != 0) {
@@ -470,7 +464,7 @@
           }
         }
         ?>
-        
+
       </div>
     </div>
   </div>

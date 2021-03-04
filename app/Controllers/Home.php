@@ -207,6 +207,7 @@ class Home extends BaseController
 
 
 		$keyword_string = urldecode($keyword_string);
+		
 		$title = $keyword_string;
 		$parameter = [
 			'branch' => $this->branch,
@@ -222,9 +223,8 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-
+			'keyword' => $this->keyword_string,
 			'title' => $title,
-
 			'keyword_string' => $keyword_string
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -381,7 +381,6 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
@@ -713,8 +712,11 @@ class Home extends BaseController
 
 	public function contact()
 	{
-
-		$data_query = calltemplate($this->template, 'contact','');
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string
+		];
+		$data_query = calltemplate($this->template, 'contact',$parameter);
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$view_data = [

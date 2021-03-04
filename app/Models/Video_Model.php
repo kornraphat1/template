@@ -308,6 +308,8 @@ class Video_Model extends Model
                 WHERE 
                     mo_moviecate.category_id = '$id' 
                     AND mo_moviecate.branch_id = '$branch_id' ";
+
+               // echo $sql;die;
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
         $perpage = 24;
@@ -420,20 +422,22 @@ class Video_Model extends Model
     public function get_list_video_search($keyword, $branch_id, $page)
     {
         $sql_where = " ";
-        $keyword = str_replace("'", "\'", $keyword);
+        $search_array = array("'", "%");
+        $replace_array = array("\'", "%25");
+        $keyword = str_replace($search_array, $replace_array, $keyword);
+
         if ($keyword != "") {
-            $sql_where .= " AND REPLACE(CONCAT_WS('',`$this->table_movie`.movie_thname, 
+            $sql_where .= " AND REPLACE(REPLACE(CONCAT_WS('',`$this->table_movie`.movie_thname, 
                                               `$this->table_movie`.movie_enname,
                                               `$this->table_movie`.movie_year
-                                              ), \"'\", \"\'\") LIKE '%$keyword%' ";
+                                              ), \"'\", \"\'\"), '%', '%25') LIKE '%$keyword%' ";
         }
         $sql = "SELECT
                     *
                 FROM
                     $this->table_movie
                 WHERE
-                    `$this->table_movie`.branch_id = '$branch_id' $sql_where ";
-        // echo $sql;die;
+                    `$this->table_movie`.branch_id = '$branch_id' AND `$this->table_movie`.movie_active = '1' $sql_where ";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
         $perpage = 24;
