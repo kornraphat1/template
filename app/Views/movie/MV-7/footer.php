@@ -22,6 +22,11 @@
   </div>
 </footer>
 
+
+<script src="<?= base_url('public/movie/js/defualt.js') ?>"></script>
+
+
+
 <script>
   $(document).ready(function() {
 
@@ -44,13 +49,7 @@
     })
 
   });
-
-
-
-
-
-
-  
+ 
 
   /* Set the width of the side navigation to 0 */
   /* Set the width of the side navigation to 250px */

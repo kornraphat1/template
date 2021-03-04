@@ -4,46 +4,22 @@ $(document).ready(function() {
     return false; //<---- Add this line
   });
 
-  $(".movie-formcontract").on("submit", function() {
+});
 
-    var form = $(this)[0];
-    var request_text = $.trim($("#request_text").val());
-    var ads_con_name = $.trim($("#ads_con_name").val());
+function goAdscontact() {
+  var form = $('.movie-formcontract-Adscontact')[0];
+  var ads_con_name = $.trim($("#ads_con_name").val());
     var ads_con_email = $.trim($("#ads_con_email").val());
     var ads_con_line = $.trim($("#ads_con_line").val());
     var ads_con_tel = $.trim($("#ads_con_tel").val());
-    var branch = <?= $branch ?>;
+
     if (form.checkValidity() === false) {
 
       event.preventDefault();
 
       event.stopPropagation();
 
-    } else if (request_text) {
-
-      jQuery.ajax({
-        url: "/saverequest/branch/" + branch + "/movie/" + request_text,
-        type: 'GET',
-        async: false,
-        success: function(data) {
-          console.log(data);
-
-         
-          if (data == "OK") {
-            alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
-            
-            window.location.href = "<?= base_url() ?>";
-        
-          }
-        }
-      });
-
-      return false;
-
     } else {
-
-      
-
       $.ajax({
         url: "<?php echo base_url('/contact_ads/'); ?>",
         type: 'POST',
@@ -55,9 +31,9 @@ $(document).ready(function() {
 
         },
         success: function(data) {
-          alert('ดำเนินการเรียบร้อยแล้วครับ')
+          alert('ดำเนินการเรียบร้อยแล้วครับ จะติอต่อกลับโดยเร็ว')
           
-            window.location.href = "<?= base_url() ?>";
+            // window.location.href = "<?= base_url() ?>";
           
           return false;
 
@@ -67,14 +43,49 @@ $(document).ready(function() {
 
     }
 
-
-
     form.classList.add('was-validated');
 
-  });
+  }
 
+  function goRequest(branch) {
+    var form = $('.movie-formcontract-Request')[0];
+    var request_text = $.trim($("#request_text").val());
+  // alert(request_text)
+      if (form.checkValidity() === false) {
+  
+        event.preventDefault();
+  
+        event.stopPropagation();
+  
+      } else {
 
-});
+        jQuery.ajax({
+          url: "/saverequest/branch/" + branch + "/movie/" + request_text,
+          type: 'GET',
+          async: false,
+          success: function(data) {
+            console.log(data);
+  
+           
+            if (data == "OK") {
+              alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
+              
+              // window.location.href = "<?= base_url() ?>";
+          
+            }
+          }
+        });
+  
+        return false;
+  
+      }
+        
+  
+  
+      form.classList.add('was-validated');
+  
+    }
+
 
 function goSearch() {
   var search = $.trim($("#movie-search").val());
