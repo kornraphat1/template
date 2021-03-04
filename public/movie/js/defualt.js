@@ -12,46 +12,53 @@ $(document).ready(function() {
     var ads_con_email = $.trim($("#ads_con_email").val());
     var ads_con_line = $.trim($("#ads_con_line").val());
     var ads_con_tel = $.trim($("#ads_con_tel").val());
-
+    var branch = <?= $branch ?>;
     if (form.checkValidity() === false) {
 
       event.preventDefault();
+
       event.stopPropagation();
 
     } else if (request_text) {
 
-      $.ajax({
-        url: "/save_requests",
-        type: 'POST',
+      jQuery.ajax({
+        url: "/saverequest/branch/" + branch + "/movie/" + request_text,
+        type: 'GET',
         async: false,
-        data: {
-          request_text: request_text
-        },
         success: function(data) {
-          alert('ดำเนินการเรียบร้อยแล้วครับ')
-          setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-        
-          return false;
+          console.log(data);
 
+         
+          if (data == "OK") {
+            alert("Admin จะรีบดำเนินการให้เร็วที่สุด !");
+            
+            window.location.href = "<?= base_url() ?>";
+        
+          }
         }
       });
+
       return false;
 
     } else {
 
+      
+
       $.ajax({
-        url: "/con_ads",
+        url: "<?php echo base_url('/contact_ads/'); ?>",
         type: 'POST',
         data: {
-          ads_con_name: ads_con_name,
-          ads_con_email: ads_con_email,
-          ads_con_line: ads_con_line,
-          ads_con_tel: ads_con_tel,
+          namesurname: ads_con_name,
+          email: ads_con_email,
+          lineid: ads_con_line,
+          phone: ads_con_tel,
 
         },
         success: function(data) {
           alert('ดำเนินการเรียบร้อยแล้วครับ')
-          setInterval(function(){  location.reload();}, 2000);
+          
+            window.location.href = "<?= base_url() ?>";
+          
           return false;
 
         }
@@ -65,6 +72,7 @@ $(document).ready(function() {
     form.classList.add('was-validated');
 
   });
+
 
 });
 
@@ -163,7 +171,6 @@ function countView(id) {
 
     }
 
-
   });
 
 }
@@ -172,5 +179,22 @@ function goCate(id, name) {
   name = name.replace("/", "|");
   window.location.href = "/category/" + id + '/' + name ;
 }
+function goReport(id, branch, name, ep) {
+  var request = prompt('แจ้งหนังเสืย');
+  if (request != null) {
+    jQuery.ajax({
+      url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+      type: 'GET',
+      crossDomain: true,
+      cache: false,
+      success: function(data) {
+        console.log(request);
+        alert('เราจะดำเนินการให้เร็วที่สุด');
+      }
+
+    });
+
+  } else {}
+};
 
 

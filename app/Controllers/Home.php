@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-8';
+		$this->template = 'MV-7';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -696,8 +696,8 @@ class Home extends BaseController
 
 	public function moviedata_newmovie()
 	{
-
-		$list = $this->VideoModel->get_video_newmovie( $this->branch,  $_GET['page']);
+// echo '<pre>',print_r( $_GET,true),'</pre>';die;
+		$list = $this->VideoModel->get_video_newmovie( $this->branch, $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -705,7 +705,7 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-		echo '<pre>',print_r( $header_data,true),'</pre>';die;
+		
 
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
@@ -740,6 +740,7 @@ class Home extends BaseController
 	//Popular dunung4u - mv7
 	public function popular() //ต้นแบบ หน้า cate / search
 	{
+		
 	
 		$page = 1;
 		if (!empty($_GET['page'])) {

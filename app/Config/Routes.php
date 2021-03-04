@@ -113,7 +113,7 @@ $routes->get('popular', 'Home::popular');
 $routes->get('/moviedata', 'Home::moviedata');
 $routes->get('/moviedata_search', 'Home::moviedata_search');
 $routes->get('/moviedata_category', 'Home::moviedata_category');
-
+$routes->get('/moviedata_newmovie', 'Home::moviedata_newmovie');
 // category dunung4u
 $routes->get('category', 'Home::categorylist');
 
