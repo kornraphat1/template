@@ -57,7 +57,6 @@
   <!-- Bootstrap core JavaScript -->
   <script src="<?= $document_root ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?= $document_root ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -93,7 +92,7 @@
             </li>
             
             <li class="nav-item <?= $chk_act['newmovie'] ?>">
-            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">หนังใหม่</a>
+            <a class="nav-link" href="<?php echo base_url('/newmovie'); ?>">New movie</a>
             </li>
             <li class="nav-item <?= $chk_act['category'] ?>">
               <a class="nav-link" href="<?php echo base_url('category') ?>">CATEGORY</a>

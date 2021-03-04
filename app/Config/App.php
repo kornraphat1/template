@@ -18,7 +18,7 @@ class App extends BaseConfig
 	|
 	|	http://example.com/
 	|
-	| If this is not set then CodeIgniter will try guess the protocol, domain
+	| If this is not set then CodeIgniter will try guess the protocol, domain 
 	| and path to your installation. However, you should always configure this
 	| explicitly and never rely on auto-guessing, especially in production
 	| environments.
@@ -34,14 +34,14 @@ class App extends BaseConfig
 
 //กร 
 
-	// public $baseURL = 'http://localhost:9220/';
-	// public $docURL = 'http://localhost:9220/public/movie/MV-7/';
-	// public $backURL = "https://backend.donengded.com/public/";
-
-//พี่มิ้น
-	public $baseURL = 'http://localhost:1111/';
-	public $docURL = 'http://localhost:1111//public/movie/MV-8/';
+	public $baseURL = 'http://localhost:9220/';
+	public $docURL = 'http://localhost:9220/public/movie/MV-7/';
 	public $backURL = "https://backend.donengded.com/public/";
+
+ //พี่มิ้น
+// 	public $baseURL = 'http://localhost:1111/';
+// 	public $docURL = 'http://localhost:1111//public/movie/MV-8/';
+// 	public $backURL = "https://backend.donengded.com/public/";
 
 	/*
 	|--------------------------------------------------------------------------

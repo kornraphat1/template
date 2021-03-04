@@ -1,84 +1,174 @@
 <<<<<<< HEAD
+CRITICAL - 2021-03-03 01:12:13 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(233): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('555 ')
+=======
+<<<<<<< HEAD
 CRITICAL - 2021-03-03 00:01:53 --> Undefined variable: ep_name
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\video.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 131, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/vide...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(536): view('movie/MV-7/vide...')
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('20064', '%E0%B9%80%E0%B8...')
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 01:12:20 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(233): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('555')
+=======
 CRITICAL - 2021-03-03 00:08:49 --> Undefined index: name_ep
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\video.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 65, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/vide...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(536): view('movie/MV-7/vide...')
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('8029', 'Sex-and-the-Cit...')
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 01:25:54 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(233): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('the boys')
+=======
 CRITICAL - 2021-03-03 01:29:49 --> Undefined variable: chk_act
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 88, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 01:26:26 --> Undefined variable: keyword
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\list.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('16', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(234): view('movie/MV-6/list')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('the boys')
+=======
 CRITICAL - 2021-03-03 01:34:11 --> Undefined variable: chk_act
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 88, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 01:31:18 --> Undefined variable: url_loadmore
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\list.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 175, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('16', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(234): view('movie/MV-6/list')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video_search('the boys')
+=======
 CRITICAL - 2021-03-03 01:37:14 --> Undefined variable: chk_act
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 88, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 02:26:04 --> Undefined index: movie_name
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\video.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 47, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(546): view('movie/MV-6/vide...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('20064', '%E0%B9%80%E0%B8...')
+=======
 CRITICAL - 2021-03-03 01:41:37 --> Undefined variable: chk_act
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 88, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 02:28:14 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(395): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+=======
 CRITICAL - 2021-03-03 01:42:06 --> Undefined index: netflix
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 94, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 02:41:43 --> Undefined index: epdata
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\video.php(238): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 238, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(396): view('movie/MV-6/vide...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+=======
 CRITICAL - 2021-03-03 01:42:14 --> Undefined index: netflix
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\header.php(94): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 94, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(186): view('movie/MV-7/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 02:46:42 --> Undefined index: name_ep
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\video.php(238): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 238, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(396): view('movie/MV-6/vide...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-03 02:47:43 --> Undefined index: epdata
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\video.php(238): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 238, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/vide...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(396): view('movie/MV-6/vide...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+=======
 CRITICAL - 2021-03-03 01:42:36 --> Undefined variable: keyword
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\list.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 145, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -196,10 +286,31 @@ CRITICAL - 2021-03-03 02:01:50 --> Undefined index: image
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(803): view('movie/MV-8/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contract()
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 02:48:21 --> iconv_substr(): Detected an illegal character in input string
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'iconv_substr():...', 'C:\\xampp\\htdocs...', 387, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-6\video.php(387): iconv_substr('\x99t Feel at Home...', 0, 40, 'UTF-8')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('7', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(396): view('movie/MV-6/vide...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-03-03 02:51:11 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\template\app\Controllers\Home.php(488): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 488, Array)
+#1 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->video('9673', '%E0%B9%80%E0%B8...')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
 CRITICAL - 2021-03-03 02:02:46 --> Undefined variable: chk_act
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-8\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 86, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -346,6 +457,7 @@ CRITICAL - 2021-03-03 02:44:40 --> Undefined variable: video_data
 #6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2021-03-03 02:56:33 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\video.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
 #1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -416,3 +528,165 @@ CRITICAL - 2021-03-03 04:57:40 --> Undefined variable: chk_act
 #6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+=======
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 03:00:01 --> Undefined index: image
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(787): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+>>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
+CRITICAL - 2021-03-03 03:06:30 --> Undefined index: contact
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 03:00:45 --> Undefined index: image
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(788): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
+CRITICAL - 2021-03-03 03:15:36 --> Undefined index: contact
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+<<<<<<< HEAD
+=======
+CRITICAL - 2021-03-03 03:16:11 --> Undefined index: contact
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-03 03:16:22 --> Undefined index: contact
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-03 03:20:53 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(704): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 704, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 03:41:10 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 03:42:06 --> Undefined index: branch
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 03:42:34 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(697): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 697, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 03:58:54 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:00:02 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:03:54 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '1')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:03:55 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '1')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:03:56 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '1')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:04:38 --> Undefined variable: list_video
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(707): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 707, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-03 04:04:42 --> Undefined variable: category_list
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-6\footer.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/foot...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(734): view('movie/MV-6/foot...')
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-03 04:04:55 --> Illegal string offset 'branch'
+#0 C:\xampp\htdocs\template\app\Helpers\template_helper.php(705): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 705, Array)
+#1 C:\xampp\htdocs\template\app\Controllers\Home.php(716): calltemplate('MV-6', 'contact', '')
+#2 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->contact()
+#3 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
+>>>>>>> 2170d1e739bb23707b8a97c2fe963a51808af646

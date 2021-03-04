@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-8';
+		$this->template = 'MV-7';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -207,6 +207,7 @@ class Home extends BaseController
 
 
 		$keyword_string = urldecode($keyword_string);
+		
 		$title = $keyword_string;
 		$parameter = [
 			'branch' => $this->branch,
@@ -222,9 +223,8 @@ class Home extends BaseController
 			'path_setting' => $this->path_setting,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-
+			'keyword' => $this->keyword_string,
 			'title' => $title,
-
 			'keyword_string' => $keyword_string
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -381,7 +381,6 @@ class Home extends BaseController
 			'keyword_string' => $this->keyword_string,
 			'path_ads' =>	$this->path_ads,
 			'ads' => $this->ads,
-
 			'feildplay' => $feildplay,
 			'index' => $index,
 			'keyword_string' => $this->keyword_string
@@ -696,8 +695,8 @@ class Home extends BaseController
 
 	public function moviedata_newmovie()
 	{
-
-		$list = $this->VideoModel->get_video_newmovie( $this->branch,  $_GET['page']);
+// echo '<pre>',print_r( $_GET,true),'</pre>';die;
+		$list = $this->VideoModel->get_video_newmovie( $this->branch, $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -705,7 +704,7 @@ class Home extends BaseController
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 		];
-		echo '<pre>',print_r( $header_data,true),'</pre>';die;
+		
 
 		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
 	}
@@ -713,8 +712,11 @@ class Home extends BaseController
 
 	public function contact()
 	{
-
-		$data_query = calltemplate($this->template, 'contact','');
+		$parameter = [
+			'branch' => $this->branch,
+			'keyword_string' => $this->keyword_string
+		];
+		$data_query = calltemplate($this->template, 'contact',$parameter);
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$view_data = [
@@ -740,6 +742,7 @@ class Home extends BaseController
 	//Popular dunung4u - mv7
 	public function popular() //ต้นแบบ หน้า cate / search
 	{
+		
 	
 		$page = 1;
 		if (!empty($_GET['page'])) {
