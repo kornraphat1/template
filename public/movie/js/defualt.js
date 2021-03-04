@@ -4,68 +4,6 @@ $(document).ready(function() {
     return false; //<---- Add this line
   });
 
-  $(".movie-formcontract").on("submit", function() {
-
-    var form = $(this)[0];
-    var request_text = $.trim($("#request_text").val());
-    var ads_con_name = $.trim($("#ads_con_name").val());
-    var ads_con_email = $.trim($("#ads_con_email").val());
-    var ads_con_line = $.trim($("#ads_con_line").val());
-    var ads_con_tel = $.trim($("#ads_con_tel").val());
-
-    if (form.checkValidity() === false) {
-
-      event.preventDefault();
-      event.stopPropagation();
-
-    } else if (request_text) {
-
-      $.ajax({
-        url: "/save_requests",
-        type: 'POST',
-        async: false,
-        data: {
-          request_text: request_text
-        },
-        success: function(data) {
-          alert('ดำเนินการเรียบร้อยแล้วครับ')
-          setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-        
-          return false;
-
-        }
-      });
-      return false;
-
-    } else {
-
-      $.ajax({
-        url: "/con_ads",
-        type: 'POST',
-        data: {
-          ads_con_name: ads_con_name,
-          ads_con_email: ads_con_email,
-          ads_con_line: ads_con_line,
-          ads_con_tel: ads_con_tel,
-
-        },
-        success: function(data) {
-          alert('ดำเนินการเรียบร้อยแล้วครับ')
-          setInterval(function(){  location.reload();}, 2000);
-          return false;
-
-        }
-      });
-      return false;
-
-    }
-
-
-
-    form.classList.add('was-validated');
-
-  });
-
 });
 
 function goSearch() {
@@ -120,14 +58,14 @@ function myFunction() {
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
+// window.onclick = function(e) {
+//   if (!e.target.matches('.dropbtn')) {
+//   var myDropdown = document.getElementById("myDropdown");
+//     if (myDropdown.classList.contains('show')) {
+//       myDropdown.classList.remove('show');
+//     }
+//   }
+// }
 
 function goView(id, name, type) {
   countView(id);
@@ -171,6 +109,24 @@ function countView(id) {
 function goCate(id, name) {
   name = name.replace("/", "|");
   window.location.href = "/category/" + id + '/' + name ;
+}
+
+function goReport(id, branch, name, ep) {
+  var request = prompt('แจ้งหนังเสืย');
+  if (request != null) {
+      jQuery.ajax({
+          url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+          type: 'GET',
+          crossDomain: true,
+          cache: false,
+          success: function(data) {
+              // console.log(request);
+              alert('เราจะดำเนินการให้เร็วที่สุด');
+          }
+
+      });
+
+  }
 }
 
 

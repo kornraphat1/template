@@ -35,7 +35,7 @@ CRITICAL - 2021-01-05 00:27:00 --> Undefined index: movie_picture
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-05 00:29:13 --> Undefined variable: videodata
+CRITICAL - 2021-01-05 00:29:13 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\anime\body.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 55, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('anime/body.php', Array, true)
