@@ -38,14 +38,15 @@
 
         <div class="tab-content" id="formrequest">
           <div id="request" class="tab-pane container active">
-            <form class="movie-formcontract" novalidate method="POST" action="">
+          <form class="movie-formcontract-Request" novalidate method="POST" action="" onsubmit=" goRequest('<?= $branch ?>')">
               <textarea rows="4" id="request_text" type="text" class="form-control" required autocomplete="off"  pattern="([^,<>;]+)" ></textarea >
               <center><button type="submit" class="movie-btnrequest">ส่งข้อความ</button></center>
             </form>
           </div>
 
           <div id="contract" class="tab-pane container fade">
-            <form class="movie-formcontract" novalidate method="POST" action="">
+          <form class="movie-formcontract-Adscontact" novalidate method="POST" action="" onsubmit="goAdscontact()">
+
               <label for="ads_con_name"> ชื่อ สกุล :</label>
               <input id="ads_con_name" name="ads_con_name" type="text" class="form-control" required autocomplete="off"  pattern="([^,<>;]+)">
               <div class="invalid-feedback">
