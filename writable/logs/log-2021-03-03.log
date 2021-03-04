@@ -457,6 +457,14 @@ CRITICAL - 2021-03-03 02:44:40 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 03:00:01 --> Undefined index: image
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(787): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
 >>>>>>> c6c2035662ab54afd58757e002efd22223e19f98
 CRITICAL - 2021-03-03 03:06:30 --> Undefined index: contact
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
@@ -464,20 +472,32 @@ CRITICAL - 2021-03-03 03:06:30 --> Undefined index: contact
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+CRITICAL - 2021-03-03 03:00:45 --> Undefined index: image
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\template\app\Controllers\Home.php(788): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+=======
 CRITICAL - 2021-03-03 03:15:36 --> Undefined index: contact
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-6/head...', Array, true)
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(393): view('movie/MV-6/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->series('9852', '\xE0\xB8\x94\xE0\xB8\xB9\xE0\xB8\xAB\xE0\xB8\x99\xE0\xB8\xB1...')
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
 #5 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 #6 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
+=======
 CRITICAL - 2021-03-03 03:16:11 --> Undefined index: contact
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-6\header.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 86, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -596,3 +616,4 @@ CRITICAL - 2021-03-03 04:04:55 --> Illegal string offset 'branch'
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+>>>>>>> a904744786b19262643c96b473e6ac73ca26ddeb
