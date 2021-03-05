@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2021-03-05 00:19:22 --> Undefined index: image
 #0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
 #1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
@@ -71,3 +72,16 @@ CRITICAL - 2021-03-05 01:03:43 --> You have an error in your SQL syntax; check t
 #9 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
 #11 {main}
+=======
+CRITICAL - 2021-03-05 01:07:34 --> Undefined variable: listyear
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-1\left.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-1\list.php(9): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-1/list', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(194): view('movie/MV-1/list')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+>>>>>>> 26487524892652986b9b55e9a4b2d521600b9d26
