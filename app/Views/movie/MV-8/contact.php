@@ -94,11 +94,8 @@
             event.stopPropagation();
           } else if (request_text) {
 
-
-      
-      
             $.ajax({
-              url: "<?php echo $urlrequests  ?>",
+              url: "saverequest",
               type: 'POST',
               async: false,
               data: {
@@ -107,7 +104,6 @@
               success: function(data) {
                 alert('ดำเนินการเรียบร้อยแล้วครับ')
                 setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-              
                 return false;
 
               }
@@ -117,7 +113,7 @@
           } else {
             
             $.ajax({
-              url: " <?php echo $urlconads ?>",
+              url: "contact_ads",
               type: 'POST',
               data: {
                 ads_con_name: ads_con_name,

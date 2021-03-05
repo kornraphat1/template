@@ -61,7 +61,7 @@ CRITICAL - 2021-01-04 00:26:32 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2021-01-04 00:29:43 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 00:29:43 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\AV\video.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 87, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/video.php', Array, true)
@@ -71,7 +71,7 @@ CRITICAL - 2021-01-04 00:29:43 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 00:31:47 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 00:31:47 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\AV\video.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/video.php', Array, true)
@@ -81,7 +81,7 @@ CRITICAL - 2021-01-04 00:31:47 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 00:32:34 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 00:32:34 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\AV\video.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/video.php', Array, true)
@@ -91,7 +91,7 @@ CRITICAL - 2021-01-04 00:32:34 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 00:37:26 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 00:37:26 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\AV\video.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/video.php', Array, true)
@@ -101,7 +101,7 @@ CRITICAL - 2021-01-04 00:37:26 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 00:37:53 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 00:37:53 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\AV\video.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('AV/video.php', Array, true)
@@ -330,7 +330,7 @@ CRITICAL - 2021-01-04 01:53:10 --> Too few arguments to function App\Models\AV_M
 #3 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2021-01-04 04:22:50 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 04:22:50 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\clips\video.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('clips/video.php', Array, true)
@@ -340,7 +340,7 @@ CRITICAL - 2021-01-04 04:22:50 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 04:23:31 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 04:23:31 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\clips\video.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 71, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('clips/video.php', Array, true)
@@ -350,7 +350,7 @@ CRITICAL - 2021-01-04 04:23:31 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 04:23:42 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 04:23:42 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\clips\video.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 71, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('clips/video.php', Array, true)
@@ -360,7 +360,7 @@ CRITICAL - 2021-01-04 04:23:42 --> Undefined variable: videodata
 #6 C:\xampp\htdocs\donungded.com\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\donungded.com\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
-CRITICAL - 2021-01-04 04:24:05 --> Undefined variable: videodata
+CRITICAL - 2021-01-04 04:24:05 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\donungded.com\app\Views\clips\video.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 71, Array)
 #1 C:\xampp\htdocs\donungded.com\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\donungded.com\system\Common.php(1071): CodeIgniter\View\View->render('clips/video.php', Array, true)

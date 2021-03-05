@@ -1150,7 +1150,7 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 3);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 6);
 
                     $chk_act = [
                         'home' => 'active',
@@ -1158,11 +1158,11 @@ function calltemplate($template, $view, $parameter = [])
                     ];
 
                     $list = [
-                        'video_data' => $VideoModel->get_id_video($parameter['id']),
+                        'chk_act' => $chk_act,
+                        'video_data' => $series,
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
-                        'series' => $series,
                         'video_random' => $video_random,
                         'seo' => $seo,
                     ];
@@ -1181,7 +1181,7 @@ function calltemplate($template, $view, $parameter = [])
 
                     $list = [
                         'video_data' => $VideoModel->get_id_video($parameter['id']),
-                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 5),
+                        'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 6),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
@@ -1204,12 +1204,24 @@ function calltemplate($template, $view, $parameter = [])
                     ];
 
                     $list = [
-
                         'video_data' => $video_data,
                         'video_random' => $video_random,
                         'seo' => $seo,
                         'category_list' => $category_list,
                         'listyear' => $listyear,
+                        'chk_act' => $chk_act,
+                    ];
+
+                    break;
+                
+                case 'contact':
+                    $chk_act = [
+                        'home' => 'active',
+                        'contact' => ''
+                    ];
+
+                    $list = [
+                        'chk_act' => $chk_act,
                     ];
 
                     break;

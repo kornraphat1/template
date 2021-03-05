@@ -139,14 +139,14 @@ function myFunction() {
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
+// window.onclick = function(e) {
+//   if (!e.target.matches('.dropbtn')) {
+//   var myDropdown = document.getElementById("myDropdown");
+//     if (myDropdown.classList.contains('show')) {
+//       myDropdown.classList.remove('show');
+//     }
+//   }
+// }
 
 function goView(id, name, type) {
   countView(id);
@@ -207,5 +207,23 @@ function goReport(id, branch, name, ep) {
 
   } else {}
 };
+
+function goReport(id, branch, name, ep) {
+  var request = prompt('แจ้งหนังเสืย');
+  if (request != null) {
+      jQuery.ajax({
+          url: "/savereport/branch/" + branch + "/id/" + id + "/reason/" + request + "/name/" + name + "/" + ep,
+          type: 'GET',
+          crossDomain: true,
+          cache: false,
+          success: function(data) {
+              // console.log(request);
+              alert('เราจะดำเนินการให้เร็วที่สุด');
+          }
+
+      });
+
+  }
+}
 
 
