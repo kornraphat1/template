@@ -32,7 +32,8 @@
       } else {
         $movie_picture = $path_thumbnail . $video_data['movie_picture'];
       }
-      $url_name = urlencode(str_replace(' ', '-', $video_data['movie_name']))
+      $url_name = urlname_encode($val['movie_name']);
+
 
       ?>
       <div id="movie-player">
@@ -70,7 +71,8 @@
                   if ($index == $key) {
                     $active = 'active';
                   }
-                  $url_nameep = urlencode(str_replace(' ', '-', $video_data['name_ep'][$key]));
+                  $url_name = urlname_encode($val['movie_name']);
+
 
                 ?>
                   <div class="swiper-slide">

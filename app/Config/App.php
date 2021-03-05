@@ -35,7 +35,7 @@ class App extends BaseConfig
 //กร 
 
 	public $baseURL = 'http://localhost:9220/';
-	public $docURL = 'http://localhost:9220/public/movie/MV-7/';
+	public $docURL = 'http://localhost:9220/public/movie/MV-1/';
 	public $backURL = "https://backend.donengded.com/public/";
 
  //พี่มิ้น

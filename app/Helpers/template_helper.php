@@ -1037,11 +1037,11 @@ function calltemplate($template, $view, $parameter = [])
                     break;
                 case 'contact':
                     $chk_act = [
-                        'home' => 'active',
+                        'home' => '',
                         'newmovie' => '',
                         'category' => '',
                         'poppular' => '',
-                        'contact' => ''
+                        'contact' => 'active'
                     ];
 
                     $list = [
