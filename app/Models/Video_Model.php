@@ -874,89 +874,24 @@ class Video_Model extends Model
         return $result;
     }
 
-    //-------------------------------------------------------------------------------------------------
-
-    public function get_list_popular_index($branch_id, $perpage, $page = 1)
-    {
-        $sql = "SELECT
-                    $this->table_movie.*,
-                    $this->table_slide.slide_img
-                FROM
-                $this->table_movie
-                INNER JOIN $this->table_slide ON $this->table_slide.movie_id = $this->table_movie.movie_id 
-                WHERE
-                    `$this->table_movie`.branch_id = '$branch_id'
-                    AND `$this->table_movie`.movie_active = '1' 
-                ORDER BY `$this->table_slide`.slide_id ASC";
-
-    
-        $query = $this->db->query($sql);
-
-        $total = count($query->getResultArray());
-        // return $query->getResultArray();
-        $data = get_pagination($sql, $page, $perpage, $total);
-        $data['list'] = divineMovieName($data['list']);
-
-        if (!empty($data['list'])) {
-            foreach ($data['list'] as $key => $val) {
-
-                $id = $val['movie_id'];
-                $sqlcate = "SELECT
-                        *
-                    FROM
-                        `$this->table_category`
-                    INNER JOIN `$this->mo_moviecate` ON `$this->mo_moviecate`.category_id = `$this->table_category`.category_id
-                    WHERE
-                    `$this->mo_moviecate`.movie_id = '$id'";
-
-                $querycate = $this->db->query($sqlcate);
-                $data['list'][$key]['cate_data'] = $querycate->getResultArray();
-            }
-        }
-
-        return $data;
-
-    }
-
      //-------------------------------------------------------------------------------------------------
 
     public function get_list_popular($branch_id, $perpage, $page = 1)
     {
         $sql = "SELECT
-                    $this->table_movie.*,
-                    $this->table_slide.slide_img
+                    $this->table_movie.*
                 FROM
-                $this->table_movie
-                INNER JOIN $this->table_slide ON $this->table_slide.movie_id = $this->table_movie.movie_id 
+                    $this->table_movie
                 WHERE
                     `$this->table_movie`.branch_id = '$branch_id'
                     AND `$this->table_movie`.movie_active = '1' 
-                ORDER BY `$this->table_slide`.slide_id ASC";
-
+                ORDER BY `$this->table_movie`.movie_ratescore DESC";
     
         $query = $this->db->query($sql);
-
         $total = count($query->getResultArray());
         // return $query->getResultArray();
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
-
-        if (!empty($data['list'])) {
-            foreach ($data['list'] as $key => $val) {
-
-                $id = $val['movie_id'];
-                $sqlcate = "SELECT
-                        *
-                    FROM
-                        `$this->table_category`
-                    INNER JOIN `$this->mo_moviecate` ON `$this->mo_moviecate`.category_id = `$this->table_category`.category_id
-                    WHERE
-                    `$this->mo_moviecate`.movie_id = '$id'";
-
-                $querycate = $this->db->query($sqlcate);
-                $data['list'][$key]['cate_data'] = $querycate->getResultArray();
-            }
-        }
 
         return $data;
 

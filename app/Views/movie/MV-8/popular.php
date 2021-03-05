@@ -217,7 +217,7 @@
       if (track_click <= total_pages) //user click number is still less than total pages
       {
         //post page number and load returned data into result element
-        $.get('', {
+        $.get('<?=base_url('moviedata_popular')?>', {
           'page': track_click
         }, function(data) {
 

@@ -85,3 +85,25 @@ CRITICAL - 2021-03-05 01:07:34 --> Undefined variable: listyear
 #8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
 >>>>>>> 26487524892652986b9b55e9a4b2d521600b9d26
+CRITICAL - 2021-03-05 01:30:34 --> Undefined index: movie_picture
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\body.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/body...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(71): view('movie/MV-8/body...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 01:33:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2'' at line 8
+#0 C:\xampp\htdocs\templates\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\templates\app\Helpers\pagination_helper.php(6): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\templates\app\Models\Video_Model.php(129): get_pagination('SELECT\r\n       ...', 1, '2', 2634)
+#5 C:\xampp\htdocs\templates\app\Controllers\Home.php(649): App\Models\Video_Model->get_list_video(1, '', '2')
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->moviedata()
+#7 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
