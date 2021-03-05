@@ -28,47 +28,23 @@
 <section class="text-center">
   <div class="container">
     <div id="movie-list" class="row">
-      <?php
-        $chkactive = [
-          'cate' => 'active',
-          'netflix' => ''
-        ];
-
-        if($keyword=='28'){
-          $chkactive = [
-            'cate' => '',
-            'netflix' => 'active'
-          ];
-        }
-      ?>
       <ul id="menuMobile" class="nav nav-pills">
         <li><a href="<?=base_url()?>">New</a></li>
         <li><a data-toggle="tab" href="#mb-category" >Category</a></li>
-        <li><a href="<?=base_url('/category/28/Netflix-Movie')?>" class="<?=$chkactive['netflix']?>">Netflix</a></li>
+        <li><a href="<?=base_url('/category/28/Netflix-Movie')?>">Netflix</a></li>
       </ul>
 
       <div class="tab-content">
         <div id="mb-home" class="tab-pane fade in active show">
           <div class="movie-title-list">
-            <?php
-              if (!empty($cate_name)) {
-            
-                $title = $cate_name ;
-
-              } else if (!empty($keyword)) {
-            
-                $title = 'คุณกำลังค้นหา : '. $keyword;
-          
-              }
-            ?>
-            <h1><?= $title ?></h1>
+            <h1>Popular</h1>
           </div>
 
-          <?php if (!empty($list['list'])) { ?>
+          <?php if (!empty($list_video['list'])) { ?>
           <ul id="list-movie" class="list-movie">
 
             <?PHP
-              foreach ($list['list'] as $val) {
+              foreach ($list_video['list'] as $val) {
 
             ?>
                 <li>
@@ -172,7 +148,7 @@
           <?php } ?>
 
           <?php
-            if ( !empty($list['list']) ) {
+            if ( !empty($list_video['list']) ) {
           ?>
             <button id="movie-loadmore">NEXT</button>
           <?php
@@ -228,8 +204,7 @@
 <script>
   $(document).ready(function() {
     var track_click = 1; //track user click on "load more" button, righ now it is 0 click
-    var total_pages = '<?= $list['total_page'] ?>';
-    var keyword = "<?= $keyword ?>";
+    var total_pages = '<?= $list_video['total_page'] ?>';
 
     if( track_click >= total_pages ){
       $("#movie-loadmore").hide(0);
@@ -242,9 +217,8 @@
       if (track_click <= total_pages) //user click number is still less than total pages
       {
         //post page number and load returned data into result element
-        $.get('<?php echo $url_loadmore ?>', {
-          'page': track_click,
-          'keyword': keyword,
+        $.get('', {
+          'page': track_click
         }, function(data) {
 
          //  $("#anime-loadmore").show(); //bring back load more button

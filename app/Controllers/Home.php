@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-7';
+		$this->template = 'MV-8';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -695,8 +695,22 @@ class Home extends BaseController
 
 	public function moviedata_newmovie()
 	{
-// echo '<pre>',print_r( $_GET,true),'</pre>';die;
 		$list = $this->VideoModel->get_video_newmovie( $this->branch, $_GET['page']);
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list' => $list,
+			'branch' => $this->branch,
+			'backURL' => $this->backURL,
+		];
+		
+
+		echo view('movie/' . $this->template . '/moviedata.php', $header_data);
+	}
+
+	public function moviedata_popular()
+	{
+		$list = $this->VideoModel->get_list_popular( $this->branch, 24, $_GET['page']);
 
 		$header_data = [
 			'document_root' => $this->document_root,
@@ -742,7 +756,6 @@ class Home extends BaseController
 	//Popular dunung4u - mv7
 	public function popular() //ต้นแบบ หน้า cate / search
 	{
-		
 	
 		$page = 1;
 		if (!empty($_GET['page'])) {
@@ -758,35 +771,19 @@ class Home extends BaseController
 		$data_query = calltemplate($this->template, 'popular', $parameter);
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
-
-		$this->setting = $this->VideoModel->get_setting($this->branch);
-		$this->setting['setting_img'] = $this->path_setting . $this->setting['setting_logo'];
-
-
-
-		$chk_act = [
-			'home' => '',
-			'poppular' => 'active',
-			'newmovie' => '',
-			'topimdb' => '',
-			'category' => '',
-			'contact' => ''
-		];
-
 		$view_data = [
 			'document_root' => $this->document_root,
 			'path_setting' => $this->path_setting,
 			'setting' => $this->setting,
-			'chk_act' => $chk_act,
-
 			'ads' => $this->ads,
-
 			'path_ads' => $this->path_ads,
 			'branch' => $this->branch,
 			'backURL' => $this->backURL,
 			'path_slide' => $this->path_slide
 		];
+
 		$view_data = array_merge($view_data, $data_query);
+
 		echo view('movie/' . $this->template . '/header.php', $view_data);
 		echo view('movie/' . $this->template . '/popular.php');
 		echo view('movie/' . $this->template . '/footer.php');

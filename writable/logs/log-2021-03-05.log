@@ -1,0 +1,73 @@
+CRITICAL - 2021-03-05 00:19:22 --> Undefined index: image
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 16, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/head...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(789): view('movie/MV-8/head...', Array)
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 00:20:54 --> Undefined variable: keyword
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\popular.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/popu...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(774): view('movie/MV-8/popu...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 00:23:47 --> Undefined variable: title
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\popular.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/popu...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(774): view('movie/MV-8/popu...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 00:24:26 --> Undefined variable: list
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\popular.php(218): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 218, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/popu...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(774): view('movie/MV-8/popu...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 00:27:52 --> Undefined index: total_page
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\popular.php(218): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 218, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/popu...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(788): view('movie/MV-8/popu...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 00:35:33 --> Undefined index: total_page
+#0 C:\xampp\htdocs\templates\app\Views\movie\MV-8\popular.php(207): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 207, Array)
+#1 C:\xampp\htdocs\templates\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\templates\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-8/popu...', Array, true)
+#3 C:\xampp\htdocs\templates\app\Controllers\Home.php(788): view('movie/MV-8/popu...')
+#4 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#5 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2021-03-05 01:03:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''24'' at line 10
+#0 C:\xampp\htdocs\templates\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\templates\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\templates\app\Helpers\pagination_helper.php(6): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\templates\app\Models\Video_Model.php(897): get_pagination('SELECT\r\n       ...', '1', '24', 5)
+#5 C:\xampp\htdocs\templates\app\Helpers\template_helper.php(1155): App\Models\Video_Model->get_list_popular(1, '24', '1')
+#6 C:\xampp\htdocs\templates\app\Controllers\Home.php(771): calltemplate('MV-8', 'popular', Array)
+#7 C:\xampp\htdocs\templates\system\CodeIgniter.php(910): App\Controllers\Home->popular()
+#8 C:\xampp\htdocs\templates\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\templates\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\templates\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
