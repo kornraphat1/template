@@ -106,7 +106,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_list_video($branchid, $keyword = "", $page = 1)
+    public function get_list_video($branchid, $keyword = "", $perpage, $page = 1)
     {
         $sql_where = " ";
         if ($keyword != "") {
@@ -125,7 +125,6 @@ class Video_Model extends Model
         $query = $this->db->query($sql);
 
         $total = count($query->getResultArray());
-        $perpage = 24;
         // return $query->getResultArray();
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
@@ -137,7 +136,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_list_series($branchid, $page = 1)
+    public function get_list_series($branchid, $perpage, $page = 1)
     {
         $sql = "SELECT
                     *
@@ -150,7 +149,6 @@ class Video_Model extends Model
             "ORDER BY `$this->table_movie`.movie_year DESC , `$this->table_movie`.movie_id DESC";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         // return $query->getResultArray();
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
@@ -162,7 +160,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_list_topimdb($branchid, $page = 1)
+    public function get_list_topimdb($branchid, $perpage, $page = 1)
     {
         $sql = "SELECT
                     *
@@ -175,7 +173,6 @@ class Video_Model extends Model
             "ORDER BY `$this->table_movie`.movie_year DESC , `$this->table_movie`.movie_ratescore DESC";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         // return $query->getResultArray();
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
@@ -187,7 +184,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_movie_new_recommend($branchid, $keyword = "", $page = 1)
+    public function get_movie_new_recommend($branchid, $keyword = "", $perpage, $page = 1)
     {
         $sql_where = " ";
         if ($keyword != "") {
@@ -203,7 +200,7 @@ class Video_Model extends Model
             $sql_where;
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 10;
+
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 
@@ -294,7 +291,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_bycategory($id, $branch_id, $page = 1)
+    public function get_id_video_bycategory($id, $branch_id, $perpage, $page = 1)
     {
     
         $sql = "SELECT
@@ -312,7 +309,6 @@ class Video_Model extends Model
                // echo $sql;die;
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 
@@ -323,7 +319,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_byyear($id, $branch_id, $page = 1, $keyword = "")
+    public function get_id_video_byyear($id, $branch_id, $perpage, $page = 1, $keyword = "")
     {
         $sql_where = " ";
         if ($keyword != "") {
@@ -337,7 +333,6 @@ class Video_Model extends Model
                 ORDER BY `$this->table_movie`.movie_year DESC";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 
@@ -348,7 +343,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_video_newmovie($branch_id, $page = 1)
+    public function get_video_newmovie($branch_id, $perpage, $page = 1)
     {
         $yearnow = date('Y');
         $yearold  = (date('Y') - 1);
@@ -360,7 +355,6 @@ class Video_Model extends Model
                 ORDER BY `$this->table_movie`.movie_year DESC";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 
@@ -371,7 +365,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_id_video_random($branch_id,$limit)
+    public function get_id_video_random($branch_id, $limit)
     {
         $sql = "SELECT
                     *
@@ -419,7 +413,7 @@ class Video_Model extends Model
     //-------------------------------------------------------------------------------------------------
 
 
-    public function get_list_video_search($keyword, $branch_id, $page)
+    public function get_list_video_search($keyword, $branch_id, $perpage, $page=1)
     {
         $sql_where = " ";
         $search_array = array("'", "%");
@@ -440,7 +434,6 @@ class Video_Model extends Model
                     `$this->table_movie`.branch_id = '$branch_id' AND `$this->table_movie`.movie_active = '1' $sql_where ";
         $query = $this->db->query($sql);
         $total = count($query->getResultArray());
-        $perpage = 24;
         $data = get_pagination($sql, $page, $perpage, $total);
         $data['list'] = divineMovieName($data['list']);
 
@@ -561,9 +554,8 @@ class Video_Model extends Model
                     AND   `$this->table_movie`.branch_id = '$branchid'
                 ORDER BY `$this->table_movie`.movie_year DESC, `$this->table_movie`.movie_create DESC , `$this->table_movie`.movie_view DESC limit 8 ";
       
-       $query = $this->db->query($sql);
+        $query = $this->db->query($sql);
         $data['list'] = $query->getResultArray();
-
         $data['list'] = divineMovieName($data['list']);
 
         $data['category_name'] = $data['list'][0]['category_name'];
@@ -844,7 +836,7 @@ class Video_Model extends Model
     }
 
     //-------------------------------------------------------------------------------------------------
-    public function get_list_popular($branch_id)
+    public function get_popular($branch_id)
     {
         $sql = "SELECT
                     $this->table_movie.*,
@@ -880,6 +872,29 @@ class Video_Model extends Model
         }
 
         return $result;
+    }
+
+     //-------------------------------------------------------------------------------------------------
+
+    public function get_list_popular($branch_id, $perpage, $page = 1)
+    {
+        $sql = "SELECT
+                    $this->table_movie.*
+                FROM
+                    $this->table_movie
+                WHERE
+                    `$this->table_movie`.branch_id = '$branch_id'
+                    AND `$this->table_movie`.movie_active = '1' 
+                ORDER BY `$this->table_movie`.movie_ratescore DESC";
+    
+        $query = $this->db->query($sql);
+        $total = count($query->getResultArray());
+        // return $query->getResultArray();
+        $data = get_pagination($sql, $page, $perpage, $total);
+        $data['list'] = divineMovieName($data['list']);
+
+        return $data;
+
     }
 
 }

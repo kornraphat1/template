@@ -25,7 +25,8 @@
                   $movie_picture = $path_thumbnail . $val['movie_picture'];
                 }
 
-                $url_name = urlencode(str_replace(' ', '-', $val['movie_name']));
+                $url_name = urlname_encode($val['movie_name']);
+
                 ?>
 
                 <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">

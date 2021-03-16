@@ -332,7 +332,7 @@ CRITICAL - 2021-03-02 01:59:16 --> Undefined variable: chk_act
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(187): view('movie/MV-6/head...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->newmovie()
 =======
-CRITICAL - 2021-03-02 01:41:27 --> Undefined variable: videodata
+CRITICAL - 2021-03-02 01:41:27 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-7\video.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-7/vide...', Array, true)

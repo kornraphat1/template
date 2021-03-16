@@ -13,33 +13,33 @@
 
         <div class="tab-content" id="formrequest">
           <div id="request" class="tab-pane container active">
-            <form class="movie-formcontract" novalidate method="POST" action="">
+            <form class="movie-formcontract-Request" novalidate method="POST" action="" onsubmit="return goRequest('<?=$branch?>')">
               <textarea rows="4" id="request_text" type="text" class="form-control" required autocomplete="off" pattern="([,<>;]+)"></textarea>
               <center><button type="submit" class="movie-btnrequest">ส่งข้อความ</button></center>
             </form>
           </div>
 
           <div id="contract" class="tab-pane container fade">
-            <form class="movie-formcontract" novalidate method="POST" action="">
+            <form class="movie-formcontract-Adscontact" novalidate method="POST" action="" onsubmit="return goAdscontact()">
               <label for="ads_con_name"> ชื่อ สกุล :</label>
               <input id="ads_con_name" name="ads_con_name" type="text" class="form-control" required autocomplete="off"  pattern="([^,<>;]+)">
               <div class="invalid-feedback">
-                กรุณากรอกชื่อ นามสกุล และ ห้ามใช้ เครื่องหมาย  < > , ; 
+                กรุณากรอกชื่อ นามสกุล และห้ามใช้เครื่องหมาย  < > , ; 
               </div>
               <label for="ads_con_email"> Email :</label>
               <input id="ads_con_email" type="text" class="form-control" pattern="(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$)" required autocomplete="off">
               <div class="invalid-feedback">
-                กรุณากรอก Email เช่น " xxx@xxx.com " และ ห้ามใช้ เครื่องหมาย  < > , ; 
+                กรุณากรอก Email เช่น " xxx@xxx.com " และห้ามใช้เครื่องหมาย  < > , ; 
               </div>
               <label for="ads_con_line"> Line ID :</label>
               <input id="ads_con_line" type="text" class="form-control" required autocomplete="off" pattern="([^,<>;]+)">
               <div class="invalid-feedback">
-                กรุณากรอก Line ID และ ห้ามใช้ เครื่องหมาย  < > , ; 
+                กรุณากรอก Line ID และห้ามใช้เครื่องหมาย  < > , ; 
               </div>
               <label for="ads_con_tel"> เบอร์โทรศัพท์ :</label>
               <input id="ads_con_tel" type="text" class="form-control" required autocomplete="off" pattern="(^0([8|9|6])([0-9]{8}$))">
               <div class="invalid-feedback">
-                กรุณากรอก เบอร์โทรศัพท์ 10หลัก เช่น " 0600000000 " และ ห้ามใช้ เครื่องหมาย  < > , ; 
+                กรุณากรอกเบอร์โทรศัพท์ 10 หลัก เช่น " 0xxxxxxxxx " และห้ามใช้เครื่องหมาย  < > , ; 
               </div>
 
               <label id="ads_con_all_alt">**กรุณากรอกข้อมูลให้ครบทุกช่อง</label>
@@ -94,11 +94,8 @@
             event.stopPropagation();
           } else if (request_text) {
 
-
-      
-      
             $.ajax({
-              url: "<?php echo $urlrequests  ?>",
+              url: "saverequest",
               type: 'POST',
               async: false,
               data: {
@@ -107,7 +104,6 @@
               success: function(data) {
                 alert('ดำเนินการเรียบร้อยแล้วครับ')
                 setInterval(function(){  window.location.href = "<?= base_url() ?>";}, 2000);
-              
                 return false;
 
               }
@@ -117,7 +113,7 @@
           } else {
             
             $.ajax({
-              url: " <?php echo $urlconads ?>",
+              url: "contact_ads",
               type: 'POST',
               data: {
                 ads_con_name: ads_con_name,

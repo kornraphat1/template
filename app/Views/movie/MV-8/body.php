@@ -49,19 +49,21 @@
             <div class="swiper-wrapper">
 
               <?php 
-                foreach($popular as $val){ 
+                foreach($popular['list'] as $val){ 
               ?>
 
                 <div class="swiper-slide">
                   <div class="movie-box">
 
-                    <?php if (substr($val['movie_picture'], 0, 4) == 'http') {
-                      $movie_picture = $val['movie_picture'];
-                    } else {
-                      $movie_picture = $path_thumbnail . $val['movie_picture'];
-                    }
+                    <?php 
 
-                    $url_name = urlname_encode($val['movie_name']);
+                        if (substr($val['movie_picture'], 0, 4) == 'http') {
+                          $movie_picture = $val['movie_picture'];
+                        } else {
+                          $movie_picture = $path_thumbnail . $val['movie_picture'];
+                        }
+
+                      $url_name = urlname_encode($val['movie_name']);
                     ?>
 
                     <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>' , '<?=$val['movie_type']?>')" alt="<?= $val['movie_name'] ?>" title="<?= $val['movie_name'] ?>">

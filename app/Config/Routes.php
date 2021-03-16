@@ -69,37 +69,37 @@ $routes->setAutoRoute(true);
 //--------------------------------------movie -----------------------------------------------//
 
 $routes->get('/', 'Home::index');
-$routes->get('/page/home', 'Home::index');
-$routes->get('/zoom', 'Home::zoom');
-$routes->get('/category_series', 'Home::list_series');
+$routes->get('page/home', 'Home::index');
+$routes->get('zoom', 'Home::zoom');
+$routes->get('category_series', 'Home::list_series');
 
-$routes->get('/series/(:num)/(:segment)', 'Home::series/$1/$2');
-$routes->get('/video/(:num)/(:any)', 'Home::video/$1/$2');
-$routes->get('/series/(:num)/(:segment)/(:num)/(:segment)', 'Home::video_series/$1/$2/$3/$4');
-$routes->get('/player/(:num)/(:segment)', 'Home::player/$1/$2');
-$routes->get('/player/(:num)/(:segment)/(:segment)', 'Home::player/$1/$2/$3');
+$routes->get('series/(:num)/(:segment)', 'Home::series/$1/$2');
+$routes->get('video/(:num)/(:any)', 'Home::video/$1/$2');
+$routes->get('series/(:num)/(:segment)/(:num)/(:segment)', 'Home::video_series/$1/$2/$3/$4');
+$routes->get('player/(:num)/(:segment)', 'Home::player/$1/$2');
+$routes->get('player/(:num)/(:segment)/(:segment)', 'Home::player/$1/$2/$3');
 
 // Category แบ่งตามหมวดหมู่ เมื่อกดเลือก ตามหมวดหมู่
-$routes->get('/category/(:num)/(:any)', 'Home::video_bycate/$1/$2');
+$routes->get('category/(:num)/(:any)', 'Home::video_bycate/$1/$2');
 
 // year แบ่งตาม ปี เมื่อกดเลือก  ปี
-$routes->get('/year/(:num)', 'Home::video_byyear/$1');
+$routes->get('year/(:num)', 'Home::video_byyear/$1');
 // หนังใหม่ 
-$routes->get('/newmovie', 'Home::newmovie');
+$routes->get('newmovie', 'Home::newmovie');
 // search
-$routes->get('/search/(:any)', 'Home::video_search/$1');
+$routes->get('search/(:any)', 'Home::video_search/$1');
 // topimdb
-$routes->get('/list_top_imdb', 'Home::video_topimdb');
+$routes->get('list_top_imdb', 'Home::video_topimdb');
 // ขอหนัง
 $routes->post('contact', 'Home::contact');
 //แจ้งหนังเสีย
-$routes->get('/savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)/(:segment)', 'Home::save_report/$1/$2/$3/$4/$5');
+$routes->get('savereport/branch/(:num)/id/(:num)/reason/(:segment)/name/(:segment)/(:segment)', 'Home::save_report/$1/$2/$3/$4/$5');
 
 //ขอหนัง 
-$routes->get('/saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$2');
+$routes->get('saverequest/branch/(:num)/movie/(:any)', 'Home::save_request/$1/$2');
 
 //ติดต่อโฆษณา 
-$routes->post('/contact_ads', 'Home::contact_ads');
+$routes->post('contact_ads', 'Home::contact_ads');
 
 //หน้า contact
 $routes->get('contact', 'Home::contact');
@@ -110,10 +110,12 @@ $routes->get('countview/(:num)', 'Home::countView/$1');
 // Popular dunung4u
 $routes->get('popular', 'Home::popular');
 
-$routes->get('/moviedata', 'Home::moviedata');
-$routes->get('/moviedata_search', 'Home::moviedata_search');
-$routes->get('/moviedata_category', 'Home::moviedata_category');
-$routes->get('/moviedata_newmovie', 'Home::moviedata_newmovie');
+$routes->get('moviedata', 'Home::moviedata');
+$routes->get('moviedata_search', 'Home::moviedata_search');
+$routes->get('moviedata_category', 'Home::moviedata_category');
+$routes->get('moviedata_newmovie', 'Home::moviedata_newmovie');
+$routes->get('moviedata_popular', 'Home::moviedata_popular');
+
 // category dunung4u
 $routes->get('category', 'Home::categorylist');
 

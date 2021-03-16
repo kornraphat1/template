@@ -165,7 +165,7 @@ CRITICAL - 2021-02-22 02:09:34 --> Undefined variable: list_video_topimdb
 #3 C:\xampp\htdocs\template\app\Controllers\Home.php(77): view('movie/MV-6/body...', Array)
 #4 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
 =======
-CRITICAL - 2021-02-22 03:40:56 --> Undefined variable: videodata
+CRITICAL - 2021-02-22 03:40:56 --> Undefined variable: video_data
 #0 C:\xampp\htdocs\template\app\Views\movie\MV-5\video.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 76, Array)
 #1 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('movie/MV-5/vide...', Array, true)
