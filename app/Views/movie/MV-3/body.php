@@ -17,20 +17,20 @@
                         foreach($list_video['list'] as $value){
 
                            $id = $value['movie_id'];
-                           $url_name = urlname_encode($value['movie_name']);
-                           
-                           if($value['movie_type']=="se"){
-                              $urlvideo = urldecode(base_url('series/'.$id.'/'.$url_name));
-                           }else{
-                              $urlvideo = urldecode(base_url('video/'.$id.'/'.$url_name));
-                           }
+                           $s_replace = [
+                              ")", "(", " ", '%'
+                          ];
+                          $e_replace = [
+                              "", "", "-", '%25'
+                          ];
+                          $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
                         
                      ?>  
                      <article class="col-lg-3 col-md-3 col-sm-4">
                         <!-- POST L size -->
                         <div class="post post-medium ">
                            <div class="thumbr " style=" background-color: dimgray; padding-bottom: 1px;">
-                              <a class="afterglow post-thumb" href="<?= $urlvideo ?>" data-lity>
+                              <a class="afterglow post-thumb" onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')" data-lity>
                                  <span class="play-btn-border" title="Play"><i class="fa fa-play-circle headline-round" aria-hidden="true"></i></span>
                                  <div  class="movie-imdb">
                                     <b>
@@ -53,7 +53,7 @@
                               </a>
                                        
                               <h2 class="titla_name" style="height: 53px;">
-                                 <a class="title" style="word-wrap: break-word;" href="<?= $urlvideo ?>"><?php echo $value['movie_name'];?></a>
+                                 <a class="title" style="word-wrap: break-word;" href="<?= $url_name ?>"><?php echo $value['movie_name'];?></a>
                               </h2>
                            
                            </div>

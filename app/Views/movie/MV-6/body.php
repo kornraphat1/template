@@ -164,7 +164,7 @@
       <div id="Nextnew" class="swiper-container">
         <div class="swiper-wrapper">
           <?php
-          // print_r($list_video);die;
+         
           foreach ($list_video['list'] as  $val) {
 
             if (strtolower($val['movie_sound']) == 'th' || strtolower($val['movie_sound']) == 'thai') {

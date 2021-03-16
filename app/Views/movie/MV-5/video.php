@@ -34,6 +34,7 @@
 							<!-- player -->
 
 							<div class="col-lg-9 col-md-12">
+							
 								<iframe class="if-size" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0"> </iframe>
 
 								<?php

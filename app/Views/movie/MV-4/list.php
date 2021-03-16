@@ -65,21 +65,15 @@
                         foreach ($list_video['list'] as $value) {
 
                             $id = $value['movie_id'];
+                     
+        
                             $s_replace = [
                                 ")", "(", " ", '%'
                             ];
                             $e_replace = [
                                 "", "", "-", '%25'
                             ];
-        
                             $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
-                            if ($value['movie_type'] == 'se') {
-        
-                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
-                            } else {
-        
-                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
-                            }
 
                     ?>
 
@@ -98,7 +92,7 @@
                                 } else {
                                 ?>
 
-                                    <a href="<?php echo $urlvideo; ?>">
+                                    <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
                                         <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
@@ -112,13 +106,13 @@
                             </div>
 
                             <div class="hvr-inner">
-                                <a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
                             </div>
 
                             <div class="mv-item-infor">
 
                                 <h2>
-                                    <a href="<?php echo $urlvideo; ?>">
+                                    <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
                                         <?php echo $value['movie_name']?>
                                     </a>
                                 </h2>

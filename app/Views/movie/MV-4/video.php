@@ -174,23 +174,23 @@
 			<iframe class="if-size" src="<?= base_url('player/' . $video_data['movie_id'] . '/' . $feildplay) ?>" scrolling="no" frameborder="0"></iframe>
 			<?php
 			if ($video_data['movie_type'] == 'se') {
+				//echo "<pre>";print_r($video_data);die;
 			?>
 				<div class="movie-series-content ">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="col-md-2">
 								<?php
-								$url_name =  str_replace('%', '%25', urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname']))))))));
-
-								if ($index > 0) {
+								 if ($index > 0) {
 									$key = $index - 1;
-									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
 									$disabled = '';
-								} else {
+								 } else {
 									$key = $index;
-									$url_epname =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['name_ep'][$key])))))));
 									$disabled = 'disabled';
-								}
+								 }
+   
+								 $url_name =  urlname_encode($video_data['movie_thname']);
+								 $url_epname =  urlname_encode($video_data['name_ep'][$key]);
 
 								?>
 
@@ -331,14 +331,16 @@
 
 			<div class="flex-wrap-movielist">
 
-				<?php foreach ($vdorandom as $value) {
+				<?php foreach ($video_random as $value) {
 
 					$id = $value['movie_id'];
-					if ($value['movie_type'] == 'mo') {
-						$urlvideo = base_url('/video/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
-					} else if ($value['movie_type'] == 'se') {
-						$urlvideo = base_url('/series/' . $id . '/' . urlencode(str_replace(' ', '-', $value['movie_name'])));
-					}
+					$s_replace = [
+						")", "(", " ", '%'
+					];
+					$e_replace = [
+						"", "", "-", '%25'
+					];
+					$url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
 
 				?>
 
@@ -354,14 +356,14 @@
 
 						<div class="hvr-inner">
 
-							<a href="<?php echo $urlvideo; ?>">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+							<a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
 						</div>
 
 						<div class="mv-item-infor">
 
 							<h2>
-								<a href="<?php echo $urlvideo; ?>">
+								<a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
 									<?php echo $value['movie_name'] ?>
 								</a>
 							</h2>

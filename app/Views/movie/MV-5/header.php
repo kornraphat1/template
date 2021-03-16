@@ -34,13 +34,14 @@
 
 	 <!--Google Font-->
 	 <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet"/>
+
     <!-- CSS files -->
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/custom.css?v=5"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css?v=8"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/plugins.css?v=2"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/animate.css?v=1"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/size.css?v=3"; ?>' />
-    <link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-awesome.min.css?v=1"; ?>'>
+    <!-- <link rel="stylesheet" href='<?php echo $document_root . "assets/css/custom.css?v=5"; ?>' /> -->
+    <link rel="stylesheet" href='<?php echo $document_root . "assets/css/style.css?v=8"; ?>' />
+    <!-- <link rel="stylesheet" href='<?php echo $document_root . "assets/css/plugins.css?v=2"; ?>' /> -->
+    <!-- <link rel="stylesheet" href='<?php echo $document_root . "assets/css/animate.css?v=1"; ?>' /> -->
+    <!-- <link rel="stylesheet" href='<?php echo $document_root . "assets/css/size.css?v=3"; ?>' /> -->
+    <link rel="stylesheet" href='<?php echo $document_root . "assets/css/font-awesome.min.css?v=1"; ?>'>
 
     <!-- TAG og facebook -->
     <meta property="og:url" content="<?php echo base_url(uri_string()); ?>" />

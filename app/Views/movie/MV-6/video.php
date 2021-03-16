@@ -222,7 +222,9 @@
 
         <!-- สำหรับ series -->
 
-        <?php if ($video_data['movie_type'] == 'se') { ?>
+        <?php if ($video_data['movie_type'] == 'se') { 
+            echo "<pre>";print_r($video_data);die;
+          ?>
 
           <div class="movie-episode">
 

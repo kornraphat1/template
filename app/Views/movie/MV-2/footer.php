@@ -369,13 +369,7 @@
 		} else {
 
 			url = "<?= base_url() ?>/video/" + id + '/' + decodeURI(name);
-
 		}
-
-		window.open(url, '_parent');
-
-
-
 	}
 
 	function count_view(id) {

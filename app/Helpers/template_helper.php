@@ -303,12 +303,12 @@ function calltemplate($template, $view, $parameter = [])
 
 
                     $list = [
-                        'video_data' => $VideoModel->get_id_video($parameter['id']),
+                      
                         'video_random' => $VideoModel->get_id_video_random($parameter['branch'], 4),
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
-                        'series' => $series,
+                        'video_data' => $series,
                         'vdorandom' => $vdorandom,
                         'seo' => $seo,
                     ];
@@ -428,7 +428,7 @@ function calltemplate($template, $view, $parameter = [])
                     $category_list = $VideoModel->get_category($parameter['branch']);
                     $series = $VideoModel->get_ep_series($parameter['id']);
                     $seo = $VideoModel->get_seo($parameter['branch']);
-                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 3);
+                    $video_random = $VideoModel->get_id_video_random($parameter['branch'], 5);
 
 
                     $list = [
@@ -437,7 +437,7 @@ function calltemplate($template, $view, $parameter = [])
                         'seo' => $VideoModel->get_seo($parameter['branch']),
                         'category_list' => $category_list,
                         'listyear' => $listyear,
-                        'series' => $series,
+                        'video_data' => $series,
                         'video_random' => $video_random,
                         'seo' => $seo,
                     ];

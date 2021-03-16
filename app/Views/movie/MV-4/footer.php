@@ -187,18 +187,48 @@
 		} else {}
 	};
 
-	function count_view(id) {
+	function goView(id, name, type) {
+          
+		  count_view(id);
+		  var url = '';
+		  if (type == 'se') {
+			 url = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name);
+		  } else {
+			 url = "<?= base_url() ?>/video/" + id + '/' + decodeURI(name);
+		  }
+		  window.open(url, '_parent');
+	   }
 
-		var url = "<?= base_url('/countview') ?>/" + id
-
-		jQuery.ajax({
-			url: url,
-			async: true,
-			success: function(response) {
+	   function count_view(id) {
+		  var url = "<?= base_url('/countview') ?>/" + id
+		  jQuery.ajax({
+			 url: url,
+			 async: true,
+			 success: function(response) {
 				console.log(url); // server response
-			}
-		});
-	}
+			 }
+		  });
+	   }
+
+	   function goEP(id, name, index, epname) {
+		  countView(id);
+		  window.location.href = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name) + '/' + index + '/' + decodeURI(epname);
+	   }
+
+	   function countView(id) {
+		  // alert(id);
+		  var base_url = '<?= base_url() ?>';
+		  $.ajax({
+			 url: base_url + "/countview/" + id,
+			 method: "GET",
+			 async: true,
+			 success: function(response) {
+				console.log(response); // server response
+			 }
+		  });
+	   }
+
+
 
 	function onClickAds(adsid, branch) {
 

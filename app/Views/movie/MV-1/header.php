@@ -106,7 +106,7 @@
             background-color: red;
         }
     </style>
-    <meta name="google-site-verification" content="4Slg2QhpVrOUmcX9cvY5MJL_mxemuI2peizyqfDvJw0" />
+  
 </head>
 
 <body class="home blog" cfapps-selector="body">

@@ -24,7 +24,7 @@
     <meta name="author" content="OrcasThemes" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="ahrefs-site-verification" content="b1eaaf15b97924166d4bedbc41f0f1052d2b109a77474547804fb1deab7c135a">
-    <meta name="google-site-verification" content="FAgygvDnheGcPeqP4UMeP4v9pmMY8iQkZ_colYC1eFE" />
+    
     <?php
     if (!empty($setting['setting_header'])) {
         echo base64_decode($setting['setting_header']);

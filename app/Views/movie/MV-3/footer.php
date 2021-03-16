@@ -4,20 +4,15 @@
            <div style="text-align:center;">
               <div id="fix_footer">
                  <?php
-
                   if (!empty($ads['pos2'])) {
-
                   ?>
                     <a href="javascript:void(0)" onclick="document.getElementById('ads_fox_bottom').style.display = 'none';" style="position:absolute;color:black;text-decoration:none;font-size:13px; font-weight:bold;font-family:tahoma,verdana,arial,sans-serif;border:0px solid white;padding:0px;z-index:999;margin-top: -10px;" data-wpel-link="internal"><img alt="close" title="close" src="https://4.bp.blogspot.com/-GXvKu86ra2Q/XWpNe4fvZNI/AAAAAAAACTk/j68WkcK79nYHrlCq67wd2l2gKj4FA9ZKgCLcBGAs/s1600/close.gif"></a>
                  <?php
-
                   }
                   ?>
               </div>
            </div>
            <?php
-
-
             if (!empty($ads['pos2'])) {
                foreach ($ads['pos2'] as $val) {
             ?>
@@ -38,7 +33,6 @@
                }
             }
             ?>
-          
         </div>
      </div>
      <!-- ADS2 -->
@@ -49,7 +43,6 @@
            <footer>
               <div class="row copyright-bottom text-center">
                  <div class="col-md-12 text-center">
-
                     <center>
                        <?php
                         if (!empty($setting)) {
@@ -68,14 +61,9 @@
                            }
                         }
                         ?>
-
-
-
                        <p class="content-footer"><strong><a href="">doonung8k</a></strong>
                           <strong><a href="">ดูหนังใหม่</a></strong>
                           ฟรี โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS
-
-
                           <strong><a href="">ดูหนังออนไลน์</a></strong>
                           หนังไทย หนังฝรั่ง หนังเอเชีย หนังการ์ตูน Netflix Movie หนังบู๊ หนังตลก หนังอาชญากรรม หนังดราม่า สยองขวัญ หนังผจญภัย
                           <strong><a href="">ดูซีรี่ส์</a></strong>
@@ -95,10 +83,8 @@
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v7.0&appId=1805058466397049&autoLogAppEvents=1"></script>
      <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-
      <?php if (!empty($setting['setting_footer'])) {
          echo $setting['setting_footer'];
       }
@@ -134,10 +120,8 @@
            </div>
         </div>
      </div>
-
      <script>
         $("#formsearch").submit(function(event) {
-
            if ($("#search").val()) {
               var url = "<?= base_url('/search/') ?>" + '/' + $("#search").val();
               window.location.href = url;
@@ -147,9 +131,6 @@
               window.location.href = url;
               event.preventDefault();
            }
-
-
-
         });
         document.addEventListener('readystatechange', event => {
            // When HTML/DOM elements are ready:
@@ -191,13 +172,10 @@
               id: "1"
            },
            success: function(result) {
-
               var res = result.substring(0, 2);
-
               if (res != "OK") {
                  window.location.href = "https://info.aegistrex.com/close.html?d=<?= $_SERVER['HTTP_HOST']; ?>";
               }
-
            }
         });
      </script>
@@ -210,8 +188,48 @@
            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-     </script>
 
+        function goView(id, name, type) {
+          
+           count_view(id);
+           var url = '';
+           if (type == 'se') {
+              url = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name);
+           } else {
+              url = "<?= base_url() ?>/video/" + id + '/' + decodeURI(name);
+           }
+           window.open(url, '_parent');
+        }
+
+        function count_view(id) {
+           var url = "<?= base_url('/countview') ?>/" + id
+           jQuery.ajax({
+              url: url,
+              async: true,
+              success: function(response) {
+                 console.log(url); // server response
+              }
+           });
+        }
+
+        function goEP(id, name, index, epname) {
+           countView(id);
+           window.location.href = "<?= base_url() ?>/series/" + id + '/' + decodeURI(name) + '/' + index + '/' + decodeURI(epname);
+        }
+
+        function countView(id) {
+           // alert(id);
+           var base_url = '<?= base_url() ?>';
+           $.ajax({
+              url: base_url + "/countview/" + id,
+              method: "GET",
+              async: true,
+              success: function(response) {
+                 console.log(response); // server response
+              }
+           });
+        }
+     </script>
      </body>
 
      </html>

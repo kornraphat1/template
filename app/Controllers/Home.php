@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-7';
+		$this->template = 'MV-8';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -327,9 +327,6 @@ class Home extends BaseController
 
 		$data_query = calltemplate($this->template, 'series', $parameter);
 
-		// echo "<pre>";
-		// print_r($data_query['series']);die;
-
 		$setting = $this->setting;
 		$setting['image'] = $data_query['video_data']['movie_picture'];
 
@@ -474,6 +471,7 @@ class Home extends BaseController
 
 	public function video($id)
 	{
+	
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword_string' => $this->keyword_string,

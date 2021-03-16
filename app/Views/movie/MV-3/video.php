@@ -110,7 +110,7 @@
                <?php
                if ($video_data['movie_type'] == 'se') {
                ?>
-                  <div class="movie-series-content ">
+                  <div class="movie-series-content">
                      <div class="row">
                         <div class="col-md-12">
                            <?php
