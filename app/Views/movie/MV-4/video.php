@@ -334,13 +334,8 @@
 				<?php foreach ($video_random as $value) {
 
 					$id = $value['movie_id'];
-					$s_replace = [
-						")", "(", " ", '%'
-					];
-					$e_replace = [
-						"", "", "-", '%25'
-					];
-					$url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
+				
+					$url_name = urlname_encode($value['movie_name']);
 
 				?>
 

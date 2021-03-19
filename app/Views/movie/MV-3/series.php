@@ -116,6 +116,7 @@
                   <h2 class="title main-head-title">ตอน</h2>
                      <?php
                      foreach ($video_data['name_ep'] as $key => $value) {
+                       
                         $url_name = urlname_encode($video_data['movie_name']);
                      ?>
 

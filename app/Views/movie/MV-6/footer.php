@@ -27,6 +27,8 @@
       </div>
     </section>
   </footer>
+
+  
   <script>
     $(document).ready(function() {
       var mySwiper = new Swiper('#HomeSlide', {

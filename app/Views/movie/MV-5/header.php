@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/photoswipe.css"; ?>'>
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/default-skin.css"; ?>'>
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/main.css"; ?>'>
-	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/css_size.css"; ?>'>
+	<link rel="stylesheet" href='<?php echo $document_root . "assets/css/css_size.css"; ?>'>
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/font-manual.css"; ?>'>
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/style.css"; ?>'>
 	<link rel="stylesheet" href='<?php echo $document_root . "/assets/css/navigation.css"; ?>'>

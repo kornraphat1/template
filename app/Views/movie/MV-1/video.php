@@ -295,11 +295,11 @@
 		<!-- สุ่มหนัง ก่อน Footer -->
 		<div class="box">
 			<h3 class="box-header">เรื่องอื่นๆ</h3>
-			<?php foreach ($vdorandom as  $value) {
+			<?php foreach ($video_random as  $value) {
 				$id = $value['movie_id'];
 				$title_encode = urlencode(str_replace(' ', '-', $value['movie_name']));
 
-				$url_name = urldecode(str_replace([" ", "'"], ["-", ""], $value['movie_name']));
+				$url_name = urlname_encode($value['movie_name']);
 
 			?>
 

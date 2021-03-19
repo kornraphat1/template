@@ -196,7 +196,7 @@
          <br>
          <div class="col-lg-12 col-md-6 col-xs-12">
             <?php
-               $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $video_data['movie_thname'])))))));
+                $url_name = urlname_encode($video_data['movie_name']);
 
                if (
                      !empty($video_data['movie_thmain']) 

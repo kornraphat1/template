@@ -39,6 +39,7 @@
     <link rel="canonical" href="<?= 'https://' . $_SERVER['HTTP_HOST'] ?>" />
   <?php } ?>
   <!-- Bootstrap core JavaScript -->
+  <script src="<?= $document_root ?>movie/js/defualt.js"></script>
   <script src="<?= $document_root ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?= $document_root ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
@@ -91,7 +92,7 @@
               $style = '';
             }
             ?>
-            <div class="hamburger <?= $change ?>" onclick="myFunction(this)">
+            <div class="hamburger <?= $change ?>" onclick="Showmenu(this)">
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
@@ -131,7 +132,7 @@
         }
       }
 
-      function myFunction(x) {
+      function Showmenu(x) {
         x.classList.toggle("change");
         var a = document.getElementById("myLinks");
         if (a.style.display === "block") {

@@ -32,7 +32,7 @@ class Home extends BaseController
 		// Query
 		$this->setting = $this->VideoModel->get_setting($this->branch);
 		$this->ads = $this->VideoModel->get_ads($this->branch);
-		$this->template = 'MV-8';
+		$this->template = 'MV-5';
 
 		helper(['url', 'pagination', 'template', 'moviename', 'library']);
 	}
@@ -50,7 +50,7 @@ class Home extends BaseController
 			'page' => $page,
 			'keyword_string' => $this->keyword_string
 		];
-
+		
 		$data_query = calltemplate($this->template, 'index', $parameter);
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 		$view_data = [
@@ -62,6 +62,7 @@ class Home extends BaseController
 			'path_ads' =>	$this->path_ads,
 			'ads'  => $this->ads,
 			'keyword_string' => $this->keyword_string,
+			
 		];
 
 		$view_data = array_merge($view_data, $data_query);
@@ -101,6 +102,7 @@ class Home extends BaseController
 		$this->setting['image'] = $this->path_setting . $this->setting['setting_logo'];
 
 		$view_data = [
+		
 			'document_root' => $this->document_root,
 			'branch' => $this->branch,
 			'setting' => $this->setting,
@@ -109,7 +111,7 @@ class Home extends BaseController
 			'path_ads' => $this->path_ads,
 			'ads' => $this->ads,
 			'chk_act' => $chk_act,
-			'keyword_string' => $this->keyword_string,
+			'keyword_string' => $title,
 			'title' => $title,
 		];
 		$view_data = array_merge($view_data, $data_query);
@@ -665,7 +667,6 @@ class Home extends BaseController
 
 	public function moviedata_category()
 	{
-
 		$parameter = [
 			'branch' => $this->branch,
 			'keyword' => $_GET['keyword'],

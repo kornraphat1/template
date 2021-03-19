@@ -1,9 +1,18 @@
-@font-face {
-    font-family: myFirstFont;
-    src: url('/public/assets/font/Prompt-Bold.ttf');
-}
-
-ul, li, a , h1, h2, h3, h4, h5, p {
-font-family: myFirstFont !important; 
-}
-
+@font-face {
+
+    font-family: myFirstFont;
+
+    src: url('/public/movie/MV-1/assets/font/Prompt-Bold.ttf');
+
+}
+
+
+
+ul, li, a , h1, h2, h3, h4, h5, p {
+
+font-family: myFirstFont !important; 
+
+}
+
+
+

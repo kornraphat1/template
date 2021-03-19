@@ -12,7 +12,7 @@ foreach ($list['list'] as $val) {
           $movie_picture = $path_thumbnail . $val['movie_picture'];
         }
 
-        $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
+        $url_name = urlname_encode($val['movie_name']);
       ?>
 
       <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>', '<?=$val['movie_type']?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">

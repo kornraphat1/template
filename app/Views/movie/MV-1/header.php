@@ -243,7 +243,7 @@
                         หนังไทย
                     </a>
                 </li>
-                <li class="cat-item">
+                <!-- <li class="cat-item">
                     <a href="<?php echo base_url('/anime'); ?>" alt="หนังไทย" title="Thai Movie" style="font-size: 19px">
                         Anime
                     </a>
@@ -257,7 +257,7 @@
                     <a href="<?php echo base_url('/clips'); ?>" alt="หนังไทย" title="Thai Movie" style="font-size: 19px">
                         Clips 18+
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li class="nav-main-item  menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-28">
                     <a class="nav-main-link request" style="font-size: 19px">ขอหนัง</a>

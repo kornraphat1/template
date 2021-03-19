@@ -29,8 +29,8 @@
     <div id="movie-list" class="row">
       <div class="movie-title-list">
         <?php
-        if (!empty($cate_name)) {
-          $title = $cate_name;
+        if (!empty($title)) {
+          $title = $title;
         } else if (!empty($keyword_string)) {
           $title = 'คุณกำลังค้นหา : ' . $keyword_string;
         }
@@ -50,7 +50,7 @@
                   $movie_picture = $path_thumbnail . $val['movie_picture'];
                 }
 
-                $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
+                $url_name = urlname_encode($val['movie_name']);
                 ?>
 
 
@@ -161,7 +161,7 @@
   $(document).ready(function() {
     var track_click = 2; //track user click on "load more" button, righ now it is 0 click
     var total_pages = '<?= $list_video['total_page'] ?>';
-    var keyword = "<?= $keyword ?>";
+    var keyword = "<?= $keyword_string ?>";
 
     if( track_click >= total_pages ){
       $("#movie-loadmore").hide(0);

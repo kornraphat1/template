@@ -69,7 +69,7 @@
                   $e_replace = [
                      "", "", "-", '%25'
                   ];
-                  $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
+                  $url_name = urlname_encode($value['movie_name']);
 
                ?>
                   <article class="col-lg-3 col-md-3 col-sm-4">
@@ -109,6 +109,9 @@
                }
                ?>
             </div>
+            <div class="row pagi text-center">
+                        <?= pagination($list_video['page'], $list_video['total_page']); ?>
+                  </div>
          </div>
       </div>
 

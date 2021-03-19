@@ -14,7 +14,7 @@
         //echo "<pre>"; print_r($list_video);die;
           foreach($list_video as $val){ 
             
-            $url_name = urldecode(str_replace([" ","'"],["-",""], $val['movie_thname']));
+            $url_name = urlname_encode($val['movie_name']);
         ?>
           <li>
             <a onclick="goView('<?= $val['movie_id'] ?>', '<?=$url_name?>' , '<?=$val['movie_type']?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">

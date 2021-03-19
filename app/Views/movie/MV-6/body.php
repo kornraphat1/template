@@ -183,7 +183,7 @@
               $view = $val['movie_view'];
             }
 
-            $url_name = urldecode(str_replace([" ", "'"], ["-", ""], $val['movie_name']));
+            $url_name = urlname_encode($val['movie_name']);
           ?>
             <div class="swiper-slide">
               <div class="movie-box">

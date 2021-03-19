@@ -14,7 +14,7 @@
                 ?>
                <?php foreach ($list_video['list'] as $value) {
                     $id = $value['movie_id'];
-                    $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
+                    $url_name = urlname_encode($value['movie_name']);
                    
                 ?>
                    <div class="movie_box">

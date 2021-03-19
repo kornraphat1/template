@@ -137,36 +137,19 @@
 
 
                     <?php foreach ($list_video['list'] as $value) {
-
-                        $s_replace = [
-                            ")", "(", " ", '%'
-                        ];
-                        $e_replace = [
-                            "", "", "-", '%25'
-                        ];
-                        $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
-
-                      
-
+                        $url_name = urlname_encode($value['movie_name']);
                     ?>
-
                         <div class="movie-item-style-2 movie-item-style-1">
-
                             <div class="mv-img-style-resize">
-
-
                                 <?php
                                 if (substr($value['movie_picture'], 0, 4) == 'http') {
                                 ?>
-
                                     <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
-
-
                                 <?php
                                 } else {
                                 ?>
 
-                                    <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')" >
+                                    <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
                                         <img src="<?php echo $backURL . $img_backurl . $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                     </a>
 
@@ -180,7 +163,7 @@
 
                             <div class="hvr-inner">
 
-                                <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')" >ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                             </div>
 
@@ -269,19 +252,7 @@
                         foreach ($values['movie'] as $value) {
                             $id = $value['movie_id'];
 
-                            $s_replace = [
-                                ")", "(", " ", '%'
-                            ];
-                            $e_replace = [
-                                "", "", "-", '%25'
-                            ];
-                            if ($value['movie_type'] == 'se') {
-                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
-                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/series/' . $id . '/' . $url_name)));
-                            } else {
-                                $url_name =  urldecode(trim(str_replace(")", "", (str_replace("(", "", (str_replace(" ", "-", $value['movie_name'])))))));
-                                $urlvideo = str_replace('%', '%25', urldecode(base_url('/video/' . $id . '/' . $url_name)));
-                            }
+                            $url_name = urlname_encode($value['movie_name']);
                         ?>
                             <div class="movie-item-style-2 movie-item-style-1">
 
@@ -298,7 +269,7 @@
                                     } else {
                                     ?>
 
-                                        <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">
+                                        <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">
                                             <img src="<?php echo $value['movie_picture']; ?>" alt="<?php echo $value['movie_name']; ?>" title="<?php echo $value['movie_name']; ?>">
                                         </a>
 
@@ -312,7 +283,7 @@
 
                                 <div class=" hvr-inner">
 
-                                    <a href="<?php echo $urlvideo; ?>" onclick=" return count_view(<?= $id ?>) ">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
+                                    <a onclick="goView('<?= $value['movie_id'] ?>', '<?= $url_name ?>', '<?= $value['movie_type'] ?>')">ดูหนัง <i class="ion-ios-arrow-righ"></i></a>
 
                                 </div>
 
