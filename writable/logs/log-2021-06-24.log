@@ -1,0 +1,33 @@
+CRITICAL - 2021-06-24 01:23:20 --> Undefined index: ads_picture
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\left.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(74): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('23', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(72): view('movie/MV-5/body...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-24 01:24:49 --> Undefined index: ads_picture
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\left.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(74): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('23', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(72): view('movie/MV-5/body...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2021-06-24 01:33:26 --> Undefined index: ads_picture
+#0 C:\xampp\htdocs\template\app\Views\movie\MV-5\left.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 19, Array)
+#1 C:\xampp\htdocs\template\app\Views\movie\MV-5\body.php(74): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\template\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\template\system\Common.php(1071): CodeIgniter\View\View->render('23', Array, true)
+#4 C:\xampp\htdocs\template\app\Controllers\Home.php(72): view('movie/MV-5/body...')
+#5 C:\xampp\htdocs\template\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\template\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\template\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\template\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
