@@ -212,7 +212,13 @@
 			<?php foreach ($vdorandom as  $value) {
 				$id = $value['movie_id'];
 				$title_encode = urlencode(str_replace(' ', '-', $value['movie_thname']));
-				$urlvideo = base_url('/video/' . $id . '/' . $title_encode);
+				$s_replace = [
+					")", "(", " ", '%', "'"
+				];
+				$e_replace = [
+					"", "", "-", '%25', ""
+				];
+				$url_name =  urldecode(str_replace($s_replace, $e_replace,  trim($value['movie_name'])));
 			?>
 				<div class="movie">
 					<div class="movie-box">
