@@ -1,10 +1,11 @@
    <!-- ส่วนหลัก -->
+
    <section class="sec_main sec_main-mobile">
        <!-- เมนูหลักซ้าย -->
        <?php include('left.php') ?>
        <!-- จบเมนูหลักซ้าย -->
 
-
+       
        <div class="sec_main-cen">
            <div class="h2-text" style="background-color: crimson;">
                <h1>ดูหนังใหม่ หนังออนไลน์ ฟรี HD</h1>
@@ -23,7 +24,7 @@
                     $e_replace = [
                         "", "", "-", '%25'
                     ];
-                    $url_name = urlname_encode($value['movie_name']);
+                    $url_name =  urldecode(trim(str_replace($s_replace, $e_replace,  $value['movie_name'])));
 
                    
                 ?>
